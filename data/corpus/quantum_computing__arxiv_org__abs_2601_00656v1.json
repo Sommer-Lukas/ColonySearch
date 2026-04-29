@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2601.00656v1",
+  "title": "Quantum Simulation of Protein Fragment Electronic Structure Using Moment-based Adaptive Variational Quantum Algorithms",
+  "body": "Background: Understanding electronic interactions in protein active sites is fundamental to drug discovery and enzyme engineering, but remains computationally challenging due to exponential scaling of quantum mechanical calculations.\n  Results: We present a quantum-classical hybrid framework for simulating protein fragment electronic structure using variational quantum algorithms. We construct fermionic Hamiltonians from experimentally determined protein structures, map them to qubits via Jordan-Wigner transformation, and optimize ground state energies using the Variational Quantum Eigensolver implemented in pure Python. For a 4-orbital serine protease fragment, we achieve chemical accuracy (< 1.6 mHartree) with 95.3% correlation energy recovery. Systematic analysis reveals three-phase convergence behaviour with exponential decay (α = 0.95), power law optimization (γ = 1.21), and asymptotic approach. Application to SARS-CoV-2 protease inhibition demonstrates predictive accuracy (MAE=0.25 kcal/mol), while cytochrome P450 metabolism predictions achieve 85% site accuracy.\n  Conclusions: This work establishes a pathway for quantum-enhanced biomolecular simulations on near-term quantum hardware, bridging quantum algorithm development with practical biological applications.",
+  "links": [
+    "https://arxiv.org/abs/2601.00656v1",
+    "https://arxiv.org/pdf/2601.00656v1"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

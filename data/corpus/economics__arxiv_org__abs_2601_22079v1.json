@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2601.22079v1",
+  "title": "The Economics of No-regret Learning Algorithms",
+  "body": "A fundamental challenge for modern economics is to understand what happens when actors in an economy are replaced with algorithms. Like rationality has enabled understanding of outcomes of classical economic actors, no-regret can enable the understanding of outcomes of algorithmic actors. This review article covers the classical computer science literature on no-regret algorithms to provide a foundation for an overview of the latest economics research on no-regret algorithms, focusing on the emerging topics of manipulation, statistical inference, and algorithmic collusion.",
+  "links": [
+    "https://arxiv.org/abs/2601.22079v1",
+    "https://arxiv.org/pdf/2601.22079v1"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

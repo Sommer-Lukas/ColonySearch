@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2503.03213v1",
+  "title": "Convergence Rates for Softmax Gating Mixture of Experts",
+  "body": "Mixture of experts (MoE) has recently emerged as an effective framework to advance the efficiency and scalability of machine learning models by softly dividing complex tasks among multiple specialized sub-models termed experts. Central to the success of MoE is an adaptive softmax gating mechanism which takes responsibility for determining the relevance of each expert to a given input and then dynamically assigning experts their respective weights. Despite its widespread use in practice, a comprehensive study on the effects of the softmax gating on the MoE has been lacking in the literature. To bridge this gap in this paper, we perform a convergence analysis of parameter estimation and expert estimation under the MoE equipped with the standard softmax gating or its variants, including a dense-to-sparse gating and a hierarchical softmax gating, respectively. Furthermore, our theories also provide useful insights into the design of sample-efficient expert structures. In particular, we demonstrate that it requires polynomially many data points to estimate experts satisfying our proposed \\emph{strong identifiability} condition, namely a commonly used two-layer feed-forward network. In stark contrast, estimating linear experts, which violate the strong identifiability condition, necessitates exponentially many data points as a result of intrinsic parameter interactions expressed in the language of partial differential equations. All the theoretical results are substantiated with a rigorous guarantee.",
+  "links": [
+    "https://arxiv.org/abs/2503.03213v1",
+    "https://arxiv.org/pdf/2503.03213v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

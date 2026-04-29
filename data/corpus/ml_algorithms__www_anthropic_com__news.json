@@ -1,0 +1,22 @@
+{
+  "url": "https://www.anthropic.com/news",
+  "title": "Newsroom \\ Anthropic",
+  "body": "Newsroom Press inquires press@anthropic.com Non-media inquiries support@anthropic.com Media assets Download press kit Introducing Claude Opus 4.7 Product Apr 16, 2026 Our latest Opus model brings stronger performance across coding, agents, vision, and multi-step tasks, with greater thoroughness and consistency on the work that matters most. Product Apr 17, 2026 Introducing Claude Design by Anthropic Labs Today, we’re launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more. Announcements Apr 7, 2026 Project Glasswing A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world's most critical software. Mar 18, 2026 What 81,000 people want from AI We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found. Announcements Feb 4, 2026 Claude is a space to think We’ve made a choice: Claude will remain ad-free. We explain why advertising incentives are incompatible with a genuinely helpful AI assistant, and how we plan to expand access without compromising user trust. News Search Date Category Title Apr 28, 2026 Announcements Claude for Creative Work Apr 27, 2026 Announcements Anthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office Apr 24, 2026 Announcements An update on our election safeguards Apr 24, 2026 Announcements Anthropic and NEC collaborate to build Japan’s largest AI engineering workforce Apr 20, 2026 Announcements Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute Apr 17, 2026 Product Introducing Claude Design by Anthropic Labs Apr 16, 2026 Product Introducing Claude Opus 4.7 Apr 14, 2026 Announcements Anthropic’s Long-Term Benefit Trust appoints Vas Narasimhan to Board of Directors Apr 6, 2026 Announcements Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute Mar 31, 2026 Announcements Australian government and Anthropic sign MOU for AI safety and research See more",
+  "links": [
+    "https://www.anthropic.com/news/claude-opus-4-7",
+    "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "https://www.anthropic.com/glasswing",
+    "https://www.anthropic.com/81k-interviews",
+    "https://www.anthropic.com/news/claude-is-a-space-to-think",
+    "https://www.anthropic.com/news/claude-for-creative-work",
+    "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+    "https://www.anthropic.com/news/election-safeguards-update",
+    "https://www.anthropic.com/news/anthropic-nec",
+    "https://www.anthropic.com/news/anthropic-amazon-compute",
+    "https://www.anthropic.com/news/narasimhan-board",
+    "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+    "https://www.anthropic.com/news/australia-MOU"
+  ],
+  "source": "html",
+  "topic": "ml_algorithms"
+}

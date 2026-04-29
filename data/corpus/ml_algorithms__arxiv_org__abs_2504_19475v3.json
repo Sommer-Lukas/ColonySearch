@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2504.19475v3",
+  "title": "Prisma: An Open Source Toolkit for Mechanistic Interpretability in Vision and Video",
+  "body": "Robust tooling and publicly available pre-trained models have helped drive recent advances in mechanistic interpretability for language models. However, similar progress in vision mechanistic interpretability has been hindered by the lack of accessible frameworks and pre-trained weights. We present Prisma (Access the codebase here: https://github.com/Prisma-Multimodal/ViT-Prisma), an open-source framework designed to accelerate vision mechanistic interpretability research, providing a unified toolkit for accessing 75+ vision and video transformers; support for sparse autoencoder (SAE), transcoder, and crosscoder training; a suite of 80+ pre-trained SAE weights; activation caching, circuit analysis tools, and visualization tools; and educational resources. Our analysis reveals surprising findings, including that effective vision SAEs can exhibit substantially lower sparsity patterns than language SAEs, and that in some instances, SAE reconstructions can decrease model loss. Prisma enables new research directions for understanding vision model internals while lowering barriers to entry in this emerging field.",
+  "links": [
+    "https://arxiv.org/abs/2504.19475v3",
+    "https://arxiv.org/pdf/2504.19475v3"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

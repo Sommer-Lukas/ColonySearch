@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2203.14669v1",
+  "title": "Dynamic Structure in Four-strategy Game: Theory and Experiment",
+  "body": "Game dynamics theory, as a field of science, the consistency of theory and experiment is essential. In the past 10 years, important progress has been made in the merging of the theory and experiment in this field, in which dynamics cycle is the presentation. However, the merging works have not got rid of the constraints of Euclidean two-dimensional cycle so far. This paper uses a classic four-strategy game to study the dynamic structure (non-Euclidean superplane cycle). The consistency is in significant between the three ways: (1) the analytical results from evolutionary dynamics equations, (2) agent-based simulation results from learning models and (3) laboratory results from human subjects game experiments. The consistency suggests that, game dynamic structure could be quantitatively predictable, observable and controllable in general.",
+  "links": [
+    "https://arxiv.org/abs/2203.14669v1",
+    "https://arxiv.org/pdf/2203.14669v1",
+    "https://doi.org/10.21638/11701/spbu31.2022.26"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

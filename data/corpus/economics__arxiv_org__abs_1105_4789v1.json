@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1105.4789v1",
+  "title": "Stochastic Price Dynamics Implied By the Limit Order Book",
+  "body": "In this paper we present a novel approach to the determination of fat tails in financial data by studying the information contained in the limit order book. In an order-driven market buyers and sellers may submit limit orders, which are executed when the price touches a pre-specified lower, respectively higher, limit-price. We show that, in equilibrium, the collection of all such orders - the limit order book - implies a volatility smile, similar to observations from option pricing in the Black-Scholes model. We also show how a jump-diffusion process can be explicitly inferred to account for the volatility smile.",
+  "links": [
+    "https://arxiv.org/abs/1105.4789v1",
+    "https://arxiv.org/pdf/1105.4789v1"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

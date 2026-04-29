@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2105.07455v1",
+  "title": "An all-sky search in early O3 LIGO data for continuous gravitational-wave signals from unknown neutron stars in binary systems",
+  "body": "We present a search for continuous gravitational waves emitted by neutron stars in binary systems conducted on data from the early third observing run of the Advanced LIGO and Advanced Virgo detectors using the semicoherent, GPU-accelerated, BinarySkyHough pipeline. The search analyzes the most sensitive frequency band of the LIGO detectors, 50 - 300 Hz. Binary orbital parameters are split into four regions, comprising orbital periods of 3 - 45 days and projected semimajor axes of 2 - 40 light-seconds. No detections are reported. We estimate the sensitivity of the search using simulated continuous wave signals, achieving the most sensitive results to date across the analyzed parameter space.",
+  "links": [
+    "https://arxiv.org/abs/2105.07455v1",
+    "https://arxiv.org/pdf/2105.07455v1"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

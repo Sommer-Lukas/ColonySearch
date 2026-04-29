@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1103/physrevlett.132.100602",
+  "title": "Generative Quantum Machine Learning via Denoising Diffusion Probabilistic Models",
+  "body": "Deep generative models are key-enabling technology to computer vision, text generation, and large language models. Denoising diffusion probabilistic models (DDPMs) have recently gained much attention due to their ability to generate diverse and high-quality samples in many computer vision tasks, as well as to incorporate flexible model architectures and a relatively simple training scheme. Quantum generative models, empowered by entanglement and superposition, have brought new insight to learning classical and quantum data. Inspired by the classical counterpart, we propose the quantum denoising diffusion probabilistic model (QuDDPM) to enable efficiently trainable generative learning of quantum data. QuDDPM adopts sufficient layers of circuits to guarantee expressivity, while it introduces multiple intermediate training tasks as interpolation between the target distribution and noise to avoid barren plateau and guarantee efficient training. We provide bounds on the learning error and demonstrate QuDDPM's capability in learning correlated quantum noise model, quantum many-body phases, and topological structure of quantum data. The results provide a paradigm for versatile and efficient quantum generative learning. Computer science Probabilistic logic Generative model Quantum computer Artificial intelligence Noise (video) Quantum machine learning Quantum Quantum entanglement Generative grammar Theoretical computer science Machine learning Physics Quantum mechanics Image (mathematics)",
+  "links": [],
+  "source": "openalex",
+  "topic": "ml_algorithms"
+}

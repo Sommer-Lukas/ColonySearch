@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2002.04803v2",
+  "title": "Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence",
+  "body": "Smarter applications are making better use of the insights gleaned from data, having an impact on every industry and research discipline. At the core of this revolution lies the tools and the methods that are driving it, from processing the massive piles of data generated each day to learning from and taking useful action. Deep neural networks, along with advancements in classical ML and scalable general-purpose GPU computing, have become critical components of artificial intelligence, enabling many of these astounding breakthroughs and lowering the barrier to adoption. Python continues to be the most preferred language for scientific computing, data science, and machine learning, boosting both performance and productivity by enabling the use of low-level libraries and clean high-level APIs. This survey offers insight into the field of machine learning with Python, taking a tour through important topics to identify some of the core hardware and software paradigms that have enabled it. We cover widely-used libraries and concepts, collected together for holistic comparison, with the goal of educating the reader and driving the field of Python machine learning forward.",
+  "links": [
+    "https://arxiv.org/abs/2002.04803v2",
+    "https://arxiv.org/pdf/2002.04803v2"
+  ],
+  "source": "arxiv",
+  "topic": "programming"
+}

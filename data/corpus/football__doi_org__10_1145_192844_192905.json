@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1145/192844.192905",
+  "title": "GroupLens",
+  "body": "Collaborative filters help people make choices based on the opinions of other people. GroupLens is a system for collaborative filtering of netnews, to help people find articles they will like in the huge stream of available articles. News reader clients display predicted scores and make it easy for users to rate articles after they read them. Rating servers, called Better Bit Bureaus, gather and disseminate the ratings. The rating servers predict scores based on the heuristic that people who agreed in the past will probably agree again. Users can protect their privacy by entering ratings under pseudonyms, without reducing the effectiveness of the score prediction. The entire architecture is open: alternative software for news clients and Better Bit Bureaus can be developed independently and can interoperate with the components we have developed. Computer science Collaborative filtering Interoperability Server Dissemination World Wide Web Internet privacy Recommender system Telecommunications",
+  "links": [],
+  "source": "openalex",
+  "topic": "football"
+}

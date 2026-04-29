@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/physics/0304041v1",
+  "title": "Message Passing Fluids: molecules as processes in parallel computational fluids",
+  "body": "In this paper we present the concept of MPF, Message Passing Fluid, an abstract fluid where the molecules move by mean of the informations that they exchange each other, on the basis of rules and methods of a generalized Cellular Automaton. The model is intended for its simulation by mean of message passing libraries on the field of parallel computing. We present a critical analysis of the necessary computational effort in a possible implementation of such an object.",
+  "links": [
+    "https://arxiv.org/abs/physics/0304041v1",
+    "https://arxiv.org/pdf/physics/0304041v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

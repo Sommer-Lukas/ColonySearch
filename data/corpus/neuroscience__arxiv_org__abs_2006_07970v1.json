@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2006.07970v1",
+  "title": "Tackling Morpion Solitaire with AlphaZero-likeRanked Reward Reinforcement Learning",
+  "body": "Morpion Solitaire is a popular single player game, performed with paper and pencil. Due to its large state space (on the order of the game of Go) traditional search algorithms, such as MCTS, have not been able to find good solutions. A later algorithm, Nested Rollout Policy Adaptation, was able to find a new record of 82 steps, albeit with large computational resources. After achieving this record, to the best of our knowledge, there has been no further progress reported, for about a decade.\n  In this paper we take the recent impressive performance of deep self-learning reinforcement learning approaches from AlphaGo/AlphaZero as inspiration to design a searcher for Morpion Solitaire. A challenge of Morpion Solitaire is that the state space is sparse, there are few win/loss signals. Instead, we use an approach known as ranked reward to create a reinforcement learning self-play framework for Morpion Solitaire. This enables us to find medium-quality solutions with reasonable computational effort. Our record is a 67 steps solution, which is very close to the human best (68) without any other adaptation to the problem than using ranked reward. We list many further avenues for potential improvement.",
+  "links": [
+    "https://arxiv.org/abs/2006.07970v1",
+    "https://arxiv.org/pdf/2006.07970v1"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

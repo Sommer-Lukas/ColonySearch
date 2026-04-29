@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1201.0490v4",
+  "title": "Scikit-learn: Machine Learning in Python",
+  "body": "Scikit-learn is a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems. This package focuses on bringing machine learning to non-specialists using a general-purpose high-level language. Emphasis is put on ease of use, performance, documentation, and API consistency. It has minimal dependencies and is distributed under the simplified BSD license, encouraging its use in both academic and commercial settings. Source code, binaries, and documentation can be downloaded from http://scikit-learn.org.",
+  "links": [
+    "https://arxiv.org/abs/1201.0490v4",
+    "https://arxiv.org/pdf/1201.0490v4"
+  ],
+  "source": "arxiv",
+  "topic": "programming"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2207.14140v1",
+  "title": "Playing a 2D Game Indefinitely using NEAT and Reinforcement Learning",
+  "body": "For over a decade now, robotics and the use of artificial agents have become a common thing.Testing the performance of new path finding or search space optimization algorithms has also become a challenge as they require simulation or an environment to test them.The creation of artificial environments with artificial agents is one of the methods employed to test such algorithms.Games have also become an environment to test them.The performance of the algorithms can be compared by using artificial agents that will behave according to the algorithm in the environment they are put in.The performance parameters can be, how quickly the agent is able to differentiate between rewarding actions and hostile actions.This can be tested by placing the agent in an environment with different types of hurdles and the goal of the agent is to reach the farthest by taking decisions on actions that will lead to avoiding all the obstacles.The environment chosen is a game called \"Flappy Bird\".The goal of the game is to make the bird fly through a set of pipes of random heights.The bird must go in between these pipes and must not hit the top, the bottom, or the pipes themselves.The actions that the bird can take are either to flap its wings or drop down with gravity.The algorithms that are enforced on the artificial agents are NeuroEvolution of Augmenting Topologies (NEAT) and Reinforcement Learning.The NEAT algorithm takes an \"N\" initial population of artificial agents.They follow genetic algorithms by considering an objective function, crossover, mutation, and augmenting topologies.Reinforcement learning, on the other hand, remembers the state, the action taken at that state, and the reward received for the action taken using a single agent and a Deep Q-learning Network.The performance of the NEAT algorithm improves as the initial population of the artificial agents is increased.",
+  "links": [
+    "https://arxiv.org/abs/2207.14140v1",
+    "https://arxiv.org/pdf/2207.14140v1"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

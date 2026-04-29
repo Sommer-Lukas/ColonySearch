@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2509.22958v3",
+  "title": "Interfacing of an optical nanofiber with tunably spaced atoms in an optical lattice",
+  "body": "We experimentally demonstrate efficient interfacing of a large number of atoms to an optical nanofiber using an optical lattice with tunable spacing ($0.88-1.5~μ$m) projected onto the nanofiber. The lattice beam and reflections from the nanofiber yield trap potentials that provide tight confinement in all motional degrees of freedom $\\approx 220$ nm above the nanofiber surface, enabling efficient atom-photon coupling. We achieve trapping of $\\approx1300$ atoms in periodic trap sites with a trap lifetime of $\\approx15$ ms. We also observe the effect of varied lattice periods on the atomic motional frequencies. Our new scheme is adaptable to other nanophotonic cold-atom systems and provides a versatile and scalable platform for studying photon-mediated long-range collective interactions.",
+  "links": [
+    "https://arxiv.org/abs/2509.22958v3",
+    "https://arxiv.org/pdf/2509.22958v3"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

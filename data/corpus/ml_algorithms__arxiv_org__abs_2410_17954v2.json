@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2410.17954v2",
+  "title": "ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling",
+  "body": "Sparse Mixture-of-Experts (MoE) models can outperform dense large language models at similar computation by activating only a small set of experts per token. However, stacking many expert modules introduces substantial parameter memory, which makes MoE models difficult to deploy in memory-constrained environments such as single-GPU devices. Offloading alleviates this issue by storing inactive experts in CPU memory and loading them on demand, but existing methods remain limited: static caches disregard input-dependent routing, and methods that train separate models to predict expert usage ahead of time are often inaccurate or require significant training cost. We propose ExpertFlow, a lightweight MoE inference system that addresses this routing dependency through three coordinated components: 1) a transformer-based routing path predictor that estimates expert usage across all MoE layers in a single forward pass, 2) a token scheduler that groups tokens with similar predicted routes to improve expert utilization, and 3) a predictive expert cache that loads only the required experts while correcting mispredictions at runtime. Together, these components enable efficient expert loading and execution, reducing GPU memory usage by up to 93.72% and improving inference throughput by up to 10x over strong offloading baselines on a single GPU.",
+  "links": [
+    "https://arxiv.org/abs/2410.17954v2",
+    "https://arxiv.org/pdf/2410.17954v2",
+    "https://doi.org/10.1145/3770743.3804292"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2012.07739v2",
+  "title": "The economics of stop-and-go epidemic control",
+  "body": "We analyse 'stop-and-go' containment policies that produce infection cycles as periods of tight lockdowns are followed by periods of falling infection rates. The subsequent relaxation of containment measures allows cases to increase again until another lockdown is imposed and the cycle repeats. The policies followed by several European countries during the Covid-19 pandemic seem to fit this pattern. We show that 'stop-and-go' should lead to lower medical costs than keeping infections at the midpoint between the highs and lows produced by 'stop-and-go'. Increasing the upper and reducing the lower limits of a stop-and-go policy by the same amount would lower the average medical load. But increasing the upper and lowering the lower limit while keeping the geometric average constant would have the opposite effect. We also show that with economic costs proportional to containment, any path that brings infections back to the original level (technically a closed cycle) has the same overall economic cost.",
+  "links": [
+    "https://arxiv.org/abs/2012.07739v2",
+    "https://arxiv.org/pdf/2012.07739v2"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

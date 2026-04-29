@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2602.12375v1",
+  "title": "Value Bonuses using Ensemble Errors for Exploration in Reinforcement Learning",
+  "body": "Optimistic value estimates provide one mechanism for directed exploration in reinforcement learning (RL). The agent acts greedily with respect to an estimate of the value plus what can be seen as a value bonus. The value bonus can be learned by estimating a value function on reward bonuses, propagating local uncertainties around rewards. However, this approach only increases the value bonus for an action retroactively, after seeing a higher reward bonus from that state and action. Such an approach does not encourage the agent to visit a state and action for the first time. In this work, we introduce an algorithm for exploration called Value Bonuses with Ensemble errors (VBE), that maintains an ensemble of random action-value functions (RQFs). VBE uses the errors in the estimation of these RQFs to design value bonuses that provide first-visit optimism and deep exploration. The key idea is to design the rewards for these RQFs in such a way that the value bonus can decrease to zero. We show that VBE outperforms Bootstrap DQN and two reward bonus approaches (RND and ACB) on several classic environments used to test exploration and provide demonstrative experiments that it can scale easily to more complex environments like Atari.",
+  "links": [
+    "https://arxiv.org/abs/2602.12375v1",
+    "https://arxiv.org/pdf/2602.12375v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

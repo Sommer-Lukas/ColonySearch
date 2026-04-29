@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1109/mis.2004.1265878",
+  "title": "MAPGEN: mixed-initiative planning and scheduling for the Mars Exploration Rover mission",
+  "body": "The Mars Exploration Rover mission is one of NASA's most ambitious science missions to date. Launched in the summer of 2003, each rover carries instruments for conducting remote and in site observations to elucidate the planet's past climate, water activity, and habitability. Science is MER's primary driver, so making best use of the scientific instruments, within the available resources, is a crucial aspect of the mission. To address this criticality, the MER project team selected MAPGEN (mixed initiative activity plan generator) as an activity-planning tool. MAPGEN combines two existing systems, each with a strong heritage: the APGEN activity-planning tool from the Jet Propulsion Laboratory and the Europa planning and scheduling system from NASA Ames Research Center. We discuss the issues arising from combining these tools in this mission's context. MAPGEN is the first AI-based system to control a space platform on another planet's surface. Habitability Mars Exploration Program Space exploration Planet Computer science Systems engineering Propulsion Exploration of Mars Context (archaeology) Jet propulsion Plan (archaeology) Mission control center Aeronautics Astrobiology Aerospace engineering Engineering Geology Physics Paleontology Astrophysics",
+  "links": [],
+  "source": "openalex",
+  "topic": "space"
+}

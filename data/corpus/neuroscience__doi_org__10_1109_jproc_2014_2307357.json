@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1109/jproc.2014.2307357",
+  "title": "Information Systems Opportunities in Brain–Machine Interface Decoders",
+  "body": "Brain-machine interface (BMI) systems convert neural signals from motor regions of the brain into control signals to guide prosthetic devices. The ultimate goal of BMIs is to improve the quality of life for people with paralysis by providing direct neural control of prosthetic arms or computer cursors. While considerable research over the past 15 years has led to compelling BMI demonstrations, there remain several challenges to achieving clinically viable BMI systems. In this review, we focus on the challenge of increasing BMI performance and robustness. We review and highlight key aspects of intracortical BMI decoder design, which is central to the conversion of neural signals into prosthetic control signals, and discuss emerging opportunities to improve intracortical BMI decoders. This is one of the primary research opportunities where information systems engineering can directly impact the future success of BMIs. Brain–computer interface Computer science Robustness (evolution) Interface (matter) Neuroprosthetics Interface design Human–computer interaction Physical medicine and rehabilitation Medicine Neuroscience Psychology Electroencephalography Bubble Chemistry Gene Maximum bubble pressure method Biochemistry Parallel computing",
+  "links": [],
+  "source": "openalex",
+  "topic": "neuroscience"
+}

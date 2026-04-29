@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1109/tqe.2020.3030314",
+  "title": "Quantum Computing for Finance: State-of-the-Art and Future Prospects",
+  "body": "This article outlines our point of view regarding the applicability, state-of-the-art, and potential of quantum computing for problems in finance. We provide an introduction to quantum computing as well as a survey on problem classes in finance that are computationally challenging classically and for which quantum computing algorithms are promising. In the main part, we describe in detail quantum algorithms for specific applications arising in financial services, such as those involving simulation, optimization, and machine learning problems. In addition, we include demonstrations of quantum algorithms on IBM Quantum back-ends and discuss the potential benefits of quantum algorithms for problems in financial services. We conclude with a summary of technical challenges and future prospects. Quantum computer Computer science Quantum algorithm Quantum IBM Point (geometry) Quantum information science Quantum technology Quantum information Theoretical computer science Natural computing Quantum machine learning Quantum network Algorithm Key (lock)",
+  "links": [],
+  "source": "openalex",
+  "topic": "quantum_computing"
+}

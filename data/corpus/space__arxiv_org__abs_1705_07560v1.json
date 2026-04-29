@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1705.07560v1",
+  "title": "Exoplanet Biosignatures: Understanding Oxygen as a Biosignature in the Context of Its Environment",
+  "body": "Here we review how environmental context can be used to interpret whether O2 is a biosignature in extrasolar planetary observations. This paper builds on the overview of current biosignature research discussed in Schwieterman et al. (2017), and provides an in-depth, interdisciplinary example of biosignature identification and observation that serves as a basis for the development of the general framework for biosignature assessment described in Catling et al., (2017). O2 is a potentially strong biosignature that was originally thought to be an unambiguous indicator for life at high-abundance. We describe the coevolution of life with the early Earth's environment, and how the interplay of sources and sinks in the planetary environment may have resulted in suppression of O2 release into the atmosphere for several billion years, a false negative for biologically generated O2. False positives may also be possible, with recent research showing potential mechanisms in exoplanet environments that may generate relatively high abundances of atmospheric O2 without a biosphere being present. These studies suggest that planetary characteristics that may enhance false negatives should be considered when selecting targets for biosignature searches. Similarly our ability to interpret O2 observed in an exoplanetary atmosphere is also crucially dependent on environmental context to rule out false positive mechanisms. We describe future photometric, spectroscopic and time-dependent observations of O2 and the planetary environment that could increase our confidence that any observed O2 is a biosignature, and help discriminate it from potential false positives. By observing and understanding O2 in its planetary context we can increase our confidence in the remote detection of life, and provide a model for biosignature development for other proposed biosignatures.",
+  "links": [
+    "https://arxiv.org/abs/1705.07560v1",
+    "https://arxiv.org/pdf/1705.07560v1",
+    "https://doi.org/10.1089/ast.2017.1727"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

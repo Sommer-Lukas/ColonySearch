@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2108.09771v1",
+  "title": "On the product selectivity in the electrochemical reductive cleavage of lignin model compounds",
+  "body": "Research towards the production of renewable chemicals for fuel and energy industries has found lignin valorization as key. With a high carbon content and aromaticity, a fine-tuning of the depolymerization process is required to convert lignin into valuable chemicals. In context, model compounds have been used to understand the electrocatalyzed depolymerization for mimicking the typical linkages of lignin. In this investigation, 2-phenoxyacetophenone, a model compound for lignin \\b{eta}-O-4 linkage, was electro-catalytically hydrogenated (ECH) in distinct three-electrode setups: an open and a membrane cell. A deep eutectic solvent based on ethylene-glycol and choline chloride was used to pursue sustainable routes to dissolve lignin. Copper was used as electrocatalyst due to the economic feasibility and low activity towards hydrogen evolution reaction (HER), a side reaction of ECH. By varying the cell type, we demonstrate a simple ECH route for the generation of different monomers and oligomers from lignin. Gas chromatography of the products revealed a higher content of carbonyl groups in those using the membrane cell, whereas the open cell produced mostly hydroxyl-end chemicals. Aiming at high value-added products, our results disclose the cell type influence on electrochemical reductive depolymerization of lignin. This approach encompasses cheap transition metal electrodes and sustainable solvents.",
+  "links": [
+    "https://arxiv.org/abs/2108.09771v1",
+    "https://arxiv.org/pdf/2108.09771v1",
+    "https://doi.org/10.1080/17518253.2022.2025462"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

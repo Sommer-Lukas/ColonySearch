@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1908.03540v2",
+  "title": "Enriching MRI mean flow data of inclined jets in crossflow with Large Eddy Simulations",
+  "body": "Measurement techniques such as Magnetic Resonance Velocimety (MRV) and Magnetic Resonance Concentration (MRC) are useful for obtaining 3D time-averaged flow quantities in complex turbulent flows, but cannot measure turbulent correlations or near-wall data. In this work, we use highly resolved Large Eddy Simulations (LES) to complement the experiments and bypass those limitations. Coupling LES and magnetic resonance experimental techniques is especially advantageous in complex non-homogeneous flows because the 3D data allow for extensive validation, creating confidence that the simulation results portray a physically realistic flow. As such we can treat the simulation as data, which \"enrich\" the original MRI mean flow results. This approach is demonstrated using a cylindrical and inclined jet in crossflow with three distinct velocity ratios, $r=1$, $r=1.5$, and $r=2$. The numerical mesh is highly refined in order for the subgrid scale models to have negligible contribution, and a systematic, iterative procedure is described to set inlet conditions. The validation of the mean flow data shows excellent agreement between simulation and experiments, which creates confidence that the LES data can be used to enrich the experiments with near-wall results and turbulent statistics. We also discuss some mean flow features and how they vary with velocity ratio, including wall concentration, the counter rotating vortex pair, and the in-hole velocity.",
+  "links": [
+    "https://arxiv.org/abs/1908.03540v2",
+    "https://arxiv.org/pdf/1908.03540v2",
+    "https://doi.org/10.1016/j.ijheatfluidflow.2019.108472"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

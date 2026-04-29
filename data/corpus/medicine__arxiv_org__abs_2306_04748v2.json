@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2306.04748v2",
+  "title": "Analysis, Identification and Prediction of Parkinson Disease Sub-Types and Progression through Machine Learning",
+  "body": "This paper represents a groundbreaking advancement in Parkinson disease (PD) research by employing a novel machine learning framework to categorize PD into distinct subtypes and predict its progression. Utilizing a comprehensive dataset encompassing both clinical and neurological parameters, the research applies advanced supervised and unsupervised learning techniques. This innovative approach enables the identification of subtle, yet critical, patterns in PD manifestation, which traditional methodologies often miss. Significantly, this research offers a path toward personalized treatment strategies, marking a major stride in the precision medicine domain and showcasing the transformative potential of integrating machine learning into medical research.",
+  "links": [
+    "https://arxiv.org/abs/2306.04748v2",
+    "https://arxiv.org/pdf/2306.04748v2",
+    "https://doi.org/10.4236/oalib.1111135"
+  ],
+  "source": "arxiv",
+  "topic": "medicine"
+}

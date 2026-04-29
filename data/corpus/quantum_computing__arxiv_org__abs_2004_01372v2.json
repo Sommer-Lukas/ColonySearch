@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2004.01372v2",
+  "title": "Variational Quantum State Eigensolver",
+  "body": "Extracting eigenvalues and eigenvectors of exponentially large matrices will be an important application of near-term quantum computers. The Variational Quantum Eigensolver (VQE) treats the case when the matrix is a Hamiltonian. Here, we address the case when the matrix is a density matrix $ρ$. We introduce the Variational Quantum State Eigensolver (VQSE), which is analogous to VQE in that it variationally learns the largest eigenvalues of $ρ$ as well as a gate sequence $V$ that prepares the corresponding eigenvectors. VQSE exploits the connection between diagonalization and majorization to define a cost function $C=\\Tr(\\tildeρ H)$ where $H$ is a non-degenerate Hamiltonian. Due to Schur-concavity, $C$ is minimized when $\\tildeρ = VρV^\\dagger$ is diagonal in the eigenbasis of $H$. VQSE only requires a single copy of $ρ$ (only $n$ qubits) per iteration of the VQSE algorithm, making it amenable for near-term implementation. We heuristically demonstrate two applications of VQSE: (1) Principal component analysis, and (2) Error mitigation.",
+  "links": [
+    "https://arxiv.org/abs/2004.01372v2",
+    "https://arxiv.org/pdf/2004.01372v2",
+    "https://doi.org/10.1038/s41534-022-00611-6"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

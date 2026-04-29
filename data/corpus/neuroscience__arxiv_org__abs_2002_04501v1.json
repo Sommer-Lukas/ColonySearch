@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2002.04501v1",
+  "title": "Some interesting observations on the free energy principle",
+  "body": "Biehl et al (2020) present some interesting observations on an early formulation of the free energy principle in (Friston, 2013). We use these observations to scaffold a discussion of the technical arguments that underwrite the free energy principle. This discussion focuses on solenoidal coupling between various (subsets of) states in sparsely coupled systems that possess a Markov blanket - and the distinction between exact and approximate Bayesian inference, implied by the ensuing Bayesian mechanics.",
+  "links": [
+    "https://arxiv.org/abs/2002.04501v1",
+    "https://arxiv.org/pdf/2002.04501v1",
+    "https://doi.org/10.3390/e23081076"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

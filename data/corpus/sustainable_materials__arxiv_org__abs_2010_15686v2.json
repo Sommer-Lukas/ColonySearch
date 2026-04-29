@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2010.15686v2",
+  "title": "Disassembling of TEMPO-oxidized cellulose fibers: intersheet and interchain interactions in the isolation of nanofibers and unitary chains",
+  "body": "Cellulose disassembly is an important issue in designing nanostructures using cellulose-based materials. In this work, we present a joint of experimental and theoretical study addressing the disassembly of cellulose nanofibrils. Through 2,2,6,6-tetramethylpiperidine-1-oxyl (TEMPO) mediated oxidation processes, combined with atomic force microscopy results, we find the formation of nanofibers with diameters corresponding to a single cellulose polymer chain. The formation of these polymer chains is ruled by repulsive electrostatic interactions between the oxidized chains. Further first-principles calculations have been done in order to provide an atomistic understanding the cellulose disassembling processes, focusing on the balance of the interchain and intersheet interactions upon oxidation. Firstly we analyse these interaction in pristine systems, where we found the intersheet interaction stronger than the interchain one. In the oxidized systems, we have considered the formation of (charged) carboxylate groups along the inner sites of elementary fibrils. We show a net charge concentration on the carboxylate groups, supporting the emergence of repulsive electrostatic interactions between the cellulose nanofibers. Indeed, our total energy results show that the weakening of the binding strength between the fibrils is proportional to the concentration and the net charge density of the carboxylate group. Moreover, by comparing interchain and intersheet binding energies, we found that most of the disassembly processes should take place by breaking the interchain O--H$\\cdots$O hydrogen bond interactions, and thus supporting the experimental observation of single and double cellulose polymeric chains.",
+  "links": [
+    "https://arxiv.org/abs/2010.15686v2",
+    "https://arxiv.org/pdf/2010.15686v2"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2604.07404v1",
+  "title": "Score Shocks: The Burgers Equation Structure of Diffusion Generative Models",
+  "body": "We analyze the score field of a diffusion generative model through a Burgers-type evolution law. For VE diffusion, the heat-evolved data density implies that the score obeys viscous Burgers in one dimension and the corresponding irrotational vector Burgers system in $\\R^d$, giving a PDE view of \\emph{speciation transitions} as the sharpening of inter-mode interfaces. For any binary decomposition of the noised density into two positive heat solutions, the score separates into a smooth background and a universal $\\tanh$ interfacial term determined by the component log-ratio; near a regular binary mode boundary this yields a normal criterion for speciation. In symmetric binary Gaussian mixtures, the criterion recovers the critical diffusion time detected by the midpoint derivative of the score and agrees with the spectral criterion of Biroli, Bonnaire, de~Bortoli, and Mézard (2024). After subtracting the background drift, the inter-mode layer has a local Burgers $\\tanh$ profile, which becomes global in the symmetric Gaussian case with width $σ_τ^2/a$. We also quantify exponential amplification of score errors across this layer, show that Burgers dynamics preserves irrotationality, and use a change of variables to reduce the VP-SDE to the VE case, yielding a closed-form VP speciation time. Gaussian-mixture formulas are verified to machine precision, and the local theorem is checked numerically on a quartic double-well.",
+  "links": [
+    "https://arxiv.org/abs/2604.07404v1",
+    "https://arxiv.org/pdf/2604.07404v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

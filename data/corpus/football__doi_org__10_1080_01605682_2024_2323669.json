@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1080/01605682.2024.2323669",
+  "title": "A new xG model for football analytics",
+  "body": "The aim of this exploratory study is to refine and improve, in terms of prediction performance, the expected goal (xG) model, one of the emerging tools in the field of football analytics. With this final goal, we merged data from different sources: tracking data, match event data and some players’ performance composite indicators. Using an original sample of match data relying on the 2019/2020 season of the Italian Serie A, composed of 660 shots, one outcome (i.e. the GOAL) and 22 regressors, a supervised machine learning approach (logistic regression model with imbalanced training sample adjustment) was applied to different scenarios for sample balanced techniques. Results are interesting in terms of sensitivity and F1 metrics, compared with a benchmark (Understat). Other results concerning the classic imbalance framework significantly outperform the benchmark in terms of the AUC metric. In addition, some performance composite indicators and one original tracking variable are significant for the classification model, contributing to increasing the goal prediction probability compared with the benchmark. Football Analytics Project management Computer science Purchasing Operations research Data science Management science Engineering Operations management Systems engineering Geography Archaeology",
+  "links": [],
+  "source": "openalex",
+  "topic": "football"
+}

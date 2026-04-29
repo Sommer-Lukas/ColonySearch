@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1707.09430v1",
+  "title": "Human in the Loop: Interactive Passive Automata Learning via Evidence-Driven State-Merging Algorithms",
+  "body": "We present an interactive version of an evidence-driven state-merging (EDSM) algorithm for learning variants of finite state automata. Learning these automata often amounts to recovering or reverse engineering the model generating the data despite noisy, incomplete, or imperfectly sampled data sources rather than optimizing a purely numeric target function. Domain expertise and human knowledge about the target domain can guide this process, and typically is captured in parameter settings. Often, domain expertise is subconscious and not expressed explicitly. Directly interacting with the learning algorithm makes it easier to utilize this knowledge effectively.",
+  "links": [
+    "https://arxiv.org/abs/1707.09430v1",
+    "https://arxiv.org/pdf/1707.09430v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

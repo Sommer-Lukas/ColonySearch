@@ -1,0 +1,14 @@
+{
+  "url": "https://docs.python.org/3/improve-page-nojs.html",
+  "title": "Improve a documentation page — Python 3.14.4 documentation",
+  "body": "Improve a documentation page Â¶ We are always interested to hear ideas about improvements to the documentation. You have a few ways to ask questions or suggest changes: You can start a discussion about the page on the Python discussion forum. This link will start a topic in the Documentation category: New Documentation topic . You can open an issue on the Python GitHub issue tracker. This link will create a new issue with the âdocsâ label: New docs issue .",
+  "links": [
+    "https://docs.python.org/3/index.html",
+    "https://docs.python.org/3/bugs.html",
+    "https://docs.python.org/3/copyright.html",
+    "https://docs.python.org/license.html",
+    "https://docs.python.org/bugs.html"
+  ],
+  "source": "html",
+  "topic": "programming"
+}

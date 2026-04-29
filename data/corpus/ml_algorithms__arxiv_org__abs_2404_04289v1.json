@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2404.04289v1",
+  "title": "Designing for Human-Agent Alignment: Understanding what humans want from their agents",
+  "body": "Our ability to build autonomous agents that leverage Generative AI continues to increase by the day. As builders and users of such agents it is unclear what parameters we need to align on before the agents start performing tasks on our behalf. To discover these parameters, we ran a qualitative empirical research study about designing agents that can negotiate during a fictional yet relatable task of selling a camera online. We found that for an agent to perform the task successfully, humans/users and agents need to align over 6 dimensions: 1) Knowledge Schema Alignment 2) Autonomy and Agency Alignment 3) Operational Alignment and Training 4) Reputational Heuristics Alignment 5) Ethics Alignment and 6) Human Engagement Alignment. These empirical findings expand previous work related to process and specification alignment and the need for values and safety in Human-AI interactions. Subsequently we discuss three design directions for designers who are imagining a world filled with Human-Agent collaborations.",
+  "links": [
+    "https://arxiv.org/abs/2404.04289v1",
+    "https://arxiv.org/pdf/2404.04289v1",
+    "https://doi.org/10.1145/3613905.3650948"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

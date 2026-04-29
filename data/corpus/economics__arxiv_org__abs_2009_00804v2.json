@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2009.00804v2",
+  "title": "Architectural Implications of Graph Neural Networks",
+  "body": "Graph neural networks (GNN) represent an emerging line of deep learning models that operate on graph structures. It is becoming more and more popular due to its high accuracy achieved in many graph-related tasks. However, GNN is not as well understood in the system and architecture community as its counterparts such as multi-layer perceptrons and convolutional neural networks. This work tries to introduce the GNN to our community. In contrast to prior work that only presents characterizations of GCNs, our work covers a large portion of the varieties for GNN workloads based on a general GNN description framework. By constructing the models on top of two widely-used libraries, we characterize the GNN computation at inference stage concerning general-purpose and application-specific architectures and hope our work can foster more system and architecture research for GNNs.",
+  "links": [
+    "https://arxiv.org/abs/2009.00804v2",
+    "https://arxiv.org/pdf/2009.00804v2",
+    "https://doi.org/10.1109/LCA.2020.2988991"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

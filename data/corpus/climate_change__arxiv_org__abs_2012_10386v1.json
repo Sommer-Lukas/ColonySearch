@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2012.10386v1",
+  "title": "Future Climate Change Projections over the Indian Region",
+  "body": "Assessments of impacts of climate change and future projections over the Indian region, have so far relied on a single regional climate model (RCM) - eg., the PRECIS RCM of the Hadley Centre, UK. While these assessments have provided inputs to various reports (e.g., INCCA 2010; NATCOMM2 2012), it is important to have an ensemble of climate projections drawn from multiple RCMs due to large uncertainties in regional-scale climate projections. Ensembles of multi-RCM projections driven under different perceivable socio-economic scenarios are required to capture the probable path of growth, and provide the behavior of future climate and impacts on various biophysical systems and economic sectors dependent on such systems.\n  The Centre for Climate Change Research, Indian Institute of Tropical Meteorology (CCCR-IITM) has generated an ensemble of high resolution downscaled projections of regional climate and monsoon over South Asia until 2100 for the Intergovernmental Panel for Climate Change (IPCC)using a RCM (ICTP-RegCM4) at 50 km horizontal resolution, by driving the regional model with lateral and lower boundary conditions from multiple global atmosphere-ocean coupled models from the Coupled Model Intercomparison Project Phase 5 (CMIP5). The future projections are based on three Representation Concentration Pathway (RCP) scenarios (viz., RCP2.6, RCP4.5, RCP8.5) of the IPCC.",
+  "links": [
+    "https://arxiv.org/abs/2012.10386v1",
+    "https://arxiv.org/pdf/2012.10386v1"
+  ],
+  "source": "arxiv",
+  "topic": "climate_change"
+}

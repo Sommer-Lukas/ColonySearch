@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1007/s10479-021-04224-8",
+  "title": "Forecasting binary outcomes in soccer",
+  "body": "Abstract Several studies deal with the development of advanced statistical methods for predicting football match results. These predictions are then used to construct profitable betting strategies. Even if the most popular bets are based on whether one expects that a team will win, lose, or draw in the next game, nowadays a variety of other outcomes are available for betting purposes. While some of these events are binary in nature (e.g. the red cards occurrence), others can be seen as binary outcomes. In this paper we propose a simple framework, based on score-driven models, able to obtain accurate forecasts for binary outcomes in soccer matches. To show the usefulness of the proposed statistical approach, two experiments to the English Premier League and to the Italian Serie A are provided for predicting red cards occurrence, Under/Over and Goal/No Goal events. Football League Computer science Binary number Construct (python library) Variety (cybernetics) Artificial intelligence Econometrics Machine learning Operations research Data science Mathematics History Arithmetic Archaeology Physics Programming language Astronomy",
+  "links": [],
+  "source": "openalex",
+  "topic": "football"
+}

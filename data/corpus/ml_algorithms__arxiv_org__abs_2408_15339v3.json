@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2408.15339v3",
+  "title": "UNA: Unifying Alignments of RLHF/PPO, DPO and KTO by a Generalized Implicit Reward Function",
+  "body": "An LLM is pretrained on trillions of tokens, but the pretrained LLM may still generate undesired responses. To solve this problem, alignment techniques such as RLHF, DPO and KTO are proposed. However, these alignment techniques have limitations. For example, RLHF requires training the reward model and policy separately, which is complex, time-consuming, memory intensive and unstable during training processes. DPO proposes a mapping between an optimal policy and a reward, greatly simplifying the training process of RLHF. However, it can not take full advantages of a reward model and it is limited to pairwise preference data.\n  In this paper, we propose \\textbf{UN}ified \\textbf{A}lignment (UNA) which unifies RLHF/PPO, DPO and KTO. Firstly, we mathematically prove that given the classical RLHF objective, the optimal policy is induced by a generalize implicit reward function. With this novel mapping between a reward model and an optimal policy, UNA can 1. unify RLHF/PPO, DPO and KTO into a supervised learning of minimizing the difference between an implicit reward and an explicit reward; 2. outperform RLHF/PPO while simplify, stabilize, speed up and reduce memory burden of RL fine-tuning process; 3. accommodate different feedback types including pairwise, binary and scalar feedback. Downstream experiments show UNA outperforms DPO, KTO and RLHF.",
+  "links": [
+    "https://arxiv.org/abs/2408.15339v3",
+    "https://arxiv.org/pdf/2408.15339v3"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

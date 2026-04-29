@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2409.18574v2",
+  "title": "Climate Adaptation with Reinforcement Learning: Experiments with Flooding and Transportation in Copenhagen",
+  "body": "Due to climate change the frequency and intensity of extreme rainfall events, which contribute to urban flooding, are expected to increase in many places. These floods can damage transport infrastructure and disrupt mobility, highlighting the need for cities to adapt to escalating risks. Reinforcement learning (RL) serves as a powerful tool for uncovering optimal adaptation strategies, determining how and where to deploy adaptation measures effectively, even under significant uncertainty. In this study, we leverage RL to identify the most effective timing and locations for implementing measures, aiming to reduce both direct and indirect impacts of flooding. Our framework integrates climate change projections of future rainfall events and floods, models city-wide motorized trips, and quantifies direct and indirect impacts on infrastructure and mobility. Preliminary results suggest that our RL-based approach can significantly enhance decision-making by prioritizing interventions in specific urban areas and identifying the optimal periods for their implementation. Our framework is publicly available: \\url{https://github.com/MLSM-at-DTU/floods_transport_rl}.",
+  "links": [
+    "https://arxiv.org/abs/2409.18574v2",
+    "https://arxiv.org/pdf/2409.18574v2"
+  ],
+  "source": "arxiv",
+  "topic": "climate_change"
+}

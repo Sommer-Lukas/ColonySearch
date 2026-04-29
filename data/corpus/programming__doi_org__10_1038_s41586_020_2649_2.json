@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1038/s41586-020-2649-2",
+  "title": "Array programming with NumPy",
+  "body": ". Here we review how a few fundamental array concepts lead to a simple and powerful programming paradigm for organizing, exploring and analysing scientific data. NumPy is the foundation upon which the scientific Python ecosystem is constructed. It is so pervasive that several projects, targeting audiences with specialized needs, have developed their own NumPy-like interfaces and array objects. Owing to its central position in the ecosystem, NumPy increasingly acts as an interoperability layer between such array computation libraries and, together with its application programming interface (API), provides a flexible framework to support the next decade of scientific and industrial analysis. Python (programming language) Computer science Interoperability Syntax Programming paradigm Application programming interface Software Programming language Computational science Generic programming Computation Interface (matter) Object-oriented programming Stack (abstract data type) Graphical user interface Data structure Software framework Software engineering Scientific instrument Pipeline (software) Visual programming language",
+  "links": [],
+  "source": "openalex",
+  "topic": "programming"
+}

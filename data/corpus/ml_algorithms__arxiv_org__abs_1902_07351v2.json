@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1902.07351v2",
+  "title": "Phase-field simulation of core-annular pipe flow",
+  "body": "Phase-field methods have long been used to model the flow of immiscible fluids. Their ability to naturally capture interface topological changes is widely recognized, but their accuracy in simulating flows of real fluids in practical geometries is not established. We here quantitatively investigate the convergence of the phase-field method to the sharp-interface limit with simulations of two-phase pipe flow. We focus on core-annular flows, in which a highly viscous fluid is lubricated by a less viscous fluid, and validate our simulations with an analytic laminar solution, a formal linear stability analysis and also in the fully nonlinear regime. We demonstrate the ability of the phase-field method to accurately deal with non-rectangular geometry, strong advection, unsteady fluctuations and large viscosity contrast. We argue that phase-field methods are very promising for quantitatively studying moderately turbulent flows, especially at high concentrations of the disperse phase.",
+  "links": [
+    "https://arxiv.org/abs/1902.07351v2",
+    "https://arxiv.org/pdf/1902.07351v2",
+    "https://doi.org/10.1016/j.ijmultiphaseflow.2019.04.027"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

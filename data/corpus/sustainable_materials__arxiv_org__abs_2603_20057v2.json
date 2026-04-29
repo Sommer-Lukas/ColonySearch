@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2603.20057v2",
+  "title": "Multiscale theory, modelling, and simulation of hemicellulose and lignin in solution",
+  "body": "This review examines multiscale modelling approaches for cellulose nanocrystals (CNCs) and lignocellulosic plant cell walls, with a focus on hemicellulose and lignin interactions in aqueous environments. The three-dimensional reference interaction site model with the Kovalenko-Hirata closure (3D-RISM-KH) is highlighted as a powerful molecular solvation theory applied in nanochemistry and biomolecular simulations. The method has been successfully employed to investigate hemicellulose hydrogels, the influence of hemicellulose composition on nanoscale forces in primary cell walls, and lignin-lignin and lignin-hemicellulose interactions. Findings indicate that these interactions are predominantly hydrophobic and entropy-driven, arising from water exclusion effects. Insights gained through this modeling framework deepen the understanding of molecular-scale forces in plant cell walls and inform strategies for biomass valorization, including genetic engineering and pretreatment technologies aimed at enhancing cellulose extraction and utilization.",
+  "links": [
+    "https://arxiv.org/abs/2603.20057v2",
+    "https://arxiv.org/pdf/2603.20057v2",
+    "https://doi.org/10.5488/CMP.29.13802"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

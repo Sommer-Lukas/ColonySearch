@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1802.06101v4",
+  "title": "Market Impact in a Latent Order Book",
+  "body": "The latent order book of \\cite{donier2015fully} is one of the most promising agent-based models for market impact. This work extends the minimal model by allowing agents to exhibit mean-reversion, a commonly observed pattern in real markets. This modification leads to new order book dynamics, which we explicitly study and analyze. Underlying our analysis is a mean-field assumption that views the order book through its \\textit{average} density. We show how price impact develops in this new model, providing a flexible family of solutions that can potentially improve calibration to real data. While no closed-form solution is provided, we complement our theoretical investigation with extensive numerical results, including a simulation scheme for the entire order book.",
+  "links": [
+    "https://arxiv.org/abs/1802.06101v4",
+    "https://arxiv.org/pdf/1802.06101v4",
+    "https://doi.org/10.1142/S2382626620500045"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2207.02679v1",
+  "title": "Experimental study of cavitating flow influenced by heat transfer from heated hydrofoil",
+  "body": "This study experimentally investigated the influence of heat transfer from a heated hydrofoil on cavitating flow to understand the evaporation phenomenon under high-heat-flux and high-speed conditions. A temperature difference was generated between the hydrofoil and mainstream by installing an aluminum nitride heater in a NACA0015 hydrofoil fabricated from copper. A cavitation experiment was performed in a high-temperature water cavitation tunnel at the Institute of Fluid Science, Tohoku University. The effect of heating on cavitating flow was evaluated by changing the mainstream velocity and pressure, namely the cavitation number, at a fixed heater power of 860 W. Results showed that the heat transfer from the hydrofoil affected cavitating flow in terms of the cavity length, cavity aspect, and periodicity. The effect on the cavity length became stronger at a lower velocity owing to a higher hydrofoil temperature. The variation in periodicity implied that the heating effect reduced the unsteadiness of cavitation. A modified cavitation number was proposed by considering the heat transfer from the heated wall. A thermal correction term was derived by considering that the fluid temperature close to the heated hydrofoil was affected by the turbulent convective heat transfer between the mainstream and hydrofoil. The corrected cavitation number can be considered as a parameter that describes the cavity length in the isothermal and heated cases in a unified expression.",
+  "links": [
+    "https://arxiv.org/abs/2207.02679v1",
+    "https://arxiv.org/pdf/2207.02679v1",
+    "https://doi.org/10.1016/j.ijmultiphaseflow.2022.104168"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

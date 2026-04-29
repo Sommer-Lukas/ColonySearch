@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2512.13568v1",
+  "title": "Superposition as Lossy Compression: Measure with Sparse Autoencoders and Connect to Adversarial Vulnerability",
+  "body": "Neural networks achieve remarkable performance through superposition: encoding multiple features as overlapping directions in activation space rather than dedicating individual neurons to each feature. This challenges interpretability, yet we lack principled methods to measure superposition. We present an information-theoretic framework measuring a neural representation's effective degrees of freedom. We apply Shannon entropy to sparse autoencoder activations to compute the number of effective features as the minimum neurons needed for interference-free encoding. Equivalently, this measures how many \"virtual neurons\" the network simulates through superposition. When networks encode more effective features than actual neurons, they must accept interference as the price of compression. Our metric strongly correlates with ground truth in toy models, detects minimal superposition in algorithmic tasks, and reveals systematic reduction under dropout. Layer-wise patterns mirror intrinsic dimensionality studies on Pythia-70M. The metric also captures developmental dynamics, detecting sharp feature consolidation during grokking. Surprisingly, adversarial training can increase effective features while improving robustness, contradicting the hypothesis that superposition causes vulnerability. Instead, the effect depends on task complexity and network capacity: simple tasks with ample capacity allow feature expansion (abundance regime), while complex tasks or limited capacity force reduction (scarcity regime). By defining superposition as lossy compression, this work enables principled measurement of how neural networks organize information under computational constraints, connecting superposition to adversarial robustness.",
+  "links": [
+    "https://arxiv.org/abs/2512.13568v1",
+    "https://arxiv.org/pdf/2512.13568v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

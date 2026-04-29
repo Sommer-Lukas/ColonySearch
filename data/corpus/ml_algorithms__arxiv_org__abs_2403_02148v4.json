@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2403.02148v4",
+  "title": "MiM-ISTD: Mamba-in-Mamba for Efficient Infrared Small Target Detection",
+  "body": "Recently, infrared small target detection (ISTD) has made significant progress, thanks to the development of basic models. Specifically, the models combining CNNs with transformers can successfully extract both local and global features. However, the disadvantage of the transformer is also inherited, i.e., the quadratic computational complexity to sequence length. Inspired by the recent basic model with linear complexity for long-distance modeling, Mamba, we explore the potential of this state space model for ISTD task in terms of effectiveness and efficiency in the paper. However, directly applying Mamba achieves suboptimal performances due to the insufficient harnessing of local features, which are imperative for detecting small targets. Instead, we tailor a nested structure, Mamba-in-Mamba (MiM-ISTD), for efficient ISTD. It consists of Outer and Inner Mamba blocks to adeptly capture both global and local features. Specifically, we treat the local patches as \"visual sentences\" and use the Outer Mamba to explore the global information. We then decompose each visual sentence into sub-patches as \"visual words\" and use the Inner Mamba to further explore the local information among words in the visual sentence with negligible computational costs. By aggregating the visual word and visual sentence features, our MiM-ISTD can effectively explore both global and local information. Experiments on NUAA-SIRST and IRSTD-1k show the superior accuracy and efficiency of our method. Specifically, MiM-ISTD is $8 \\times$ faster than the SOTA method and reduces GPU memory usage by 62.2$\\%$ when testing on $2048 \\times 2048$ images, overcoming the computation and memory constraints on high-resolution infrared images.",
+  "links": [
+    "https://arxiv.org/abs/2403.02148v4",
+    "https://arxiv.org/pdf/2403.02148v4"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

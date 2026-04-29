@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2211.05304v1",
+  "title": "Contrastive Self-Supervised Learning for Skeleton Representations",
+  "body": "Human skeleton point clouds are commonly used to automatically classify and predict the behaviour of others. In this paper, we use a contrastive self-supervised learning method, SimCLR, to learn representations that capture the semantics of skeleton point clouds. This work focuses on systematically evaluating the effects that different algorithmic decisions (including augmentations, dataset partitioning and backbone architecture) have on the learned skeleton representations. To pre-train the representations, we normalise six existing datasets to obtain more than 40 million skeleton frames. We evaluate the quality of the learned representations with three downstream tasks: skeleton reconstruction, motion prediction, and activity classification. Our results demonstrate the importance of 1) combining spatial and temporal augmentations, 2) including additional datasets for encoder training, and 3) and using a graph neural network as an encoder.",
+  "links": [
+    "https://arxiv.org/abs/2211.05304v1",
+    "https://arxiv.org/pdf/2211.05304v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

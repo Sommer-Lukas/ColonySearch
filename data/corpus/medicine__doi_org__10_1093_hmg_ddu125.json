@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1093/hmg/ddu125",
+  "title": "CRISPR/Cas9 for genome editing: progress, implications and challenges",
+  "body": "Clustered regularly interspaced short palindromic repeats (CRISPR)/CRISPR-associated (Cas) protein 9 system provides a robust and multiplexable genome editing tool, enabling researchers to precisely manipulate specific genomic elements, and facilitating the elucidation of target gene function in biology and diseases. CRISPR/Cas9 comprises of a nonspecific Cas9 nuclease and a set of programmable sequence-specific CRISPR RNA (crRNA), which can guide Cas9 to cleave DNA and generate double-strand breaks at target sites. Subsequent cellular DNA repair process leads to desired insertions, deletions or substitutions at target sites. The specificity of CRISPR/Cas9-mediated DNA cleavage requires target sequences matching crRNA and a protospacer adjacent motif locating at downstream of target sequences. Here, we review the molecular mechanism, applications and challenges of CRISPR/Cas9-mediated genome editing and clinical therapeutic potential of CRISPR/Cas9 in future. CRISPR Trans-activating crRNA Cas9 Genome editing Biology Computational biology DNA Nuclease Genetics Guide RNA Genome Gene CRISPR interference",
+  "links": [],
+  "source": "openalex",
+  "topic": "medicine"
+}

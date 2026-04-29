@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.3389/fncom.2020.00030",
+  "title": "An Investigation of the Free Energy Principle for Emotion Recognition",
+  "body": "This paper offers a prospectus of what might be achievable in the development of emotional recognition devices. It provides a conceptual overview of the free energy principle; including Markov blankets, active inference, and—in particular—a discussion of selfhood and theory of mind, followed by a brief explanation of how these concepts can explain both neural and cultural models of emotional inference. The underlying hypothesis is that emotion recognition and inference devices will evolve from state-of-the-art deep learning models into active inference schemes that go beyond marketing applications and become adjunct to psychiatric practice. Specifically, this paper proposes that a second wave of emotion recognition devices will be equipped with an emotional lexicon (or the ability to epistemically search for one), allowing the device to resolve uncertainty about emotional states by actively eliciting responses from the user and learning from these responses. Following this, a third wave of emotional devices will converge upon the user's generative model, resulting in the machine and human engaging in a reciprocal, prosocial emotional interaction, i.e., sharing a generative model of emotional states.\n\nTL;DR: A conceptual overview of the free energy principle is provided; including Markov blankets, active inference, and—in particular—a discussion of selfhood and theory of mind, followed by a brief explanation of how these concepts can explain both neural and cultural models of emotional inference.",
+  "links": [],
+  "source": "semantic_scholar",
+  "topic": "neuroscience"
+}

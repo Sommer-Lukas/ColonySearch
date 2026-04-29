@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1609.04620v1",
+  "title": "Price impact without order book: A study of the OTC credit index market",
+  "body": "We present a study of price impact in the over-the-counter credit index market, where no limit order book is used. Contracts are traded via dealers, that compete for the orders of clients. Despite this distinct microstructure, we successfully apply the propagator technique to estimate the price impact of individual transactions. Because orders are typically split less than in multilateral markets, impact is observed to be mainly permanent, in line with theoretical expectations. A simple method is presented to correct for errors in our classification of trades between buying and selling. We find a very significant, temporary increase in order flow correlations during late 2015 and early 2016, which we attribute to increased order splitting or herding among investors. We also find indications that orders advertised to less dealers may have lower price impact. Quantitative results are compatible with earlier findings in other more classical markets, further supporting the argument that price impact is a universal phenomenon, to a large degree independent of market microstructure.",
+  "links": [
+    "https://arxiv.org/abs/1609.04620v1",
+    "https://arxiv.org/pdf/1609.04620v1"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

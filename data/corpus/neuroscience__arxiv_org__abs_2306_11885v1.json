@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2306.11885v1",
+  "title": "Reward Shaping via Diffusion Process in Reinforcement Learning",
+  "body": "Reinforcement Learning (RL) models have continually evolved to navigate the exploration - exploitation trade-off in uncertain Markov Decision Processes (MDPs). In this study, I leverage the principles of stochastic thermodynamics and system dynamics to explore reward shaping via diffusion processes. This provides an elegant framework as a way to think about exploration-exploitation trade-off. This article sheds light on relationships between information entropy, stochastic system dynamics, and their influences on entropy production. This exploration allows us to construct a dual-pronged framework that can be interpreted as either a maximum entropy program for deriving efficient policies or a modified cost optimization program accounting for informational costs and benefits. This work presents a novel perspective on the physical nature of information and its implications for online learning in MDPs, consequently providing a better understanding of information-oriented formulations in RL.",
+  "links": [
+    "https://arxiv.org/abs/2306.11885v1",
+    "https://arxiv.org/pdf/2306.11885v1"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

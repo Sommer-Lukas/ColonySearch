@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1212.2426v1",
+  "title": "Molecular simulation of surface reorganization and wetting in crystalline cellulose I and II",
+  "body": "Cellulose is one of the most versatile substances in the world. Its immense variety of applications was in recent years complemented by interesting nanotechnological applications. The fabrication of complex cellulose-based materials asks for thorough understanding of the surface structure and its interactions with adsorbates. In this study we investigate several surface model systems of nanotechnological interest, which are obtained by reorganization of the cellulose-vacuum or cellulose-water interfaces of slabs of crystalline cellulose. To do this, we constructed supercells from crystallographic data, and then optimized the interface structures. From the bulk and surface systems we calculated structural properties such as unit cell parameters, dihedral conformation distributions, density profiles and hydrogen bonding. The results suggest that no overall geometrical restructuring occurs at the interface. However, the hydrogen bond network is strongly reconstructed, as is inferred from the dihedral conformations and hydrogen bond occurrences, although only within the first few layers. This holds for low index close packed structures as well as for high index loosely packed surfaces. Replacing the vacuum by ambient pressure water molecules we find less rearrangements of the cellulose surface, because the water allows formation of hydrogen bonds similar to those in the bulk phase. The water near the cellulose surface shows, however, strong structural changes. We observe reduced mobility of the water molecules, which corresponds to a cooling of water by about 30 degrees, in a slab that is about 10 Å thick. Although structuring and adsorption is observed on all surfaces, no actual penetration of water into the cellulose structure could be observed. This suggests that pure water is not sufficient to produce cellulose swelling at mesoscopic timescales.",
+  "links": [
+    "https://arxiv.org/abs/1212.2426v1",
+    "https://arxiv.org/pdf/1212.2426v1",
+    "https://doi.org/10.1007/s10570-012-9835-9"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

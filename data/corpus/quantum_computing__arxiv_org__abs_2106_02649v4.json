@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2106.02649v4",
+  "title": "Achieving fault tolerance on capped color codes with few ancillas",
+  "body": "Attaining fault tolerance while maintaining low overhead is one of the main challenges in a practical implementation of quantum circuits. One major technique that can overcome this problem is the flag technique, in which high-weight errors arising from a few faults can be detected by a few ancillas and distinguished using subsequent syndrome measurements. The technique can be further improved using the fact that for some families of codes, errors of any weight are logically equivalent if they have the same syndrome and weight parity, as previously shown in [Phys. Rev. A 104, 042410 (2021)]. In this work, we develop a notion of distinguishable fault set which captures both concepts of flags and weight parities, and extend the use of weight parities in error correction from [Phys. Rev. A 104, 042410 (2021)] to families of capped and recursive capped color codes. We also develop fault-tolerant protocols for error correction, measurement, state preparation, and logical T gate implementation via code switching, which are sufficient for performing fault-tolerant Clifford computation on a capped color code, and performing fault-tolerant universal quantum computation on a recursive capped color code. Our protocols for a capped or a recursive capped color code of any distance require only 2 ancillas, assuming that the ancillas can be reused. The concept of distinguishable fault set also leads to a generalization of the definitions of fault-tolerant gadgets proposed by Aliferis, Gottesman, and Preskill.",
+  "links": [
+    "https://arxiv.org/abs/2106.02649v4",
+    "https://arxiv.org/pdf/2106.02649v4",
+    "https://doi.org/10.1103/PRXQuantum.3.030322"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

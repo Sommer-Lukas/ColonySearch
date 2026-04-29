@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2506.01392v2",
+  "title": "Sparse Imagination for Efficient Visual World Model Planning",
+  "body": "World model based planning has significantly improved decision-making in complex environments by enabling agents to simulate future states and make informed choices. This computational burden is particularly restrictive in robotics, where resources are severely constrained. To address this limitation, we propose a Sparse Imagination for Efficient Visual World Model Planning, which enhances computational efficiency by reducing the number of tokens processed during forward prediction. Our method leverages a sparsely trained vision-based world model based on transformers with randomized grouped attention strategy, allowing the model to flexibly adjust the number of tokens processed based on the computational resource. By enabling sparse imagination during latent rollout, our approach significantly accelerates planning while maintaining high control fidelity. Experimental results demonstrate that sparse imagination preserves task performance while dramatically improving inference efficiency. This general technique for visual planning is applicable from simple test-time trajectory optimization to complex real-world tasks with the latest VLAs, enabling the deployment of world models in real-time scenarios.",
+  "links": [
+    "https://arxiv.org/abs/2506.01392v2",
+    "https://arxiv.org/pdf/2506.01392v2"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

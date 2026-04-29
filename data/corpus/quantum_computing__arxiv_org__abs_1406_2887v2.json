@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1406.2887v2",
+  "title": "Focus on topological quantum computation",
+  "body": "Topological quantum computation started as a niche area of research aimed at employing particles with exotic statistics, called anyons, for performing quantum computation. Soon it evolved to include a wide variety of disciplines. Advances in the understanding of anyon properties inspired new quantum algorithms and helped in the characterisation of topological phases of matter and their experimental realisation. The conceptual appeal of topological systems as well as their promise for building fault-tolerant quantum technologies fuelled the fascination in this field. This `focus on' brings together several of the latest developments in the field and facilitates the synergy between different approaches.",
+  "links": [
+    "https://arxiv.org/abs/1406.2887v2",
+    "https://arxiv.org/pdf/1406.2887v2",
+    "https://doi.org/10.1088/1367-2630/16/6/065003"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

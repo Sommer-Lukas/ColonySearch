@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2407.02989v3",
+  "title": "Numerical solution of nonlinear Schrödinger equation by a hybrid pseudospectral-variational quantum algorithm",
+  "body": "The time-dependent one-dimensional nonlinear Schrödinger equation (NLSE) is solved numerically by a hybrid pseudospectral-variational quantum algorithm that connects a pseudospectral step for the Hamiltonian term with a variational step for the nonlinear term. The Hamiltonian term is treated as an integrating factor by forward and backward Fourier transformations, which are here carried out classically. This split allows us to avoid higher-order time integration schemes, to apply a first-order explicit time stepping for the remaining nonlinear NLSE term in a variational algorithm block, and thus to avoid numerical instabilities. We demonstrate that the analytical solution is reproduced with a small root mean square error for a long time interval over which a nonlinear soliton propagates significantly forward in space while keeping its shape. We analyze the accuracy of the quantum algorithm and compare it with classical approaches. Furthermore, we investigate the influence of algorithm parameters on the accuracy of the results, including the temporal step width and the depth of the quantum circuit.",
+  "links": [
+    "https://arxiv.org/abs/2407.02989v3",
+    "https://arxiv.org/pdf/2407.02989v3",
+    "https://doi.org/10.1038/s41598-025-05660-3"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2008.03542v1",
+  "title": "Compiling single-qubit braiding gate for Fibonacci anyons topological quantum computation",
+  "body": "Topological quantum computation is an implementation of a quantum computer in a way that radically reduces decoherence. Topological qubits are encoded in the topological evolution of two-dimensional quasi-particles called anyons and universal set of quantum gates can be constructed by braiding these anyons yielding to a topologically protected circuit model. In the present study we remind the basics of this emerging quantum computation scheme and illustrate how a topological qubit built with three Fibonacci anyons might be adopted to achieve leakage free braiding gate by exchanging the anyons composing it. A single-qubit braiding gate that approximates the Hadamard quantum gate to a certain accuracy is numerically implemented using a brute force search method. The algorithms utilized for that purpose are explained and the numerical programs are publicly shared for reproduction and further use.",
+  "links": [
+    "https://arxiv.org/abs/2008.03542v1",
+    "https://arxiv.org/pdf/2008.03542v1"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

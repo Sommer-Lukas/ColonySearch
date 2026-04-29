@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2111.09816v1",
+  "title": "A scaling law chaotic system",
+  "body": "In this article, we propose an anomalous chaotic system of the scaling-law ordinary differential equations involving the Mandelbrot scaling law. This chaotic behavior shows the \"Wukong\" effect. The comparison among the Lorenz and scaling-law attractors is discussed in detail. We also suggest the conjecture for the fixed point theory for the fractal SL attractor. The scaling-law chaos may be open a new door in the study of the chaos theory.",
+  "links": [
+    "https://arxiv.org/abs/2111.09816v1",
+    "https://arxiv.org/pdf/2111.09816v1",
+    "https://doi.org/10.1142/S0218348X22500578"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

@@ -1,0 +1,8 @@
+{
+  "url": "https://github.com/psf/requests",
+  "title": "Requests",
+  "body": "Requests Requests is a simple, yet elegant, HTTP library. Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your & data — but nowadays, just use the method! Requests is one of the most downloaded Python packages today, pulling in around — according to GitHub, Requests is currently depended upon by repositories. Installing Requests and Supported Versions Requests is available on PyPI: Requests officially supports Python 3.10+. Supported Features & Best–Practices Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today. - Keep-Alive & Connection Pooling - International Domains and URLs - Sessions with Cookie Persistence - Browser-style TLS/SSL Verification - Basic & Digest Authentication - Familiar –like Cookies - Automatic Content Decompression and Decoding - Multi-part File Uploads - SOCKS Proxy Support - Connection Timeouts - Streaming Downloads - Automatic honoring of - Chunked HTTP Requests Cloning the repository When cloning the Requests repository, you may need to add the flag to avoid an error about a bad commit timestamp (see this issue for more background): You can also apply this setting to your global Git config: ---",
+  "links": [],
+  "source": "github",
+  "topic": "programming"
+}

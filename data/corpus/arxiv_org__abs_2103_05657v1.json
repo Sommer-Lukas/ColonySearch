@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2103.05657v1",
+  "title": "Detection of an Atmosphere on a Rocky Exoplanet",
+  "body": "We report the detection of an atmosphere on a rocky exoplanet, GJ 1132 b, which is similar to Earth in terms of size and density. The atmospheric transmission spectrum was detected using Hubble WFC3 measurements and shows spectral signatures of aerosol scattering, HCN, and CH$_{4}$ in a low mean molecular weight atmosphere. We model the atmospheric loss process and conclude that GJ 1132 b likely lost the original H/He envelope, suggesting that the atmosphere that we detect has been reestablished. We explore the possibility of H$_{2}$ mantle degassing, previously identified as a possibility for this planet by theoretical studies, and find that outgassing from ultrareduced magma could produce the observed atmosphere. In this way we use the observed exoplanet transmission spectrum to gain insights into magma composition for a terrestrial planet. The detection of an atmosphere on this rocky planet raises the possibility that the numerous powerfully irradiated Super-Earth planets, believed to be the evaporated cores of Sub-Neptunes, may, under favorable circumstances, host detectable atmospheres.",
+  "links": [
+    "https://arxiv.org/abs/2103.05657v1",
+    "https://arxiv.org/pdf/2103.05657v1",
+    "https://doi.org/10.3847/1538-3881/abe879"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

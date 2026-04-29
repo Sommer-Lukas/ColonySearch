@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1145/3581783.3612514",
+  "title": "StegaDDPM: Generative Image Steganography based on Denoising Diffusion Probabilistic Model",
+  "body": "Image steganography is the technology of concealing secret messages within an image. Recently, generative image steganography has been developed, which conceals secret messages during image generation. However, existing generative image steganography schemes are often criticized for their poor steganographic capacity and extraction accuracy. To ensure secure and dependable communication, we propose a novel generative image steganography based on the denoising diffusion probabilistic model, called StegaDDPM. StegaDDPM utilizes the probability distribution between the intermediate state and generated image in the reverse process of the diffusion model. The secret message is hidden in the generated image through message sampling, which follows the same probability distribution as normal generation. The receiver uses two shared random seeds to reproduce the reverse process and accurately extract secret data. Experimental results show that StegaDDPM outperforms state-of-the-art methods in terms of steganographic capacity, extraction accuracy, and security. In addition, it can securely conceal and accurately extract secret messages up to 9 bits per pixel. Steganography Computer science Steganography tools Steganalysis Probabilistic logic Artificial intelligence Image (mathematics) Generative model Computer vision Pixel Pattern recognition (psychology) Theoretical computer science Generative grammar",
+  "links": [],
+  "source": "openalex",
+  "topic": "ml_algorithms"
+}

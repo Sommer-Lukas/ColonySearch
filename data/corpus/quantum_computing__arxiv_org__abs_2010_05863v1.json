@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2010.05863v1",
+  "title": "Using the Parameterized Quantum Circuit combined with Variational-Quantum-Eigensolver (VQE) to create an Intelligent social workers' schedule problem solver",
+  "body": "The social worker scheduling problem is a class of combinatorial optimization problems that combines scheduling with routing issues. These types of problems with classical computing can only be solved, in the best of cases, in an approximate way and significantly when the input data does not grow considerably. Today, the focus on the quantum computer should no longer be only on its enormous computing power, but also on the use of its imperfection for this era, (Noisy Intermediate-Scale Quantum (NISQ)) to create a powerful optimization and learning device that uses variational techniques. We had already proposed a formulation and solution of this problem using the capacity of the quantum computer. In this article, we present some broad results of the experimentation techniques. And above all, we propose an adaptive and intelligence solution, which efficiently recalculates the schedules of social workers. Taking into account new restrictions and changes in the initial conditions, by using a case-based reasoning system and the variational quantum eigensolver based on a finite-depth quantum circuit. That encodes the ground state of the Hamiltonian of social workers.\n  The quantum feasibility of the algorithm will be modelled with docplex and tested on IBMQ computers.",
+  "links": [
+    "https://arxiv.org/abs/2010.05863v1",
+    "https://arxiv.org/pdf/2010.05863v1"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2109.04906v4",
+  "title": "Emergent second law for non-equilibrium steady states",
+  "body": "The Gibbs distribution universally characterizes states of thermal equilibrium. In order to extend the Gibbs distribution to non-equilibrium steady states, one must relate the self-information $\\mathcal{I}(x) = -\\log(P_\\text{ss}(x))$ of microstate $x$ to measurable physical quantities. This is a central problem in non-equilibrium statistical physics. By considering open systems described by stochastic dynamics which become deterministic in the macroscopic limit, we show that changes $Δ\\mathcal{I} = \\mathcal{I}(x_t) - \\mathcal{I}(x_0)$ in steady state self-information along deterministic trajectories can be bounded by the macroscopic entropy production $Σ$. This bound takes the form of an emergent second law $Σ+ k_b Δ\\mathcal{I}\\geq 0$, which contains the usual second law $Σ\\geq 0$ as a corollary, and is saturated in the linear regime close to equilibrium. We thus obtain a tighter version of the second law of thermodynamics that provides a link between the deterministic relaxation of a system and the non-equilibrium fluctuations at steady state. In addition to its fundamental value, our result leads to novel methods for computing non-equilibrium distributions, providing a deterministic alternative to Gillespie simulations or spectral methods.",
+  "links": [
+    "https://arxiv.org/abs/2109.04906v4",
+    "https://arxiv.org/pdf/2109.04906v4",
+    "https://doi.org/10.1038/s41467-022-32700-7"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

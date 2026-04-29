@@ -1,0 +1,26 @@
+{
+  "url": "https://docs.python.org/3/library/constants.html",
+  "title": "Built-in Constants — Python 3.14.4 documentation",
+  "body": "Built-in Constants Â¶ A small number of constants live in the built-in namespace. They are: False Â¶ The false value of the bool type. Assignments to False are illegal and raise a SyntaxError . True Â¶ The true value of the bool type. Assignments to True are illegal and raise a SyntaxError . None Â¶ An object frequently used to represent the absence of a value, as when default arguments are not passed to a function. Assignments to None are illegal and raise a SyntaxError . None is the sole instance of the NoneType type. NotImplemented Â¶ A special value which should be returned by the binary special methods (e.g. __eq__() , __lt__() , __add__() , __rsub__() , etc.) to indicate that the operation is not implemented with respect to the other type; may be returned by the in-place binary special methods (e.g. __imul__() , __iand__() , etc.) for the same purpose. It should not be evaluated in a boolean context. NotImplemented is the sole instance of the types.NotImplementedType type. Note When a binary (or in-place) method returns NotImplemented the interpreter will try the reflected operation on the other type (or some other fallback, depending on the operator). If all attempts return NotImplemented , the interpreter will raise an appropriate exception. Incorrectly returning NotImplemented will result in a misleading error message or the NotImplemented value being returned to Python code. See Implementing the arithmetic operations for examples. Caution NotImplemented and NotImplementedError are not interchangeable. This constant should only be used as described above; see NotImplementedError for details on correct usage of the exception. Changed in version 3.9: Evaluating NotImplemented in a boolean context was deprecated. Changed in version 3.14: Evaluating NotImplemented in a boolean context now raises a TypeError . It previously evaluated to True and emitted a DeprecationWarning since Python 3.9. Ellipsis Â¶ The same as the ellipsis literal â ... â, an object frequently used to indicate that something is omitted. Assignment to Ellipsis is possible, but assignment to ... raises a SyntaxError . Ellipsis is the sole instance of the types.EllipsisType type. __debug__ Â¶ This constant is true if Python was not started with an -O option. See also the assert statement. Note The names None , False , True and __debug__ cannot be reassigned (assignments to them, even as an attribute name, raise SyntaxError ), so they can be considered âtrueâ constants. Constants added by the site module Â¶ The site module (which is imported automatically during startup, except if the -S command-line option is given) adds several constants to the built-in namespace. They are useful for the interactive interpreter shell and should not be used in programs. quit ( code = None ) Â¶ exit ( code = None ) Â¶ Objects that when printed, print a message like âUse quit() or Ctrl-D (i.e. EOF) to exitâ, and when accessed directly in the interactive interpreter or called as functions, raise SystemExit with the specified exit code. help Object that when printed, prints the message âType help() for interactive help, or help(object) for help about object.â, and when accessed directly in the interactive interpreter, invokes the built-in help system (see help() ). copyright Â¶ credits Â¶ Objects that when printed or called, print the text of copyright or credits, respectively. license Â¶ Object that when printed, prints the message âType license() to see the full license textâ, and when called, displays the full license text in a pager-like fashion (one screen at a time).",
+  "links": [
+    "https://docs.python.org/3/library/stdtypes.html",
+    "https://docs.python.org/3/library/functions.html",
+    "https://docs.python.org/3/index.html",
+    "https://docs.python.org/3/library/index.html",
+    "https://docs.python.org/3/library/exceptions.html",
+    "https://docs.python.org/3/library/types.html",
+    "https://docs.python.org/3/reference/datamodel.html",
+    "https://docs.python.org/3/library/numbers.html",
+    "https://docs.python.org/3/using/cmdline.html",
+    "https://docs.python.org/3/reference/simple_stmts.html",
+    "https://docs.python.org/3/library/site.html",
+    "https://docs.python.org/3/contents.html",
+    "https://docs.python.org/3/bugs.html",
+    "https://docs.python.org/3/improve-page-nojs.html",
+    "https://docs.python.org/3/copyright.html",
+    "https://docs.python.org/license.html",
+    "https://docs.python.org/bugs.html"
+  ],
+  "source": "html",
+  "topic": "programming"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2601.10382v2",
+  "title": "Advanced Manufacturing with Renewable and Bio-based Materials: AI/ML workflows and Process Optimization",
+  "body": "Advanced manufacturing with new bio-derived materials can be achieved faster and more economically with first-principle-based artificial intelligence and machine learning (AI/ML)-derived models and process optimization. Not only is this motivated by increased industry profitability, but it can also be optimized to reduce waste generation, energy consumption, and gas emissions through additive manufacturing (AM) and AI/ML-directed self-driving laboratory (SDL) process optimization. From this perspective, the benefits of using 3D printing technology to manufacture durable, sustainable materials will enable high-value reuse and promote a better circular economy. Using AI/ML workflows at different levels, it is possible to optimize the synthesis and adaptation of new bio-derived materials with self-correcting 3D printing methods, and in-situ characterization. Working with training data and hypotheses derived from Large Language Models (LLMs) and algorithms, including ML-optimized simulation, it is possible to demonstrate more field convergence. The combination of SDL and AI/ML Workflows can be the norm for improved use of biobased and renewable materials towards advanced manufacturing. This should result in faster and better structure, composition, processing, and properties (SCPP) correlation. More agentic AI tasks, as well as supervised or unsupervised learning, can be incorporated to improve optimization protocols continuously. Deep Learning (DL), Reinforcement Learning (RL), and Deep Reinforcement Learning (DRL) with Deep Neural Networks (DNNs) can be applied to more generative AI directions in both AM and SDL, with bio-based materials.",
+  "links": [
+    "https://arxiv.org/abs/2601.10382v2",
+    "https://arxiv.org/pdf/2601.10382v2"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2206.05684v1",
+  "title": "Knowledge as Fruits of Ignorance: A global Free Energy Principle of our way of thinking",
+  "body": "In this second article, we show a simple use of the Ignorance as defined in \"Jaynes & Shannon's Constrained Ignorance and Surprise\". By giving an example about the journey of a person, we believe to show some simple, obvious but mathematically encoded philosophical implications about how we could think, learn and memorize. In this basic model we will separate how we learn from Ignorance, and how we anticipate the world using Bayes formula, both should however be more entangled to best reflect reality. In fact, as we have seen after achieving this work, applying Ignorance on the system constituting a person finally turns out to be the global approach of its local counterpart on systems like neurons, cells and other complex probabilistic systems, described using the free energy principle, a much more complex and detailed approach. The aim of this article is therefore to show, as seen from a person, another aspect of the application of the free energy principle which represents the constrained Shannon's entropy, and leads to Bayes'formula. We show that, using only ignorance as a single quantity, and its minimization as the main process, we can take into account his understandings, assertions, doubts and assumptions about how he perceives the world, by describing them mathematically.",
+  "links": [
+    "https://arxiv.org/abs/2206.05684v1",
+    "https://arxiv.org/pdf/2206.05684v1"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

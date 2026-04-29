@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2208.11692v1",
+  "title": "Identification of carbon dioxide in an exoplanet atmosphere",
+  "body": "Carbon dioxide (CO2) is a key chemical species that is found in a wide range of planetary atmospheres. In the context of exoplanets, CO2 is an indicator of the metal enrichment (i.e., elements heavier than helium, also called \"metallicity\"), and thus formation processes of the primary atmospheres of hot gas giants. It is also one of the most promising species to detect in the secondary atmospheres of terrestrial exoplanets. Previous photometric measurements of transiting planets with the Spitzer Space Telescope have given hints of the presence of CO2 but have not yielded definitive detections due to the lack of unambiguous spectroscopic identification. Here we present the detection of CO2 in the atmosphere of the gas giant exoplanet WASP-39b from transmission spectroscopy observations obtained with JWST as part of the Early Release Science Program (ERS). The data used in this study span 3.0 to 5.5 μm in wavelength and show a prominent CO2 absorption feature at 4.3 μm (26σ significance). The overall spectrum is well matched by one-dimensional, 10x solar metallicity models that assume radiative-convective-thermochemical equilibrium and have moderate cloud opacity. These models predict that the atmosphere should have water, carbon monoxide, and hydrogen sulfide in addition to CO2, but little methane. Furthermore, we also tentatively detect a small absorption feature near 4.0 μm that is not reproduced by these models.",
+  "links": [
+    "https://arxiv.org/abs/2208.11692v1",
+    "https://arxiv.org/pdf/2208.11692v1",
+    "https://doi.org/10.1038/s41586-022-05269-w"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

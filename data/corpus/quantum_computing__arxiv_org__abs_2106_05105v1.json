@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2106.05105v1",
+  "title": "Variational Quantum-Neural Hybrid Eigensolver",
+  "body": "The variational quantum eigensolver (VQE) is one of the most representative quantum algorithms in the noisy intermediate-size quantum (NISQ) era, and is generally speculated to deliver one of the first quantum advantages for the ground-state simulations of some non-trivial Hamiltonians. However, short quantum coherence time and limited availability of quantum hardware resources in the NISQ hardware strongly restrain the capacity and expressiveness of VQEs. In this Letter, we introduce the variational quantum-neural hybrid eigensolver (VQNHE) in which the shallow-circuit quantum ansatz can be further enhanced by classical post-processing with neural networks. We show that VQNHE consistently and significantly outperforms VQE in simulating ground-state energies of quantum spins and molecules given the same amount of quantum resources. More importantly, we demonstrate that for arbitrary post-processing neural functions, VQNHE only incurs an polynomial overhead of processing time and represents the first scalable method to exponentially accelerate VQE with non-unitary post-processing that can be efficiently implemented in the NISQ era.",
+  "links": [
+    "https://arxiv.org/abs/2106.05105v1",
+    "https://arxiv.org/pdf/2106.05105v1",
+    "https://doi.org/10.1103/PhysRevLett.128.120502"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

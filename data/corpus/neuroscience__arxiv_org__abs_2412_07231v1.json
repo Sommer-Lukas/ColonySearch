@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2412.07231v1",
+  "title": "Adversarial Filtering Based Evasion and Backdoor Attacks to EEG-Based Brain-Computer Interfaces",
+  "body": "A brain-computer interface (BCI) enables direct communication between the brain and an external device. Electroencephalogram (EEG) is a common input signal for BCIs, due to its convenience and low cost. Most research on EEG-based BCIs focuses on the accurate decoding of EEG signals, while ignoring their security. Recent studies have shown that machine learning models in BCIs are vulnerable to adversarial attacks. This paper proposes adversarial filtering based evasion and backdoor attacks to EEG-based BCIs, which are very easy to implement. Experiments on three datasets from different BCI paradigms demonstrated the effectiveness of our proposed attack approaches. To our knowledge, this is the first study on adversarial filtering for EEG-based BCIs, raising a new security concern and calling for more attention on the security of BCIs.",
+  "links": [
+    "https://arxiv.org/abs/2412.07231v1",
+    "https://arxiv.org/pdf/2412.07231v1",
+    "https://doi.org/10.1016/j.inffus.2024.102316"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

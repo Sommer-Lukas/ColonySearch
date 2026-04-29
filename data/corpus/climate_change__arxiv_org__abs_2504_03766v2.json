@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2504.03766v2",
+  "title": "Renewable Natural Resources with Tipping Points",
+  "body": "Many of the world's renewable resources are in decline. Optimal harvests with smooth recruitment is well studied but in recent years, ecologists have concluded that tipping points in recruitment are common. Recruitment with a tipping point has low-fecundity below the tipping point and high-fecundity above. When the incremental value of high-fecundity is sufficiently high, there is a high-fecundity steady-state. This steady-state is stable but in some cases, small perturbations may result in large, temporary reductions in recruitment and harvests. Below the tipping point, a low-fecundity steady-state need not exist. When a low-fecundity steady-state does exist, there is an endogenous tipping (Skiba) point: below, harvests converge to the low-fecundity steady-state and above, an austere harvest policy transitions the renewable resource to high-fecundity recruitment. If there is hysteresis in recruitment, the high steady-state may not be stable. Moreover, if the high-/low-fecundity differential is large then following a downward perturbation, fecundity optimally remains low.",
+  "links": [
+    "https://arxiv.org/abs/2504.03766v2",
+    "https://arxiv.org/pdf/2504.03766v2"
+  ],
+  "source": "arxiv",
+  "topic": "climate_change"
+}

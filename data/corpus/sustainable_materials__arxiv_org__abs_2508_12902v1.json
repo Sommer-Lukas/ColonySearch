@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2508.12902v1",
+  "title": "Uniform and Tunable Structural Colors based on Ultrathin Lignin Optical Coatings",
+  "body": "Structural coloration offers a sustainable and non-fading alternative to conventional pigment- and dye-based colorants. In this study, we present a scalable strategy for generating vivid, tunable structural colors using ultrathin films of industrial kraft lignin. By employing solvent fractionation to isolate a methanol-soluble lignin fraction, followed by spin-coating onto silicon substrates, we achieve highly uniform films with controllable thickness. The observed colors originate from thin-film interference and span the entire visible spectrum by adjusting lignin concentration and spin speed. Spectroscopic ellipsometry and transfer matrix modeling confirm that the interference is modulated by the film thickness. The lignin films exhibit robust mechanical properties, limited angular color shift, and fast, reversible optical response to humidity changes, enabling real-time environmental sensing. This approach circumvents the need for nanoparticle synthesis or self-assembly and highlights the potential of lignin, a widely available and underutilized biopolymer, as a functional photonic material for sustainable optical coatings and colorimetric sensors.",
+  "links": [
+    "https://arxiv.org/abs/2508.12902v1",
+    "https://arxiv.org/pdf/2508.12902v1"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

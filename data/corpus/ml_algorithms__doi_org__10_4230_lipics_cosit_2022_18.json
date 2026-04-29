@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.4230/lipics.cosit.2022.18",
+  "title": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
+  "body": "Although geospatial question answering systems have received increasing attention in recent years, existing prototype systems struggle to properly answer qualitative spatial questions. In this work, we propose a unique framework for answering qualitative spatial questions, which comprises three main components: a geoparser that takes the input questions and extracts place semantic information from text, a reasoning system which is embedded with a crisp reasoner, and finally, answer extraction, which refines the solution space and generates final answers. We present an experimental design to evaluate our framework for point-based cardinal direction calculus (CDC) relations by developing an automated approach for generating three types of synthetic qualitative spatial questions. The initial evaluations of generated answers in our system are promising because a high proportion of answers were labelled correct. Transformer Computer science Training (meteorology) Artificial intelligence Electrical engineering Engineering Geography Voltage Meteorology",
+  "links": [],
+  "source": "openalex",
+  "topic": "ml_algorithms"
+}

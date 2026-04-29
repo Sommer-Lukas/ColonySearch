@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2406.15890v1",
+  "title": "Language Alignment via Nash-learning and Adaptive feedback",
+  "body": "Recent research has shown the potential of Nash Learning via Human Feedback for large language model alignment by incorporating the notion of a preference model in a minimax game setup. We take this idea further by casting the alignment as a mirror descent algorithm against the adaptive feedback of an improved opponent, thereby removing the need for learning a preference model or the existence of an annotated dataset altogether. The resulting algorithm, which we refer to as Language Alignment via Nash-learning and Adaptive feedback (LANA), is capable of self-alignment without the need for a human-annotated preference dataset. We support this statement with various experiments and mathematical discussion.",
+  "links": [
+    "https://arxiv.org/abs/2406.15890v1",
+    "https://arxiv.org/pdf/2406.15890v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

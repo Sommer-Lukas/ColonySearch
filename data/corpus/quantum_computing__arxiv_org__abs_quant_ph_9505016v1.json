@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/quant-ph/9505016v1",
+  "title": "A Universal Two--Bit Gate for Quantum Computation",
+  "body": "We prove the existence of a class of two--input, two--output gates any one of which is universal for quantum computation. This is done by explicitly constructing the three--bit gate introduced by Deutsch [Proc.~R.~Soc.~London.~A {\\bf 425}, 73 (1989)] as a network consisting of replicas of a single two--bit gate.",
+  "links": [
+    "https://arxiv.org/abs/quant-ph/9505016v1",
+    "https://arxiv.org/pdf/quant-ph/9505016v1",
+    "https://doi.org/10.1098/rspa.1995.0066"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2308.04332v1",
+  "title": "RLHF-Blender: A Configurable Interactive Interface for Learning from Diverse Human Feedback",
+  "body": "To use reinforcement learning from human feedback (RLHF) in practical applications, it is crucial to learn reward models from diverse sources of human feedback and to consider human factors involved in providing feedback of different types. However, the systematic study of learning from diverse types of feedback is held back by limited standardized tooling available to researchers. To bridge this gap, we propose RLHF-Blender, a configurable, interactive interface for learning from human feedback. RLHF-Blender provides a modular experimentation framework and implementation that enables researchers to systematically investigate the properties and qualities of human feedback for reward learning. The system facilitates the exploration of various feedback types, including demonstrations, rankings, comparisons, and natural language instructions, as well as studies considering the impact of human factors on their effectiveness. We discuss a set of concrete research opportunities enabled by RLHF-Blender. More information is available at https://rlhfblender.info/.",
+  "links": [
+    "https://arxiv.org/abs/2308.04332v1",
+    "https://arxiv.org/pdf/2308.04332v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

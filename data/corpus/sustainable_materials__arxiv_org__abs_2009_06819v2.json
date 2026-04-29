@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2009.06819v2",
+  "title": "MatScIE: An automated tool for the generation of databases of methods and parameters used in the computational materials science literature",
+  "body": "The number of published articles in the field of materials science is growing rapidly every year. This comparatively unstructured data source, which contains a large amount of information, has a restriction on its re-usability, as the information needed to carry out further calculations using the data in it must be extracted manually. It is very important to obtain valid and contextually correct information from the online (offline) data, as it can be useful not only to generate inputs for further calculations, but also to incorporate them into a querying framework. Retaining this context as a priority, we have developed an automated tool, MatScIE (Material Scince Information Extractor) that can extract relevant information from material science literature and make a structured database that is much easier to use for material simulations. Specifically, we extract the material details, methods, code, parameters, and structure from the various research articles. Finally, we created a web application where users can upload published articles and view/download the information obtained from this tool and can create their own databases for their personal uses.",
+  "links": [
+    "https://arxiv.org/abs/2009.06819v2",
+    "https://arxiv.org/pdf/2009.06819v2"
+  ],
+  "source": "arxiv",
+  "topic": "sustainable_materials"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2209.06346v2",
+  "title": "Prediction of the outcome of a Twenty-20 Cricket Match : A Machine Learning Approach",
+  "body": "Twenty20 cricket, sometimes written Twenty-20, and often abbreviated to T20, is a short form of cricket. In a Twenty20 game the two teams of 11 players have a single innings each, which is restricted to a maximum of 20 overs. This version of cricket is especially unpredictable and is one of the reasons it has gained popularity over recent times. However, in this paper we try four different machine learning approaches for predicting the results of T20 Cricket Matches. Specifically we take in to account: previous performance statistics of the players involved in the competing teams, ratings of players obtained from reputed cricket statistics websites, clustering the players' with similar performance statistics and propose a novel method using an ELO based approach to rate players. We compare the performances of each of these feature engineering approaches by using different ML algorithms, including logistic regression, support vector machines, bayes network, decision tree, random forest.",
+  "links": [
+    "https://arxiv.org/abs/2209.06346v2",
+    "https://arxiv.org/pdf/2209.06346v2"
+  ],
+  "source": "arxiv",
+  "topic": "football"
+}

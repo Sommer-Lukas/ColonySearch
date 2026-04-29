@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2503.03930v1",
+  "title": "Ground-Based Reconnaissance Observations of 21 Exoplanet Atmospheres with the Exoplanet Transmission Spectroscopy Imager",
+  "body": "One of the most prolific methods of studying exoplanet atmospheres is transmission spectroscopy, which measures the difference between the depth of an exoplanet's transit signal at various wavelengths and attempts to correlate the depth changes to potential features in the exoplanet's atmosphere. Here we present reconnaissance observations of 21 exoplanet atmospheres measured with the Exoplanet Transmission Spectroscopy Imager (ETSI), a recently deployed spectro-photometer on the McDonald Observatory Otto Struve 2.1 m telescope. ETSI measurements are mostly free of systematics through the use of a novel observing technique called common-path multi-band imaging (CMI), which has been shown to achieve photometric color precision on-par with space-based observations (300ppm or 0.03%). This work also describes the various statistical tests performed on the data to evaluate the efficacy of the CMI method and the ETSI instrument in combination. We find that none of the 8 comparisons of exoplanet atmospheres measured with ETSI and other observatories (including the Hubble Space Telescope) provide evidence that the spectra are statistically dissimilar. These results suggest that ETSI can provide initial transmission spectroscopy observations for a fraction of the observational and monetary overhead previously required to detect an exoplanet's atmosphere. Ultimately these reconnaissance observations increase the number of planets with transmission spectroscopy measurements by ~10% and provide an immediate prioritization of 21 exoplanets for future follow-up with more precious observatories, such as the James Webb Space Telescope. The reconnaissance spectra are available through the Filtergraph visualization portal at the URL: https://filtergraph.com/etsi/.",
+  "links": [
+    "https://arxiv.org/abs/2503.03930v1",
+    "https://arxiv.org/pdf/2503.03930v1",
+    "https://doi.org/10.3847/1538-3881/ada557"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

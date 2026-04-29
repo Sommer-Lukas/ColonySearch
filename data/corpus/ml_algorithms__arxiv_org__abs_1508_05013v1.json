@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1508.05013v1",
+  "title": "Message Passing and Combinatorial Optimization",
+  "body": "Graphical models use the intuitive and well-studied methods of graph theory to implicitly represent dependencies between variables in large systems. They can model the global behaviour of a complex system by specifying only local factors. This thesis studies inference in discrete graphical models from an algebraic perspective and the ways inference can be used to express and approximate NP-hard combinatorial problems.\n  We investigate the complexity and reducibility of various inference problems, in part by organizing them in an inference hierarchy. We then investigate tractable approximations for a subset of these problems using distributive law in the form of message passing. The quality of the resulting message passing procedure, called Belief Propagation (BP), depends on the influence of loops in the graphical model. We contribute to three classes of approximations that improve BP for loopy graphs A) loop correction techniques; B) survey propagation, another message passing technique that surpasses BP in some settings; and C) hybrid methods that interpolate between deterministic message passing and Markov Chain Monte Carlo inference.\n  We then review the existing message passing solutions and provide novel graphical models and inference techniques for combinatorial problems under three broad classes: A) constraint satisfaction problems such as satisfiability, coloring, packing, set / clique-cover and dominating / independent set and their optimization counterparts; B) clustering problems such as hierarchical clustering, K-median, K-clustering, K-center and modularity optimization; C) problems over permutations including assignment, graph morphisms and alignment, finding symmetries and traveling salesman problem. In many cases we show that message passing is able to find solutions that are either near optimal or favourably compare with today's state-of-the-art approaches.",
+  "links": [
+    "https://arxiv.org/abs/1508.05013v1",
+    "https://arxiv.org/pdf/1508.05013v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

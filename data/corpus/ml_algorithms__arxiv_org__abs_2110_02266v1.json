@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2110.02266v1",
+  "title": "Time-averaged velocity and scalar fields of the flow surrounding a group of cylinders",
+  "body": "We examine the characteristics of mean flow and scalar concentration characteristics of a turbulent boundary layer flow impinging on a cluster of tall obstacles (which can also be interpreted as a porous obstruction). The cluster is created with a group of cylinders of diameter $d$ and height $h$ arranged in a circular patch of diameter $D$.The solidity of the patch/obstruction is defined by $φ$ (the total planar area covered by cylinders), which is systematically varied ($0.098 \\leq φ\\leq 1$) by increasing the number of cylinders in a patch ($N_c$). A point source is placed at ground level upstream of the patch and its transport around the patch is examined. Time-averaged velocity and scalar fields, obtained from simultaneous planar PIV-PLIF (particle image velocimetry-planar laser-induced fluorescence) measurements, reveal that the characteristics of wake and flow above porous patches are heavily influenced by $φ$. In particular, we observe that the horizontal and vertical extent of the wake and scalar concentration downstream of the patches decreases and increases with $φ$, respectively. Here, the recirculation bubble is shifted closer to the trailing edge of the patches as $φ$ increases, limiting the flow from convecting downstream, decreasing the scalar concentration and virtually `extending' the patch in streamwise direction. As the bubble forms in the trailing edge, vertical bleeding increases and hence the concentration increases above patch where the cylinders appear to be `extend' vertically towards the freestream.",
+  "links": [
+    "https://arxiv.org/abs/2110.02266v1",
+    "https://arxiv.org/pdf/2110.02266v1",
+    "https://doi.org/10.1017/flo.2022.2"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

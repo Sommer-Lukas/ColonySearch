@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2407.06136v3",
+  "title": "Mamba-FSCIL: Dynamic Adaptation with Selective State Space Model for Few-Shot Class-Incremental Learning",
+  "body": "Few-shot class-incremental learning (FSCIL) aims to incrementally learn novel classes from limited examples while preserving knowledge of previously learned classes. Existing methods face a critical dilemma: static architectures rely on a fixed parameter space to learn from data that arrive sequentially, prone to overfitting to the current session, while dynamic architectures require the expansion of the parameter space continually, leading to increased complexity. In this study, we explore the potential of Selective State Space Models (SSMs) for FSCIL. Mamba leverages its input-dependent parameters to dynamically adjust its processing patterns and generate content-aware scan patterns within a fixed architecture. This enables it to configure distinct processing for base and novel classes, effectively preserving existing knowledge while adapting to new ones. To leverage Mamba's potential for FSCIL, we design two key modules: First, we propose a dual selective SSM projector that dynamically adjusts the projection parameters based on the intermediate features for dynamic adaptation. The dual-design structurally decouples base and novel class processing with a frozen base branch, employing a frozen base branch to maintain robust base-class features and a dynamic incremental branch that adaptively learns distinctive feature shifts for novel classes. Second, we develop a class-sensitive selective scan mechanism to guide dynamic adaptation of the incremental branch. It minimizes the disruption to base-class representations caused by training on novel data, and meanwhile, forces the selective scan to perform in distinct patterns between base and novel classes. Extensive experiments on miniImageNet, CUB-200, and CIFAR-100 demonstrate that Mamba-FSCIL achieves state-of-the-art performance. The code is available at https://github.com/xiaojieli0903/Mamba-FSCIL.",
+  "links": [
+    "https://arxiv.org/abs/2407.06136v3",
+    "https://arxiv.org/pdf/2407.06136v3"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

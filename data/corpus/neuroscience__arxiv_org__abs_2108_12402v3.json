@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2108.12402v3",
+  "title": "Representation learning with reward prediction errors",
+  "body": "The Reward Prediction Error hypothesis proposes that phasic activity in the midbrain dopaminergic system reflects prediction errors needed for learning in reinforcement learning. Besides the well-documented association between dopamine and reward processing, dopamine is implicated in a variety of functions without a clear relationship to reward prediction error. Fluctuations in dopamine levels influence the subjective perception of time, dopamine bursts precede the generation of motor responses, and the dopaminergic system innervates regions of the brain, including hippocampus and areas in prefrontal cortex, whose function is not uniquely tied to reward. In this manuscript, we propose that a common theme linking these functions is representation, and that prediction errors signaled by the dopamine system, in addition to driving associative learning, can also support the acquisition of adaptive state representations. In a series of simulations, we show how this extension can account for the role of dopamine in temporal and spatial representation, motor response, and abstract categorization tasks. By extending the role of dopamine signals to learning state representations, we resolve a critical challenge to the Reward Prediction Error hypothesis of dopamine function.",
+  "links": [
+    "https://arxiv.org/abs/2108.12402v3",
+    "https://arxiv.org/pdf/2108.12402v3"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

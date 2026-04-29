@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1002/advs.201903381",
+  "title": "Appropriate Delivery of the CRISPR/Cas9 System through the Nonlysosomal Route: Application for Therapeutic Gene Editing",
+  "body": "The development of gene delivery has attracted increasing attention, especially when the introduction and application of the CRISPR/Cas9 gene editing system appears promising for gene therapy. However, ensuring biosafety and high gene editing efficiency at the same time poses a great challenge for its in vivo applications. Herein, a pardaxin peptide (PAR)-modified cationic liposome (PAR-Lipo) is developed. The results are indicative that significantly enhanced gene editing efficiency can be obtained through the mediation of PAR-Lipos compared to non-Lipos (non-PAR-modified liposomes) and Lipofectamine 2000, owing to its protection toward carried nucleotide by the prevention of lysosomal capture, prolongation of retention time in cells through the accumulation in the endoplasmic reticulum (ER), and more importantly, facilitation of the nuclear access via an ER-nucleus route. Accumulation of PAR-Lipos in the ER may improve the binding of Cas9 and sgRNA, thus further contributing to the eventually enhanced gene editing efficiency. Given their high biosafety, PAR-Lipos are used to mediate the knockout of the oncogene CDC6 in vivo, which results in significant tumor growth inhibition. This work may provide a useful reference for enhancing the delivery of gene editing systems, thus improving the potential for their future clinical applications. CRISPR Genome editing Genetic enhancement Cas9 Computational biology Gene delivery Computer science Gene Biology Genetics",
+  "links": [],
+  "source": "openalex",
+  "topic": "medicine"
+}

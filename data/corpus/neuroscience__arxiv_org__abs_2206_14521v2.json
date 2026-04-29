@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2206.14521v2",
+  "title": "Reconstruction of interactions in the ProtoDUNE-SP detector with Pandora",
+  "body": "The Pandora Software Development Kit and algorithm libraries provide pattern-recognition logic essential to the reconstruction of particle interactions in liquid argon time projection chamber detectors. Pandora is the primary event reconstruction software used at ProtoDUNE-SP, a prototype for the Deep Underground Neutrino Experiment far detector. ProtoDUNE-SP, located at CERN, is exposed to a charged-particle test beam. This paper gives an overview of the Pandora reconstruction algorithms and how they have been tailored for use at ProtoDUNE-SP. In complex events with numerous cosmic-ray and beam background particles, the simulated reconstruction and identification efficiency for triggered test-beam particles is above 80% for the majority of particle type and beam momentum combinations. Specifically, simulated 1 GeV/$c$ charged pions and protons are correctly reconstructed and identified with efficiencies of 86.1$\\pm0.6$% and 84.1$\\pm0.6$%, respectively. The efficiencies measured for test-beam data are shown to be within 5% of those predicted by the simulation.",
+  "links": [
+    "https://arxiv.org/abs/2206.14521v2",
+    "https://arxiv.org/pdf/2206.14521v2",
+    "https://doi.org/10.1140/epjc/s10052-023-11733-2"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

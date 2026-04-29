@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2211.05409v1",
+  "title": "Radiomics-enhanced Deep Multi-task Learning for Outcome Prediction in Head and Neck Cancer",
+  "body": "Outcome prediction is crucial for head and neck cancer patients as it can provide prognostic information for early treatment planning. Radiomics methods have been widely used for outcome prediction from medical images. However, these methods are limited by their reliance on intractable manual segmentation of tumor regions. Recently, deep learning methods have been proposed to perform end-to-end outcome prediction so as to remove the reliance on manual segmentation. Unfortunately, without segmentation masks, these methods will take the whole image as input, such that makes them difficult to focus on tumor regions and potentially unable to fully leverage the prognostic information within the tumor regions. In this study, we propose a radiomics-enhanced deep multi-task framework for outcome prediction from PET/CT images, in the context of HEad and neCK TumOR segmentation and outcome prediction challenge (HECKTOR 2022). In our framework, our novelty is to incorporate radiomics as an enhancement to our recently proposed Deep Multi-task Survival model (DeepMTS). The DeepMTS jointly learns to predict the survival risk scores of patients and the segmentation masks of tumor regions. Radiomics features are extracted from the predicted tumor regions and combined with the predicted survival risk scores for final outcome prediction, through which the prognostic information in tumor regions can be further leveraged. Our method achieved a C-index of 0.681 on the testing set, placing the 2nd on the leaderboard with only 0.00068 lower in C-index than the 1st place.",
+  "links": [
+    "https://arxiv.org/abs/2211.05409v1",
+    "https://arxiv.org/pdf/2211.05409v1",
+    "https://doi.org/10.1007/978-3-031-27420-6_14"
+  ],
+  "source": "arxiv",
+  "topic": "football"
+}

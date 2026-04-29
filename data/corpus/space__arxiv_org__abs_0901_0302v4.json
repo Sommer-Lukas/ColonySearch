@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/0901.0302v4",
+  "title": "Search for Gravitational Waves from Low Mass Binary Coalescences in the First Year of LIGO's S5 Data",
+  "body": "We have searched for gravitational waves from coalescing low mass compact binary systems with a total mass between 2 and 35 Msun and a minimum component mass of 1 Msun using data from the first year of the fifth science run (S5) of the three LIGO detectors, operating at design sensitivity. Depending on mass, we are sensitive to coalescences as far as 150 Mpc from the Earth. No gravitational wave signals were observed above the expected background. Assuming a compact binary objects population with a Gaussian mass distribution representing binary neutron star systems, black hole-neutron star binary systems, and binary black hole systems, we calculate the 90%-confidence upper limit on the rate of coalescences to be 3.9 \\times 10^{-2} yr^{-1} L_{10}^{-1}, 1.1 \\times 10^{-2} yr^{-1} L_{10}^{-1}, and 2.5 \\times 10^{-3} yr^{-1} L_{10}^{-1} respectively, where $L_{10}$ is $10^{10}$ times the blue solar luminosity. We also set improved upper limits on the rate of compact binary coalescences per unit blue-light luminosity, as a function of mass.",
+  "links": [
+    "https://arxiv.org/abs/0901.0302v4",
+    "https://arxiv.org/pdf/0901.0302v4",
+    "https://doi.org/10.1103/PhysRevD.79.122001"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

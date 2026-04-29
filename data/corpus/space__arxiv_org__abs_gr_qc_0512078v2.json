@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/gr-qc/0512078v2",
+  "title": "Joint LIGO and TAMA300 Search for Gravitational Waves from Inspiralling Neutron Star Binaries",
+  "body": "We search for coincident gravitational wave signals from inspiralling neutron star binaries using LIGO and TAMA300 data taken during early 2003. Using a simple trigger exchange method, we perform an inter-collaboration coincidence search during times when TAMA300 and only one of the LIGO sites were operational. We find no evidence of any gravitational wave signals. We place an observational upper limit on the rate of binary neutron star coalescence with component masses between 1 and 3 M_sun of 49 per year per Milky Way equivalent galaxy at a 90% confidence level. The methods developed during this search will find application in future network inspiral analyses.",
+  "links": [
+    "https://arxiv.org/abs/gr-qc/0512078v2",
+    "https://arxiv.org/pdf/gr-qc/0512078v2",
+    "https://doi.org/10.1103/PhysRevD.73.102002"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

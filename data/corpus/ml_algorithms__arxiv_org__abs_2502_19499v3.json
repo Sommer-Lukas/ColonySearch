@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2502.19499v3",
+  "title": "On the Interpolation Effect of Score Smoothing in Diffusion Models",
+  "body": "Diffusion models have achieved remarkable progress in various domains with an intriguing ability to produce new data that do not exist in the training set. In this work, we study the hypothesis that such creativity arises from the neural network backbone learning a smoothed version of the empirical score function, which guides the denoising dynamics to generate data points that interpolate the training data. Focusing mainly on settings where the training set lies uniformly in a one-dimensional subspace, we elucidate the interplay between score smoothing and the denoising dynamics with analytical solutions and numerical experiments, demonstrating how smoothing the score function can cause the denoised data samples to interpolate the training set along the subspace. Moreover, we present theoretical and empirical evidence that learning score functions with neural networks - either with or without explicit regularization - can naturally achieve a similar effect, including when the data belong to simple nonlinear manifolds.",
+  "links": [
+    "https://arxiv.org/abs/2502.19499v3",
+    "https://arxiv.org/pdf/2502.19499v3"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

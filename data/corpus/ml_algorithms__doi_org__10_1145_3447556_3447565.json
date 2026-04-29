@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1145/3447556.3447565",
+  "title": "Recent Advances in Reinforcement Learning for Traffic Signal Control",
+  "body": "Traffic signal control is an important and challenging real-world problem that has recently received a large amount of interest from both transportation and computer science communities. In this survey, we focus on investigating the recent advances in using reinforcement learning (RL) techniques to solve the traffic signal control problem. We classify the known approaches based on the RL techniques they use and provide a review of existing models with analysis on their advantages and disadvantages. Moreover, we give an overview of the simulation environments and experimental settings that have been developed to evaluate the traffic signal control methods. Finally, we explore future directions in the area of RLbased traffic signal control methods. We hope this survey could provide insights to researchers dealing with real-world applications in intelligent transportation systems Computer science Reinforcement learning SIGNAL (programming language) Traffic signal Control (management) Focus (optics) Data science Artificial intelligence Machine learning Human–computer interaction Real-time computing Physics Programming language Optics",
+  "links": [],
+  "source": "openalex",
+  "topic": "ml_algorithms"
+}

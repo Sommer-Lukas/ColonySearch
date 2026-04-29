@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2304.12442v1",
+  "title": "Enabling Exoplanet Demographics Studies with Standardized Exoplanet Survey Meta-Data",
+  "body": "Goal 1 of the National Academies of Science, Engineering and Mathematics Exoplanet Science Strategy is \"to understand the formation and evolution of planetary systems as products of the process of star formation, and characterize and explain the diversity of planetary system architectures, planetary compositions, and planetary environments produced by these processes\", with the finding that \"Current knowledge of the demographics and characteristics of planets and their systems is substantially incomplete.\" One significant roadblock to our ongoing efforts to improve our demographics analyses is the lack of comprehensive meta-data accompanying published exoplanet surveys. The Exoplanet Program Analysis Group (ExoPAG) Science Interest Group 2: Exoplanet Demographics has prepared this document to provide guidance to survey architects, authors, referees and funding agencies as to the most valuable such data products for five different exoplanet detection techniques - transit, radial velocity, direct imaging, microlensing and astrometry. We find that making these additional data easily available would greatly enhance the community's ability to perform robust, reproducible demographics analyses, and make progress on achieving the most important goals identified by the exoplanet and wider astronomical community.",
+  "links": [
+    "https://arxiv.org/abs/2304.12442v1",
+    "https://arxiv.org/pdf/2304.12442v1"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

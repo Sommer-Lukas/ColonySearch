@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1403.4969v1",
+  "title": "Crowd Flow Modeling of Athletes in Mass Sports Events -- a Macroscopic Approach",
+  "body": "We propose a macroscopic model in form of a dispersion-transport equation for non-congested flow of the athletes which is coupled to a kinematic-wave model for congested flow. The model takes into account the performance (i.e., free-flow speed distributions) of the athletes in the different starting groups. The model is calibrated and validated on data of the German $\\textit{Rennsteig Half Marathon 2012}$ and the Swedish $\\textit{Vasaloppet 2012}$ cross-country ski race. Simulations of the model allow the event managers to improve the organization by determining the optimum number of starting groups, the maximum size of each group, whether a wave start with a certain starting delay between the groups is necessary, or what will be the effects of changing the course. We apply the model to simulate a planned course change for the Rennsteig Half Marathon 2013, and determine whether critical congestions are likely to occur.",
+  "links": [
+    "https://arxiv.org/abs/1403.4969v1",
+    "https://arxiv.org/pdf/1403.4969v1",
+    "https://doi.org/10.1007/978-3-319-10629-8_3"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2511.20606v2",
+  "title": "Limit Order Book Dynamics in Matching Markets: Microstructure, Spread, and Execution Slippage",
+  "body": "Conventional models of matching markets assume that monetary transfers can clear markets by compensating for utility differentials. However, empirical patterns show that such transfers often fail to close structural preference gaps. This paper introduces a market microstructure framework that models matching decisions as a limit order book system with rigid bid ask spreads. Individual preferences are represented by a latent preference state matrix, where the spread between an agent's internal ask price (the unconditional maximum) and the market's best bid (the reachable maximum) creates a structural liquidity constraint. We establish a Threshold Impossibility Theorem showing that linear compensation cannot close these spreads unless it induces a categorical identity shift. A dynamic discrete choice execution model further demonstrates that matches occur only when the market to book ratio crosses a time decaying liquidity threshold, analogous to order execution under inventory pressure. Numerical experiments validate persistent slippage, regional invariance of preference orderings, and high tier zero spread executions. The model provides a unified microstructure explanation for matching failures, compensation inefficiency, and post match regret in illiquid order driven environments.",
+  "links": [
+    "https://arxiv.org/abs/2511.20606v2",
+    "https://arxiv.org/pdf/2511.20606v2"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

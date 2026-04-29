@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2212.11187v1",
+  "title": "Similarity Contrastive Estimation for Image and Video Soft Contrastive Self-Supervised Learning",
+  "body": "Contrastive representation learning has proven to be an effective self-supervised learning method for images and videos. Most successful approaches are based on Noise Contrastive Estimation (NCE) and use different views of an instance as positives that should be contrasted with other instances, called negatives, that are considered as noise. However, several instances in a dataset are drawn from the same distribution and share underlying semantic information. A good data representation should contain relations between the instances, or semantic similarity and dissimilarity, that contrastive learning harms by considering all negatives as noise. To circumvent this issue, we propose a novel formulation of contrastive learning using semantic similarity between instances called Similarity Contrastive Estimation (SCE). Our training objective is a soft contrastive one that brings the positives closer and estimates a continuous distribution to push or pull negative instances based on their learned similarities. We validate empirically our approach on both image and video representation learning. We show that SCE performs competitively with the state of the art on the ImageNet linear evaluation protocol for fewer pretraining epochs and that it generalizes to several downstream image tasks. We also show that SCE reaches state-of-the-art results for pretraining video representation and that the learned representation can generalize to video downstream tasks.",
+  "links": [
+    "https://arxiv.org/abs/2212.11187v1",
+    "https://arxiv.org/pdf/2212.11187v1",
+    "https://doi.org/10.1007/s00138-023-01444-9"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

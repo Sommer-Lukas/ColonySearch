@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2402.03855v2",
+  "title": "Challenges in Mechanistically Interpreting Model Representations",
+  "body": "Mechanistic interpretability (MI) aims to understand AI models by reverse-engineering the exact algorithms neural networks learn. Most works in MI so far have studied behaviors and capabilities that are trivial and token-aligned. However, most capabilities important for safety and trust are not that trivial, which advocates for the study of hidden representations inside these networks as the unit of analysis. We formalize representations for features and behaviors, highlight their importance and evaluation, and perform an exploratory study of dishonesty representations in `Mistral-7B-Instruct-v0.1'. We justify that studying representations is an important and under-studied field, and highlight several challenges that arise while attempting to do so through currently established methods in MI, showing their insufficiency and advocating work on new frameworks for the same.",
+  "links": [
+    "https://arxiv.org/abs/2402.03855v2",
+    "https://arxiv.org/pdf/2402.03855v2"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

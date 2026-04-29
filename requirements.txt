@@ -4,4 +4,5 @@ matplotlib>=3.8
 plotly>=5.20
 numpy>=1.26
 requests>=2.31
+beautifulsoup4>=4.12
 pytest>=8.0

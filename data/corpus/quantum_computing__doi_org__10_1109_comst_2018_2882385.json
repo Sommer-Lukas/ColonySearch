@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1109/comst.2018.2882385",
+  "title": "Quantum Search Algorithms for Wireless Communications",
+  "body": "Faster, ultra-reliable, low-power, and secure communications has always been high on the wireless evolutionary agenda. However, the appetite for faster, more reliable, greener, and more secure communications continues to grow. The state-of-the-art methods conceived for achieving the performance targets of the associated processes may be accompanied by an increase in computational complexity. Alternatively, a degraded performance may have to be accepted due to the lack of jointly optimized system components. In this survey we investigate the employment of quantum computing for solving problems in wireless communication systems. By exploiting the inherent parallelism of quantum computing, quantum algorithms may be invoked for approaching the optimal performance of classical wireless processes, despite their reduced number of cost-function evaluations. In this contribution we discuss the basics of quantum computing using linear algebra, before presenting the operation of the major quantum algorithms, which have been proposed in the literature for improving wireless communications systems. Furthermore, we investigate a number of optimization problems encountered both in the physical and network layer of wireless communications, while comparing their classical and quantum-assisted solutions. Finally, we state a number of open problems in wireless communications that may benefit from quantum computing. Wireless Computer science Algorithm Telecommunications",
+  "links": [],
+  "source": "openalex",
+  "topic": "quantum_computing"
+}

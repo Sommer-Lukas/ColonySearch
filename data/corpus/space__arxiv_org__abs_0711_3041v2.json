@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/0711.3041v2",
+  "title": "LIGO: The Laser Interferometer Gravitational-Wave Observatory",
+  "body": "The goal of the Laser Interferometric Gravitational-Wave Observatory (LIGO) is to detect and study gravitational waves of astrophysical origin. Direct detection of gravitational waves holds the promise of testing general relativity in the strong-field regime, of providing a new probe of exotic objects such as black hole and neutron stars, and of uncovering unanticipated new astrophysics. LIGO, a joint Caltech-MIT project supported by the National Science Foundation, operates three multi-kilometer interferometers at two widely separated sites in the United States. These detectors are the result of decades of worldwide technology development, design, construction, and commissioning. They are now operating at their design sensitivity, and are sensitive to gravitational wave strains smaller than 1 part in 1E21. With this unprecedented sensitivity, the data are being analyzed to detect or place limits on gravitational waves from a variety of potential astrophysical sources.",
+  "links": [
+    "https://arxiv.org/abs/0711.3041v2",
+    "https://arxiv.org/pdf/0711.3041v2",
+    "https://doi.org/10.1088/0034-4885/72/7/076901"
+  ],
+  "source": "arxiv",
+  "topic": "space"
+}

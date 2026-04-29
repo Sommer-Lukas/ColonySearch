@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/1104.3098v3",
+  "title": "Optimal strategies for a game on amenable semigroups",
+  "body": "The semigroup game is a two-person zero-sum game defined on a semigroup S as follows: Players 1 and 2 choose elements x and y in S, respectively, and player 1 receives a payoff f(xy) defined by a function f from S to [-1,1]. If the semigroup is amenable in the sense of Day and von Neumann, one can extend the set of classical strategies, namely countably additive probability measures on S, to include some finitely additive measures in a natural way. This extended game has a value and the players have optimal strategies. This theorem extends previous results for the multiplication game on a compact group or on the positive integers with a specific payoff. We also prove that the procedure of extending the set of allowed strategies preserves classical solutions: if a semigroup game has a classical solution, this solution solves also the extended game.",
+  "links": [
+    "https://arxiv.org/abs/1104.3098v3",
+    "https://arxiv.org/pdf/1104.3098v3",
+    "https://doi.org/10.1007/s00182-012-0345-7"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

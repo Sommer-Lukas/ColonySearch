@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1098/rsif.2017.0792",
+  "title": "The Markov blankets of life: autonomy, active inference and the free energy principle",
+  "body": "This work addresses the autonomous organization of biological systems. It does so by considering the boundaries of biological systems, from individual cells to Home sapiens, in terms of the presence of Markov blankets under the active inference scheme—a corollary of the free energy principle. A Markov blanket defines the boundaries of a system in a statistical sense. Here we consider how a collective of Markov blankets can self-assemble into a global system that itself has a Markov blanket; thereby providing an illustration of how autonomous systems can be understood as having layers of nested and self-sustaining boundaries. This allows us to show that: (i) any living system is a Markov blanketed system and (ii) the boundaries of such systems need not be co-extensive with the biophysical boundaries of a living organism. In other words, autonomous systems are hierarchically composed of Markov blankets of Markov blankets—all the way down to individual cells, all the way up to you and me, and all the way out to include elements of the local environment.\n\nTL;DR: This work considers how a collective of Markov blankets can self-assemble into a global system that itself has a Markov blanket; thereby providing an illustration of how autonomous systems can be understood as having layers of nested and self-sustaining boundaries.",
+  "links": [],
+  "source": "semantic_scholar",
+  "topic": "neuroscience"
+}

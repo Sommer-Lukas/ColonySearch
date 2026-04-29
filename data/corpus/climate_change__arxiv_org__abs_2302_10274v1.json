@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2302.10274v1",
+  "title": "A Generative Adversarial Network for Climate Tipping Point Discovery (TIP-GAN)",
+  "body": "We propose a new Tipping Point Generative Adversarial Network (TIP-GAN) for better characterizing potential climate tipping points in Earth system models. We describe an adversarial game to explore the parameter space of these models, detect upcoming tipping points, and discover the drivers of tipping points. In this setup, a set of generators learn to construct model configurations that will invoke a climate tipping point. The discriminator learns to identify which generators are generating each model configuration and whether a given configuration will lead to a tipping point. The discriminator is trained using an oracle (a surrogate climate model) to test if a generated model configuration leads to a tipping point or not. We demonstrate the application of this GAN to invoke the collapse of the Atlantic Meridional Overturning Circulation (AMOC). We share experimental results of modifying the loss functions and the number of generators to exploit the area of uncertainty in model state space near a climate tipping point. In addition, we show that our trained discriminator can predict AMOC collapse with a high degree of accuracy without the use of the oracle. This approach could generalize to other tipping points, and could augment climate modeling research by directing users interested in studying tipping points to parameter sets likely to induce said tipping points in their computationally intensive climate models.",
+  "links": [
+    "https://arxiv.org/abs/2302.10274v1",
+    "https://arxiv.org/pdf/2302.10274v1"
+  ],
+  "source": "arxiv",
+  "topic": "climate_change"
+}

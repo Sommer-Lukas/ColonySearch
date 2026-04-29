@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/quant-ph/9505018v1",
+  "title": "Universality in Quantum Computation",
+  "body": "We show that in quantum computation almost every gate that operates on two or more bits is a universal gate. We discuss various physical considerations bearing on the proper definition of universality for computational components such as logic gates.",
+  "links": [
+    "https://arxiv.org/abs/quant-ph/9505018v1",
+    "https://arxiv.org/pdf/quant-ph/9505018v1",
+    "https://doi.org/10.1098/rspa.1995.0065"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1105.1749v2",
+  "title": "A Real-Time Model-Based Reinforcement Learning Architecture for Robot Control",
+  "body": "Reinforcement Learning (RL) is a method for learning decision-making tasks that could enable robots to learn and adapt to their situation on-line. For an RL algorithm to be practical for robotic control tasks, it must learn in very few actions, while continually taking those actions in real-time. Existing model-based RL methods learn in relatively few actions, but typically take too much time between each action for practical on-line learning. In this paper, we present a novel parallel architecture for model-based RL that runs in real-time by 1) taking advantage of sample-based approximate planning methods and 2) parallelizing the acting, model learning, and planning processes such that the acting process is sufficiently fast for typical robot control cycles. We demonstrate that algorithms using this architecture perform nearly as well as methods using the typical sequential architecture when both are given unlimited time, and greatly out-perform these methods on tasks that require real-time actions such as controlling an autonomous vehicle.",
+  "links": [
+    "https://arxiv.org/abs/1105.1749v2",
+    "https://arxiv.org/pdf/1105.1749v2"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

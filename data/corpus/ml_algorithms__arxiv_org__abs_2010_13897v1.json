@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2010.13897v1",
+  "title": "The scaling-law flows: An attempt at scaling-law vector calculus",
+  "body": "In this paper, the scaling-law vector calculus, which is related to the connection between the vector calculus and the scaling law in fractal geometry, is addressed based on the Leibniz derivative and Stieltjes integral for the first time. The Gauss-Ostrogradsky-like theorem, Stokes-like theorem, Green-like theorem, and Green-like identities are considered in the sense of the scaling-law vector calculus. The Navier-Stokes-like equations are obtained in detail. The obtained result is as a potentially mathematical tool proposed to develop an important way of approaching this challenge for the scaling-law flows.",
+  "links": [
+    "https://arxiv.org/abs/2010.13897v1",
+    "https://arxiv.org/pdf/2010.13897v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

@@ -1,0 +1,19 @@
+{
+  "url": "https://scikit-learn.org/stable/data_transforms.html",
+  "title": "7. Dataset transformations — scikit-learn 1.8.0 documentation",
+  "body": "7. Dataset transformations # scikit-learn provides a library of transformers, which may clean (see Preprocessing data ), reduce (see Unsupervised dimensionality reduction ), expand (see Kernel Approximation ) or generate (see Feature extraction ) feature representations. Like other estimators, these are represented by classes with a fit method, which learns model parameters (e.g. mean and standard deviation for normalization) from a training set, and a transform method which applies this transformation model to unseen data. fit_transform may be more convenient and efficient for modelling and transforming the training data simultaneously. Combining such transformers, either in parallel or series is covered in Pipelines and composite estimators . Pairwise metrics, Affinities and Kernels covers transforming feature spaces into affinity matrices, while Transforming the prediction target (y) considers transformations of the target space (e.g. categorical labels) for use in scikit-learn. 7.1. Pipelines and composite estimators 7.1.1. Pipeline: chaining estimators 7.1.2. Transforming target in regression 7.1.3. FeatureUnion: composite feature spaces 7.1.4. ColumnTransformer for heterogeneous data 7.1.5. Visualizing Composite Estimators 7.2. Feature extraction 7.2.1. Loading features from dicts 7.2.2. Feature hashing 7.2.3. Text feature extraction 7.2.4. Image feature extraction 7.3. Preprocessing data 7.3.1. Standardization, or mean removal and variance scaling 7.3.2. Non-linear transformation 7.3.3. Normalization 7.3.4. Encoding categorical features 7.3.5. Discretization 7.3.6. Imputation of missing values 7.3.7. Generating polynomial features 7.3.8. Custom transformers 7.4. Imputation of missing values 7.4.1. Univariate vs. Multivariate Imputation 7.4.2. Univariate feature imputation 7.4.3. Multivariate feature imputation 7.4.4. Nearest neighbors imputation 7.4.5. Keeping the number of features constant 7.4.6. Marking imputed values 7.4.7. Estimators that handle NaN values 7.5. Unsupervised dimensionality reduction 7.5.1. PCA: principal component analysis 7.5.2. Random projections 7.5.3. Feature agglomeration 7.6. Random Projection 7.6.1. The Johnson-Lindenstrauss lemma 7.6.2. Gaussian random projection 7.6.3. Sparse random projection 7.6.4. Inverse Transform 7.7. Kernel Approximation 7.7.1. Nystroem Method for Kernel Approximation 7.7.2. Radial Basis Function Kernel 7.7.3. Additive Chi Squared Kernel 7.7.4. Skewed Chi Squared Kernel 7.7.5. Polynomial Kernel Approximation via Tensor Sketch 7.7.6. Mathematical Details 7.8. Pairwise metrics, Affinities and Kernels 7.8.1. Cosine similarity 7.8.2. Linear kernel 7.8.3. Polynomial kernel 7.8.4. Sigmoid kernel 7.8.5. RBF kernel 7.8.6. Laplacian kernel 7.8.7. Chi-squared kernel 7.9. Transforming the prediction target ( y ) 7.9.1. Label binarization 7.9.2. Label encoding",
+  "links": [
+    "https://scikit-learn.org/stable/modules/preprocessing.html",
+    "https://scikit-learn.org/stable/modules/unsupervised_reduction.html",
+    "https://scikit-learn.org/stable/modules/kernel_approximation.html",
+    "https://scikit-learn.org/stable/modules/feature_extraction.html",
+    "https://scikit-learn.org/stable/modules/compose.html",
+    "https://scikit-learn.org/stable/modules/metrics.html",
+    "https://scikit-learn.org/stable/modules/preprocessing_targets.html",
+    "https://scikit-learn.org/stable/modules/impute.html",
+    "https://scikit-learn.org/stable/modules/random_projection.html",
+    "https://scikit-learn.org/stable/_sources/data_transforms.rst.txt"
+  ],
+  "source": "scikit",
+  "topic": "programming"
+}

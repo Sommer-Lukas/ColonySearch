@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/1811.02143v1",
+  "title": "Symmetry defects and their application to topological quantum computing",
+  "body": "We describe the mathematical theory of topological quantum computing with symmetry defects in the language of fusion categories and unitary representations. Symmetry defects together with anyons are modeled by G-crossed braided extensions of unitary modular tensor categories. The algebraic data of these categories afford projective unitary representations of the braid group. Elements in the image of such representations correspond to quantum gates arising from exchanging anyons and symmetry defects in topological phases of matter with symmetry. We provide some small examples that highlight features of practical interest for quantum computing. In particular, symmetry defects show the potential to generate non-abelian statistics from abelian topological phases and to be used as as a tool to enlarge the set of quantum gates accessible to an anyonic device.",
+  "links": [
+    "https://arxiv.org/abs/1811.02143v1",
+    "https://arxiv.org/pdf/1811.02143v1"
+  ],
+  "source": "arxiv",
+  "topic": "quantum_computing"
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://arxiv.org/abs/2301.13794v4",
+  "title": "Auctions with Tokens: Monetary Policy as a Mechanism Design Choice",
+  "body": "I study a repeated auction in which payments are made with a blockchain token created and initially owned by the auction designer. Unlike the ``virtual money'' previously examined in mechanism design, such tokens can be saved and traded outside the mechanism. I show that the present-discounted value of expected revenues equals that of a conventional dollar auction, but revenues accrue earlier and are less volatile. The optimal monetary policy burns the tokens used for payment, a practice common in blockchain-based protocols. I also show that the same outcome can be reproduced in a dollar auction if the auctioneer issues a suitable dollar-denominated security. This equivalence breaks down with moral hazard and contracting frictions: with severe contracting frictions the token auction dominates, whereas with mild contracting frictions the dollar auction combined with a dollar-denominated financial instrument is preferred.",
+  "links": [
+    "https://arxiv.org/abs/2301.13794v4",
+    "https://arxiv.org/pdf/2301.13794v4",
+    "https://doi.org/10.1016/j.jet.2025.106095"
+  ],
+  "source": "arxiv",
+  "topic": "economics"
+}

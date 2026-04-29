@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2510.23802v1",
+  "title": "Learning Interpretable Features in Audio Latent Spaces via Sparse Autoencoders",
+  "body": "While sparse autoencoders (SAEs) successfully extract interpretable features from language models, applying them to audio generation faces unique challenges: audio's dense nature requires compression that obscures semantic meaning, and automatic feature characterization remains limited. We propose a framework for interpreting audio generative models by mapping their latent representations to human-interpretable acoustic concepts. We train SAEs on audio autoencoder latents, then learn linear mappings from SAE features to discretized acoustic properties (pitch, amplitude, and timbre). This enables both controllable manipulation and analysis of the AI music generation process, revealing how acoustic properties emerge during synthesis. We validate our approach on continuous (DiffRhythm-VAE) and discrete (EnCodec, WavTokenizer) audio latent spaces, and analyze DiffRhythm, a state-of-the-art text-to-music model, to demonstrate how pitch, timbre, and loudness evolve throughout generation. While our work is only done on audio modality, our framework can be extended to interpretable analysis of visual latent space generation models.",
+  "links": [
+    "https://arxiv.org/abs/2510.23802v1",
+    "https://arxiv.org/pdf/2510.23802v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

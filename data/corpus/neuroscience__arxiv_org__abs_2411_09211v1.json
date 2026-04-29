@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2411.09211v1",
+  "title": "Dynamic Neural Communication: Convergence of Computer Vision and Brain-Computer Interface",
+  "body": "Interpreting human neural signals to decode static speech intentions such as text or images and dynamic speech intentions such as audio or video is showing great potential as an innovative communication tool. Human communication accompanies various features, such as articulatory movements, facial expressions, and internal speech, all of which are reflected in neural signals. However, most studies only generate short or fragmented outputs, while providing informative communication by leveraging various features from neural signals remains challenging. In this study, we introduce a dynamic neural communication method that leverages current computer vision and brain-computer interface technologies. Our approach captures the user's intentions from neural signals and decodes visemes in short time steps to produce dynamic visual outputs. The results demonstrate the potential to rapidly capture and reconstruct lip movements during natural speech attempts from human neural signals, enabling dynamic neural communication through the convergence of computer vision and brain--computer interface.",
+  "links": [
+    "https://arxiv.org/abs/2411.09211v1",
+    "https://arxiv.org/pdf/2411.09211v1"
+  ],
+  "source": "arxiv",
+  "topic": "neuroscience"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2101.06480v1",
+  "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+  "body": "This paper introduces SelfMatch, a semi-supervised learning method that combines the power of contrastive self-supervised learning and consistency regularization. SelfMatch consists of two stages: (1) self-supervised pre-training based on contrastive learning and (2) semi-supervised fine-tuning based on augmentation consistency regularization. We empirically demonstrate that SelfMatch achieves the state-of-the-art results on standard benchmark datasets such as CIFAR-10 and SVHN. For example, for CIFAR-10 with 40 labeled examples, SelfMatch achieves 93.19% accuracy that outperforms the strong previous methods such as MixMatch (52.46%), UDA (70.95%), ReMixMatch (80.9%), and FixMatch (86.19%). We note that SelfMatch can close the gap between supervised learning (95.87%) and semi-supervised learning (93.19%) by using only a few labels for each class.",
+  "links": [
+    "https://arxiv.org/abs/2101.06480v1",
+    "https://arxiv.org/pdf/2101.06480v1"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

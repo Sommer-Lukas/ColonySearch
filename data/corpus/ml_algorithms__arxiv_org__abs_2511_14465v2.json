@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/abs/2511.14465v2",
+  "title": "nnterp: A Standardized Interface for Mechanistic Interpretability of Transformers",
+  "body": "Mechanistic interpretability research requires reliable tools for analyzing transformer internals across diverse architectures. Current approaches face a fundamental tradeoff: custom implementations like TransformerLens ensure consistent interfaces but require coding a manual adaptation for each architecture, introducing numerical mismatch with the original models, while direct HuggingFace access through NNsight preserves exact behavior but lacks standardization across models. To bridge this gap, we develop nnterp, a lightweight wrapper around NNsight that provides a unified interface for transformer analysis while preserving original HuggingFace implementations. Through automatic module renaming and comprehensive validation testing, nnterp enables researchers to write intervention code once and deploy it across 50+ model variants spanning 16 architecture families. The library includes built-in implementations of common interpretability methods (logit lens, patchscope, activation steering) and provides direct access to attention probabilities for models that support it. By packaging validation tests with the library, researchers can verify compatibility with custom models locally. nnterp bridges the gap between correctness and usability in mechanistic interpretability tooling.",
+  "links": [
+    "https://arxiv.org/abs/2511.14465v2",
+    "https://arxiv.org/pdf/2511.14465v2"
+  ],
+  "source": "arxiv",
+  "topic": "ml_algorithms"
+}

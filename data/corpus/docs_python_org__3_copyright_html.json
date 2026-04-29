@@ -1,0 +1,15 @@
+{
+  "url": "https://docs.python.org/3/copyright.html",
+  "title": "Copyright — Python 3.14.4 documentation",
+  "body": "Copyright Â¶ Python and this documentation is: Copyright Â© 2001 Python Software Foundation. All rights reserved. Copyright Â© 2000 BeOpen.com. All rights reserved. Copyright Â© 1995-2000 Corporation for National Research Initiatives. All rights reserved. Copyright Â© 1991-1995 Stichting Mathematisch Centrum. All rights reserved. See History and License for complete license and permissions information.",
+  "links": [
+    "https://docs.python.org/3/license.html",
+    "https://docs.python.org/3/bugs.html",
+    "https://docs.python.org/3/index.html",
+    "https://docs.python.org/3/improve-page-nojs.html",
+    "https://docs.python.org/license.html",
+    "https://docs.python.org/bugs.html"
+  ],
+  "source": "html",
+  "topic": "programming"
+}

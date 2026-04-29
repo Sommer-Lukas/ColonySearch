@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.1109/comst.2020.2988367",
+  "title": "Deep Reinforcement Learning for Autonomous Internet of Things: Model, Applications and Challenges",
+  "body": "The Internet of Things (IoT) extends the Internet connectivity into billions of IoT devices around the world, where the IoT devices collect and share information to reflect status of the physical world. The Autonomous Control System (ACS), on the other hand, performs control functions on the physical systems without external intervention over an extended period of time. The integration of IoT and ACS results in a new concept - autonomous IoT (AIoT). The sensors collect information on the system status, based on which the intelligent agents in the IoT devices as well as the Edge/Fog/Cloud servers make control decisions for the actuators to react. In order to achieve autonomy, a promising method is for the intelligent agents to leverage the techniques in the field of artificial intelligence, especially reinforcement learning (RL) and deep reinforcement learning (DRL) for decision making. In this paper, we first provide a tutorial of DRL, and then propose a general model for the applications of RL/DRL in AIoT. Next, a comprehensive survey of the state-of-art research on DRL for AIoT is presented, where the existing works are classified and summarized under the umbrella of the proposed general DRL model. Finally, the challenges and open issues for future research are identified. Reinforcement learning Computer science Internet of Things Leverage (statistics) Server Cloud computing Artificial intelligence Edge computing The Internet Cyber-physical system Computer security World Wide Web Operating system",
+  "links": [],
+  "source": "openalex",
+  "topic": "ml_algorithms"
+}

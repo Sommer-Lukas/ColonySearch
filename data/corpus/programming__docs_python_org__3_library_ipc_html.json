@@ -1,0 +1,24 @@
+{
+  "url": "https://docs.python.org/3/library/ipc.html",
+  "title": "Networking and Interprocess Communication — Python 3.14.4 documentation",
+  "body": "Networking and Interprocess Communication Â¶ The modules described in this chapter provide mechanisms for networking and inter-processes communication. Some modules only work for two processes that are on the same machine, e.g. signal and mmap . Other modules support networking protocols that two or more processes can use to communicate across machines. The list of modules described in this chapter is: asyncio â Asynchronous I/O socket â Low-level networking interface ssl â TLS/SSL wrapper for socket objects select â Waiting for I/O completion selectors â High-level I/O multiplexing signal â Set handlers for asynchronous events mmap â Memory-mapped file support",
+  "links": [
+    "https://docs.python.org/3/library/asyncio.html",
+    "https://docs.python.org/3/library/_thread.html",
+    "https://docs.python.org/3/index.html",
+    "https://docs.python.org/3/library/index.html",
+    "https://docs.python.org/3/library/signal.html",
+    "https://docs.python.org/3/library/mmap.html",
+    "https://docs.python.org/3/library/socket.html",
+    "https://docs.python.org/3/library/ssl.html",
+    "https://docs.python.org/3/library/select.html",
+    "https://docs.python.org/3/library/selectors.html",
+    "https://docs.python.org/3/bugs.html",
+    "https://docs.python.org/3/improve-page-nojs.html",
+    "https://docs.python.org/3/copyright.html",
+    "https://docs.python.org/license.html",
+    "https://docs.python.org/bugs.html"
+  ],
+  "source": "html",
+  "topic": "programming"
+}
