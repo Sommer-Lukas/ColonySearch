@@ -1,0 +1,32 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Bibcode_(identifier)",
+  "title": "Bibcode - Wikipedia",
+  "body": "Code used to identify references in certain astronomical data systems The bibcode (also known as the refcode ) is a compact identifier used by several astronomical data systems to uniquely specify literature references. Adoption [ edit ] The Bibliographic Reference Code (refcode) was originally [ when? ] developed to be used in SIMBAD and the NASA/IPAC Extragalactic Database (NED), but it became a de facto standard and is now used more widely, for example, by the NASA Astrophysics Data System , which coined and prefers the term \"bibcode\". [ 1 ] [ 2 ] Format [ edit ] The code has a fixed length of 19 characters and has the form YYYYJJJJJVVVVMPPPPA where YYYY is the four-digit year of the reference and JJJJJ is a code indicating where the reference was published. In the case of a journal reference, VVVV is the volume number, M indicates the section of the journal where the reference was published (e.g., L for a letters section), PPPP gives the starting page number, and A is the first letter of the last name of the first author. Periods ( . ) are used to fill unused fields and to pad fields out to their fixed length if too short; padding is done on the right for the publication code and on the left for the volume number and page number. [ 1 ] [ 2 ] Page numbers greater than 9999 are continued in the M column. The 6-digit article ID numbers (in lieu of page numbers) used by the Physical Review publications since the late 1990s are treated as follows: The first two digits of the article ID, corresponding to the issue number, are converted to a lower-case letter (01 = a, etc.) and inserted into column M . The remaining four digits are used in the page field. [ 2 ] As many publishers are moving away from page numbers and using electronic identifiers more and more frequently, the page field is no longer guaranteed to be numeric. Often an identifier of more than 5 digits is truncated, and there may be letters, periods, dashes, or other characters in the page field as well. The volume field may also contain non-numeric characters. Modern bibcodes are likely to be deprecated in the future, and users should not depend on semantic meaning represented in the bibcode. For the most current information on bibcodes, see the help text [ 3 ] for ADS. [ 4 ] Examples [ edit ] Some examples of bibcodes are: Bibcode Reference 1974AJ.....79..819H Heintz, W. D. (1974). \"Astrometric study of four visual binaries\". The Astronomical Journal . 79 : 819– 825. Bibcode : 1974AJ.....79..819H . doi : 10.1086/111614 . 1924MNRAS..84..308E Eddington, A. S. (1924). \"On the relation between the masses and luminosities of the stars\" . Monthly Notices of the Royal Astronomical Society . 84 (5): 308– 332. Bibcode : 1924MNRAS..84..308E . doi : 10.1093/mnras/84.5.308 . 1970ApJ...161L..77K Kemp, J. C.; Swedlund, J. B.; Landstreet, J. D.; Angel, J. R. P. (1970). \"Discovery of circularly polarized light from a white dwarf\". The Astrophysical Journal Letters . 161 : L77– L79. Bibcode : 1970ApJ...161L..77K . doi : 10.1086/180574 . 2004PhRvL..93o0801M Mukherjee, M.; Kellerbauer, A.; Beck, D.; et al. (2004). \"The Mass of 22 Mg\" (PDF) . Physical Review Letters . 93 (15) 150801. Bibcode : 2004PhRvL..93o0801M . doi : 10.1103/PhysRevLett.93.150801 . PMID 15524861 . 2008AgrJ..100.-166S Schillinger, William F.; Papendick, Robert I. (2008). \"Then and Now: 125 Years of Dryland Wheat Farming in the Inland Pacific Northwest\" . Agronomy Journal . 100 (S3): S166– S182. Bibcode : 2008AgrJ..100.-166S . doi : 10.2134/agronj2007.0027c . ISSN 0002-1962 . [ a ] See also [ edit ] Digital object identifier Notes [ edit ] ^ This valid bibcode example contains a hyphen, which Wikipedia incorrectly parses as an error . Refer also to the last paragraph in § Format . References [ edit ] ^ a b Schmitz, M.; Helou, G.; Dubois, P.; LaGue, C.; Madore, B. F.; Corwin, H. G. Jr.; Lesteven, S. (1995). \"NED and SIMBAD Conventions for Bibliographic Reference Coding\". In Egret, Daniel; Albrecht, Miguel A. (eds.). Information & On-Line Data in Astronomy . Kluwer Academic Publishers . ISBN 0-7923-3659-3 . Archived from the original on 7 June 2011 . Retrieved 22 June 2011 . ^ a b c \"The ADS Data, help page\" . NASA ADS. Archived from the original on 14 October 2007 . Retrieved 5 November 2007 . ^ \"Bibcodes\" . ADS news, blogs, and help pages . 9 February 2015 . Retrieved 28 October 2025 . ^ \"Astrophysics Data System\" . ui.adsabs.harvard.edu . Retrieved 28 October 2025 . Portals : Literature Astronomy Stars Science Retrieved from \" https://en.wikipedia.org/w/index.php?title=Bibcode&oldid=1348089696 \"",
+  "links": [
+    "https://en.wikipedia.org/w/index.php?title=Bibcode_(identifier)&redirect=no",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&action=edit&section=1",
+    "https://en.wikipedia.org/wiki/SIMBAD",
+    "https://en.wikipedia.org/wiki/NASA/IPAC_Extragalactic_Database",
+    "https://en.wikipedia.org/wiki/Astrophysics_Data_System",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&action=edit&section=2",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&action=edit&section=3",
+    "https://en.wikipedia.org/wiki/The_Astronomical_Journal",
+    "https://en.wikipedia.org/wiki/Doi_(identifier)",
+    "https://en.wikipedia.org/wiki/Monthly_Notices_of_the_Royal_Astronomical_Society",
+    "https://en.wikipedia.org/wiki/The_Astrophysical_Journal_Letters",
+    "https://en.wikipedia.org/wiki/Physical_Review_Letters",
+    "https://en.wikipedia.org/wiki/PMID_(identifier)",
+    "https://en.wikipedia.org/wiki/Agronomy_Journal",
+    "https://en.wikipedia.org/wiki/ISSN_(identifier)",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&action=edit&section=4",
+    "https://en.wikipedia.org/wiki/Digital_object_identifier",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&action=edit&section=5",
+    "https://en.wikipedia.org/wiki/Help_talk:CS1_errors/Archive_4",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&action=edit&section=6",
+    "https://en.wikipedia.org/wiki/Kluwer_Academic_Publishers",
+    "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+    "https://en.wikipedia.org/w/index.php?title=Bibcode&oldid=1348089696"
+  ],
+  "source": "html",
+  "topic": "climate_change"
+}
