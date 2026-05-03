@@ -20,7 +20,7 @@ ColonySearch is a proof-of-concept distributed search engine with no central ser
 
 Nodes that return good results gain reputation. Queries naturally flow toward high-reputation nodes. Dead ends evaporate. The network self-organizes.
 
-> Built as a university project for the *Introduction to Blockchain* module at THN.
+> Built as a university project for the *Introduction to Bionic Computation* module at THN.
 
 ---
 
