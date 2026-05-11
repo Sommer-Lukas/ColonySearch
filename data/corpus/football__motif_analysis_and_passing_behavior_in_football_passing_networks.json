@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2408.07927v1",
+  "title": "Motif analysis and passing behavior in football passing networks",
+  "body": "The strategic orchestration of football matchplays profoundly influences game outcomes, motivating a surge in research aimed at uncovering tactical nuances through social network analysis. In this paper, we delve into the microscopic intricacies of cooperative player interactions by focusing on triadic motifs within passing networks. Employing a dataset compiled from 3,199 matches across 18 premier football competitions, we identify successful passing activities and construct passing networks for both home and away teams. Our findings highlight a pronounced disparity in passing efficiency, with home teams demonstrating superior performance relative to away teams. Through the identification and analysis of 3-motifs, we find that the motifs with more bidirectional links are more significant. It reveals that footballers exhibit a strong tendency towards backward passes rather than direct forward attacks. Comparing the results of games, we find that some motifs are related to the goal difference. It indicates that direct and effective forward passing significantly amplifies a team's offensive capabilities, whereas an abundance of passbacks portends an elevated risk of offensive futility. These revelations affirm the efficacy of network motif analysis as a potent analytical tool for unveiling the foundational components of passing dynamics among footballers and for decoding the complex tactical behaviors and interaction modalities that underpin team performance.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

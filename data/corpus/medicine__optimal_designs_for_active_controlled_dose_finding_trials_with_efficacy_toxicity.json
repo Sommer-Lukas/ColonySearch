@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1601.00797v1",
+  "title": "Optimal designs for active controlled dose finding trials with efficacy-toxicity outcomes",
+  "body": "Nonlinear regression models addressing both efficacy and toxicity outcomes are increasingly used in dose-finding trials, such as in pharmaceutical drug development. However, research on related experimental design problems for corresponding active controlled trials is still scarce. In this paper we derive optimal designs to estimate efficacy and toxicity in an active controlled clinical dose finding trial when the bivariate continuous outcomes are modeled either by polynomials up to degree 2, the Michaelis- Menten model, the Emax model, or a combination thereof. We determine upper bounds on the number of different doses levels required for the optimal design and provide conditions under which the boundary points of the design space are included in the optimal design. We also provide an analytical description of the minimally supported $D$-optimal designs and show that they do not depend on the correlation between the bivariate outcomes. We illustrate the proposed methods with numerical examples and demonstrate the advantages of the $D$-optimal design for a trial, which has recently been considered in the literature.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

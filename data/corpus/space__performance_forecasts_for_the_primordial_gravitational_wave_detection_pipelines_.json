@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1088/1475-7516/2022/10/063",
+  "title": "Performance forecasts for the primordial gravitational wave detection pipelines for AliCPT-1",
+  "body": "AliCPT is the first Chinese cosmic microwave background (CMB) experiment which will make the most precise measurements of the CMB polarization in the northern hemisphere. The key science goal for AliCPT is the detection of primordial gravitational waves (PGWs). It is well known that an epoch of cosmic inflation, in the very early universe, can produce PGWs, which leave an imprint on the CMB in form of odd parity B-mode polarization. In this work, we study the performance of the component separation and parameter estimation pipelines in context of constraining the value of the tensor-to-scalar ratio. Based on the simulated data for one observation season, we compare five different pipelines with different working principles. Three pipelines perform component separation at map or spectra level before estimating r from the cleaned spectra, while the other two pipelines performs a global fit for both foreground parameters and r. We also test different methods to account for the effects of time stream filtering systematics. This work shows that our pipelines provide consistent and robust constraints on the tensor-to-scalar ratio and a consistent sensitivity σ(r) ∼ 0.02. This showcases the potential of precise B-mode polarization measurement with AliCPT-1. AliCPT will provide a powerful opportunity to detect PGWs, which is complementary with various ground-based CMB experiments in the southern hemisphere.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1609.06843v1",
+  "title": "Fluctuations in protein aggregation: Design of preclinical screening for early diagnosis of neurodegenerative disease",
+  "body": "Autocatalytic fibril nucleation has recently been proposed to be a determining factor for the spread of neurodegenerative diseases, but the same process could also be exploited to amplify minute quantities of protein aggregates in a diagnostic context. Recent advances in microfluidic technology allow analysis of protein aggregation in micron-scale samples potentially enabling such diagnostic approaches, but the theoretical foundations for the analysis and interpretation of such data are so far lacking. Here we study computationally the onset of protein aggregation in small volumes and show that the process is ruled by intrinsic fluctuations whose volume dependent distribution we also estimate theoretically. Based on these results, we develop a strategy to quantify in silico the statistical errors associated with the detection of aggregate containing samples. Our work opens a new perspective on the forecasting of protein aggregation in asymptomatic subjects.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "neuroscience"
+}

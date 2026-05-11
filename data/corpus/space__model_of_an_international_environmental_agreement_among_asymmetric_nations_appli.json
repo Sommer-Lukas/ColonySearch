@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1003.3969v1",
+  "title": "Model of an International Environmental Agreement among Asymmetric Nations applied to Debris Mitigation",
+  "body": "We investigate how ideas from the International Environmental Agreement (IEA) literature can be applied to the problem of space debris mitigation. The problem of space debris is similar to other international environmental problems in that there is a potential for a tragedy of the commons effect--individual nations bear all the cost of their mitigation measures but share only a fraction of the benefit. Consequently, nations have a tendency to underinvest in mitigation. Coalitions of nations, brought together by IEAs, have the potential to lessen the tragedy of the commons effect by pooling the costs and benefits of mitigation. This work brings together two recent modeling advances: i) a game theoretic model for studying the potential gains from IEA cooperation between nations with asymmetric costs and benefits, ii) an orbital debris model that gives the societal cost that specific actions, such as failing to deorbit an inactive satellite, have on the environment. We combine these two models with empirical launch share data for a \"proof of concept\" of an IEA for a single mitigation measure, deorbiting spacecraft at the end of operational lifetime. Simulations of all possible coalitions for a proxy set of 12 asymmetric nations suggest the possibility that stable coalitions can provide significant deorbiting gains relative to nations acting in the absence of an IEA coalition.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "space"
+}

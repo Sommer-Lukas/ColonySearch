@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2009.14135v1",
+  "title": "The role of clearance mechanisms in the kinetics of toxic protein aggregates involved in neurodegenerative diseases",
+  "body": "Protein aggregates in the brain play a central role in cognitive decline and structural damage associated with neurodegenerative diseases. For instance, in Alzheimer's disease the formation of Amyloid-beta plaques and tau proteins neurofibrillary tangles follows from the accumulation of different proteins into large aggregates through specific mechanisms such as nucleation and elongation. These mechanisms have been studied in vitro where total protein mass is conserved. However, in vivo, clearance mechanisms may play an important role in limiting the formation of aggregates. Here, we generalise classical models of protein aggregation to take into account both production of monomers and the clearance of protein aggregates. Depending on the clearance model, we show that there may be a critical clearance value above which aggregation does not take place. Our result offers further evidence in support of the hypotheses that clearance mechanisms play a potentially crucial role in neurodegenerative disease initiation and progression; and as such, are a possible therapeutic target.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "neuroscience"
+}

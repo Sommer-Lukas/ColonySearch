@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ASIANCON66527.2025.11280854",
+  "title": "Data-Driven Prediction of Football Player Positions Using Gradient Boosting Ensemble Models",
+  "body": "Position of football players is a key aspect that should not be underestimated regarding the efforts of teams to optimize their performance, game scouting, and game strategy. The proposed research ventures a machine learning algorithm with FIFA player data as the inputs and classifies the athletes into 30 positions in the field. The most important of them are data reprocessing, feature selection and class balancing. It uses a Gradient Boosting Classifier, which provides high precision through the analysis of such aspects as finishing, positioning, tackling, dribbling of the players. The model is used to analyze 5000 instances and measure precision, recall, F1-score and accuracy. The outcomes demonstrate a promising opportunity of using ensemble learning in sports analytics and provide an automated method of predicting the roles and a way of guiding data-driven solutions in the player development and team composition.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "football"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1051/0004-6361/201834776",
+  "title": "Hot Exoplanet Atmospheres Resolved with Transit Spectroscopy (HEARTS)",
+  "body": "High-resolution optical spectroscopy is a powerful tool to characterise exoplanetary atmospheres from the ground. The sodium D lines, with their large cross sections, are especially suited to studying the upper layers of atmospheres in this context. We report on the results from Hot Exoplanet Atmosphere Resolved with Transit Spectroscopy survey (HEARTS), a spectroscopic survey of exoplanet atmospheres, performing a comparative study of hot gas giants to determine the effects of stellar irradiation. In this second installation of the series, we highlight the detection of neutral sodium on the ultra-hot giant WASP-76b. We observed three transits of the planet using the High-Accuracy Radial-velocity Planet Searcher (HARPS) high-resolution spectrograph at the European Southern Observatory (ESO) 3.6 m telescope and collected 175 spectra of WASP-76. We repeatedly detect the absorption signature of neutral sodium in the planet atmosphere (0.371 ± 0.034%; 10.75 σ in a 0.75 Å passband). The sodium lines have a Gaussian profile with full width at half maximum (FWHM) of 27.6 ± 2.8 km s −1 . This is significantly broader than the line spread function of HARPS (2.7 km s −1 ). We surmise that the observed broadening could trace the super-rotation in the upper atmosphere of this ultra-hot gas giant. Exoplanet Hot Jupiter Spectrograph Planet Atmosphere (unit) Physics Spectroscopy Spectral line Spectral resolution Astrophysics Context (archaeology) Transit (satellite) Trace gas Astronomy Atmospheric sciences Geology Meteorology Political science Public transport Law Paleontology",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

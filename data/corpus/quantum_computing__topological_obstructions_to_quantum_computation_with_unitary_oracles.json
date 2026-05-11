@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2011.10031v3",
+  "title": "Topological obstructions to quantum computation with unitary oracles",
+  "body": "Algorithms with unitary oracles can be nested, which makes them extremely versatile. An example is the phase estimation algorithm used in many candidate algorithms for quantum speed-up. The search for new quantum algorithms benefits from understanding their limitations: Some tasks are impossible in quantum circuits, although their classical versions are easy, for example, cloning. An example with a unitary oracle $U$ is the if clause, the task to implement controlled $U$ (up to the phase on $U$). In classical computation the conditional statement is easy and essential. In quantum circuits the if clause was shown impossible from one query to $U$. Is it possible from polynomially many queries? Here we unify algorithms with a unitary oracle and develop a topological method to prove their limitations: No number of queries to $U$ and $U^\\dagger$ lets quantum circuits implement the if clause, even if admitting approximations, postselection and relaxed causality. We also show limitations of process tomography, oracle neutralization, and $\\sqrt[\\dim U]{U}$, $U^T$, and $U^\\dagger$ algorithms. Our results strengthen an advantage of linear optics, challenge the experiments on relaxed causality, and motivate new algorithms with many-outcome measurements.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

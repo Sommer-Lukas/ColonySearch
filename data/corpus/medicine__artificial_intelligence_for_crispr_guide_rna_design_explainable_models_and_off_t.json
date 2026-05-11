@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2508.20130v1",
+  "title": "Artificial Intelligence for CRISPR Guide RNA Design: Explainable Models and Off-Target Safety",
+  "body": "CRISPR-based genome editing has revolutionized biotechnology, yet optimizing guide RNA (gRNA) design for efficiency and safety remains a critical challenge. Recent advances (2020--2025, updated to reflect current year if needed) demonstrate that artificial intelligence (AI), especially deep learning, can markedly improve the prediction of gRNA on-target activity and identify off-target risks. In parallel, emerging explainable AI (XAI) techniques are beginning to illuminate the black-box nature of these models, offering insights into sequence features and genomic contexts that drive Cas enzyme performance. Here we review how state-of-the-art machine learning models are enhancing gRNA design for CRISPR systems, highlight strategies for interpreting model predictions, and discuss new developments in off-target prediction and safety assessment. We emphasize breakthroughs from top-tier journals that underscore an interdisciplinary convergence of AI and genome editing to enable more efficient, specific, and clinically viable CRISPR applications.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

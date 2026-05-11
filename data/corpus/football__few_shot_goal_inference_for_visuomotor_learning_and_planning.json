@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1810.00482v1",
+  "title": "Few-Shot Goal Inference for Visuomotor Learning and Planning",
+  "body": "Reinforcement learning and planning methods require an objective or reward function that encodes the desired behavior. Yet, in practice, there is a wide range of scenarios where an objective is difficult to provide programmatically, such as tasks with visual observations involving unknown object positions or deformable objects. In these cases, prior methods use engineered problem-specific solutions, e.g., by instrumenting the environment with additional sensors to measure a proxy for the objective. Such solutions require a significant engineering effort on a per-task basis, and make it impractical for robots to continuously learn complex skills outside of laboratory settings. We aim to find a more general and scalable solution for specifying goals for robot learning in unconstrained environments. To that end, we formulate the few-shot objective learning problem, where the goal is to learn a task objective from only a few example images of successful end states for that task. We propose a simple solution to this problem: meta-learn a classifier that can recognize new goals from a few examples. We show how this approach can be used with both model-free reinforcement learning and visual model-based planning and show results in three domains: rope manipulation from images in simulation, visual navigation in a simulated 3D environment, and object arrangement into user-specified configurations on a real robot.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

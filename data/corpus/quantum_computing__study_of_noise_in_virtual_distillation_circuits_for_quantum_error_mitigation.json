@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2210.15317v2",
+  "title": "Study of noise in virtual distillation circuits for quantum error mitigation",
+  "body": "Virtual distillation has been proposed as an error mitigation protocol for estimating the expectation values of observables in quantum algorithms. It proceeds by creating a cyclic permutation of $M$ noisy copies of a quantum state using a sequence of controlled-swap gates. If the noise does not shift the dominant eigenvector of the density operator away from the ideal state, then the error in expectation-value estimation can be exponentially reduced with $M$. In practice, subsequent error mitigation techniques are required to suppress the effect of noise in the cyclic permutation circuit itself, leading to increased experimental complexity. Here, we perform a careful analysis of the effect of uncorrelated, identical noise in the cyclic permutation circuit and find that the estimation of expectation value of observables are robust against dephasing noise. We support the analytical result with numerical simulations and find that $67\\%$ of errors are reduced for $M=2$, with physical dephasing error probabilities as high as $10\\%$. Our results imply that a broad class of quantum algorithms can be implemented with higher accuracy in the near-term with qubit platforms where non-dephasing errors are suppressed, such as superconducting bosonic qubits and Rydberg atoms.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

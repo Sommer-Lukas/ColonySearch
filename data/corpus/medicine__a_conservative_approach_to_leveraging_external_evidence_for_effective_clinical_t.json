@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2211.02381v4",
+  "title": "A Conservative Approach to Leveraging External Evidence for Effective Clinical Trial Design",
+  "body": "Prior probabilities of clinical hypotheses are not systematically used for clinical trial design yet, due to a concern that poor priors may lead to poor decisions. To address this concern, a conservative approach to Bayesian trial design is illustrated here, requiring that the operational characteristics of the primary trial outcome are stronger than the prior. This approach is complementary to current Bayesian design methods, in that it insures against prior-data conflict by defining a sample size commensurate to a discrete design prior. This approach is ethical, in that it requires designs appropriate to achieving pre-specified levels of clinical equipoise imbalance. Practical examples are discussed, illustrating design of trials with binary or time to event endpoints. Moderate increases in phase II study sample size are shown to deliver strong levels of overall evidence for go/no-go clinical development decisions. Levels of negative evidence provided by group sequential confirmatory designs are found negligible, highlighting the importance of complementing efficacy boundaries with non-binding futility criteria.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

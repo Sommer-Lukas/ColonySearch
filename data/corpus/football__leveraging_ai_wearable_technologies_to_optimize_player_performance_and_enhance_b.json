@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/BioSensors65002.2025.11239254",
+  "title": "Leveraging AI Wearable Technologies to Optimize Player Performance and Enhance Basketball Gameplay",
+  "body": "Basketball is one of the most popular sports in the U.S., but intense training can lead to fatigue, affecting player performance and game outcomes. While most research focuses on offline injury prediction, real-time performance monitoring offers valuable insights for coaches to refine strategies. As the sport grows, teams increasingly adopt wearables and analytics to enhance training and reduce injury risks. This paper utilizes surface electromyography (sEMG) and accelerometry to develop a model that classifies optimal player positions based on muscle activity and movement. By analyzing sEMG data from multiple sensors, our model achieves 81% accuracy in stress detection and 91% in player position classification (89.7% for conference games). This system aids in performance optimization, team selection, and strategic player placement.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "football"
+}

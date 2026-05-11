@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.3390/technologies13010032",
+  "title": "Vision Transformers for Image Classification: A Comparative Survey",
+  "body": "Transformers were initially introduced for natural language processing, leveraging the self-attention mechanism. They require minimal inductive biases in their design and can function effectively as set-based architectures. Additionally, transformers excel at capturing long-range dependencies and enabling parallel processing, which allows them to outperform traditional models, such as long short-term memory (LSTM) networks, on sequence-based tasks. In recent years, transformers have been widely adopted in computer vision, driving remarkable advancements in the field. Previous surveys have provided overviews of transformer applications across various computer vision tasks, such as object detection, activity recognition, and image enhancement. In this survey, we focus specifically on image classification. We begin with an introduction to the fundamental concepts of transformers and highlight the first successful Vision Transformer (ViT). Building on the ViT, we review subsequent improvements and optimizations introduced for image classification tasks. We then compare the strengths and limitations of these transformer-based models against classic convolutional neural networks (CNNs) through experiments. Finally, we explore key challenges and potential future directions for image classification transformers.\n\nTL;DR: This survey focuses specifically on image classification transformers and begins with an introduction to the fundamental concepts of transformers and highlight the first successful Vision Transformer (ViT), which is reviewed subsequent improvements and optimizations introduced for image classification tasks.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "ml_algorithms"
+}

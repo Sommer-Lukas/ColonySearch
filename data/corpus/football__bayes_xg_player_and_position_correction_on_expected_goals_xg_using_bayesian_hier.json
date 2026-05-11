@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2311.13707v1",
+  "title": "Bayes-xG: Player and Position Correction on Expected Goals (xG) using Bayesian Hierarchical Approach",
+  "body": "This study employs Bayesian methodologies to explore the influence of player or positional factors in predicting the probability of a shot resulting in a goal, measured by the expected goals (xG) metric. Utilising publicly available data from StatsBomb, Bayesian hierarchical logistic regressions are constructed, analysing approximately 10,000 shots from the English Premier League to ascertain whether positional or player-level effects impact xG. The findings reveal positional effects in a basic model that includes only distance to goal and shot angle as predictors, highlighting that strikers and attacking midfielders exhibit a higher likelihood of scoring. However, these effects diminish when more informative predictors are introduced. Nevertheless, even with additional predictors, player-level effects persist, indicating that certain players possess notable positive or negative xG adjustments, influencing their likelihood of scoring a given chance. The study extends its analysis to data from Spain's La Liga and Germany's Bundesliga, yielding comparable results. Additionally, the paper assesses the impact of prior distribution choices on outcomes, concluding that the priors employed in the models provide sound results but could be refined to enhance sampling efficiency for constructing more complex and extensive models feasibly.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

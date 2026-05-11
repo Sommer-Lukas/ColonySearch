@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1912.08986v1",
+  "title": "Deep Connectomics Networks: Neural Network Architectures Inspired by Neuronal Networks",
+  "body": "The interplay between inter-neuronal network topology and cognition has been studied deeply by connectomics researchers and network scientists, which is crucial towards understanding the remarkable efficacy of biological neural networks. Curiously, the deep learning revolution that revived neural networks has not paid much attention to topological aspects. The architectures of deep neural networks (DNNs) do not resemble their biological counterparts in the topological sense. We bridge this gap by presenting initial results of Deep Connectomics Networks (DCNs) as DNNs with topologies inspired by real-world neuronal networks. We show high classification accuracy obtained by DCNs whose architecture was inspired by the biological neuronal networks of C. Elegans and the mouse visual cortex.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "neuroscience"
+}

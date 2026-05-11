@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ICCECE69169.2026.11399759",
+  "title": "Multi-Agent Reinforcement Learning-Based Task Offloading with Evolutionary Game Theory for User Association in Edge Computing",
+  "body": "Heterogeneous networks, which integrate diverse access nodes such as base stations, WiFi access points, and unmanned aerial vehicles (UAVs), provide an effective solution to address the computational bottlenecks of mobile devices in edge computing. The differences in coverage, bandwidth, and channel characteristics among network nodes enable flexible resource allocation and expanded service coverage. This paper proposes a novel two-stage optimization framework that integrates evolutionary game theory with Multi-Agent Soft ActorCritic (MASAC) for user association and task offloading in heterogeneous edge computing environments comprising base stations, WiFi APs, and UAVs. In the first stage, we model user association as an evolutionary game to achieve Nash equilibrium among users, enabling stable and efficient allocation of users to access nodes. In the second stage, we formulate the task offloading problem as a multi-agent reinforcement learning (MARL) problem and employ MASAC to optimize offloading decisions based on the user association results. Experimental results demonstrate that our proposed approach outperforms existing methods (MATD3, MADDPG) with 38.5% improvement in reward, 33.6% reduction in latency, and 24.7% decrease in energy consumption compared to MATD3, and 75.1%, 58.1%, and 48.4% improvements compared to MADDPG, respectively.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "economics"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2404.11572v1",
+  "title": "Towards Energetic Quantum Advantage in Trapped-Ion Quantum Computation",
+  "body": "The question of the energetic efficiency of quantum computers has gained some attention only recently. A precise understanding of the resources required to operate a quantum computer with a targeted computational performance and how the energy requirements can impact the scalability is still missing. In this work, one implementation of the quantum Fourier transform (QFT) algorithm in a trapped ion setup was studied. The main focus was to obtain a theoretical characterization of the energetic costs of quantum computation. The energetic cost of the experiment was estimated by analyzing the components of the setup and the steps involved in a quantum computation, from the cooling and preparation of the ions to the implementation of the algorithm and readout of the result. A potential scaling of the energetic costs was argued and used to find a possible threshold for an energetic quantum advantage against state-of-the-art classical supercomputers.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

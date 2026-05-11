@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2403.16042v1",
+  "title": "Force Controlled Printing for Material Extrusion Additive Manufacturing",
+  "body": "In material extrusion additive manufacturing, the extrusion process is commonly controlled in a feed-forward fashion. The amount of material to be extruded at each printing location is pre-computed by a planning software. This approach is inherently unable to adapt the extrusion to external and unexpected disturbances, and the quality of the results strongly depends on a number of modeling and tuning parameters. To overcome these limitations, we propose the first framework for Force Controlled Printing for material extrusion additive manufacturing. We utilize a custom-built extruder to measure the extrusion force in real time, and use this quantity as feedback to continuously control the material flow in closed-loop. We demonstrate the existence of a strong correlation between extrusion force and line width, which we exploit to deposit lines of desired width in a width range of 33 % up to 233 % of the nozzle diameter. We also show how Force Controlled Printing outperforms conventional feed-forward extrusion in print quality and disturbance rejection, while requiring little tuning and automatically adapting to changes in the hardware settings. With no adaptation, Force Controlled Printing can deposit lines of desired width under severe disturbances in bed leveling, such as at layer heights ranging between 20 % and 200 % of the nominal height.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

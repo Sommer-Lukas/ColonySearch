@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1904.10675v1",
+  "title": "Organizing Network Management Logic with Circular Economy Principles",
+  "body": "The traditional cycle of industrial products has been linear since its inception. Raw resources are acquired, processed, distributed, used and ultimately disposed of. This linearity has led to a dangerously low efficiency degree in resource use, and has brought forth serious concerns for the viability of our natural ecosystem. Circular economy is introducing a circular workflow for the lifetime of products. It generalizes the disposal phase, reconnecting it to manufacturing, distribution and end-use, thus limiting true deposition to the environment. This process has not been extended so far to software. Nonetheless, the development of software follows the same phases, and also entails the use-and waste-of considerable resources. This include human effort, as well as human and infrastructure sustenance products such as food, traveling and energy. This paper introduces circular economy principles to the software development, and particularly to network management logic and security. It employs a recently proposed concept-the Socket Store-which is an online store distributing end-user network logic in modular form. The Store modules act as mediators between the end-user network logic and the network resources. It is shown that the Socket Store can implement all circular economy principles to the software life-cycle, with considerable gains in resource waste.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "sustainable_materials"
+}

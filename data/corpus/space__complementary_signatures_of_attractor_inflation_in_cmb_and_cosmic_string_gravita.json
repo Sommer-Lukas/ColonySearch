@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1103/81v4-pp8q",
+  "title": "Complementary signatures of \nα\n-attractor inflation in CMB and cosmic string gravitational waves",
+  "body": "When cosmic strings are formed during inflation, they regrow to reach a scaling regime, leaving distinct imprints on the stochastic gravitational wave background (SGWB). Such signatures, associated with specific primordial features, can be detected by upcoming gravitational wave observatories, such as the LISA and Einstein Telescope (ET). Our analysis explores scenarios in which cosmic strings form either before or during inflation. We examine how the number of e-folds experienced by cosmic strings during inflation correlates with the predictions of inflationary models observable in cosmic microwave background (CMB) measurements. This correlation provides a testable link between inflationary physics and the associated gravitational wave signals in a complementary manner. Focusing on $\\alpha$-attractor models of inflation, with the Polynomial $\\alpha$-attractor serving as an illustrative example, we find constraints, for instance, on the spectral index $n_s$ to $0.962 \\lesssim n_s \\lesssim 0.972$ for polynomial exponent $n=1$, $0.956 \\lesssim n_s \\lesssim 0.968$ for $n=2$, $0.954 \\lesssim n_s \\lesssim 0.965$ for $n=3$, and $0.963 \\lesssim n_s \\lesssim 0.964$ for $n=4$, which along with the GW signals from LISA, are capable of detecting local cosmic strings that have experienced $\\sim 34 - 47$ e-folds of inflation consistent with current Planck data and are also testable in upcoming CMB experiments such as LiteBIRD and CMB-S4.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

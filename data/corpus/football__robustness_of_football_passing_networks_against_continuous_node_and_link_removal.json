@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2003.13465v2",
+  "title": "Robustness of football passing networks against continuous node and link removals",
+  "body": "We can construct passing networks when we regard a player as a node and a pass as a link in football games. Thus, we can analyze the networks by using tools developed in network science. Among various metrics characterizing a network, centrality metrics have often been used to identify key players in a passing network. However, a tolerance to players being marked or passes being blocked in a passing network, namely the robustness of the network, has been poorly understood so far. Because the robustness of a passing network can be connected to the increase of ball possession, it would be deeply related to the outcome of a game. Here, we developed position-dependent passing networks of 45 matches by 18 teams belonging to the Japan Professional Football League. Then, nodes or links were continuously removed from the passing networks by two removal methods so that we could evaluate the robustness of these networks against the removals. The results show that these passing networks commonly contain hubs (key players making passes). Then, we analyzed the most robust networks in detail and found that their full backs increase the robustness by often invoking a heavier emphasis on attack. Moreover, we showed that the robustness of the passing networks and the team performance have a positive correlation.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

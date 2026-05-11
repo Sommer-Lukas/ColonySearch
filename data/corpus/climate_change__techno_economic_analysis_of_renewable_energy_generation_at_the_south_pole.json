@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2306.13552v2",
+  "title": "Techno-economic analysis of renewable energy generation at the South Pole",
+  "body": "Transitioning from fossil-fuel power generation to renewable energy generation and energy storage in remote locations has the potential to reduce both carbon emissions and cost. This study presents a techno-economic analysis for implementation of a hybrid renewable energy system at the South Pole in Antarctica, which currently hosts several high-energy physics experiments with nontrivial power needs. A tailored model of resource availability and economics for solar photovoltaics, wind turbine generators, lithium-ion energy storage, and long-duration energy storage at this site is explored in different combinations with and without existing diesel energy generation. The Renewable Energy Integration and Optimization (REopt) platform is used to determine the optimal system component sizing and the associated system economics and environmental benefit. We find that the least-cost system includes all three energy generation sources and lithium-ion energy storage. For an example steady-state load of 170 kW, this hybrid system includes 180 kW-DC of photovoltaic panels, 570 kW of wind turbines, and a 3.4 MWh lithium-ion battery energy storage system. This system reduces diesel consumption by 95% compared to an all-diesel configuration, resulting in approximately 1200 metric tons of carbon footprint avoided annually. Over the course of a 15-year analysis period the reduced diesel usage leads to a net savings of 57 million United States dollars, with a time to payback of approximately two years. All the scenarios modeled show that the transition to renewables is highly cost effective under the unique economics and constraints of this extremely remote site.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1088/1367-2630/18/2/023023",
+  "title": "The theory of variational hybrid quantum-classical algorithms",
+  "body": "Many quantum algorithms have daunting resource requirements when compared to what is available today. To address this discrepancy, a quantum-classical hybrid optimization scheme known as 'the quantum variational eigensolver' was developed (Peruzzo et al 2014 Nat. Commun. 5 4213) with the philosophy that even minimal quantum resources could be made useful when used in conjunction with classical routines. In this work we extend the general theory of this algorithm and suggest algorithmic improvements for practical implementations. Specifically, we develop a variational adiabatic ansatz and explore unitary coupled cluster where we establish a connection from second order unitary coupled cluster to universal gate sets through a relaxation of exponential operator splitting. We introduce the concept of quantum variational error suppression that allows some errors to be suppressed naturally in this algorithm on a pre-threshold quantum device. Additionally, we analyze truncation and correlated sampling in Hamiltonian averaging as ways to reduce the cost of this procedure. Finally, we show how the use of modern derivative free optimization techniques can offer dramatic computational savings of up to three orders of magnitude over previously used optimization techniques. Quantum machine learning Physics Hamiltonian (control theory) Quantum Quantum computer Quantum algorithm Ansatz Coupled cluster Algorithm Adiabatic process Unitary state Adiabatic quantum computation Quantum mechanics Applied mathematics Computer science Mathematical optimization Mathematics Law Political science Molecule",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "quantum_computing"
+}

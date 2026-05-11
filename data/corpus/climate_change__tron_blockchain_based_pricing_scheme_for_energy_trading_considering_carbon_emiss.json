@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ISGTAsia54193.2022.10003568",
+  "title": "Tron Blockchain Based Pricing Scheme for Energy Trading Considering Carbon Emissions Taxes",
+  "body": "With the rapid development of renewable energy generation, governments have released various policies to reduce the portion of the energy generated from the burning of fossil fuel, of which the carbon emission tax is one of the most effective methods. Blockchain is considered as the optimal ecosystem to protect and trace the energy transactions with carbon taxes. This paper proposes a distributed Proof-of-Stake (DPoS) public blockchain with a smart contract function to support a double auction based pricing scheme and execute a carbon tax compensation mechanism, which reduce the trading cost of prosumers and improve the social welfare. A 13-prosumer energy trading model is performed in the case study to experiment the blockchain performance. Numerical results prove the effectiveness and feasibility of the proposed method.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "climate_change"
+}

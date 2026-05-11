@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1305.3196v1",
+  "title": "The stochastic background: scaling laws and time to detection for pulsar timing arrays",
+  "body": "We derive scaling laws for the signal-to-noise ratio of the optimal cross-correlation statistic, and show that the large power-law increase of the signal-to-noise ratio as a function of the the observation time $T$ that is usually assumed holds only at early times. After enough time has elapsed, pulsar timing arrays enter a new regime where the signal to noise only scales as $\\sqrt{T}$. In addition, in this regime the quality of the pulsar timing data and the cadence become relatively un-important. This occurs because the lowest frequencies of the pulsar timing residuals become gravitational-wave dominated. Pulsar timing arrays enter this regime more quickly than one might naively suspect. For T=10 yr observations and typical stochastic background amplitudes, pulsars with residual RMSs of less than about $1\\,μ$s are already in that regime. The best strategy to increase the detectability of the background in this regime is to increase the number of pulsars in the array. We also perform realistic simulations of the NANOGrav pulsar timing array, which through an aggressive pulsar survey campaign adds new millisecond pulsars regularly to its array, and show that a detection is possible within a decade, and could occur as early as 2016.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "space"
+}

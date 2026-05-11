@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1111.5177v3",
+  "title": "A fractal climate response function can simulate global average temperature trends of the modern era and the past millennium",
+  "body": "A climate response function is introduced that consists of six exponential (low-pass) filters with weights depending as a power law on their e-folding times. The response of this two-parameter function to the combined forcings of solar irradiance, greenhouse gases, and SO2-related aerosols is fitted simultaneously to reconstructed temperatures of the past millennium, the response to solar cycles, the response to the 1991 Pinatubo volcanic eruption, and the modern 1850-2010 temperature trend. Assuming strong long-term modulation of solar irradiance, the quite adequate fit produces a climate response function with a millennium-scale response to doubled CO2 concentration of 2.0 +- 0.3 K (mean +- standard error), of which about 50% is realized with e-folding times of 0.5 and 2 years, about 30% with e-folding times of 8 and 32 years, and about 20% with e-folding times of 128 and 512 years. The transient climate response (response after 70 years of 1% yearly rise of CO2 concentration) is 1.5 +- 0.2 K. The temperature rise from 1820-1950 can be attributed for about 70% to increased solar irradiance, while the temperature changes after 1950 are almost completely produced by the interplay of anthropogenic greenhouse gases and aerosols. The SO2-related forcing produces a small temperature drop in the years 1950-1970 and an inflection of the temperature curve around the year 2000. Fitting with a tenfold smaller modulation of solar irradiance produces a less adequate fit with millennium-scale and transient climate responses of 2.5 +- 0.4 K and 1.9 +- 0.3 K, respectively.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

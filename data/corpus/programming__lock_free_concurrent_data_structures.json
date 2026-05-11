@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1302.2757v1",
+  "title": "Lock-free Concurrent Data Structures",
+  "body": "Concurrent data structures are the data sharing side of parallel programming. Data structures give the means to the program to store data, but also provide operations to the program to access and manipulate these data. These operations are implemented through algorithms that have to be efficient. In the sequential setting, data structures are crucially important for the performance of the respective computation. In the parallel programming setting, their importance becomes more crucial because of the increased use of data and resource sharing for utilizing parallelism.\n  The first and main goal of this chapter is to provide a sufficient background and intuition to help the interested reader to navigate in the complex research area of lock-free data structures. The second goal is to offer the programmer familiarity to the subject that will allow her to use truly concurrent methods.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "programming"
+}

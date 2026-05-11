@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.3390/molecules25061375",
+  "title": "A Review on Applications of Computational Methods in Drug Screening and Design",
+  "body": "Drug development is one of the most significant processes in the pharmaceutical industry. Various computational methods have dramatically reduced the time and cost of drug discovery. In this review, we firstly discussed roles of multiscale biomolecular simulations in identifying drug binding sites on the target macromolecule and elucidating drug action mechanisms. Then, virtual screening methods (e.g., molecular docking, pharmacophore modeling, and QSAR) as well as structure- and ligand-based classical/de novo drug design were introduced and discussed. Last, we explored the development of machine learning methods and their applications in aforementioned computational methods to speed up the drug discovery process. Also, several application examples of combining various methods was discussed. A combination of different methods to jointly solve the tough problem at different scales and dimensions will be an inevitable trend in drug screening and design. Pharmacophore Virtual screening Drug discovery Computer science Quantitative structure–activity relationship Drug Biochemical engineering Cheminformatics Process (computing) Computational biology Machine learning Chemistry Bioinformatics Engineering Pharmacology Computational chemistry Medicine Biology Operating system",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "medicine"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1702.00978v2",
+  "title": "Assurance for clinical trial design with normally distributed outcomes: eliciting uncertainty about variances",
+  "body": "The assurance method is growing in popularity in clinical trial planning. The method involves eliciting a prior distribution for the treatment effect, and then calculating the probability that a proposed trial will produce a `successful' outcome. For normally distributed observations, uncertainty about the variance of the normal distribution also needs to be accounted for, but there is little guidance in the literature on how to elicit a distribution for a variance parameter. We present a simple elicitation method, and illustrate how the elicited distribution is incorporated within an assurance calculation. We also consider multi-stage trials, where a decision to proceed with a larger trial will follow from the outcome of a smaller trial; we illustrate the role of the elicted distribution in assessing the information provided by a proposed smaller trial. Free software is available for implementing our methods.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

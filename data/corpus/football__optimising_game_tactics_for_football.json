@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2003.10294v1",
+  "title": "Optimising Game Tactics for Football",
+  "body": "In this paper we present a novel approach to optimise tactical and strategic decision making in football (soccer). We model the game of football as a multi-stage game which is made up from a Bayesian game to model the pre-match decisions and a stochastic game to model the in-match state transitions and decisions. Using this formulation, we propose a method to predict the probability of game outcomes and the payoffs of team actions. Building upon this, we develop algorithms to optimise team formation and in-game tactics with different objectives. Empirical evaluation of our approach on real-world datasets from 760 matches shows that by using optimised tactics from our Bayesian and stochastic games, we can increase a team chances of winning by up to 16.1\\% and 3.4\\% respectively.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

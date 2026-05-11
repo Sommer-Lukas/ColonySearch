@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1088/2058-9565/ab7559",
+  "title": "A quantum-classical cloud platform optimized for variational hybrid algorithms",
+  "body": "Abstract In order to support near-term applications of quantum computing, a new compute paradigm has emerged—the quantum-classical cloud—in which quantum computers (QPUs) work in tandem with classical computers (CPUs) via a shared cloud infrastructure. In this work, we enumerate the architectural requirements of a quantum-classical cloud platform, and present a framework for benchmarking its runtime performance. In addition, we walk through two platform-level enhancements, parametric compilation and active qubit reset, that specifically optimize a quantum-classical architecture to support variational hybrid algorithms, the most promising applications of near-term quantum hardware. Finally, we show that integrating these two features into the Rigetti Quantum Cloud Services platform results in considerable improvements to the latencies that govern algorithm runtime. Cloud computing Computer science Quantum computer Quantum Distributed computing Theoretical computer science Algorithm Qubit Benchmarking Quantum algorithm Architecture Hybrid system Computer engineering Computational science Parametric statistics Order (exchange) Quantum information Work (physics) Tandem Quantum network Class (philosophy)",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "quantum_computing"
+}

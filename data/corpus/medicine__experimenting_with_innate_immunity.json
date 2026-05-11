@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1004.2854v1",
+  "title": "Experimenting with Innate Immunity",
+  "body": "In a previous paper the authors argued the case for incorporating ideas from innate immunity into artificial immune systems (AISs) and presented an outline for a conceptual framework for such systems. A number of key general properties observed in the biological innate and adaptive immune systems were highlighted, and how such properties might be instantiated in artificial systems was discussed in detail. The next logical step is to take these ideas and build a software system with which AISs with these properties can be implemented and experimentally evaluated. This paper reports on the results of that step - the libtissue system.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

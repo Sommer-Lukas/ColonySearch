@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2009.10638v1",
+  "title": "Sense-Deliberate-Act Cognitive Agents for Sense-Compute-Control Applications in the Internet of Things & Services",
+  "body": "In this paper, we advocate Agent-Oriented Software Engi-neering (AOSE) through employing Belief-Desire-Intention (BDI) intel-ligent agents for developing Sense-Compute-Control (SCC) applications in the Internet of Things and Services (IoTS). We argue that not only the agent paradigm, in general, but also cognitive BDI agents with sense-deliberate-act cycle, in particular, fit very well to the nature of SCC applications in the IoTS. However, considering the highly constrained heterogeneous devices that are prevalent in the IoTS, existing BDI agent frameworks, even those especially created for Wireless Sensor Networks (WSNs), do not work. We elaborate on the challenges and propose pos-sible approaches to address them.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

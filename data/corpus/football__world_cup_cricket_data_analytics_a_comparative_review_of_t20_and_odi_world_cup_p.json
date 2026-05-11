@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ICKECS65700.2025.11034937",
+  "title": "World Cup Cricket Data Analytics: A Comparative Review of T20 and ODI World Cup Prediction Techniques",
+  "body": "This paper focuses on utilizing data analytics to extract meaningful insights from historical T20 World Cup cricket data, aiding in strategic decision-making. By analyzing statistics from past matches, player performances, and team dynamics, the study identifies key trends and patterns at both macro and micro levels. It showcases the potential of data analytics in sports, helping teams develop data-driven strategies to enhance performance in future T20 World Cup tournaments. The project involves building a predictive model using logistic regression, implemented in Python, to forecast outcomes of future events. Leveraging detailed historical data, including information on participating countries, match types, and winning teams, the goal is to predict whether a team is likely to win in the upcoming seasons, specifically for 2027 and 2031. The logistic regression model is trained on the historical data to understand how well country have performed. This model will be used to predict winning probabilities in next years, sorting the 4 teams with probability of success.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "football"
+}

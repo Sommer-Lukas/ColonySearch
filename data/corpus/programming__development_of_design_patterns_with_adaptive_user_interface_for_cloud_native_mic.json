@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ic2pct60090.2024.10486720",
+  "title": "Development of Design Patterns with Adaptive User Interface for Cloud Native Microservice Architecture Using Deep Learning With IoT",
+  "body": "The development of design patterns with adaptive user interfaces using deep learning provides an innovative solution to address the demands of modern software systems. The design patterns play an essential role in obtaining scalability and reliability in the systems. The various challenges in the architectural designs and automatic decision-making techniques are attained through the aid of Adam optimization techniques integrated with the Internet of Things. Through the process of integration with an adaptive user interface, the changing user needs are monitored by the system. The deep learning techniques help to automatically adapt and optimize itself without any external parameters. This helps to analyze the user interactions and to promote system efficiency with an enhanced performance ratio. The generation of constant streams of data is obtained through the Internet of Things. The real-time decisions are adopted by analyzing the user behaviour. The Adam optimization techniques are well-known for the training of neural networks. This helps to maintain and adopt fine-tuning of the system and maintaining optimum performance. Thus the integration of deep learning with cloud-native microstructure architecture provides self-optimizing networks for each user in the dynamic nature of the IoT data in real-time environments. Computer science Cloud computing Architecture Internet of Things Deep learning Human–computer interaction Microservices Computer architecture World Wide Web Artificial intelligence Operating system Visual arts Art",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "programming"
+}

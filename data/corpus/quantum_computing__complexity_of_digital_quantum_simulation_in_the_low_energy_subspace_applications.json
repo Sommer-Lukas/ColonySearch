@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2312.08867v3",
+  "title": "Complexity of Digital Quantum Simulation in the Low-Energy Subspace: Applications and a Lower Bound",
+  "body": "Digital quantum simulation has broad applications in approximating unitary evolution of Hamiltonians. In practice, many simulation tasks for quantum systems focus on quantum states in the low-energy subspace instead of the entire Hilbert space. In this paper, we systematically investigate the complexity of digital quantum simulation based on product formulas in the low-energy subspace. We show that the simulation error depends on the effective low-energy norm of the Hamiltonian for a variety of digital quantum simulation algorithms and quantum systems, allowing improvements over the previous complexities for full unitary simulations even for imperfect state preparations due to thermalization. In particular, for simulating spin models in the low-energy subspace, we prove that randomized product formulas such as qDRIFT and random permutation require smaller Trotter numbers. Such improvement also persists in symmetry-protected digital quantum simulations. We prove a similar improvement in simulating the dynamics of power-law quantum interactions. We also provide a query lower bound for general digital quantum simulations in the low-energy subspace.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

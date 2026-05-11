@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/0910.0366v1",
+  "title": "Supporting Lock-Free Composition of Concurrent Data Objects",
+  "body": "Lock-free data objects offer several advantages over their blocking counterparts, such as being immune to deadlocks and convoying and, more importantly, being highly concurrent. But they share a common disadvantage in that the operations they provide are difficult to compose into larger atomic operations while still guaranteeing lock-freedom. We present a lock-free methodology for composing highly concurrent linearizable objects together by unifying their linearization points. This makes it possible to relatively easily introduce atomic lock-free move operations to a wide range of concurrent objects. Experimental evaluation has shown that the operations originally supported by the data objects keep their performance behavior under our methodology.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "programming"
+}

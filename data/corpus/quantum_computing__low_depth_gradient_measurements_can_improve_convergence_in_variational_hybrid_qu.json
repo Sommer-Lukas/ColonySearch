@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1103/physrevlett.126.140502",
+  "title": "Low-Depth Gradient Measurements Can Improve Convergence in Variational Hybrid Quantum-Classical Algorithms",
+  "body": "Within a natural black-box setting, we exhibit a simple optimization problem for which a quantum variational algorithm that measures analytic gradients of the objective function with a low-depth circuit and performs stochastic gradient descent provably converges to an optimum faster than any algorithm that only measures the objective function itself, settling the question of whether measuring analytic gradients in such algorithms can ever be beneficial. We also derive upper bounds on the cost of gradient-based variational optimization near a local minimum. Gradient descent Computer science Parameterized complexity Stochastic optimization Observable Mathematical optimization Quantum Quantum algorithm Stochastic gradient descent Speedup Context (archaeology) Optimization problem Convergence (economics) Algorithm Mathematics Applied mathematics Physics Quantum mechanics Artificial neural network Operating system Economics Economic growth Biology Machine learning Paleontology",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "quantum_computing"
+}

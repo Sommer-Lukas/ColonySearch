@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2512.14076v1",
+  "title": "Seesaw of Saltwater and Inundation Drives Methane Emissions in Coastal Tidal Wetlands",
+  "body": "Wetlands are significant carbon sinks, yet methane emissions partially offset this function due to its high global warming potential. Coastal tidal wetlands, unlike non-tidal wetlands, are regulated by oceanic drivers like salinity gradients and tidal inundation, which strongly influence methane production and release but remain poorly represented in regional assessments. Here, we estimate methane emissions from U.S. East Coast tidal marshes, by integrating ocean model, remote sensing datasets, empirical relationships from metadata. Spatially, emissions reflect the combined effects of marsh extent and per-unit-area flux rates, with hotspots occurring under lower salinity, higher inundation, and lower latitudes. Temporally, temperature and salinity dominate decadal-scale interannual variability. Between 2001 to 2020, total methane emissions are estimated at 0.019 - 0.038 Tg yr-1, with local fluxes rate ranging from 0 to 20 g m-2 day-1. Following pronounced hydrological variability in the early 2000s, emissions have increased steadily since 2007 at approximately 802 t yr-1, driven by warming, freshening, and enhanced inundation. Projections under IPCC climate scenarios indicate that increasing inundation will amplify methane emissions with sea-level rise, until a threshold near 0.75 m SLR, beyond which saltwater intrusion increasingly suppresses further growth, highlighting the critical role of salinity-inundation interactions in coastal methane dynamics.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

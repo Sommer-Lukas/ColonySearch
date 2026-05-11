@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2108.12388v1",
+  "title": "The Effect of Noise on the Performance of Variational Algorithms for Quantum Chemistry",
+  "body": "Variational quantum algorithms are suitable for use on noisy quantum systems. One of the most important use-cases is the quantum simulation of materials, using the variational quantum eigensolver (VQE). To optimize VQE performance, a suitable parameterized quantum circuit (ansatz) must be selected. We investigate a class of ansatze that incorporates knowledge of the quantum hardware, namely the hardware efficient ansatze. The performance of hardware efficient ansatze is affected differently by noise, and our goal is to study the effect of noise on evaluating which ansatz gives more accurate results in practice. First, we study the effect of noise on the different hardware efficient ansatze by benchmarking and ranking the performance of each ansatz family (i) on a chemistry application using VQE and (ii) by the recently established metric of \"expressibility\". The results demonstrate the ranking of optimal circuits does not remain constant in the presence of noise. Second, we evaluate the suitability of the expressibility measure in this context by performing a correlation study between expressibility and the performance of the same circuits on a chemistry application using VQE. Our simulations reveal a weak correlation and therefore demonstrate that expressibility is not an adequate measure to quantify the effectiveness of parameterized quantum circuits for quantum chemistry. Third, we evaluate the effect of different quantum device noise models on the ordering of which ansatz family is best. Interestingly, we see that to decide which ansatz is optimal for use, one needs to consider the specific hardware used even within the same family of quantum hardware.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

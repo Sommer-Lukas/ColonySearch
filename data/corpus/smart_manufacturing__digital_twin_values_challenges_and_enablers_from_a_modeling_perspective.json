@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/access.2020.2970143",
+  "title": "Digital Twin: Values, Challenges and Enablers From a Modeling Perspective",
+  "body": "Digital twin can be defined as a virtual representation of a physical asset enabled through data and simulators for real-time prediction, optimization, monitoring, controlling, and improved decision making. Recent advances in computational pipelines, multiphysics solvers, artificial intelligence, big data cybernetics, data processing and management tools bring the promise of digital twins and their impact on society closer to reality. Digital twinning is now an important and emerging trend in many applications. Also referred to as a computational megamodel, device shadow, mirrored system, avatar or a synchronized virtual prototype, there can be no doubt that a digital twin plays a transformative role not only in how we design and operate cyber-physical intelligent systems, but also in how we advance the modularity of multi-disciplinary systems to tackle fundamental barriers not addressed by the current, evolutionary modeling practices. In this work, we review the recent status of methodologies and techniques related to the construction of digital twins mostly from a modeling perspective. Our aim is to provide a detailed coverage of the current challenges and enabling technologies along with recommendations and reflections for various stakeholders. Computer science Data science Big data Perspective (graphical) Data sharing Human–computer interaction Artificial intelligence Medicine Alternative medicine Pathology Operating system",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "smart_manufacturing"
+}

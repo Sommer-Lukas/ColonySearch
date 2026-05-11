@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2201.00752v5",
+  "title": "Quantum error mitigation via matrix product operators",
+  "body": "In the era of noisy intermediate-scale quantum (NISQ) devices, the number of controllable hardware qubits is insufficient to implement quantum error correction (QEC). As an alternative, quantum error mitigation (QEM) can suppress errors in measurement results via repeated experiments and postprocessing of data. Typical techniques for error mitigation, e.g., the quasi-probability decomposition method, ignore correlated errors between different gates. Here, we introduce a QEM method based on the matrix product operator (MPO) representation of a quantum circuit that can characterize the noise channel with polynomial complexity. Our technique is demonstrated on a $\\rm{depth}=20$ fully parallel quantum circuit of up to $N_q=20$ qubits undergoing local and global noise. The circuit error is reduced by several times with only a small bond dimension $D^{\\prime} = 1$ for the noise channel. The MPO representation increases the accuracy of modeling noise without consuming more experimental resources, which improves the QEM performance and broadens its scope of application. Our method is hopeful of being applied to circuits in higher dimensions with more qubits and deeper depth.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

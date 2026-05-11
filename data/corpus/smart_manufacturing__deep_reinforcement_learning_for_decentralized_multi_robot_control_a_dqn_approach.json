@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2408.11339v1",
+  "title": "Deep Reinforcement Learning for Decentralized Multi-Robot Control: A DQN Approach to Robustness and Information Integration",
+  "body": "The superiority of Multi-Robot Systems (MRS) in various complex environments is unquestionable. However, in complex situations such as search and rescue, environmental monitoring, and automated production, robots are often required to work collaboratively without a central control unit. This necessitates an efficient and robust decentralized control mechanism to process local information and guide the robots' behavior. In this work, we propose a new decentralized controller design method that utilizes the Deep Q-Network (DQN) algorithm from deep reinforcement learning, aimed at improving the integration of local information and robustness of multi-robot systems. The designed controller allows each robot to make decisions independently based on its local observations while enhancing the overall system's collaborative efficiency and adaptability to dynamic environments through a shared learning mechanism. Through testing in simulated environments, we have demonstrated the effectiveness of this controller in improving task execution efficiency, strengthening system fault tolerance, and enhancing adaptability to the environment. Furthermore, we explored the impact of DQN parameter tuning on system performance, providing insights for further optimization of the controller design. Our research not only showcases the potential application of the DQN algorithm in the decentralized control of multi-robot systems but also offers a new perspective on how to enhance the overall performance and robustness of the system through the integration of local information.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

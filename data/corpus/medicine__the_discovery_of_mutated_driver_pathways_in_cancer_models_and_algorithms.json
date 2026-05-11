@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1604.01298v1",
+  "title": "The Discovery of Mutated Driver Pathways in Cancer: Models and Algorithms",
+  "body": "The pathogenesis of cancer in human is still poorly understood. With the rapid development of high-throughput sequencing technologies, huge volumes of cancer genomics data have been generated. Deciphering those data poses great opportunities and challenges to computational biologists. One of such key challenges is to distinguish driver mutations, genes as well as pathways from passenger ones. Mutual exclusivity of gene mutations (each patient has no more than one mutation in the gene set) has been observed in various cancer types and thus has been used as an important property of a driver gene set or pathway. In this article, we aim to review the recent development of computational models and algorithms for discovering driver pathways or modules in cancer with the focus on mutual exclusivity-based ones.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}
