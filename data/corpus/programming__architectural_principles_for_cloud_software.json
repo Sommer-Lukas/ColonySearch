@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1145/3104028",
+  "title": "Architectural Principles for Cloud Software",
+  "body": "A cloud is a distributed Internet-based software system providing resources as tiered services. Through service-orientation and virtualization for resource provisioning, cloud applications can be deployed and managed dynamically. We discuss the building blocks of an architectural style for cloud-based software systems. We capture style-defining architectural principles and patterns for control-theoretic, model-based architectures for cloud software. While service orientation is agreed on in the form of service-oriented architecture and microservices, challenges resulting from multi-tiered, distributed and heterogeneous cloud architectures cause uncertainty that has not been sufficiently addressed. We define principles and patterns needed for effective development and operation of adaptive cloud-native systems. Computer science Cloud computing Microservices Provisioning Architectural style Virtualization Distributed computing Software Service virtualization Architectural pattern Software as a service Resource-oriented architecture Software architecture Component-based software engineering Software system Architecture Software development Operating system Software construction Data virtualization Art Visual arts",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "programming"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1909.11058v1",
+  "title": "Process migration-based computational offloading framework for IoT-supported mobile edge/cloud computing",
+  "body": "Mobile devices have become an indispensable component of Internet of Things (IoT). However, these devices have resource constraints in processing capabilities, battery power, and storage space, thus hindering the execution of computation-intensive applications that often require broad bandwidth, stringent response time, long battery life, and heavy computing power. Mobile cloud computing and mobile edge computing (MEC) are emerging technologies that can meet the aforementioned requirements using offloading algorithms. In this paper, we analyze the effect of platform-dependent native applications on computational offloading in edge networks and propose a lightweight process migration-based computational offloading framework. The proposed framework does not require application binaries at edge servers and thus seamlessly migrates native applications. The proposed framework is evaluated using an experimental testbed. Numerical results reveal that the proposed framework saves almost 44% of the execution time and 84% of the energy consumption. Hence, the proposed framework shows profound potential for resource-intensive IoT application processing in MEC.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2311.14642v1",
+  "title": "Continuous football player tracking from discrete broadcast data",
+  "body": "Player tracking data remains out of reach for many professional football teams as their video feeds are not sufficiently high quality for computer vision technologies to be used. To help bridge this gap, we present a method that can estimate continuous full-pitch tracking data from discrete data made from broadcast footage. Such data could be collected by clubs or players at a similar cost to event data, which is widely available down to semi-professional level. We test our method using open-source tracking data, and include a version that can be applied to a large set of over 200 games with such discrete data.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

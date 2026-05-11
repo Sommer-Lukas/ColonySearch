@@ -1,0 +1,18 @@
+{
+  "url": "https://www.ipcc.ch/report/ar6/syr/",
+  "title": "AR6 Synthesis Report: Climate Change 2023",
+  "body": "Summary for Policymakers ▼ Longer Report ▼ SYR (Full volume) ▼ Figures ► Headline Statements ▼ Annexes and Index ▼ Press Release ► Presentation ▼ Watch video in other UN languages",
+  "links": [
+    "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_SPM.pdf",
+    "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf",
+    "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf",
+    "https://www.ipcc.ch/report/ar6/syr/figures",
+    "https://www.ipcc.ch/report/ar6/syr/resources/spm-headline-statements",
+    "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_AnnexesIndex.pdf",
+    "https://www.ipcc.ch/report/ar6/syr/resources/press",
+    "https://www.ipcc.ch/report/ar6/syr/downloads/press/IPCC_AR6_SYR_SlideDeck.pdf"
+  ],
+  "source": "html",
+  "source_base": "https://www.ipcc.ch",
+  "topic": "climate_change"
+}

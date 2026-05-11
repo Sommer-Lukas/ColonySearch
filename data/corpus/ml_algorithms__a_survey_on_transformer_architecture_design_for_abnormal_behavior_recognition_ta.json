@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ICCEA65460.2025.11103434",
+  "title": "A Survey on Transformer Architecture Design for Abnormal Behavior Recognition Tasks",
+  "body": "In recent years, the outstanding performance of Transformer models in natural language processing (NLP) has garnered attention in the field of computer vision (CV) and has been successfully applied to abnormal behavior recognition tasks. This paper summarizes the research progress of Transformer models and their extended structures. Firstly, we review the crucial role of the self-attention mechanism and large-scale pretraining in the success of Transformer models for abnormal behavior recognition tasks and introduce the Vision Transformer (ViT), the first model applied to image classification tasks. Subsequently, we provide an overview of four widely-used public datasets for abnormal behavior recognition. We discuss the design concepts and operational mechanisms of Transformer models by distinguishing between pure Transformer architectures and convolution + Transformer architectures. We also objectively evaluate the strengths and limitations of various improved Transformer models and their applicable scenarios. Finally, we summarize the current state of development of Transformer models.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "ml_algorithms"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2304.07620v1",
+  "title": "Effect of Methane Mitigation on Global Temperature under a Permafrost Feedback",
+  "body": "Earth systems may fall into an undesirable system state if 1.5 degrees celsius (C) of warming is exceeded. Carbon release from substantial permafrost stocks vulnerable to near-term warming represents a positive climate feedback that may increase the risk of 1.5 C warming or greater. Methane (CH4) is a short-lived but powerful greenhouse gas with a global warming potential 28.5 times that of carbon dioxide (CO2) over a 100 year time span. Because permafrost thaw in the coming centuries is partly determined by the warming in the 21st century, rapid reductions in methane emissions early in the 21st century could have far reaching effects. We use a reduced complexity carbon cycle model and a permafrost feedback module to explore the possibility that accelerating reductions in methane emissions could help avoid long-term warming by limiting permafrost melt. We simulate 3 extended Representative Concentration Pathway (RCP) emission scenarios (RCP 2.6, 4.5, and 6) through the year 2300 and impose methane mitigation strategies where we reduce CH4 emissions by 1%, 5% or 10% annually until the long-term scenario emission level is reached. We find that accelerated rates of methane mitigation do not sufficiently alter the global temperature anomaly to prevent or delay a permafrost feedback, nor do they result in meaningful long term reductions in temperatures. We find that the long-term magnitude of methane mitigation (i.e., long-term emission level) and not the rate of reduction, corresponds to long-term temperature change. Therefore, policy and mitigation efforts should emphasize durable decreases in methane emissions over rapidity of implementation.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

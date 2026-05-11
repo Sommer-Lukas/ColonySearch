@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2107.02311v1",
+  "title": "Design of pulsed waveforms for space debris detection with ATLAS",
+  "body": "ATLAS is the first Portuguese radar system that aims to detect space debris. The article introduces the system and provides a brief description of its capabilities. The system is capable of synthesizing arbitrary amplitude modulated pulse shapes with a resolution of 10 ns. Given that degree of freedom we decided to test an amplitude modulated chirp signal developed by us and a nested barker code. These waveforms are explained as well as their advantages and drawbacks for space debris detection. An experimental setup was developed to test the system receiver and waveforms are processed by digital matched filtering. The experiments test the system using different waveform shapes and noise levels. Experimental results are in agreement with simulation and show that the chirp signal is more resilient to Doppler shifts, has higher range resolution and lower peak-to-sidelobe ratio in comparison with the nested barker code. Future work in order to increase detection capabilities is discussed at the end.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "space"
+}

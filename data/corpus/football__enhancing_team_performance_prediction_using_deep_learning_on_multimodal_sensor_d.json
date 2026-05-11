@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ACCESS.2025.3638869",
+  "title": "Enhancing Team Performance Prediction Using Deep Learning on Multimodal Sensor Data",
+  "body": "This paper presents a deep learning framework for predicting team performance outcomes in competitive sports using multimodal sensor data. Traditional methods often struggle to capture the complex spatiotemporal dependencies and interaction dynamics between players. To address this, we propose a two-part system comprising the Dynamic Interaction-Aware Representation Model (DIARM) and Contextual Interaction-Enhanced Optimization (CIEO). DIARM encodes player trajectories and inter-player proximity into role-sensitive embeddings, while CIEO improves prediction robustness through contextual temporal attention and adaptive training strategies. Our model is evaluated on multiple multimodal sports datasets, demonstrating improved accuracy in winning probability prediction compared to state-of-the-art baselines. This work offers a scalable and interpretable approach for real-time analytics in team sports.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "football"
+}

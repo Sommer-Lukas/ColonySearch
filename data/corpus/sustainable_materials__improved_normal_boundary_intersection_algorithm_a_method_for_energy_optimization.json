@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2201.10303v1",
+  "title": "Improved normal-boundary intersection algorithm: a method for energy optimization strategy in smart buildings",
+  "body": "With the widespread use of distributed energy sources, the advantages of smart buildings over traditional buildings are becoming increasingly obvious. Subsequently, its energy optimal scheduling and multi-objective optimization have become more and more complex and need to be solved urgently. This paper presents a novel method to optimize energy utilization in smart buildings. Firstly, multiple transfer-retention ratio (TRR) parameters are added to the evaluation of distributed renewable energy. Secondly, the normal-boundary intersection (NBI) algorithm is improved by the adaptive weight sum, the adjust uniform axes method, and Mahalanobis distance to form the improved normal-boundary intersection (INBI) algorithm. The multi-objective optimization problem in smart buildings is solved by the parameter TRR and INBI algorithm to improve the regulation efficiency. In response to the needs of decision-makers with evaluation indicators, the average deviation is reduced by 60% compared with the previous case. Numerical examples show that the proposed method is superior to the existing technologies in terms of three optimization objectives. The objectives include 8.2% reduction in equipment costs, 7.6% reduction in power supply costs, and 1.6% improvement in occupants' comfort.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "sustainable_materials"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2005.04020v2",
+  "title": "Modeling ball possession dynamics in the game of football",
+  "body": "In this paper, we study interaction dynamics in the game of football-soccer in the context of ball possession intervals. To do so, we analyze a database comprising one season of the five major football leagues of Europe. Using this input, we developed a stochastic model based on three agents: two teammates and one defender. Despite its simplicity, the model is able to capture, in good approximation, the statistical behavior of possession times, pass lengths, and number of passes performed. In the last section, we show that the model's dynamics can be mapped into a Wiener process with drift and an absorbing barrier.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

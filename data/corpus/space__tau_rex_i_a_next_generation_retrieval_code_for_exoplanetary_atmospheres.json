@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1088/0004-637x/802/2/107",
+  "title": "TAU-REX I: A NEXT GENERATION RETRIEVAL CODE FOR EXOPLANETARY ATMOSPHERES",
+  "body": "Spectroscopy of exoplanetary atmospheres has become a well established method for the characterisation of extrasolar planets. We here present a novel inverse retrieval code for exoplanetary atmospheres. T-REx (Tau Retrieval for Exoplanets) is a line-by-line radiative transfer fully&#13;\\nBayesian retrieval framework. T-REx includes the following features: 1) the optimised use of molecular line-lists from the ExoMol project; 2) an unbiased atmospheric composition prior selection, through custom built pattern recognition software; 3) the use of two independent algorithms to fully sample the Bayesian likelihood space: nested sampling as well as a more classical Markov Chain Monte Carlo approach; 4) iterative Bayesian parameter and model selection using the full Bayesian Evidence as well as the Savage-Dickey Ratio for nested models, and 5) the ability to&#13;\\nfully map very large parameter spaces through optimal code parallelisation and scalability to cluster computing. In this publication we outline the T-REx framework and demonstrate, using a theoretical hot-Jupiter transmission spectrum, the parameter retrieval and model selection. We investigate the impact of Signal-to-Noise and spectral resolution on the retrievability of individual&#13;\\nmodel parameters, both in terms of error bars on the temperature and molecular mixing ratios as well as its effect on the model's global Bayesian evidence. Physics Exoplanet Astronomy Astrobiology Code (set theory) Astrophysics Stars Programming language Set (abstract data type) Computer science",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

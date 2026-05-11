@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1612.09478v1",
+  "title": "Discovery of cancer common and specific driver gene sets",
+  "body": "Cancer is known as a disease mainly caused by gene alterations. Discovery of mutated driver pathways or gene sets is becoming an important step to understand molecular mechanisms of carcinogenesis. However, systematically investigating commonalities and specificities of driver gene sets among multiple cancer types is still a great challenge, but this investigation will undoubtedly benefit deciphering cancers and will be helpful for personalized therapy and precision medicine in cancer treatment. In this study, we propose two optimization models to \\emph{de novo} discover common driver gene sets among multiple cancer types (ComMDP) and specific driver gene sets of one certain or multiple cancer types to other cancers (SpeMDP), respectively. We first apply ComMDP and SpeMDP to simulated data to validate their efficiency. Then, we further apply these methods to 12 cancer types from The Cancer Genome Atlas (TCGA) and obtain several biologically meaningful driver pathways. As examples, we construct a common cancer pathway model for BRCA and OV, infer a complex driver pathway model for BRCA carcinogenesis based on common driver gene sets of BRCA with eight cancer types, and investigate specific driver pathways of the liquid cancer lymphoblastic acute myeloid leukemia (LAML) versus other solid cancer types. In these processes more candidate cancer genes are also found.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

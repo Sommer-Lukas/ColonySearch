@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2305.06769v1",
+  "title": "Comparative Analysis of Machine Learning Algorithms for Predicting On-Target and Off-Target Effects of CRISPR-Cas13d for gene editing",
+  "body": "CRISPR-Cas13 is a system that utilizes single stranded RNAs for RNA editing. Prediction of on-target and off-target effects for the CRISPR-Cas13d dependency enables us to design specific single guide RNAs (sgRNAs) that help locate the desired RNA target positions. In this study, we compared the performance of multiple machine learning algorithms in predicting these effects using a reported dataset. Our results show that Catboost is the most accurate model with high sensitivity. This finding represents a significant advancement in our understanding of how to chose modeling methods to deal with RNA sequence feaatures effictivelys. Furthermore, our approach can potentially be applied to other CRISPR systems and genetic engineering techniques. Overall, this work has important implications for developing safer and more effective gene therapies and biotechnological applications.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

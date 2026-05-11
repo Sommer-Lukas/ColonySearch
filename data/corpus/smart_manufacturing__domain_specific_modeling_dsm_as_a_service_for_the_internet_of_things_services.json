@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2009.10637v1",
+  "title": "Domain Specific Modeling (DSM) as a Service for the Internet of Things & Services",
+  "body": "In this paper, we propose a novel approach for developing Sense-Compute-Control (SCC) applications for the Internet of Things and Services (IoTS) following the Model-Driven Software Engineering (MDSE) methodology. We review the recent approaches to MDSE and argue that Domain Specific Modeling (DSM) suites our needs very well. However, in line with the recent trends in cloud computing and the emer-gence of the IoTS, we believe that both DSM creation tools and DSM solutions that are created via those tools should also be provided to their respective users in a service-oriented fashion through the cloud in the IoTS. In this work, we concentrate on the latter, i.e., DSM solu-tions that are created via a DSM creation tool. We argue that it makes sense for the owners of a DSM solution in a domain to provide their DSM solution as a service, following the well known Software as a Ser-vice (SaaS) model, to the interested customers through the IoTS. Our proposed approach concentrates on such a DSM solution for developing SCC applications in the IoTS. However, the idea could be applied to DSM solutions in other domains as well.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

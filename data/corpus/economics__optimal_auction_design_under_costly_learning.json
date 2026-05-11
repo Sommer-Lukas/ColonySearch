@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.2139/ssrn.5861082",
+  "title": "Optimal Auction Design under Costly Learning",
+  "body": "We study optimal auction design in an independent private values environment where bidders can endogenously -- but at a cost -- improve information about their own valuations. The optimal mechanism is two-stage: at stage-1 bidders register an information acquisition plan and pay a transfer; at stage-2 they bid, and allocation and payments are determined. We show that the revenue-optimal stage-2 rule is the Vickrey--Clarke--Groves (VCG) mechanism, while stage-1 transfers implement the optimal screening of types and absorb information rents consistent with incentive compatibility and participation. By committing to VCG ex post, the pre-auction information game becomes a potential game, so equilibrium information choices maximize expected welfare; the stage-1 fee schedule then transfers an optimal amount of payoff without conditioning on unverifiable cost scales. The design is robust to asymmetric primitives and accommodates a wide range of information technologies, providing a simple implementation that unifies efficiency and optimal revenue in environments with endogenous information acquisition.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "economics"
+}

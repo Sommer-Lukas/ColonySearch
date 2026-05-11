@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2505.18355v2",
+  "title": "X-MethaneWet: A Cross-scale Global Wetland Methane Emission Benchmark Dataset for Advancing Science Discovery with AI",
+  "body": "Methane (CH$_4$) is the second most powerful greenhouse gas after carbon dioxide and plays a crucial role in climate change due to its high global warming potential. Accurately modeling CH$_4$ fluxes across the globe and at fine temporal scales is essential for understanding its spatial and temporal variability and developing effective mitigation strategies. In this work, we introduce the first-of-its-kind cross-scale global wetland methane benchmark dataset (X-MethaneWet), which synthesizes physics-based model simulation data from TEM-MDM and the real-world observation data from FLUXNET-CH$_4$. This dataset can offer opportunities for improving global wetland CH$_4$ modeling and science discovery with new AI algorithms. To set up AI model baselines for methane flux prediction, we evaluate the performance of various sequential deep learning models on X-MethaneWet. Furthermore, we explore four different transfer learning techniques to leverage simulated data from TEM-MDM to improve the generalization of deep learning models on real-world FLUXNET-CH$_4$ observations. Our extensive experiments demonstrate the effectiveness of these approaches, highlighting their potential for advancing methane emission modeling and identifying new opportunities for developing more accurate and scalable AI-driven climate models.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

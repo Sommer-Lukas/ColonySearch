@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2101.05114v2",
+  "title": "Additive Manufacturing of Fibrous Sound Absorbers",
+  "body": "We investigate the possibility of additively manufacturing fibrous sound absorbers using fused deposition modeling. Two methods for 3D printing fibers are proposed. The fiber bridging method involves extruding the filament between two points with no underlying supports. The extrude-and-pull method involves extruding a filament droplet before pulling away the extruder rapidly to generate thin fibers. Both methods can produce fibers with aspect ratios greater than 100. Optical microscopy is used to investigate the effect of various printing parameters on the fiber characteristics. The sound absorption coefficient of samples printed using the two techniques are measured using a two-microphone normal incidence impedance tube setup. Effects of printing parameters and fiber density variables are experimentally studied. The experimental studies are supported by the Johnson-Champoux-Allard semi-empirical analytical model informed using an inverse characterization approach. The analytical model is then utilized to understand the effect of fiber parameters on the acoustical transport parameters. It is observed that the two methods result in individual fibers with distinct characteristics. On average, the fiber bridging method results in thicker fibers, which results in comparatively higher sound absorption. However, the extrude-and-pull method results in fibers with hair-like characteristics (thick base with progressively decreasing thickness) and one may easily incorporate it within existing additive manufacturing routines to add fibers to a base surface, thus opening up a new route towards fiber-enhanced multifunctional structures.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

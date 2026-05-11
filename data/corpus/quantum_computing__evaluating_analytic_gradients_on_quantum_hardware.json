@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1103/physreva.99.032331",
+  "title": "Evaluating analytic gradients on quantum hardware",
+  "body": "An important application for near-term quantum computing lies in optimization tasks, with applications ranging from quantum chemistry and drug discovery to machine learning. In many settings, most prominently in so-called parametrized or variational algorithms, the objective function is a result of hybrid quantum-classical processing. To optimize the objective, it is useful to have access to exact gradients of quantum circuits with respect to gate parameters. This paper shows how gradients of expectation values of quantum measurements can be estimated using the same, or almost the same, architecture that executes the original circuit. It generalizes previous results for qubit-based platforms, and proposes recipes for the computation of gradients of continuous-variable circuits. Interestingly, in many important instances it is sufficient to run the original quantum circuit twice while shifting a single gate parameter to obtain the corresponding component of the gradient. More general cases can be solved by conditioning a single gate on an ancilla. Quantum computer Computer science Quantum circuit Quantum Computation Qubit Electronic circuit Quantum algorithm Quantum gate Function (biology) Algorithm Quantum error correction Theoretical computer science Computer engineering Topology (electrical circuits) Mathematics Quantum mechanics Physics Combinatorics Evolutionary biology Biology",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "quantum_computing"
+}

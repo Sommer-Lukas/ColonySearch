@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2308.01402v2",
+  "title": "Machine Learning-guided Lipid Nanoparticle Design for mRNA Delivery",
+  "body": "While RNA technologies hold immense therapeutic potential in a range of applications from vaccination to gene editing, the broad implementation of these technologies is hindered by the challenge of delivering these agents effectively. Lipid nanoparticles have emerged as one of the most widely used delivery agents, but their design optimization relies on laborious and costly experimental methods. We propose to in silico optimize LNP design with machine learning models. On a curated dataset of 622 LNPs from published studies, we demonstrate the effectiveness of our model in predicting the transfection efficiency of unseen LNPs, with the multilayer perceptron achieving a classification accuracy of 98% on the test set. Our work represents a pioneering effort in combining ML and LNP design, offering significant potential for improving screening efficiency by computationally prioritizing LNP candidates for experimental validation and accelerating the development of effective mRNA delivery systems.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

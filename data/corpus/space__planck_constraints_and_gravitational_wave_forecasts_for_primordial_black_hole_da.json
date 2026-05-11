@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1103/PhysRevD.108.043508",
+  "title": "Planck constraints and gravitational wave forecasts for primordial black hole dark matter seeded by multifield inflation",
+  "body": "We perform a Markov Chain Monte Carlo (MCMC) analysis of a simple yet generic multifield inflation model characterized by two scalar fields coupled to each other and nonminimally coupled to gravity, fit to Planck 2018 cosmic microwave background (CMB) data. In particular, model parameters are constrained by data on the amplitude of the primordial power spectrum of scalar curvature perturbations on CMB scales $A_s$, the spectral index $n_s$, and the ratio of power in tensor to scalar modes $r$, with a prior that the primordial power spectrum should also lead to primordial black hole (PBH) production sufficient to account for the observed dark matter (DM) abundance. We find that $n_s$ in particular controls the constraints on our model. Whereas previous studies of PBH formation from an ultra-slow-roll phase of inflation have highlighted the need for at least one model parameter to be highly fine-tuned, we identify a degeneracy direction in parameter space such that shifts by $\\sim 10\\%$ of one parameter can be compensated by comparable shifts in other parameters while preserving a close fit between model predictions and observations. Furthermore, we find this allowed parameter region produces observable gravitational wave (GW) signals in the frequency ranges to which upcoming experiments are projected to be sensitive, including Advanced LIGO and Virgo, the Einstein Telescope (ET), Cosmic Explorer (CE), DECIGO, and LISA.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

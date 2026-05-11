@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1904.11339v1",
+  "title": "Expanded flow rate range of high-resolution nanoDMAs via improved sample flow injection at the aerosol inlet slit",
+  "body": "High-resolution DMAs requiring hundreds of liters per minute of sheath gas flow Q to classify 1 nm particles have not been previously examined and optimized under the modest Q values (tens of liters per minute) needed to classify particles well above 10 nm. Here we study the resolving power R (based on the relative width of the transfer function) of the Halfmini DMA, at sample flow rates q beyond 1 l/min. The charge-reduced electrosprayed ovalbumin protein used as test aerosol has an accurately determinable Gaussian mobility distribution, which limits the measurable R to at most 25 to 30. Non-ideal DMA response can however be precisely probed by comparing measured peak widths with the convolution of the protein's mobility distribution with the triangular Knutson-Whitby distribution associated to the finite qi/Q ratio. For the unmodified Halfmini DMA, R departs considerably from ideal at qi/Q values as modest as 2%, revealing a problem with the aerosol inlet flow. This imperfection is not removed by either increasing or decreasing the slit width, nor by reorienting axially the sample flow jet as it merges with the sheath gas. By introducing a ring with many perforations upstream of the inlet slit, which favors a more symmetric distribution of the sample flow over the slit perimeter, R values close to ideal are approached with qi/Q ratios as large as 6 to 12%. This improvement enables (in principle) classification of particles larger than 30 nm.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1103/hzcf-q2rk",
+  "title": "Polynomial potential inflation in the ACT era: From CMB to primordial black holes",
+  "body": "The recent measurements from the Atacama Cosmology Telescope (ACT) favor a higher value of the scalar spectral index $n_s$ compared to the Planck data, challenging many well-established inflationary models. In this work, we investigate the viability of polynomial potential inflation in light of the latest ACT data, systematically analyzing cases from $n=2$ to $n=5$. By exploring the parameter space and deriving constraints on the model coefficients, we find that the cubic to quintic models can provide a good fit to the data, while the quadratic model struggles to simultaneously accommodate the ACT data and the requirement of sufficient inflation. Notably, the quintic case ($n=5$) not only matches cosmic microwave background (CMB) observations but also produces an inflection point that simultaneously triggers primordial black hole formation and generates a scalar-induced gravitational wave. These findings establish higher-order polynomial potentials as compelling frameworks and reconcile precision CMB measurements with multi-messenger probes of early-universe physics.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

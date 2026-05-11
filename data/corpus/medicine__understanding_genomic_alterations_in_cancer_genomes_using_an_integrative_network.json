@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1409.3263v1",
+  "title": "Understanding genomic alterations in cancer genomes using an integrative network approach",
+  "body": "In recent years, cancer genome sequencing and other high-throughput studies of cancer genomes have generated many notable discoveries. In this review, Novel genomic alteration mechanisms, such as chromothripsis (chromosomal crisis) and kataegis (mutation storms), and their implications for cancer are discussed. Genomic alterations spur cancer genome evolution. Thus, the relationship between cancer clonal evolution and cancer stems cells is commented. The key question in cancer biology concerns how these genomic alterations support cancer development and metastasis in the context of biological functioning. Thus far, efforts such as pathway analysis have improved the understanding of the functional contributions of genetic mutations and DNA copy number variations to cancer development, progression and metastasis. However, the known pathways correspond to a small fraction, plausibly 5-10%, of somatic mutations and genes with an altered copy number. To develop a comprehensive understanding of the function of these genomic alterations in cancer, an integrative network framework is proposed and discussed. Finally, the challenges and the directions of studying cancer omic data using an integrative network approach are commented.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

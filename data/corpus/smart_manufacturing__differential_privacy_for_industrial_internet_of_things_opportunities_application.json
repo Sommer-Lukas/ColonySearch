@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2101.10569v3",
+  "title": "Differential Privacy for Industrial Internet of Things: Opportunities, Applications and Challenges",
+  "body": "The development of Internet of Things (IoT) brings new changes to various fields. Particularly, industrial Internet of Things (IIoT) is promoting a new round of industrial revolution. With more applications of IIoT, privacy protection issues are emerging. Specially, some common algorithms in IIoT technology such as deep models strongly rely on data collection, which leads to the risk of privacy disclosure. Recently, differential privacy has been used to protect user-terminal privacy in IIoT, so it is necessary to make in-depth research on this topic. In this paper, we conduct a comprehensive survey on the opportunities, applications and challenges of differential privacy in IIoT. We firstly review related papers on IIoT and privacy protection, respectively. Then we focus on the metrics of industrial data privacy, and analyze the contradiction between data utilization for deep models and individual privacy protection. Several valuable problems are summarized and new research ideas are put forward. In conclusion, this survey is dedicated to complete comprehensive summary and lay foundation for the follow-up researches on industrial differential privacy.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

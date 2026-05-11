@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1612.05532v1",
+  "title": "Representation of the German transmission grid for Renewable Energy Sources impact analysis",
+  "body": "The increasing impact of fossil energy generation on the Earth ecological balance is pointing to the need of a transition in power generation technology towards the more clean and sustainable Renewable Energy Sources (RES). This transition is leading to new paradigms and technologies useful for the effective energy transmission and distribution, which take into account the RES stochastic power output. In this scenario, the availability of up to date and reliable datasets regarding topological and operative parameters of power systems in presence of RES are needed, for both proposing and testing new solutions. In this spirit, I present here a dataset regarding the German 380 KV grid which contains fully DC Power Flow operative states of the grid in the presence of various amounts of RES share, ranging from realistic up to 60\\%, which can be used as reference dataset for both steady state and dynamical analysis.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

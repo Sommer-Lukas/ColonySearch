@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1512.00597v2",
+  "title": "Distributed Real-Time Power Balancing in Renewable-Integrated Power Grids with Storage and Flexible Loads",
+  "body": "The large-scale integration of renewable generation directly affects the reliability of power grids. We investigate the problem of power balancing in a general renewable-integrated power grid with storage and flexible loads. We consider a power grid that is supplied by one conventional generator (CG) and multiple renewable generators (RGs) each co-located with storage,and is connected with external markets. An aggregator operates the power grid to maintain power balance between supply and demand. Aiming at minimizing the long-term system cost, we first propose a real-time centralized power balancing solution, taking into account the uncertainty of the renewable generation, loads, and energy prices. We then provide a distributed implementation algorithm, significantly reducing both computational burden and communication overhead. We demonstrate that our proposed algorithm is asymptotically optimal as the storage capacity increases and the CG ramping constraint loosens. Moreover, the distributed implementation enjoys a fast convergence rate, and enables each RG and the aggregator to make their own decisions. Simulation shows that our proposed algorithm outperforms alternatives and can achieve near-optimal performance for a wide range of storage capacity.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

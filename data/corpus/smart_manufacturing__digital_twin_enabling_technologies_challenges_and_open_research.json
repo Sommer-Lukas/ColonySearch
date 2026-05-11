@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/access.2020.2998358",
+  "title": "Digital Twin: Enabling Technologies, Challenges and Open Research",
+  "body": "Digital Twin technology is an emerging concept that has become the centre of attention for industry and, in more recent years, academia. The advancements in industry 4.0 concepts have facilitated its growth, particularly in the manufacturing industry. The Digital Twin is defined extensively but is best described as the effortless integration of data between a physical and virtual machine in either direction. The challenges, applications, and enabling technologies for Artificial Intelligence, Internet of Things (IoT) and Digital Twins are presented. A review of publications relating to Digital Twins is performed, producing a categorical review of recent papers. The review has categorised them by research areas: manufacturing, healthcare and smart cities, discussing a range of papers that reflect these areas and the current state of research. The paper provides an assessment of the enabling technologies, challenges and open research for Digital Twins. Computer science Open research World Wide Web",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "smart_manufacturing"
+}

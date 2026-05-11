@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2201.06566v2",
+  "title": "Sizing of Energy Storage System for Virtual Inertia Emulation",
+  "body": "The infusion of renewable energy sources into the conventional synchronous generation system decreases the overall system inertia and negatively impacts the stability of its primary frequency response. The lowered inertia is due to the absence of inertia in some of the renewable energy-based systems. To maintain the stability of the system, we need to keep the frequency in the permissible limits and maintain low rotational inertia. Some authors in the literature have used the virtual synchronous generators (VSG) as a solution to this problem. Although the VSG based distributed recourses (DER) exhibits the characteristics and behavior of synchronous generators (SG) such as inertia, frequency droop functions and damping but it does not optimally solve the question of frequency stability. This paper presents a solution for these problems via an empirical model that sizes the Battery Energy Storage System (BESS) required for the inertia emulation and damping control. The tested system consists of a Photovoltaic (PV) based VSG that is connected to a 9-Bus grid and the simulation experiments are carried out using EMTP software. The VSG transient response is initiated by a symmetric fault on the grid side. Our simulations show the battery energy sizing required to emulate the virtual inertia corresponding to several design parameters, i.e., the droop gain, Kω, the droop coefficient, Kd, and the VSG time constant Ta.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

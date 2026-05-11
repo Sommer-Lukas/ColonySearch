@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2505.09460v1",
+  "title": "A Bayesian Treatment Selection Design for Phase II Randomised Cancer Clinical Trials",
+  "body": "It is crucial to design Phase II cancer clinical trials that balance the efficiency of treatment selection with clinical practicality. Sargent and Goldberg proposed a frequentist design that allow decision-making even when the primary endpoint is ambiguous. However, frequentist approaches rely on fixed thresholds and long-run frequency properties, which can limit flexibility in practical applications. In contrast, the Bayesian decision rule, based on posterior probabilities, enables transparent decision-making by incorporating prior knowledge and updating beliefs with new data, addressing some of the inherent limitations of frequentist designs. In this study, we propose a novel Bayesian design, allowing selection of a best-performing treatment. Specifically, concerning phase II clinical trials with a binary outcome, our decision rule employs posterior interval probability by integrating the joint distribution over all values, for which the 'success rate' of the bester-performing treatment is greater than that of the other(s). This design can then determine which a treatment should proceed to the next phase, given predefined decision thresholds. Furthermore, we propose two sample size determination methods to empower such treatment selection designs implemented in a Bayesian framework. Through simulation studies and real-data applications, we demonstrate how this approach can overcome challenges related to sample size constraints in randomised trials. In addition, we present a user-friendly R Shiny application, enabling clinicians to Bayesian designs. Both our methodology and the software application can advance the design and analysis of clinical trials for evaluating cancer treatments.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

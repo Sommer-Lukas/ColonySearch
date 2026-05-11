@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1109.3235v1",
+  "title": "A new spin on quantum cryptography: Avoiding trapdoors and embracing public keys",
+  "body": "We give new arguments in support of \\emph{signed quantum key establishment}, where quantum cryptography is used in a public-key infrastructure that provides the required authentication. We also analyze more thoroughly than previous works the benefits that quantum key establishment protocols have over certain classical protocols, motivated in part by the various objections to quantum key establishment that are sometimes raised. Previous knowledge of quantum cryptography on the reader's part is not required for this article, as the definition of \"quantum key establishment\" that we use is an entirely classical and black-box characterization (one need only trust that protocols satisfying the definition exist).",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

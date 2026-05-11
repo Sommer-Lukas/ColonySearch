@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1103/physrevd.82.023530",
+  "title": "Astrophysical uncertainties of dark matter direct detection experiments",
+  "body": "The effects of astrophysical uncertainties on the exclusion limits at dark matter direct detection experiments are investigated for three scenarios: elastic, momentum dependent, and inelastically scattering dark matter. We find that varying the dark matter galactic escape velocity and the Sun's circular velocity can lead to significant variations in the exclusion limits for light ($\\ensuremath{\\lesssim}10\\text{ }\\text{ }\\mathrm{GeV}$) elastic and inelastic scattering dark matter. We also calculate the limits using 100 velocity distributions extracted from the Via Lactea II and GHALO N-body simulations and find that a Maxwell-Boltzmann distribution with the same astrophysical parameters generally sets less constraining limits. The elastic and momentum dependent limits remain robust for masses $\\ensuremath{\\gtrsim}50\\text{ }\\text{ }\\mathrm{GeV}$ under variations of the astrophysical parameters and the form of the velocity distribution. Dark matter Physics Astrophysics Astronomy",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "space"
+}

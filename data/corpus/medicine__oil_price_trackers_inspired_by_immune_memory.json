@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1004.3884v1",
+  "title": "Oil Price Trackers Inspired by Immune Memory",
+  "body": "We outline initial concepts for an immune inspired algorithm to evaluate and predict oil price time series data. The proposed solution evolves a short term pool of trackers dynamically, with each member attempting to map trends and anticipate future price movements. Successful trackers feed into a long term memory pool that can generalise across repeating trend patterns. The resulting sequence of trackers, ordered in time, can be used as a forecasting tool. Examination of the pool of evolving trackers also provides valuable insight into the properties of the crude oil market.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

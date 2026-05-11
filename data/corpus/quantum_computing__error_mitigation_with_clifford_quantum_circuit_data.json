@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2005.10189v3",
+  "title": "Error mitigation with Clifford quantum-circuit data",
+  "body": "Achieving near-term quantum advantage will require accurate estimation of quantum observables despite significant hardware noise. For this purpose, we propose a novel, scalable error-mitigation method that applies to gate-based quantum computers. The method generates training data $\\{X_i^{\\text{noisy}},X_i^{\\text{exact}}\\}$ via quantum circuits composed largely of Clifford gates, which can be efficiently simulated classically, where $X_i^{\\text{noisy}}$ and $X_i^{\\text{exact}}$ are noisy and noiseless observables respectively. Fitting a linear ansatz to this data then allows for the prediction of noise-free observables for arbitrary circuits. We analyze the performance of our method versus the number of qubits, circuit depth, and number of non-Clifford gates. We obtain an order-of-magnitude error reduction for a ground-state energy problem on 16 qubits in an IBMQ quantum computer and on a 64-qubit noisy simulator.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

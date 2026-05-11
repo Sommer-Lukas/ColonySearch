@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2311.05748v1",
+  "title": "Enabling Automated Integration Testing of Smart Farming Applications via Digital Twin Prototypes",
+  "body": "Industry 4.0 represents a major technological shift that has the potential to transform the manufacturing industry, making it more efficient, productive, and sustainable. Smart farming is a concept that involves the use of advanced technologies to improve the efficiency and sustainability of agricultural practices. Industry 4.0 and smart farming are closely related, as many of the technologies used in smart farming are also used in Industry 4.0. Digital twins have the potential for cost-effective software development of such applications. With our Digital Twin Prototype approach, all sensor interfaces are integrated into the development process, and their inputs and outputs of the emulated hardware match those of the real hardware. The emulators respond to the same commands and return identically formatted data packages as their real counterparts, making the Digital Twin Prototype a valid source of a digital shadow, i.e. the Digital Twin Prototype is a prototype of the physical twin and can replace it for automated testing of the digital twin software. In this paper, we present a case study for employing our Digital Twin Prototype approach to automated testing of software for improving the making of silage with a smart farming application. Besides automated testing with continuous integration, we also discuss continuous deployment of modular Docker containers in this context.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

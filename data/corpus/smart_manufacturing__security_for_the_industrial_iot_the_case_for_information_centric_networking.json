@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1810.04645v2",
+  "title": "Security for the Industrial IoT: The Case for Information-Centric Networking",
+  "body": "Industrial production plants traditionally include sensors for monitoring or documenting processes, and actuators for enabling corrective actions in cases of misconfigurations, failures, or dangerous events. With the advent of the IoT, embedded controllers link these `things' to local networks that often are of low power wireless kind, and are interconnected via gateways to some cloud from the global Internet. Inter-networked sensors and actuators in the industrial IoT form a critical subsystem while frequently operating under harsh conditions. It is currently under debate how to approach inter-networking of critical industrial components in a safe and secure manner.\n  In this paper, we analyze the potentials of ICN for providing a secure and robust networking solution for constrained controllers in industrial safety systems. We showcase hazardous gas sensing in widespread industrial environments, such as refineries, and compare with IP-based approaches such as CoAP and MQTT. Our findings indicate that the content-centric security model, as well as enhanced DoS resistance are important arguments for deploying Information Centric Networking in a safety-critical industrial IoT. Evaluation of the crypto efforts on the RIOT operating system for content security reveal its feasibility for common deployment scenarios.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

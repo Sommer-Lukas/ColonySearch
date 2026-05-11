@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2008.04485v3",
+  "title": "Grain refinement of stainless steel in ultrasound-assisted additive manufacturing",
+  "body": "Metals and alloys fabricated by fusion-based additive manufacturing (AM), or 3D printing, undergo complex dynamics of melting and solidification, presenting challenges to the effective control of grain structure. Herein, we report on the use of high-intensity ultrasound that controls the process of solidification during AM of 316L stainless steel. We find that the use of ultrasound favours the columnar-to-equiaxed transition, promoting the formation of fine equiaxed grains with random crystallographic texture. Moreover, the use of ultrasound increases the number density of grains from 305 mm-2 to 2748 mm-2 despite an associated decrease in cooling rate and temperature gradient in the melt pool during AM. Our assessment of the relationship between grain size and cooling rate indicates that the formation of crystallites during AM is enhanced by ultrasound. Furthermore, the use of ultrasound increases the amount of constitutional supercooling during solidification by lowering the temperature gradient in the bulk of the melt pool, thus creating an environment that favours nucleation, growth, and survival of grains. This new understanding provides opportunities to better exploit ultrasound to control grain structure in AM-fabricated metal products.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

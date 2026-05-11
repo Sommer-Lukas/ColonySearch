@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/IVCNZ64857.2024.10794449",
+  "title": "Causal Behaviour Modelling for Player Action Prediction in Rugby League Using Graph Neural Networks",
+  "body": "Rugby League is a dynamic full-contact team sport where two teams of 13 players compete to score points through various tactical plays. It requires advanced strategies from both teams. To analyse and predict these actions, we investigated a causal behaviour modelling approach using graph neural networks (GNNs). We established causal links between player actions using the PCMCI algorithm and used this with a GNN architecture to predict future actions. Our model was trained and evaluated on a dataset of 211 short video clips, capturing over 71,000 player actions. Our investigation showed that integrating causal modelling with GNNs can provide the best of both worlds in terms of explainability and performance, as it was competitive with traditional black-box deep learning models like LSTMs and Transformers, achieving an Fl-Score of about 90.077%. This research highlights the potential of using causality-driven A.I. frameworks for explainable sports analytics and action prediction in the fast-paced and strategic context of Rugby League.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "football"
+}

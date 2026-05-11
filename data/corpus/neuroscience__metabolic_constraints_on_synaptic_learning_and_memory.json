@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1910.07414v1",
+  "title": "Metabolic constraints on synaptic learning and memory",
+  "body": "Dendritic spines, the carriers of long-term memory, occupy a small fraction of cortical space, and yet they are the major consumers of brain metabolic energy. What fraction of this energy goes for synaptic plasticity, correlated with learning and memory? It is estimated here based on neurophysiological and proteomic data for rat brain that, depending on the level of protein phosphorylation, the energy cost of synaptic plasticity constitutes a small fraction of the energy used for fast excitatory synaptic transmission, typically $4.0-11.2 \\%$. Next, this study analyzes a metabolic cost of a new learning and its memory trace in relation to the cost of prior memories, using a class of cascade models of synaptic plasticity. It is argued that these models must contain bidirectional cyclic motifs, related to protein phosphorylation, to be compatible with basic thermodynamic principles. For most investigated parameters longer memories generally require proportionally more energy to store. The exception are the parameters controlling the speed of molecular transitions (e.g. ATP driven phosphorylation rate), for which memory lifetime per invested energy can increase progressively for longer memories. Furthermore, in general, a memory trace decouples dynamically from a corresponding synaptic metabolic rate such that the energy expended on a new learning and its memory trace constitutes in most cases only a small fraction of the baseline energy associated with prior memories. Taken together, these empirical and theoretical results suggest a metabolic efficiency of synaptically stored information.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "neuroscience"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2305.07125v3",
+  "title": "Kwinking as the plastic forming mechanism of B19' NiTi martensite",
+  "body": "Irreversible plastic forming of B19$^\\prime$ martensite of the NiTi shape memory alloy is discussed within the framework of continuum mechanics. It is suggested that the main mechanism arises from coupling between martensite reorientation and coordinated $[100](001)_{\\rm M}$ dislocation slip. A heuristic model is proposed, showing that the ${(20\\bar{1})_{\\rm M}}$ deformation-twin bands, commonly observed in experiments, can be interpreted as a combination of dislocation-mediated kink bands, appearing due to strong plastic anisotropy, and reversible twinning of martensite. We introduce a term 'kwinking' for this combination of reversible twinning and irreversible plastic kinking. The model is subsequently formulated using the tools of nonlinear elasticity theory of martensite and crystal plasticity, introducing 'kwink interfaces' as planar, kinematically compatible interfaces between two differently plastically slipped variants of martensite. It is shown that the ${(20\\bar{1})_{\\rm M}}$ kwink bands may be understood as resultsing from energy minimization, and that their nucleation and growth and their pairing with $(100)_{\\rm M}$ twins into specific patterns enables low-energy plastic forming of NiTi martensite. We conclude that kwinking makes plastic deformation of B19$^\\prime$ martensite in polycrystalline NiTi possible despite only one slip system being available.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "neuroscience"
+}

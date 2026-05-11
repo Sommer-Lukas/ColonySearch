@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2501.08765v1",
+  "title": "Designing and evaluating advanced adaptive randomised clinical trials: a practical guide",
+  "body": "Background: Advanced adaptive randomised clinical trials are increasingly used. Compared to their conventional counterparts, their flexibility may make them more efficient, increase the probability of obtaining conclusive results without larger samples than necessary, and increase the probability that individual participants are allocated to more promising interventions. However, limited guidance is available on designing and evaluating the performance of advanced adaptive trials.\n  Methods: We summarise the methodological considerations and provide practical guidance on the entire workflow of planning and evaluating advanced adaptive trials using adaptive stopping, adaptive arm dropping, and response-adaptive randomisation within a Bayesian statistical framework.\n  Results: This comprehensive practical guide covers the key methodological decisions for advanced adaptive trials and their specification and evaluation using statistical simulation. These considerations include interventions and common control use; outcome type and generation; analysis timing and outcome-data lag; allocation rules; analysis model; adaptation rules for stopping and arm dropping; clinical scenarios assessed; performance metrics; calibration; sensitivity analyses; and reporting. The considerations are covered in the context of realistic examples, along with simulation code using the adaptr R package.\n  Conclusions: This practical guide will help clinical trialists, methodologists, and biostatisticians design and evaluate advanced adaptive trials.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

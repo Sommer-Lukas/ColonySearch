@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1557/s43579-024-00616-6",
+  "title": "Materials data science using CRADLE: A distributed, data-centric approach",
+  "body": "There is a paradigm shift towards data-centric AI, where model efficacy relies on quality, unified data. The common research analytics and data lifecycle environment (CRADLE™) is an infrastructure and framework that supports a data-centric paradigm and materials data science at scale through heterogeneous data management, elastic scaling, and accessible interfaces. We demonstrate CRADLE’s capabilities through five materials science studies: phase identification in X-ray diffraction, defect segmentation in X-ray computed tomography, polymer crystallization analysis in atomic force microscopy, feature extraction from additive manufacturing, and geospatial data fusion. CRADLE catalyzes scalable, reproducible insights to transform how data is captured, stored, and analyzed.\n\nTL;DR: This work demonstrates CRADLE’s capabilities through five materials science studies: phase identification in X-ray diffraction, defect segmentation in X-ray computed tomography, polymer crystallization analysis in atomic force microscopy, feature extraction from additive manufacturing, and geospatial data fusion.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "sustainable_materials"
+}

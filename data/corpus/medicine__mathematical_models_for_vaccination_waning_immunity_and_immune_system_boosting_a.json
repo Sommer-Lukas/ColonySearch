@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1501.03451v1",
+  "title": "Mathematical models for vaccination, waning immunity and immune system boosting: a general framework",
+  "body": "When the body gets infected by a pathogen or receives a vaccine dose, the immune system develops pathogen-specific immunity. Induced immunity decays in time and years after recovery/vaccination the host might become susceptible again. Exposure to the pathogen in the environment boosts the immune system thus prolonging the duration of the protection. Such an interplay of within host and population level dynamics poses significant challenges in rigorous mathematical modeling of immuno-epidemiology. The aim of this paper is twofold. First, we provide an overview of existing models for waning of disease/vaccine-induced immunity and immune system boosting. Then a new modeling approach is proposed for SIRVS dynamics, monitoring the immune status of individuals and including both waning immunity and immune system boosting. We show that some previous models can be considered as special cases or approximations of our framework.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2402.10351v3",
+  "title": "Quantum Automating $\\mathbf{TC}^0$-Frege Is LWE-Hard",
+  "body": "We prove the first hardness results against efficient proof search by quantum algorithms. We show that under Learning with Errors (LWE), the standard lattice-based cryptographic assumption, no quantum algorithm can weakly automate $\\mathbf{TC}^0$-Frege. This extends the line of results of Krajíček and Pudlák (Information and Computation, 1998), Bonet, Pitassi, and Raz (FOCS, 1997), and Bonet, Domingo, Gavaldà, Maciel, and Pitassi (Computational Complexity, 2004), who showed that Extended Frege, $\\mathbf{TC}^0$-Frege and $\\mathbf{AC}^0$-Frege, respectively, cannot be weakly automated by classical algorithms if either the RSA cryptosystem or the Diffie-Hellman key exchange protocol are secure. To the best of our knowledge, this is the first interaction between quantum computation and propositional proof search.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

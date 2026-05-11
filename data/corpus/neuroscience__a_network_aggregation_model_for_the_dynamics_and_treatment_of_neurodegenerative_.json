@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2407.03905v1",
+  "title": "A network aggregation model for the dynamics and treatment of neurodegenerative diseases at the brain scale",
+  "body": "Neurodegenerative diseases are associated with the assembly of specific proteins into oligomers and fibrillar aggregates. At the brain scale, these protein assemblies can diffuse through the brain and seed other regions, creating an autocatalytic protein progression. The growth and transport of these assemblies depend on various mechanisms that can be targeted therapeutically. Here, we use spatially-extended nucleation-aggregation-fragmentation models for the dynamics of prion-like neurodegenerative protein-spreading in the brain to study the effect of different drugs on whole-brain Alzheimer's disease progression.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "neuroscience"
+}

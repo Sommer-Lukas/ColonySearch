@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2602.16327v1",
+  "title": "Guide-Guard: Off-Target Predicting in CRISPR Applications",
+  "body": "With the introduction of cyber-physical genome sequencing and editing technologies, such as CRISPR, researchers can more easily access tools to investigate and create remedies for a variety of topics in genetics and health science (e.g. agriculture and medicine). As the field advances and grows, new concerns present themselves in the ability to predict the off-target behavior. In this work, we explore the underlying biological and chemical model from a data driven perspective. Additionally, we present a machine learning based solution named \\textit{Guide-Guard} to predict the behavior of the system given a gRNA in the CRISPR gene-editing process with 84\\% accuracy. This solution is able to be trained on multiple different genes at the same time while retaining accuracy.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "medicine"
+}

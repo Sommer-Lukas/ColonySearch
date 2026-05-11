@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2112.02390v1",
+  "title": "Alkalinity Concentration Swing for Direct Air Capture of Carbon Dioxide",
+  "body": "We describe a new principle - the Alkalinity Concentration Swing (ACS) - for direct air capture of carbon dioxide driven by concentrating an alkaline solution that has been exposed to the atmosphere and loaded with dissolved inorganic carbon. Upon concentration, the partial pressure of carbon dioxide increases, allowing for extraction and compression. We find that higher concentration factors result in proportionally higher outgassing pressure, and higher initial alkalinity concentrations at the same concentration factor outgas a higher concentration of CO2 relative to the feed solution. We examine two desalination technologies, reverse osmosis and capacitive deionization, as possible implementation for the ACS, and evaluate two simplified corresponding energy models. We compare the ACS to incumbent technologies and make estimates on water, land, and energy requirements for capturing one million tonnes of CO2 per year. We find that estimates for the lower end of the energy range for both reverse osmosis and capacitive deionization approaches are lower than or roughly equal to incumbent direct air capture approaches. For most conditions, we find an inverse relationship between the required energy and water processing volume per million tonnes of CO2. Realizing the ACS requires a simple alkaline aqueous solvent (e.g. potassium alkalinity carrier) and does not require heat as a driving mechanism. More generally, the ACS can be implemented through industrial-scale desalination approaches, meaning current technology could be leveraged for scale-up.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "climate_change"
+}

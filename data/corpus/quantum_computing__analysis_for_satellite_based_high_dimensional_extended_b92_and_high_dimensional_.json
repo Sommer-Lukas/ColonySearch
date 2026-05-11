@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2311.00309v2",
+  "title": "Analysis for satellite-based high-dimensional extended B92 and high-dimensional BB84 quantum key distribution",
+  "body": "A systematic analysis of the advantages and challenges associated with the satellite-based implementation of the high dimensional extended B92 (HD-Ext-B92) and high-dimensional BB84 (HD-BB84) protocol is analyzed. The method used earlier for obtaining the key rate for the HD-Ext-B92 is modified here and subsequently the variations of the key rate, probability distribution of key rate (PDR), and quantum bit error rate (QBER) with respect to dimension and noise parameter of a depolarizing channel is studied using the modified key rate equation. Further, the variations of average key rate (per pulse) with zenith angle and link length in different weather conditions in day and night considering extremely low noise for dimension d=32 are investigated using elliptic beam approximation. The effectiveness of the HD-(extended) protocols used here in creating satellite-based quantum key distribution links (both up-link and down-link) is established by appropriately modeling the atmosphere and analyzing the variation of average key rates with the probability distribution of the transmittance (PDT). The analysis performed here has revealed that in higher dimensions, HD-BB84 outperforms HD-Ext-B92 in terms of both key rate and noise tolerance. However, HD-BB84 experiences a more pronounced saturation of QBER in high dimensions.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

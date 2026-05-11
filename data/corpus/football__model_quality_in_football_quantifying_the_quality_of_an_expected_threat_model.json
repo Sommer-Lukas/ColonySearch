@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2604.21087v2",
+  "title": "Model quality in football: Quantifying the quality of an Expected Threat model",
+  "body": "The recent growth in data availability in football has increased the risk of incorrect use of data-driven models, making guidelines on their validation and application necessary. The Expected Threat (xT) model is an accessible option for football organizations that start building in-house methods, yet little is known about how to assess its quality. The aim of this study is twofold: to examine how the model error depends on the number of game states and the number of training points, and to translate these results into guidelines for constructing and applying the model. Using the Markov chain underlying the model, we perform theoretical analyses and simulations to study the model error. These show that the model error is approximately log-normally distributed for a specified number of training points and game states. Additionally, we combine the simulations with expert consultation to establish the model error beyond which player evaluations based on the Expected Threat model become unreliable for scouting applications. From this, we derive rules of thumb to ensure the quality of an Expected Threat model before application, and we illustrate through an example how a validated model can be applied in practice. Because the approach generalizes to Expected Possession Value models, this paper illustrates a framework to systematically quantify model quality, despite the ground truth being unobservable in football analytics.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

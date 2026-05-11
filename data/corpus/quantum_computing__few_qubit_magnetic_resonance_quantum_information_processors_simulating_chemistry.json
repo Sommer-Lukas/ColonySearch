@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1210.4994v1",
+  "title": "Few-Qubit Magnetic Resonance Quantum Information Processors: Simulating Chemistry and Physics",
+  "body": "We review recent progress made in quantum information processing (QIP) which can be applied in the simulation of quantum systems and chemical phenomena. The review is focused on quantum algorithms which are useful for quantum simulation of chemistry and advances in nuclear magnetic resonance (NMR) and electron spin resonance (ESR) QIP. Discussions also include a number of recent experiments demonstrating the current capabilities of the NMR QIP for quantum simulation and prospects for spin-based implementations of QIP.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

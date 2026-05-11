@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1162/evco_a_00308",
+  "title": "Regret-Based Nash Equilibrium Sorting Genetic Algorithm for Combinatorial Game Theory Problems with Multiple Players",
+  "body": "Abstract We introduce a regret-based fitness assignment strategy for evolutionary algorithms to find Nash equilibria in noncooperative simultaneous combinatorial game theory problems where it is computationally intractable to enumerate all decision options of the players involved in the game. Applications of evolutionary algorithms to non-cooperative simultaneous games have been limited due to challenges in guiding the evolutionary search toward equilibria, which are usually inferior points in the objective space. We propose a regret-based approach to select candidate decision options of the players for the next generation in a multipopulation genetic algorithm called Regret-Based Nash Equilibrium Sorting Genetic Algorithm (RNESGA). We show that RNESGA can converge to multiple Nash equilibria in a single run using two- and three- player competitive knapsack games and other games from the literature. We also show that pure payoff-based fitness assignment strategies perform poorly in three-player games.\n\nTL;DR: A regret-based approach to select candidate decision options of the players for the next generation in a multipopulation genetic algorithm called Regret-Based Nash Equilibrium Sorting Genetic Algorithm (RNESGA).",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "economics"
+}

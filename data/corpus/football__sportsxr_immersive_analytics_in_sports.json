@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2004.08010v1",
+  "title": "SportsXR -- Immersive Analytics in Sports",
+  "body": "We present our initial investigation of key challenges and potentials of immersive analytics (IA) in sports, which we call SportsXR. Sports are usually highly dynamic and collaborative by nature, which makes real-time decision making ubiquitous. However, there is limited support for athletes and coaches to make informed and clear-sighted decisions in real-time. SportsXR aims to support situational awareness for better and more agile decision making in sports. In this paper, we identify key challenges in SportsXR, including data collection, in-game decision making, situated sport-specific visualization design, and collaborating with domain experts. We then present potential user scenarios in training, coaching, and fan experiences. This position paper aims to inform and inspire future SportsXR research.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

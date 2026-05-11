@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2408.11688v1",
+  "title": "Collaborative Robot Arm Inserting Nasopharyngeal Swabs with Admittance Control",
+  "body": "The nasopharyngeal (NP) swab sample test, commonly used to detect COVID-19 and other respiratory illnesses, involves moving a swab through the nasal cavity to collect samples from the nasopharynx. While typically this is done by human healthcare workers, there is a significant societal interest to enable robots to do this test to reduce exposure to patients and to free up human resources. The task is challenging from the robotics perspective because of the dexterity and safety requirements. While other works have implemented specific hardware solutions, our research differentiates itself by using a ubiquitous rigid robotic arm. This work presents a case study where we investigate the strengths and challenges using compliant control system to accomplish NP swab tests with such a robotic configuration. To accomplish this, we designed a force sensing end-effector that integrates with the proposed torque controlled compliant control loop. We then conducted experiments where the robot inserted NP swabs into a 3D printed nasal cavity phantom. Ultimately, we found that the compliant control system outperformed a basic position controller and shows promise for human use. However, further efforts are needed to ensure the initial alignment with the nostril and to address head motion.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "smart_manufacturing"
+}

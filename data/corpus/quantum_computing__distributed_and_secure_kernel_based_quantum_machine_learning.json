@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2408.10265v3",
+  "title": "Distributed and Secure Kernel-Based Quantum Machine Learning",
+  "body": "Quantum computing promises to revolutionize machine learning, offering significant efficiency gains in tasks such as clustering and distance estimation. Additionally, it provides enhanced security through fundamental principles like the measurement postulate and the no-cloning theorem, enabling secure protocols such as quantum teleportation and quantum key distribution. While advancements in secure quantum machine learning are notable, the development of secure and distributed quantum analogues of kernel-based machine learning techniques remains underexplored.\n  In this work, we present a novel approach for securely computing common kernels, including polynomial, radial basis function (RBF), and Laplacian kernels, when data is distributed, using quantum feature maps. Our methodology introduces a robust framework that leverages quantum teleportation to ensure secure and distributed kernel learning. The proposed architecture is validated using IBM's Qiskit Aer Simulator on various public datasets.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "quantum_computing"
+}

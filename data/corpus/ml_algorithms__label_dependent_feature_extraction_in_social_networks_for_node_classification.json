@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/1303.0095v1",
+  "title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+  "body": "A new method of feature extraction in the social network for within-network classification is proposed in the paper. The method provides new features calculated by combination of both: network structure information and class labels assigned to nodes. The influence of various features on classification performance has also been studied. The experiments on real-world data have shown that features created owing to the proposed method can lead to significant improvement of classification accuracy.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "ml_algorithms"
+}

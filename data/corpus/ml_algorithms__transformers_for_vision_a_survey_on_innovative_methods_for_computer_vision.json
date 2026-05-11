@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1109/ACCESS.2025.3571735",
+  "title": "Transformers for Vision: A Survey on Innovative Methods for Computer Vision",
+  "body": "Transformers have emerged as a groundbreaking architecture in the field of computer vision, offering a compelling alternative to traditional convolutional neural networks (CNNs) by enabling the modeling of long-range dependencies and global context through self-attention mechanisms. Originally developed for natural language processing, transformers have now been successfully adapted for a wide range of vision tasks, leading to significant improvements in performance and generalization. This survey provides a comprehensive overview of the fundamental principles of transformer architectures, highlighting the core mechanisms such as self-attention, multi-head attention, and positional encoding that distinguish them from CNNs. We delve into the theoretical adaptations required to apply transformers to visual data, including image tokenization and the integration of positional embeddings. A detailed analysis of key transformer-based vision architectures such as ViT, DeiT, Swin Transformer, PVT, Twins, and CrossViT are presented, alongside their practical applications in image classification, object detection, video understanding, medical imaging, and cross-modal tasks. The paper further compares the performance of vision transformers with CNNs, examining their respective strengths, limitations, and the emergence of hybrid models. Finally, current challenges in deploying ViTs, such as computational cost, data efficiency, and interpretability, and explore recent advancements and future research directions including efficient architectures, self-supervised learning, and multimodal integration are discussed.",
+  "links": [],
+  "source": "semantic_scholar",
+  "source_base": "https://doi.org",
+  "topic": "ml_algorithms"
+}

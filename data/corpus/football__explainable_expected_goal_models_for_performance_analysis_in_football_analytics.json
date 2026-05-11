@@ -1,0 +1,9 @@
+{
+  "url": "https://arxiv.org/abs/2206.07212v2",
+  "title": "Explainable expected goal models for performance analysis in football analytics",
+  "body": "The expected goal provides a more representative measure of the team and player performance which also suit the low-scoring nature of football instead of score in modern football. The score of a match involves randomness and often may not represent the performance of the teams and players, therefore it has been popular to use the alternative statistics in recent years such as shots on target, ball possessions, and drills. To measure the probability of a shot being a goal by the expected goal, several features are used to train an expected goal model which is based on the event and tracking football data. The selection of these features, the size and date of the data, and the model which are used as the parameters that may affect the performance of the model. Using black-box machine learning models for increasing the predictive performance of the model decreases its interpretability that causes the loss of information that can be gathered from the model. This paper proposes an accurate expected goal model trained consisting of 315,430 shots from seven seasons between 2014-15 and 2020-21 of the top-five European football leagues. Moreover, this model is explained by using explainable artificial intelligence tool to obtain an explainable expected goal model for evaluating a team or player performance. To the best of our knowledge, this is the first paper that demonstrates a practical application of an explainable artificial intelligence tool aggregated profiles to explain a group of observations on an accurate expected goal model for monitoring the team and player performance. Moreover, these methods can be generalized to other sports branches.",
+  "links": [],
+  "source": "arxiv",
+  "source_base": "https://arxiv.org",
+  "topic": "football"
+}

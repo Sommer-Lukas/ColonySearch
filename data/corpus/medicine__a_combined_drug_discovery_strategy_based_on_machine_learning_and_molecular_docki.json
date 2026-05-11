@@ -1,0 +1,9 @@
+{
+  "url": "https://doi.org/10.1111/cbdd.13494",
+  "title": "A combined drug discovery strategy based on machine learning and molecular docking",
+  "body": "Data mining methods based on machine learning play an increasingly important role in drug design and discovery. In the current work, eight machine learning methods including decision trees, k-Nearest neighbor, support vector machines, random forests, extremely randomized trees, AdaBoost, gradient boosting trees, and XGBoost were evaluated comprehensively through a case study of ACC inhibitor data sets. Internal and external data sets were employed for cross-validation of the eight machine learning methods. Results showed that the extremely randomized trees model performed best and was adopted as the first step of virtual screening. Together with structure-based virtual screening in the second step, this combined strategy obtained desirable results. This work indicates that the combination of machine learning methods with traditional structure-based virtual screening can effectively strengthen the ability in finding potential hits from large compound database for a given target. Virtual screening AdaBoost Machine learning Computer science Gradient boosting Random forest Drug discovery Artificial intelligence Support vector machine Decision tree Boosting (machine learning) Ensemble learning k-nearest neighbors algorithm Data mining Bioinformatics Biology",
+  "links": [],
+  "source": "openalex",
+  "source_base": "https://doi.org",
+  "topic": "medicine"
+}
