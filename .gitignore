@@ -203,3 +203,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Claude Code local config (permissions, session state, etc.)
+.claude/
+
+# Local SQLite databases created at runtime by node.py
+*.db
+*.sqlite
+*.sqlite3
