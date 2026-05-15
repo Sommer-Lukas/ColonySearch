@@ -1,7 +1,12 @@
 from flask import Flask, jsonify, request
 import requests
 
-import index.py as index
+import search.py as search
+
+
+def sort_search_results(search_results: list, top_k: int):
+    assert top_k > 0
+    return sorted(search_results, lambda x: x.score, reverse=True)[:top_k]
 
 
 class Node:
@@ -9,12 +14,14 @@ class Node:
     def create_from_endpoint_str(endpoint_str: str):
         result = Node()
         result.local = False
+        result.db_dir = None
         result.remote_endpoint = endpoint_from_str(endpoint_str)
         result.neighbors = None
         return result
 
-    def __init__(self, neighbor_endpoint_strings: list = []):
+    def __init__(self, db_dir: str, neighbor_endpoint_strings: list = []):
         self.local = True
+        self.db_dir = db_dir
         self.remote_endpoint = None
         self.neighbors = set(Node.create_from_endpoint_str(endpt_str)
                              for endpt_str in neighbor_endpoint_strings)
@@ -24,13 +31,14 @@ class Node:
         else:            return self._remote_search(query)
 
     def _local_search(self, query: str):
-        results = index.search(query)
+        # TODO: figure out what to do for the vector argument
+        results = search.search(self.db_dir, query, None)
 
         councilor_nodes = self.get_neighbors(10)
         for node in councilor_nodes:
             results.append(node.search(query))
 
-        return index.sort_search_results(results)
+        return sort_search_results(results)
 
     def _remote_search(self, query: str):
         response = requests.get("http://{}:{}/api/search"
@@ -44,7 +52,7 @@ class Node:
         return sort(self.neighbors)[:top_n]
 
 
-myself = Node([
+myself = Node(data/dbs/Node_1, [
     # endpoint strings go here:
     # format: host:port
     # example: 127.0.0.1:80
@@ -65,8 +73,14 @@ def index():
         "message": "Hello from Flask!"
     })
 
-@app.route("/api/search", methods=["GET"])
+@app.route("/search", methods=["GET"])
 def search():
+    # TODO: return as an html document with a listing of search results
+    query = request.get_json().get("query")
+    return jsonify(myself.search(query))
+
+@app.route("/api/search", methods=["GET"])
+def api_search():
     query = request.get_json().get("query")
     return jsonify(myself.search(query))
 
