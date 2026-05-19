@@ -1,12 +1,16 @@
 from flask import Flask, jsonify, request
 import requests
 
+import json
+from copy import deepcopy
+from time import sleep
+
 import search
 temp_search = search.search
 
 
 def sort_search_results(search_results: list):
-    return sorted(search_results, key=lambda x: x.score, reverse=True)
+    return sorted(search_results, key=lambda x: x['score'], reverse=True)
 
 def calc_node_score_from_search_results(search_results: list):
     sorted_search_results = sort_search_results(search_results)
@@ -19,23 +23,39 @@ def calc_node_score_from_search_results(search_results: list):
 
     return total_score
 
-class Node:
-    @staticmethod
-    def create_from_endpoint_str(endpoint_str: str):
-        result = Node()
-        result.local = False
-        result.db_dir = None
-        result.remote_endpoint = endpoint_from_str(endpoint_str)
-        result.neighbors = None
-        result.rep = 0
-        return result
 
-    def __init__(self, db_dir: str, neighbor_endpoint_strings: list = []):
+def endpoint_from_str(endpoint_str: str):
+    return endpoint_str.split(':')
+
+# NOTE: this function is in case you want to specify remote neighbor nodes.
+# example: myself = Node(db_dir, [ node_from_endpoint_str('http://mynode.com:12345') ])
+def node_from_endpoint_str(endpoint_str: str):
+    result = Node()
+    result.local = False
+    result.db_dir = None
+    result.remote_endpoint = endpoint_from_str(endpoint_str)
+    result.neighbors = None
+    result.rep = 0
+    return result
+
+
+# debug print search results with truncated bodies because they're too fucking long for my goddamn terminal
+def print_search_results(search_results: list):
+    for item in search_results:
+        copy = deepcopy(item)
+        copy['body'] = copy['body'][:30]
+        print(json.dumps(copy))
+        print('----------------------------')
+    print(flush=True) # flush the goddamn buffer because that's not fucking automatic for some reason
+                        # Maybe this has to do with my fucking git bash or something
+
+
+class Node:
+    def __init__(self, db_dir: str, neighbors: list = []):
         self.local = True
         self.db_dir = db_dir
         self.remote_endpoint = None
-        self.neighbors = set(Node.create_from_endpoint_str(endpt_str)
-                             for endpt_str in neighbor_endpoint_strings)
+        self.neighbors = neighbors
         self.rep = 0
 
     def search(self, query: str):
@@ -44,7 +64,8 @@ class Node:
 
     def _local_search(self, query: str):
         # TODO: figure out what to do for the vector argument
-        results = temp_search(self.db_dir, query, None)
+        results = [res.to_dict() for res in temp_search(self.db_dir, query, None)]
+        print_search_results(results)
 
         councilor_nodes = self.get_neighbors(10)
 
@@ -52,6 +73,7 @@ class Node:
 
         for node in councilor_nodes:
             search_results = node.search(query)
+            print_search_results(search_results)
             node_score = calc_node_score_from_search_results(search_results)
             councilor_nodes_scores.append(node_score)
 
@@ -65,10 +87,13 @@ class Node:
                 # Idk.
                 item["score"] += node.rep # add old node rep to its results. The calculated node score shouldn't be considered for the search results it was calculated from
 
-            results.append(search_results)
+            results += search_results
 
         for node, score in zip(councilor_nodes, councilor_nodes_scores):
             node.rep += score
+
+        print('\n\n\n\nbetter together, no matter the weather, now, ladies and gentlemen, welcome all the search results:\n\n\n\n')
+        print_search_results(results)
 
         return sort_search_results(results)[:10]
 
@@ -85,11 +110,8 @@ class Node:
 
 
 myself = Node("data/dbs/Node_1", [
-    # endpoint strings go here:
-    # format: host:port
-    # example: 127.0.0.1:80
-    # example: localhost:80
-    # example: example.com:12345
+    Node("data/dbs/Node_2", []),
+    Node("data/dbs/Node_3", [])
 ])
 
 
