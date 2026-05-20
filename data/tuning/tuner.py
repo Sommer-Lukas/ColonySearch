@@ -5,6 +5,7 @@ Parameter tuner CLI for ColonySearch local node search.
 Evaluates across ALL nodes under --data-dir to avoid overfitting to one topic.
 
 Usage:
+  python tuner.py --algo PSO    [--data-dir ../../data]
   python tuner.py --algo QPSO   [--data-dir ../../data]
   python tuner.py --algo GRID   [--data-dir ../../data]
   python tuner.py --algo RANDOM [--data-dir ../../data]
@@ -33,13 +34,14 @@ from data.tuning.ground_truth import load_all_ground_truth
 from data.tuning.metrics import evaluate
 from data.tuning.algos import BOUNDS, OptimizeResult
 from data.tuning.algos.qpso import QPSO
+from data.tuning.algos.pso import PSO
 from data.tuning.algos.grid_search import GridSearch
 from data.tuning.algos.random_search import RandomSearch
 
 
 def main():
     p = argparse.ArgumentParser(description="Tune local node search hyperparameters.")
-    p.add_argument("--algo", required=True, choices=["QPSO", "GRID", "RANDOM"],
+    p.add_argument("--algo", required=True, choices=["PSO", "QPSO", "GRID", "RANDOM"],
                    help="Optimisation algorithm")
     p.add_argument("--data-dir", default=str(_ROOT / "data"),
                    help="Data directory containing dbs/ (all nodes used)")
@@ -75,7 +77,9 @@ def main():
     algo_name = args.algo
     t0 = time.time()
 
-    if algo_name == "QPSO":
+    if algo_name == "PSO":
+        algo = PSO(n_particles=args.particles, max_iter=args.iterations)
+    elif algo_name == "QPSO":
         algo = QPSO(n_particles=args.particles, max_iter=args.iterations)
     elif algo_name == "GRID":
         algo = GridSearch(n_per_dim=args.n_per_dim)
