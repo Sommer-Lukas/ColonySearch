@@ -1,0 +1,11 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/trips/",
+  "title": "TRIPS | Siemens",
+  "body": "TRIPS Trips is your partner for complex automation solutions: Whether in complete projects or in individual areas – we support you from project preparation to hardware and software engineering, digitalization, switchgear construction, logistics and on-site commissioning. Of course, we are also at your disposal when it comes to energy management. Industries Food and beverages Power utilities Machine building Chemicals Minerals Breweries Power distribution Machine tools Industrial components Hydrogen Special chemicals and fine chemicals Tank farms and terminals Cement Motion Build Extends or builds on a Siemens Xcelerator product / solution by creating a new product, or creates a new customer solution via integration of Siemens Xcelerator product and own product Available Products JobManager The JobManager was tested + developed in a virtual environment, handling tasks like batch creation, silo control, recipe management and crane ops. Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/trips-jobmanager/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing"
+}

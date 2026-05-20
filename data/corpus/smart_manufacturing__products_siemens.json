@@ -1,0 +1,11 @@
+{
+  "url": "https://www.siemens.com/en-us/products/",
+  "title": "Products | Siemens",
+  "body": "Products Explore our technology products, including hardware, software and services from Siemens and the Siemens Xcelerator seller portfolio. Contact us",
+  "links": [
+    "https://www.siemens.com/en-us/contact/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing"
+}

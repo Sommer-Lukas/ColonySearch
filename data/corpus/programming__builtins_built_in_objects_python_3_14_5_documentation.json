@@ -1,0 +1,29 @@
+{
+  "url": "https://docs.python.org/3/library/builtins.html",
+  "title": "builtins â Built-in objects — Python 3.14.5 documentation",
+  "body": "builtins â Built-in objects Â¶ This module provides direct access to all âbuilt-inâ identifiers of Python; for example, builtins.open is the full name for the built-in function open() . This module is not normally accessed explicitly by most applications, but can be useful in modules that provide objects with the same name as a built-in value, but in which the built-in of that name is also needed. For example, in a module that wants to implement an open() function that wraps the built-in open() , this module can be used directly: import builtins def open ( path ): f = builtins . open ( path , 'r' ) return UpperCaser ( f ) class UpperCaser : '''Wrapper around a file that converts output to uppercase.''' def __init__ ( self , f ): self . _f = f def read ( self , count =- 1 ): return self . _f . read ( count ) . upper () # ... As an implementation detail, most modules have the name __builtins__ made available as part of their globals. The value of __builtins__ is normally either this module or the value of this moduleâs __dict__ attribute. Since this is an implementation detail, it may not be used by alternate implementations of Python. See also Built-in Constants Built-in Exceptions Built-in Functions Built-in Types",
+  "links": [
+    "https://docs.python.org/3/library/__main__.html",
+    "https://docs.python.org/3/library/sysconfig.html",
+    "https://www.python.org/",
+    "https://docs.python.org/3/index.html",
+    "https://docs.python.org/3/library/index.html",
+    "https://docs.python.org/3/library/python.html",
+    "https://docs.python.org/3/library/functions.html",
+    "https://docs.python.org/3/reference/datamodel.html",
+    "https://docs.python.org/3/library/constants.html",
+    "https://docs.python.org/3/library/exceptions.html",
+    "https://docs.python.org/3/library/stdtypes.html",
+    "https://docs.python.org/3/bugs.html",
+    "https://docs.python.org/3/improve-page-nojs.html",
+    "https://github.com/python/cpython/blob/main/Doc/library/builtins.rst?plain=1",
+    "https://docs.python.org/3/copyright.html",
+    "https://docs.python.org/license.html",
+    "https://www.python.org/psf/donations/",
+    "https://docs.python.org/bugs.html",
+    "https://www.sphinx-doc.org/"
+  ],
+  "source": "html",
+  "source_base": "https://docs.python.org",
+  "topic": "programming"
+}
