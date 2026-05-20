@@ -1,0 +1,27 @@
+{
+  "url": "https://distill.pub/prize/",
+  "title": "Distill Prize for Clarity in Machine Learning",
+  "body": "Distill About Prize Submit The Distill Prize for Clarity in Machine Learning Recognizing outstanding work communicating and refining ideas in Machine Learning and adjacent topics. How much is the Distill Prize? Distill prizes are expected to be $10,000 USD. The Distill Prize has a $125,000 USD initial endowment, funded by Chris Olah , Greg Brockman , Jeff Dean , DeepMind , and the Open Philanthropy Project . Logistics for the prize are handled by the Open Philanthropy Project. When are prizes given? Beginning in 2018, Distill prizes will be given annually for work done before January 1 of that year. The number given each year depends on the amount of outstanding work done. We aim to come to decisions by the end of February. What sort of work is eligible for the prize? Tutorials and solving “open exposition problems.” 1 Creating a new way of looking at something, reframing it or creating a new perspective. Clarifying things we formally know but don’t understand. Visualizations, interfaces, or explorable explanations . Communicating novel results extremely well. Filtering and summarizing research. Can I nominate someone? If you’d like to make sure the prize committee is aware of someone’s work, you can explicitly nominate them for the Distill Prize. To do this, send an email to prize@distill.pub . Nominations should be sent prior to Jan 1 to be considered for that year. Please include links to relevant work. People cannot nominate themselves. How does this relate to the Distill research journal? Being awarded a Distill Prize and being published in the Distill Journal are completely independent. The Distill Prize has no intrinsic preference for work published in its cousin journal. The Distill Prize is legally separate from the Distill Journal, and is not funded or awarded by the Distill Journal. The term “open exposition problem” was introduced by Timothy Chow in A Beginner’s Guide To Forcing Distill is dedicated to clear explanations of machine learning About Submit Prize Archive RSS GitHub Twitter ISSN 2476-0757",
+  "links": [
+    "https://distill.pub/",
+    "https://distill.pub/about/",
+    "https://distill.pub/journal/",
+    "http://colah.github.io",
+    "https://gregbrockman.com/",
+    "https://research.google.com/pubs/jeff.html",
+    "https://deepmind.com/",
+    "http://www.openphilanthropy.org/",
+    "http://explorableexplanations.com/",
+    "http://www-math.mit.edu/~tchow/forcing.pdf",
+    "http://distill.pub/about/",
+    "http://distill.pub/journal/",
+    "http://distill.pub/prize/",
+    "http://distill.pub/archive/",
+    "http://distill.pub/rss.xml",
+    "https://github.com/distillpub",
+    "https://twitter.com/distillpub"
+  ],
+  "source": "html",
+  "source_base": "https://distill.pub",
+  "topic": "ml_algorithms"
+}

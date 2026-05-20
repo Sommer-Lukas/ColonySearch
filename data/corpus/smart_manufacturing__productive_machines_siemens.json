@@ -1,0 +1,11 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/productive-machines/",
+  "title": "Productive Machines | Siemens",
+  "body": "Productive Machines Productive Machines offers a unique solution for autonomous toolpath optimization to produce better parts, faster, first time and it is accessible via an easy-to-use NX CAM plug-in. The underlying technology is a unique digital twin that simulates millions of combinations of machine settings, taking into consideration cutting forces and the dynamics of the machine customised for each machine assembly. SenseNC empowers manufacturers to make data-driven decisions by automatically providing optimal feed rates and spindle speeds for every single cutting location across the toolpath, eliminating trial and error and increasing productivity. Industries Aerospace Automotive Oil and gas Machine building Healthcare Motion Build Extends or builds on a Siemens Xcelerator product / solution by creating a new product, or creates a new customer solution via integration of Siemens Xcelerator product and own product Available Products SenseNC Feeds: Reduce cycle times and extend tool life Increase production capacity, tool life, and reduce costs by using the optimized feed rates in your milling operations from your Siemens NX CAM seat. Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/productive-machines-sensenc-feeds-reduce-cycle-times-and-extend-tool-life/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing"
+}
