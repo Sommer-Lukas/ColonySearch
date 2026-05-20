@@ -12,3 +12,4 @@ scikit-learn>=1.4
 jupyterlab>=4.2
 sentence-transformers>=3.0
 umap-learn>=0.5
+ipympl>=0.10
