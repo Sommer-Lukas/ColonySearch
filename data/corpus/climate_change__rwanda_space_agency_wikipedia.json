@@ -52,5 +52,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "space",
+    "government",
+    "rwanda",
+    "space agency",
+    "aerospace",
+    "space policy",
+    "satellite",
+    "economic development"
+  ]
 }

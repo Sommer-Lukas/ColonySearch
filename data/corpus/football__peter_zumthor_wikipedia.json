@@ -226,5 +226,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "architecture",
+    "biography",
+    "swiss architect",
+    "pritzker prize",
+    "minimalist architecture"
+  ]
 }

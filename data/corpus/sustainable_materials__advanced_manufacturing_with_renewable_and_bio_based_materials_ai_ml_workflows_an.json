@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "engineering",
+    "materials science",
+    "artificial intelligence",
+    "machine learning",
+    "sustainable manufacturing",
+    "biobased materials",
+    "process optimization",
+    "3d printing"
+  ]
 }

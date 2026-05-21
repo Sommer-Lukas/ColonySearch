@@ -5,5 +5,13 @@
   "links": [],
   "source": "html",
   "source_base": "https://pubmed.ncbi.nlm.nih.gov",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "web security",
+    "captcha",
+    "recaptcha",
+    "web browser",
+    "internet",
+    "computer science"
+  ]
 }

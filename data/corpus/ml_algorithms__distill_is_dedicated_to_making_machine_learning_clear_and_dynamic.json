@@ -51,5 +51,13 @@
   ],
   "source": "html",
   "source_base": "https://distill.pub",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "scientific communication",
+    "academic publishing",
+    "data visualization",
+    "neural networks",
+    "research journal"
+  ]
 }

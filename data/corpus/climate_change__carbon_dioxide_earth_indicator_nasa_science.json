@@ -162,5 +162,14 @@
   ],
   "source": "html",
   "source_base": "https://climate.nasa.gov",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "carbon dioxide",
+    "greenhouse gas",
+    "global warming",
+    "earth science",
+    "nasa",
+    "fossil fuels"
+  ]
 }

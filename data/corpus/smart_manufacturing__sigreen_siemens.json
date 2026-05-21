@@ -9,5 +9,14 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "energy",
+    "carbon footprint",
+    "sustainability",
+    "emissions",
+    "supply chain",
+    "software",
+    "data management"
+  ]
 }

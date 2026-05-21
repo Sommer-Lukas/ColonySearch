@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "astronomy",
+    "galaxies",
+    "galactic evolution",
+    "cosmology",
+    "hubble space telescope",
+    "supernovae",
+    "candels"
+  ]
 }

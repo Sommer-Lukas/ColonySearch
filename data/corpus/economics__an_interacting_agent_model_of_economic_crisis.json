@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "economic crisis",
+    "economic model",
+    "interacting agent model",
+    "kuramoto model",
+    "ising model",
+    "globalization",
+    "trade"
+  ]
 }

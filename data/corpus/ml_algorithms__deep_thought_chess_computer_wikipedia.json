@@ -197,5 +197,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer science",
+    "artificial intelligence",
+    "chess",
+    "computer chess",
+    "deep thought",
+    "deep blue",
+    "history of computing"
+  ]
 }

@@ -42,5 +42,14 @@
   ],
   "source": "html",
   "source_base": "https://www.manufacturingtomorrow.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "manufacturing",
+    "automation",
+    "industrial control",
+    "robotics",
+    "sensors",
+    "data analysis"
+  ]
 }

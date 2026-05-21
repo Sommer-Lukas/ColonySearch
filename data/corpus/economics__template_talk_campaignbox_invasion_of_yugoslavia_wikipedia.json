@@ -8,5 +8,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "military history",
+    "world war ii",
+    "yugoslavia",
+    "balkan history",
+    "german history",
+    "italian history"
+  ]
 }

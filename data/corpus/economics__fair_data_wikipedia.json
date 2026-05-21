@@ -111,5 +111,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "data science",
+    "open science",
+    "data management",
+    "fair principles",
+    "data sharing",
+    "research data",
+    "open data"
+  ]
 }

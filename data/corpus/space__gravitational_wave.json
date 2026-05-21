@@ -506,5 +506,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "general relativity",
+    "gravitational waves",
+    "spacetime",
+    "astrophysics",
+    "cosmology"
+  ]
 }

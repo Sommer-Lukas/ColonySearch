@@ -119,5 +119,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "economics",
+    "space economy",
+    "space industry",
+    "space commercialization",
+    "asteroid mining",
+    "space manufacturing",
+    "space exploration"
+  ]
 }

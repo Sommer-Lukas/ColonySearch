@@ -34,5 +34,14 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "science",
+    "quantum physics",
+    "health",
+    "space exploration",
+    "exercise",
+    "blood pressure",
+    "psyche mission"
+  ]
 }

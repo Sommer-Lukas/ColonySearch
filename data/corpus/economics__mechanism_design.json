@@ -506,5 +506,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "game theory",
+    "mechanism design",
+    "market design",
+    "auctions",
+    "distributed systems"
+  ]
 }

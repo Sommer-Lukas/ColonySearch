@@ -1058,5 +1058,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "history",
+    "religion",
+    "christianity",
+    "paganism",
+    "ancient religions",
+    "roman empire",
+    "religious history"
+  ]
 }

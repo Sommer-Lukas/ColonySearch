@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "data analytics",
+    "immersive analytics",
+    "virtual reality",
+    "augmented reality",
+    "realtime systems",
+    "decision making"
+  ]
 }

@@ -708,5 +708,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "cosmology",
+    "astrophysics",
+    "big bang",
+    "universe",
+    "dark matter",
+    "dark energy"
+  ]
 }

@@ -740,5 +740,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "history",
+    "ancient rome",
+    "roman women",
+    "gender roles",
+    "citizenship",
+    "political power",
+    "notable women"
+  ]
 }

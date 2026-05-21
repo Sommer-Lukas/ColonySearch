@@ -174,5 +174,14 @@
   ],
   "source": "html",
   "source_base": "https://www.carbonbrief.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "energy",
+    "climate change",
+    "renewables",
+    "climate policy",
+    "fossil fuels",
+    "energy policy",
+    "international relations"
+  ]
 }

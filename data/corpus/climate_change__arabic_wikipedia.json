@@ -1308,5 +1308,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "linguistics",
+    "arabic",
+    "language",
+    "semitic language",
+    "language history",
+    "sociolinguistics"
+  ]
 }

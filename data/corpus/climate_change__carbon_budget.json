@@ -268,5 +268,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "carbon budget",
+    "greenhouse gas",
+    "emissions",
+    "global warming",
+    "climate policy"
+  ]
 }

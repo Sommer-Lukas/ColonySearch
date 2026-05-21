@@ -78,5 +78,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "history",
+    "architecture",
+    "denmark",
+    "copenhagen",
+    "university",
+    "dormitory",
+    "ole borch"
+  ]
 }

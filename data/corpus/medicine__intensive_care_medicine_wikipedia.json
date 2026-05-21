@@ -475,5 +475,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "intensive care",
+    "critical care",
+    "medical specialty",
+    "organ failure",
+    "life support"
+  ]
 }

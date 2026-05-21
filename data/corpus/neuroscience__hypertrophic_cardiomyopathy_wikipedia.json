@@ -696,5 +696,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "cardiology",
+    "hypertrophic cardiomyopathy",
+    "heart disease",
+    "genetics",
+    "diagnosis",
+    "symptoms"
+  ]
 }

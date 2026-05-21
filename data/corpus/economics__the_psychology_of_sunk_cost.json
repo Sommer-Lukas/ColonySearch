@@ -5,5 +5,13 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "psychology",
+    "economics",
+    "sunk cost",
+    "decision making",
+    "cognitive bias",
+    "behavioral economics"
+  ]
 }

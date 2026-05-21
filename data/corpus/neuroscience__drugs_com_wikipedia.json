@@ -70,5 +70,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "pharmaceuticals",
+    "drug information",
+    "online encyclopedia",
+    "healthcare",
+    "new zealand"
+  ]
 }

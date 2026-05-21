@@ -308,5 +308,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "climate change",
+    "hurricane",
+    "extreme weather",
+    "atlantic hurricane",
+    "florida",
+    "miami",
+    "1950s"
+  ]
 }

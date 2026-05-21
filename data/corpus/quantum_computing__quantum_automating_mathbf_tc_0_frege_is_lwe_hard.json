@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "quantum_computing"
+  "topic": "quantum_computing",
+  "ai_labels": [
+    "mathematics",
+    "quantum computing",
+    "complexity theory",
+    "cryptography",
+    "lwe",
+    "proof complexity"
+  ]
 }

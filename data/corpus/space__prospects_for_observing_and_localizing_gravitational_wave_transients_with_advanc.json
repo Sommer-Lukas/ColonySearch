@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "gravitational waves",
+    "ligo",
+    "virgo",
+    "kagra",
+    "astrophysics",
+    "compact objects",
+    "binary systems"
+  ]
 }

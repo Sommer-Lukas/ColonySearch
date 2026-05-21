@@ -5,5 +5,13 @@
   "links": [],
   "source": "semantic_scholar",
   "source_base": "https://doi.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer vision",
+    "machine learning",
+    "transformers",
+    "neural networks",
+    "deep learning",
+    "artificial intelligence"
+  ]
 }

@@ -5,5 +5,13 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://openalex.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "finance",
+    "highfrequency trading",
+    "algorithmic trading",
+    "trading systems",
+    "financial markets",
+    "market microstructure"
+  ]
 }

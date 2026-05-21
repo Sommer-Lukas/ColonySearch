@@ -172,5 +172,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "materials science",
+    "engineering",
+    "natural fibers",
+    "composites",
+    "textiles",
+    "manufacturing"
+  ]
 }

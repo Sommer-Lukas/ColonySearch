@@ -67,5 +67,13 @@
   ],
   "source": "html",
   "source_base": "https://news.mit.edu",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "manufacturing",
+    "robotics",
+    "modular construction",
+    "ai",
+    "materials science"
+  ]
 }

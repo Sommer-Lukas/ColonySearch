@@ -30,5 +30,13 @@
   ],
   "source": "html",
   "source_base": "https://jamestown.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "politics",
+    "russia",
+    "demographics",
+    "population decline",
+    "ethnicity",
+    "social trends"
+  ]
 }

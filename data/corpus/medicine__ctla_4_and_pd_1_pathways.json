@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "immunology",
+    "cancer",
+    "immunotherapy",
+    "ctla4",
+    "pd1",
+    "melanoma",
+    "lung cancer"
+  ]
 }

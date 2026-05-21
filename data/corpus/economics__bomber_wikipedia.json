@@ -229,5 +229,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "military",
+    "aircraft",
+    "bombers",
+    "warfare",
+    "aviation",
+    "weapons",
+    "history"
+  ]
 }

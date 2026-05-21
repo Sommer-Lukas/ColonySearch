@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "carbon dioxide",
+    "population growth",
+    "exponential growth",
+    "growth models",
+    "atmospheric science"
+  ]
 }

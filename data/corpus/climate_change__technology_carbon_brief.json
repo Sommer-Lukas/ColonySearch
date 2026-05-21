@@ -176,5 +176,13 @@
   ],
   "source": "html",
   "source_base": "https://www.carbonbrief.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "energy",
+    "climate policy",
+    "science",
+    "technology",
+    "emissions"
+  ]
 }

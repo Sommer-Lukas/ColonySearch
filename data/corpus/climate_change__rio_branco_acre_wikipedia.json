@@ -290,5 +290,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "geography",
+    "brazil",
+    "rio branco",
+    "acre",
+    "amazon",
+    "cities",
+    "south america"
+  ]
 }

@@ -163,5 +163,15 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "biology",
+    "neuroscience",
+    "longterm potentiation",
+    "synaptic plasticity",
+    "learning",
+    "memory",
+    "synapses",
+    "neurons"
+  ]
 }

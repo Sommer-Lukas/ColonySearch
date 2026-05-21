@@ -230,5 +230,13 @@
   ],
   "source": "html",
   "source_base": "https://paperswithcode.com",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "finance",
+    "large language models",
+    "multi agent systems",
+    "stock trading",
+    "financial modeling"
+  ]
 }

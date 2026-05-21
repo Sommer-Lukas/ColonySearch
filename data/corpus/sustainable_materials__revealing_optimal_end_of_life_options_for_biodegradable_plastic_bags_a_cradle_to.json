@@ -5,5 +5,16 @@
   "links": [],
   "source": "semantic_scholar",
   "source_base": "https://doi.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "environment",
+    "biodegradable plastics",
+    "life cycle assessment",
+    "waste management",
+    "composting",
+    "anaerobic digestion",
+    "incineration",
+    "landfill",
+    "china"
+  ]
 }

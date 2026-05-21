@@ -2413,5 +2413,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "geography",
+    "europe",
+    "demographics",
+    "economics",
+    "religion",
+    "languages"
+  ]
 }

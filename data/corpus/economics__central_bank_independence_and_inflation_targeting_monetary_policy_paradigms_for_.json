@@ -5,5 +5,13 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://openalex.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "monetary policy",
+    "central banks",
+    "inflation",
+    "inflation targeting",
+    "financial regulation"
+  ]
 }

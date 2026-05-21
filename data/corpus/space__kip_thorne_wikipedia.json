@@ -1141,5 +1141,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "astrophysicist",
+    "nobel laureate",
+    "kip thorne",
+    "gravitational waves",
+    "ligo",
+    "general relativity"
+  ]
 }

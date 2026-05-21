@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "environment",
+    "circular economy",
+    "industrial ecology",
+    "sustainability",
+    "bibliometrics",
+    "text mining"
+  ]
 }

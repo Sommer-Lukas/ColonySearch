@@ -226,5 +226,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "biology",
+    "bioinformatics",
+    "genomics",
+    "systems biology",
+    "pathways",
+    "databases",
+    "drug development"
+  ]
 }

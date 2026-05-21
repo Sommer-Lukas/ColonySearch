@@ -28,5 +28,13 @@
   ],
   "source": "html",
   "source_base": "https://www.worldbank.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "debt",
+    "fiscal policy",
+    "public debt",
+    "development",
+    "world bank"
+  ]
 }

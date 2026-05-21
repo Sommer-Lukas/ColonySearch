@@ -215,5 +215,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "politics",
+    "uk politics",
+    "parliament",
+    "elections",
+    "constituencies",
+    "scottish politics"
+  ]
 }

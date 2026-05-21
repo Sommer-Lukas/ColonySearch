@@ -826,5 +826,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "deep learning",
+    "transformer",
+    "natural language processing",
+    "neural network",
+    "artificial intelligence"
+  ]
 }

@@ -899,5 +899,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "publishing",
+    "academic publishing",
+    "science publishing",
+    "medical publishing",
+    "netherlands",
+    "business",
+    "company",
+    "medicine"
+  ]
 }

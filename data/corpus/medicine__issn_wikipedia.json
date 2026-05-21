@@ -575,5 +575,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "library science",
+    "publishing",
+    "serial publication",
+    "identifier",
+    "issn",
+    "information science"
+  ]
 }

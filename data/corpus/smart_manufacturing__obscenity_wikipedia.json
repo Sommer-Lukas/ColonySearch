@@ -862,5 +862,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "law",
+    "social issues",
+    "obscenity",
+    "morality",
+    "censorship",
+    "freedom of speech"
+  ]
 }

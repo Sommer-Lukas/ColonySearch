@@ -397,5 +397,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "prompt engineering",
+    "large language models",
+    "natural language processing",
+    "artificial intelligence",
+    "generative ai"
+  ]
 }

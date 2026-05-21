@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "alzheimers disease",
+    "neurodegeneration",
+    "medical imaging",
+    "mri",
+    "disease progression",
+    "data analysis",
+    "reproducibility"
+  ]
 }

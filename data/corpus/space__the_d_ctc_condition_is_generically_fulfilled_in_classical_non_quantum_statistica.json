@@ -131,5 +131,13 @@
   ],
   "source": "html",
   "source_base": "https://doi.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "closed timelike curves",
+    "ctc condition",
+    "quantum systems",
+    "classical systems",
+    "statistical mechanics"
+  ]
 }

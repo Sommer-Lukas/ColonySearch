@@ -28,5 +28,13 @@
   ],
   "source": "html",
   "source_base": "https://www.nist.gov",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "manufacturing",
+    "government",
+    "nist",
+    "industry",
+    "economics"
+  ]
 }

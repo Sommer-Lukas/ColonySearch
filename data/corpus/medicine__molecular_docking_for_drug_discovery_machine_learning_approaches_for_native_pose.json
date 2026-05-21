@@ -5,5 +5,14 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "drug discovery",
+    "protein ligand docking",
+    "machine learning",
+    "bioinformatics",
+    "computational biology",
+    "artificial intelligence"
+  ]
 }

@@ -332,5 +332,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "history",
+    "sports",
+    "yugoslavia",
+    "football",
+    "soccer",
+    "league",
+    "1951"
+  ]
 }

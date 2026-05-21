@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://openalex.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "astronomy",
+    "exoplanets",
+    "spectroscopy",
+    "astrobiology",
+    "remote sensing",
+    "planetary science",
+    "atmospheric science"
+  ]
 }

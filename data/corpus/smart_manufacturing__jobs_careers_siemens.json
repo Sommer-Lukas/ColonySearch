@@ -29,5 +29,13 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "careers",
+    "jobs",
+    "recruiting",
+    "siemens",
+    "technology"
+  ]
 }

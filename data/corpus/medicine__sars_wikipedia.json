@@ -876,5 +876,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "infectious disease",
+    "sars",
+    "coronavirus",
+    "public health",
+    "epidemiology"
+  ]
 }

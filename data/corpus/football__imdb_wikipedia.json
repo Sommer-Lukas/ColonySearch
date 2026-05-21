@@ -534,5 +534,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "media",
+    "film",
+    "television",
+    "video games",
+    "database",
+    "amazon",
+    "entertainment"
+  ]
 }

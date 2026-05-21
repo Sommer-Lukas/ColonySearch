@@ -261,5 +261,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "russia",
+    "research institute",
+    "russian academy of sciences",
+    "iki ran"
+  ]
 }

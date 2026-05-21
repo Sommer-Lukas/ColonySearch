@@ -506,5 +506,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "cancer",
+    "oncology",
+    "public health",
+    "disease",
+    "risk factors",
+    "epidemiology"
+  ]
 }

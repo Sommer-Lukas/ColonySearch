@@ -174,5 +174,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "psychology",
+    "media",
+    "sexuality",
+    "content rating",
+    "internet",
+    "research"
+  ]
 }

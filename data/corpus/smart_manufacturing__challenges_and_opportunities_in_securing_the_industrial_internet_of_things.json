@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "computer security",
+    "internet of things",
+    "industrial internet of things",
+    "industry 40",
+    "cybersecurity",
+    "network security",
+    "critical infrastructure",
+    "embedded systems"
+  ]
 }

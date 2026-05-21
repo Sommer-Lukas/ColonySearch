@@ -167,5 +167,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "mathematics",
+    "computer science",
+    "algorithm analysis",
+    "big o notation",
+    "landau notation",
+    "asymptotic analysis",
+    "algorithm complexity"
+  ]
 }

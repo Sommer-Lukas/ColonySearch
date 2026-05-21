@@ -399,5 +399,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "ai",
+    "reinforcement learning",
+    "neural networks",
+    "game ai",
+    "deep learning",
+    "algorithms"
+  ]
 }

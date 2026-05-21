@@ -1350,5 +1350,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "psychology",
+    "psychoanalysis",
+    "sigmund freud",
+    "psychiatry",
+    "psychosexual development",
+    "oedipus complex"
+  ]
 }

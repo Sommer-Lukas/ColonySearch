@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "machine learning",
+    "distributed systems",
+    "optimization",
+    "stochastic gradient descent",
+    "byzantine fault tolerance",
+    "robust estimation",
+    "heterogeneous data"
+  ]
 }

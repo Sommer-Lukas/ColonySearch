@@ -424,5 +424,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "world war ii",
+    "international relations",
+    "diplomacy",
+    "axis powers",
+    "germany",
+    "italy",
+    "japan"
+  ]
 }

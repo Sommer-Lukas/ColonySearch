@@ -506,5 +506,15 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "mars",
+    "mars rover",
+    "perseverance",
+    "planetary science",
+    "astrobiology",
+    "space exploration",
+    "nasa"
+  ]
 }

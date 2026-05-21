@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "machine learning",
+    "sports",
+    "football",
+    "soccer",
+    "expected goals",
+    "logistic regression",
+    "gradient boosting",
+    "predictive modeling"
+  ]
 }

@@ -1046,5 +1046,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "neural networks",
+    "deep learning",
+    "convolutional neural networks",
+    "artificial intelligence"
+  ]
 }

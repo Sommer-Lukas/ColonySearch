@@ -511,5 +511,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "albania",
+    "italy",
+    "world war ii",
+    "1939",
+    "military invasion",
+    "european history"
+  ]
 }

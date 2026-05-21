@@ -506,5 +506,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "microeconomics",
+    "supply and demand",
+    "market equilibrium",
+    "market forces",
+    "price determination"
+  ]
 }

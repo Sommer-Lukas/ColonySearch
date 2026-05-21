@@ -42,5 +42,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "fda",
+    "dailymed",
+    "drug labels",
+    "medication",
+    "pharmaceutical industry",
+    "xml",
+    "hl7"
+  ]
 }

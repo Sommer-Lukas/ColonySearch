@@ -47,5 +47,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer science",
+    "chess",
+    "computer chess",
+    "computer history",
+    "mephisto",
+    "chess computers",
+    "embedded systems"
+  ]
 }

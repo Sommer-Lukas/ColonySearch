@@ -506,5 +506,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "mathematics",
+    "machine learning",
+    "optimization",
+    "algorithms",
+    "gradient descent"
+  ]
 }

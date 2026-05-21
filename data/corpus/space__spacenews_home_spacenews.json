@@ -44,5 +44,15 @@
   ],
   "source": "html",
   "source_base": "https://spacenews.com",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "space exploration",
+    "satellite",
+    "rocket",
+    "space station",
+    "space mission",
+    "aerospace",
+    "defense"
+  ]
 }

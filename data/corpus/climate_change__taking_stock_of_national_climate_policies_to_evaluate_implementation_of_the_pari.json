@@ -5,5 +5,14 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "climate policy",
+    "paris agreement",
+    "renewable energy",
+    "energy efficiency",
+    "environmental economics",
+    "policy implementation"
+  ]
 }

@@ -8,5 +8,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "history",
+    "uganda",
+    "20th century",
+    "east africa",
+    "redirects"
+  ]
 }

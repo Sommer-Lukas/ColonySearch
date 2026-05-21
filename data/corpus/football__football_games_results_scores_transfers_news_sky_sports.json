@@ -95,5 +95,14 @@
   ],
   "source": "html",
   "source_base": "https://www.skysports.com",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "premier league",
+    "europa league",
+    "sports news",
+    "football transfers",
+    "match results"
+  ]
 }

@@ -191,5 +191,13 @@
   ],
   "source": "stackoverflow",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "object oriented programming",
+    "self parameter",
+    "methods",
+    "classes"
+  ]
 }

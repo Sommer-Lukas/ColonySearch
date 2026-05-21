@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "biology",
+    "artificial intelligence",
+    "crispr",
+    "genome editing",
+    "deep learning",
+    "explainable ai",
+    "bioinformatics"
+  ]
 }

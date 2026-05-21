@@ -8,5 +8,13 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "smart buildings",
+    "building management",
+    "alarm monitoring",
+    "industrial control systems",
+    "facility management"
+  ]
 }

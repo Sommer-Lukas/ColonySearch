@@ -48,5 +48,13 @@
   ],
   "source": "html",
   "source_base": "http://flagspot.net",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "history",
+    "vexillology",
+    "flags",
+    "united kingdom",
+    "british history",
+    "symbols"
+  ]
 }

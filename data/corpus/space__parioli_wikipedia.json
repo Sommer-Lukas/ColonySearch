@@ -123,5 +123,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "geography",
+    "italy",
+    "rome",
+    "parioli",
+    "european cities",
+    "urban planning",
+    "demographics"
+  ]
 }

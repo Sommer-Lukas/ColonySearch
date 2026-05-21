@@ -213,5 +213,12 @@
   ],
   "source": "stackoverflow",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "name main",
+    "program entry point",
+    "python module"
+  ]
 }

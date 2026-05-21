@@ -5,5 +5,13 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "programming",
+    "internet of things",
+    "digital twins",
+    "eclipse ditto",
+    "cloud computing",
+    "software architecture"
+  ]
 }

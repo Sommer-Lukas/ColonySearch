@@ -7,5 +7,13 @@
   ],
   "source": "html",
   "source_base": "https://www.worldcat.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "library science",
+    "information science",
+    "libraries",
+    "databases",
+    "information retrieval",
+    "digital content"
+  ]
 }

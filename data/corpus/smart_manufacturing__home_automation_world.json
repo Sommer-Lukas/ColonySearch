@@ -64,5 +64,15 @@
   ],
   "source": "html",
   "source_base": "https://www.automationworld.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "automation",
+    "manufacturing",
+    "artificial intelligence",
+    "robotics",
+    "cybersecurity",
+    "supply chain",
+    "industry"
+  ]
 }

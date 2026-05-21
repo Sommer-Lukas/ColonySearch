@@ -976,5 +976,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "geography",
+    "sint maarten",
+    "caribbean",
+    "netherlands",
+    "island",
+    "country",
+    "philipsburg"
+  ]
 }

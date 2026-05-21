@@ -919,5 +919,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "world war 2",
+    "nazi germany",
+    "austria",
+    "annexation",
+    "european history",
+    "1938"
+  ]
 }

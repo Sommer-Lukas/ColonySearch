@@ -1527,5 +1527,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "politics",
+    "international relations",
+    "russia",
+    "ukraine",
+    "sanctions",
+    "economics",
+    "war"
+  ]
 }

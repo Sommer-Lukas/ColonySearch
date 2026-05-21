@@ -951,5 +951,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "politics",
+    "labor",
+    "trade unions",
+    "united kingdom",
+    "social movements",
+    "industrial revolution"
+  ]
 }

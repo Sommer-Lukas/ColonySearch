@@ -199,5 +199,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "politics",
+    "international relations",
+    "economics",
+    "sanctions",
+    "trade",
+    "foreign policy"
+  ]
 }

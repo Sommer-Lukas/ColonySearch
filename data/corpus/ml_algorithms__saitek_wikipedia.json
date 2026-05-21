@@ -81,5 +81,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "electronics",
+    "consumer electronics",
+    "computer hardware",
+    "gaming peripherals",
+    "joysticks",
+    "computer mice",
+    "keyboards",
+    "logitech"
+  ]
 }

@@ -151,5 +151,14 @@
   ],
   "source": "html",
   "source_base": "https://www.goal.com",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "soccer",
+    "europa league",
+    "sports news",
+    "match results",
+    "player transfers"
+  ]
 }

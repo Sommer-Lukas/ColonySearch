@@ -75,5 +75,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "computer science",
+    "cyberphysical systems",
+    "embedded systems",
+    "internet of things",
+    "control systems"
+  ]
 }

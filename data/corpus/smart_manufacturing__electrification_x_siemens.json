@@ -17,5 +17,14 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "energy",
+    "engineering",
+    "software as a service",
+    "internet of things",
+    "energy infrastructure",
+    "renewable energy",
+    "digital energy"
+  ]
 }

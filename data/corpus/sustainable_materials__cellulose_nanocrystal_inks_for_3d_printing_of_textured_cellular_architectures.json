@@ -5,5 +5,14 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "engineering",
+    "materials science",
+    "3d printing",
+    "cellulose",
+    "nanocrystals",
+    "bioprinting",
+    "sustainable materials"
+  ]
 }

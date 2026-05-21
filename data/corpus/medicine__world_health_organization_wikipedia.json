@@ -1849,5 +1849,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "public health",
+    "global health",
+    "world health organization",
+    "united nations"
+  ]
 }

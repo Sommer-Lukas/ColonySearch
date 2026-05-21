@@ -166,5 +166,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "art",
+    "biography",
+    "sculpture",
+    "architectural sculpture",
+    "art deco",
+    "gothic",
+    "beauxarts"
+  ]
 }
