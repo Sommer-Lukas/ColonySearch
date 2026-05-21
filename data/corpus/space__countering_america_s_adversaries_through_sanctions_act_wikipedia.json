@@ -997,5 +997,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "politics",
+    "us politics",
+    "sanctions",
+    "international relations",
+    "iran",
+    "north korea",
+    "russia"
+  ]
 }

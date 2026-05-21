@@ -174,5 +174,13 @@
   ],
   "source": "html",
   "source_base": "https://www.carbonbrief.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "ipcc",
+    "climate policy",
+    "energy",
+    "emissions",
+    "extreme weather"
+  ]
 }

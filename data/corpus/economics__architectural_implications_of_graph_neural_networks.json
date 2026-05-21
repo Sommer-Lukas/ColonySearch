@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "machine learning",
+    "graph neural networks",
+    "neural networks",
+    "deep learning",
+    "computer architecture",
+    "gnn",
+    "gcn"
+  ]
 }

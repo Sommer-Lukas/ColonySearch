@@ -506,5 +506,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "uefa",
+    "europa league",
+    "european football"
+  ]
 }

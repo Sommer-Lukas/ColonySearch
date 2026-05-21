@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "computer science",
+    "digital twins",
+    "6g",
+    "wireless communication",
+    "real time systems",
+    "machine learning",
+    "sensing"
+  ]
 }

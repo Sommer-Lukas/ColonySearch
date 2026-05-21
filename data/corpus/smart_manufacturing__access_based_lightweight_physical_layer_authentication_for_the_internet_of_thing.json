@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "computer science",
+    "internet of things",
+    "authentication",
+    "physical layer security",
+    "network security",
+    "wireless communication"
+  ]
 }

@@ -159,5 +159,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer science",
+    "game ai",
+    "chess programming",
+    "evaluation function",
+    "minimax",
+    "alphabeta pruning",
+    "monte carlo tree search"
+  ]
 }

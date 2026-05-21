@@ -506,5 +506,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "soccer",
+    "germany",
+    "bundesliga",
+    "football league"
+  ]
 }

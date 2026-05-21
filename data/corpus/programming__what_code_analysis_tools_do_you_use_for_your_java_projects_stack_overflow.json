@@ -111,5 +111,13 @@
   ],
   "source": "stackoverflow",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "java",
+    "code analysis",
+    "static analysis",
+    "code quality",
+    "software development"
+  ]
 }

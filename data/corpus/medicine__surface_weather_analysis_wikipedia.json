@@ -478,5 +478,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "meteorology",
+    "weather",
+    "weather map",
+    "weather analysis",
+    "atmospheric science",
+    "storm systems"
+  ]
 }

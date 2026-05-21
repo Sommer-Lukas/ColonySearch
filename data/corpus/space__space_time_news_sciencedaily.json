@@ -70,5 +70,14 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "nasa",
+    "mars",
+    "psyche probe",
+    "curiosity rover",
+    "blue origin",
+    "space exploration"
+  ]
 }

@@ -48,5 +48,12 @@
   ],
   "source": "html",
   "source_base": "https://docs.python.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "exceptions",
+    "error handling",
+    "documentation"
+  ]
 }

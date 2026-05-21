@@ -11,5 +11,15 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "simulation",
+    "finite element analysis",
+    "fea",
+    "cad",
+    "product development",
+    "manufacturing",
+    "meshing"
+  ]
 }

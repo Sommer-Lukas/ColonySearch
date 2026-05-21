@@ -5,5 +5,12 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "computer science",
+    "concurrency",
+    "lockfree algorithms",
+    "parallel computing",
+    "data structures"
+  ]
 }

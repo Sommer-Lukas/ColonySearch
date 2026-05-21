@@ -9,5 +9,14 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "energy",
+    "renewable energy",
+    "biogas",
+    "itot convergence",
+    "industrial edge",
+    "agriculture",
+    "plant management"
+  ]
 }

@@ -5,5 +5,16 @@
   "links": [],
   "source": "semantic_scholar",
   "source_base": "https://doi.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "gut brain axis",
+    "mental health",
+    "diet",
+    "nutrition",
+    "microbiome",
+    "cognitive function",
+    "depression",
+    "anxiety"
+  ]
 }

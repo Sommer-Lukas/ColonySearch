@@ -16,5 +16,13 @@
   ],
   "source": "html",
   "source_base": "http://jewishencyclopedia.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "history",
+    "judaism",
+    "palestine",
+    "education",
+    "ancient history",
+    "religious history"
+  ]
 }

@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "reinforcement learning",
+    "geoengineering",
+    "stratospheric aerosol injection",
+    "deep learning",
+    "climate model"
+  ]
 }

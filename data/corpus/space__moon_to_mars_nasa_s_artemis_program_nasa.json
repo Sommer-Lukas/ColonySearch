@@ -193,5 +193,14 @@
   ],
   "source": "html",
   "source_base": "https://www.nasa.gov",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "nasa",
+    "artemis",
+    "moon",
+    "mars",
+    "space exploration",
+    "space missions"
+  ]
 }

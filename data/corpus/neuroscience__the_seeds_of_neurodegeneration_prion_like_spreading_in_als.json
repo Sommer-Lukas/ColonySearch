@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "biology",
+    "medicine",
+    "neurodegeneration",
+    "als",
+    "protein aggregation",
+    "prion",
+    "genetics",
+    "pathology"
+  ]
 }

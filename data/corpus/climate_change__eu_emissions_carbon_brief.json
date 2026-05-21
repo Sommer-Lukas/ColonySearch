@@ -175,5 +175,14 @@
   ],
   "source": "html",
   "source_base": "https://www.carbonbrief.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "climate change",
+    "eu policy",
+    "emissions",
+    "energy",
+    "policy",
+    "international policy",
+    "climate policy"
+  ]
 }

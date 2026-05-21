@@ -360,5 +360,14 @@
   ],
   "source": "html",
   "source_base": "https://doi.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "medicine",
+    "air pollution",
+    "mortality",
+    "metaanalysis",
+    "public health",
+    "respiratory disease",
+    "cancer"
+  ]
 }

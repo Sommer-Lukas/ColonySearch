@@ -5,5 +5,13 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "data science",
+    "python",
+    "soccer",
+    "analytics",
+    "programming"
+  ]
 }

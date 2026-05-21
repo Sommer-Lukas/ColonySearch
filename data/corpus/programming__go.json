@@ -5,5 +5,12 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "go",
+    "open source",
+    "software development",
+    "installation"
+  ]
 }

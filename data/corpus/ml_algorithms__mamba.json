@@ -5,5 +5,13 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "natural language processing",
+    "sequence modeling",
+    "state space models",
+    "deep learning",
+    "transformers"
+  ]
 }

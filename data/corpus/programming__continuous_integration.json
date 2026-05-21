@@ -164,5 +164,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "software development",
+    "continuous integration",
+    "devops",
+    "software engineering"
+  ]
 }

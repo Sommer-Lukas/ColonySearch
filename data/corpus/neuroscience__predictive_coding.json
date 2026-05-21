@@ -117,5 +117,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "neuroscience",
+    "predictive coding",
+    "brain function",
+    "mental models",
+    "bayesian brain",
+    "perception",
+    "cognitive science"
+  ]
 }

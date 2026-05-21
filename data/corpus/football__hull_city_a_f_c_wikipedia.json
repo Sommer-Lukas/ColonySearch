@@ -1620,5 +1620,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "association football",
+    "english football",
+    "hull city",
+    "efl championship",
+    "england"
+  ]
 }

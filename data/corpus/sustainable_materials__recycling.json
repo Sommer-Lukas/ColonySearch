@@ -506,5 +506,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "environment",
+    "waste management",
+    "recycling",
+    "sustainability",
+    "pollution",
+    "energy conservation"
+  ]
 }

@@ -64,5 +64,14 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "artificial intelligence",
+    "chemistry",
+    "molecular design",
+    "ai ethics",
+    "democracy",
+    "psychology"
+  ]
 }

@@ -662,5 +662,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "team sports",
+    "uniforms",
+    "sports history",
+    "sports equipment"
+  ]
 }

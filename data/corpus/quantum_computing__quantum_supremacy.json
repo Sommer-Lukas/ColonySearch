@@ -225,5 +225,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "quantum_computing"
+  "topic": "quantum_computing",
+  "ai_labels": [
+    "physics",
+    "quantum computing",
+    "quantum supremacy",
+    "computational complexity",
+    "algorithms"
+  ]
 }

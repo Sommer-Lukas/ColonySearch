@@ -64,5 +64,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer science",
+    "chess",
+    "artificial intelligence",
+    "computer history",
+    "carnegie mellon",
+    "grandmaster",
+    "computer chess"
+  ]
 }

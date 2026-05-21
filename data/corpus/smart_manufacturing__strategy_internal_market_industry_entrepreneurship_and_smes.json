@@ -42,5 +42,15 @@
   ],
   "source": "html",
   "source_base": "https://ec.europa.eu",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "economics",
+    "european union",
+    "industry",
+    "policy",
+    "digital transformation",
+    "climate change",
+    "employment",
+    "technology"
+  ]
 }

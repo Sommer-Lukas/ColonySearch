@@ -1536,5 +1536,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "religion",
+    "abrahamic religions",
+    "satan",
+    "devil",
+    "judaism",
+    "christianity",
+    "islam",
+    "fallen angel"
+  ]
 }

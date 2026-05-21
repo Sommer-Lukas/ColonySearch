@@ -879,5 +879,16 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "history",
+    "geography",
+    "uk",
+    "england",
+    "middlesbrough",
+    "north yorkshire",
+    "city",
+    "town",
+    "population"
+  ]
 }

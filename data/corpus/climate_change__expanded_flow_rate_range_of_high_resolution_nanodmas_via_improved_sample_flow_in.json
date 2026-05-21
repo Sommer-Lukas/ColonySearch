@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "engineering",
+    "aerosol science",
+    "nanotechnology",
+    "fluid dynamics",
+    "instrumentation",
+    "measurement",
+    "protein analysis"
+  ]
 }

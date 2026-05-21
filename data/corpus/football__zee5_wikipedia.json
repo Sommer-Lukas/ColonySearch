@@ -467,5 +467,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "media",
+    "entertainment",
+    "streaming",
+    "video on demand",
+    "india",
+    "ott platform"
+  ]
 }

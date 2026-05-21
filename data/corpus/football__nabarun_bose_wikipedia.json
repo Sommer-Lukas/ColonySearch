@@ -98,5 +98,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "music",
+    "biography",
+    "india",
+    "pop",
+    "rock",
+    "rap",
+    "composer",
+    "music producer"
+  ]
 }

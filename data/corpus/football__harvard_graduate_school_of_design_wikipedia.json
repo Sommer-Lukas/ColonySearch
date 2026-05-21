@@ -475,5 +475,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "architecture",
+    "design",
+    "harvard university",
+    "graduate school",
+    "urban planning",
+    "landscape architecture"
+  ]
 }

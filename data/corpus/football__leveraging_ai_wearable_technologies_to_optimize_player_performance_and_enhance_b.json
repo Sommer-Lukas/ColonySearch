@@ -5,5 +5,15 @@
   "links": [],
   "source": "semantic_scholar",
   "source_base": "https://doi.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports science",
+    "artificial intelligence",
+    "wearable technology",
+    "basketball",
+    "athlete performance",
+    "semg",
+    "machine learning",
+    "sports analytics"
+  ]
 }

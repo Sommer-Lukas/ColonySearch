@@ -41,5 +41,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "media",
+    "entertainment",
+    "magazine",
+    "india",
+    "tamil",
+    "cinema",
+    "film"
+  ]
 }

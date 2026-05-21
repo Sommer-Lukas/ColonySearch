@@ -30,5 +30,15 @@
   ],
   "source": "html",
   "source_base": "https://www.worldbank.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "finance",
+    "debt",
+    "debt restructuring",
+    "cte divoire",
+    "education",
+    "world bank",
+    "development"
+  ]
 }

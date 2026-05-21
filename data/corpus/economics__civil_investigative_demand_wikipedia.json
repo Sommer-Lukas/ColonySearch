@@ -283,5 +283,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "law",
+    "us law",
+    "civil law",
+    "legal process",
+    "investigation",
+    "subpoena",
+    "civil investigative demand"
+  ]
 }

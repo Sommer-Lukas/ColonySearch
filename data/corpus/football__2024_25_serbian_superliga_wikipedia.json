@@ -540,5 +540,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "serbian superliga",
+    "red star belgrade",
+    "sports statistics",
+    "league season"
+  ]
 }

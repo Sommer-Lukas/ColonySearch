@@ -506,5 +506,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "biology",
+    "neuroscience",
+    "brain",
+    "hippocampus",
+    "memory",
+    "alzheimers disease"
+  ]
 }

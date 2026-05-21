@@ -5,5 +5,12 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "clinical trials",
+    "bayesian statistics",
+    "research design",
+    "medical ethics"
+  ]
 }

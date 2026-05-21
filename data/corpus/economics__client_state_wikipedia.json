@@ -374,5 +374,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "politics",
+    "client state",
+    "forms of government",
+    "international relations",
+    "political science"
+  ]
 }

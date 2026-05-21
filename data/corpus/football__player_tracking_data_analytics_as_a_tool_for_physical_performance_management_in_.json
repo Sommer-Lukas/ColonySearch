@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports science",
+    "football",
+    "athlete performance",
+    "gps tracking",
+    "data analytics",
+    "training load",
+    "chelsea fc",
+    "sports medicine"
+  ]
 }

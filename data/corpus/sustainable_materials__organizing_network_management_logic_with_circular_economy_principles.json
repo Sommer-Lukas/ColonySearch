@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "computer science",
+    "circular economy",
+    "network management",
+    "software engineering",
+    "sustainability",
+    "resource management"
+  ]
 }

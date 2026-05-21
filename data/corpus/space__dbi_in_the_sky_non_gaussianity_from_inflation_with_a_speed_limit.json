@@ -5,5 +5,13 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "cosmology",
+    "inflation",
+    "cosmic microwave background",
+    "nongaussianity",
+    "quantum field theory"
+  ]
 }

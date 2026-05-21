@@ -447,5 +447,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "environment",
+    "natural resources",
+    "ecology",
+    "conservation",
+    "biodiversity",
+    "sustainability"
+  ]
 }

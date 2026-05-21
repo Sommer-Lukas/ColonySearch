@@ -1538,5 +1538,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "religion",
+    "paganism",
+    "polytheism",
+    "ancient religions",
+    "roman empire",
+    "early christianity"
+  ]
 }

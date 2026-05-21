@@ -5,5 +5,14 @@
   "links": [],
   "source": "semantic_scholar",
   "source_base": "https://doi.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "machine learning",
+    "graph neural networks",
+    "gnn",
+    "causal modeling",
+    "action prediction",
+    "rugby league"
+  ]
 }

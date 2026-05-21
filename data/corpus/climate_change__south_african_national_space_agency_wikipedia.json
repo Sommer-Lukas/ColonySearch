@@ -373,5 +373,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "space",
+    "space agency",
+    "south africa",
+    "sansa",
+    "government",
+    "research",
+    "engineering"
+  ]
 }

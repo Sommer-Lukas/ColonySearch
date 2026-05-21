@@ -45,5 +45,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "history",
+    "urban planning",
+    "rome",
+    "italy",
+    "geography",
+    "world war ii"
+  ]
 }

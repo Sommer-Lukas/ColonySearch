@@ -22,5 +22,14 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "energy",
+    "smart grid",
+    "digital twin",
+    "energy management",
+    "cloud platform",
+    "utilities",
+    "infrastructure"
+  ]
 }

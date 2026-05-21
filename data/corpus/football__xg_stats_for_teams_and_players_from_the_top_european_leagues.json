@@ -5,5 +5,15 @@
   "links": [],
   "source": "html",
   "source_base": "https://understat.com",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "xg",
+    "expected goals",
+    "sports analytics",
+    "neural networks",
+    "machine learning",
+    "statistics"
+  ]
 }

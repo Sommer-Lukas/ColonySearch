@@ -506,5 +506,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "energy",
+    "wind power",
+    "electricity generation",
+    "renewable energy",
+    "wind turbines",
+    "power grid",
+    "climate change"
+  ]
 }

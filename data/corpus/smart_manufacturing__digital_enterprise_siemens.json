@@ -18,5 +18,15 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "digital transformation",
+    "enterprise",
+    "siemens",
+    "ai",
+    "digital twin",
+    "supply chain",
+    "manufacturing"
+  ]
 }

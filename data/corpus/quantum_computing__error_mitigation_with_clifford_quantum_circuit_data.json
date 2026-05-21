@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "quantum_computing"
+  "topic": "quantum_computing",
+  "ai_labels": [
+    "physics",
+    "quantum computing",
+    "error mitigation",
+    "quantum circuits",
+    "clifford gates",
+    "quantum noise"
+  ]
 }

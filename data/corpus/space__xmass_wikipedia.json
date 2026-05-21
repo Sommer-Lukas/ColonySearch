@@ -169,5 +169,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "dark matter",
+    "particle physics",
+    "neutrino",
+    "experiment",
+    "japan",
+    "cryogenic detector"
+  ]
 }

@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "machine learning",
+    "federated learning",
+    "distributed systems",
+    "asynchronous systems",
+    "data privacy",
+    "optimization",
+    "convergence analysis"
+  ]
 }

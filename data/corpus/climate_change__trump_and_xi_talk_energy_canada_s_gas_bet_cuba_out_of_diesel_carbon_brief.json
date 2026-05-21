@@ -228,5 +228,15 @@
   ],
   "source": "html",
   "source_base": "https://www.carbonbrief.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "energy",
+    "climate change",
+    "international relations",
+    "energy policy",
+    "fossil fuels",
+    "renewable energy",
+    "china",
+    "united states"
+  ]
 }

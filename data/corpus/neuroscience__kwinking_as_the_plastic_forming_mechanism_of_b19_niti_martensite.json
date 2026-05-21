@@ -5,5 +5,16 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "materials science",
+    "engineering",
+    "solid mechanics",
+    "shape memory alloys",
+    "nickel titanium",
+    "martensite",
+    "plasticity",
+    "twinning",
+    "dislocations"
+  ]
 }

@@ -797,5 +797,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "artificial intelligence",
+    "game ai",
+    "alphazero",
+    "chess",
+    "reinforcement learning",
+    "neural networks"
+  ]
 }

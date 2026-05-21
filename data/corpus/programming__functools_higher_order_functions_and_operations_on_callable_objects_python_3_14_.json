@@ -39,5 +39,13 @@
   ],
   "source": "html",
   "source_base": "https://docs.python.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "functools",
+    "higherorder functions",
+    "caching",
+    "memoization"
+  ]
 }

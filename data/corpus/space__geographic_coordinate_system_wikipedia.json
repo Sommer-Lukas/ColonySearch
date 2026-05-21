@@ -324,5 +324,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "geography",
+    "cartography",
+    "geographic coordinate system",
+    "geodesy",
+    "gps",
+    "spatial reference system",
+    "earth sciences"
+  ]
 }

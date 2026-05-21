@@ -5,5 +5,13 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "energy",
+    "solar power",
+    "nowcasting",
+    "forecasting",
+    "open source",
+    "climate"
+  ]
 }

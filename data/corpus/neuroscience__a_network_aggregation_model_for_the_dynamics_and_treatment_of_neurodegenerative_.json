@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "neurodegenerative diseases",
+    "alzheimers",
+    "protein aggregation",
+    "brain",
+    "drug development"
+  ]
 }

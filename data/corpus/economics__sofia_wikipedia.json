@@ -1570,5 +1570,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "geography",
+    "bulgaria",
+    "sofia",
+    "capital cities",
+    "european cities"
+  ]
 }

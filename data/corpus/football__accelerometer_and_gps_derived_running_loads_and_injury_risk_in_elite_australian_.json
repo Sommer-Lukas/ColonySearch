@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "medicine",
+    "sports science",
+    "injury prevention",
+    "athlete monitoring",
+    "gps",
+    "accelerometer",
+    "workload",
+    "australian rules football"
+  ]
 }

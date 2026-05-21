@@ -55,5 +55,13 @@
   ],
   "source": "html",
   "source_base": "https://realpython.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "python 3",
+    "learning",
+    "computer science",
+    "software development"
+  ]
 }

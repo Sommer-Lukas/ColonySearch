@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "medicine",
+    "cancer",
+    "head and neck cancer",
+    "outcome prediction",
+    "radiomics",
+    "deep learning",
+    "medical imaging"
+  ]
 }

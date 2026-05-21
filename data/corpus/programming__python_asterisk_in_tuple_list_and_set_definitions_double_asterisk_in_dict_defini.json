@@ -77,5 +77,14 @@
   ],
   "source": "html",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "python 3",
+    "tuples",
+    "lists",
+    "dictionaries",
+    "syntax"
+  ]
 }

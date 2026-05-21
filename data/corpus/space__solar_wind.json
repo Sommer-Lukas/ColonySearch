@@ -425,5 +425,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "space",
+    "solar wind",
+    "sun",
+    "plasma",
+    "solar physics",
+    "astrophysics"
+  ]
 }

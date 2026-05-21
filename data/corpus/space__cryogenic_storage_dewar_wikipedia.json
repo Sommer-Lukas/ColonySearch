@@ -215,5 +215,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "cryogenics",
+    "dewar",
+    "vacuum flask",
+    "liquid nitrogen",
+    "liquid helium",
+    "low temperature physics"
+  ]
 }

@@ -5,5 +5,15 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "neurodegenerative disease",
+    "protein aggregation",
+    "protein misfolding",
+    "amyotrophic lateral sclerosis",
+    "neuroscience",
+    "cell biology",
+    "pathology"
+  ]
 }

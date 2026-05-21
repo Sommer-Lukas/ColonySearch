@@ -39,5 +39,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "film",
+    "mockumentary",
+    "british film",
+    "simon rumley",
+    "2000s film"
+  ]
 }

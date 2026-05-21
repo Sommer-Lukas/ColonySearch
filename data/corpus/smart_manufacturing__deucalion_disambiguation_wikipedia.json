@@ -27,5 +27,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "mythology",
+    "disambiguation",
+    "greek mythology",
+    "astronomy",
+    "biology",
+    "computer science",
+    "literature",
+    "ships"
+  ]
 }

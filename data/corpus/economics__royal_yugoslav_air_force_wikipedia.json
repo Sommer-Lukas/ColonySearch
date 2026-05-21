@@ -218,5 +218,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "history",
+    "military",
+    "yugoslavia",
+    "air force",
+    "world war 2",
+    "aviation"
+  ]
 }

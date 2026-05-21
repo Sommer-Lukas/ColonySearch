@@ -998,5 +998,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "computer science",
+    "internet",
+    "world wide web",
+    "web history",
+    "information system",
+    "web browsers"
+  ]
 }

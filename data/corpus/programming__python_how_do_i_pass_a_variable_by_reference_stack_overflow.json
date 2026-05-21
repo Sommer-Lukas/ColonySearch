@@ -221,5 +221,13 @@
   ],
   "source": "stackoverflow",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "pass by reference",
+    "pass by value",
+    "mutable",
+    "immutable"
+  ]
 }

@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "astronomy",
+    "black hole",
+    "event horizon telescope",
+    "m87",
+    "general relativity",
+    "astrophysics"
+  ]
 }

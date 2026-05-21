@@ -5,5 +5,16 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "cancer",
+    "genomics",
+    "tumor mutational burden",
+    "immunotherapy",
+    "biomarkers",
+    "pd1",
+    "pdl1",
+    "exome sequencing"
+  ]
 }

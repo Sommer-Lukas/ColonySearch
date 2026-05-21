@@ -250,5 +250,15 @@
   ],
   "source": "html",
   "source_base": "https://www.carbonbrief.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "energy",
+    "climate change",
+    "renewables",
+    "uk policy",
+    "india",
+    "china",
+    "energy policy",
+    "climate policy"
+  ]
 }

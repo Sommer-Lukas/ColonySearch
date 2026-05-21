@@ -227,5 +227,19 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "research institute",
+    "niels bohr",
+    "university of copenhagen",
+    "theoretical physics",
+    "astronomy",
+    "geophysics",
+    "nanotechnology",
+    "particle physics",
+    "quantum mechanics",
+    "biophysics",
+    "cosmology"
+  ]
 }

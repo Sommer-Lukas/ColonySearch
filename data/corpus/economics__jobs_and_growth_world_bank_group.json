@@ -21,5 +21,14 @@
   ],
   "source": "html",
   "source_base": "https://www.worldbank.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "jobs",
+    "economic growth",
+    "poverty",
+    "fiscal policy",
+    "world bank",
+    "development"
+  ]
 }

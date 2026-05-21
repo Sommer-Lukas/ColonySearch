@@ -446,5 +446,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "psychology",
+    "sociology",
+    "antisocial behavior",
+    "criminology",
+    "social psychology",
+    "deviance"
+  ]
 }

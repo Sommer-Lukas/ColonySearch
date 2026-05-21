@@ -550,5 +550,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "mathematics",
+    "game theory",
+    "decision theory",
+    "minimax",
+    "algorithms",
+    "artificial intelligence"
+  ]
 }

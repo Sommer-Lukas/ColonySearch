@@ -184,5 +184,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "economics",
+    "biography",
+    "global development",
+    "poverty",
+    "public health",
+    "climate change",
+    "academia"
+  ]
 }

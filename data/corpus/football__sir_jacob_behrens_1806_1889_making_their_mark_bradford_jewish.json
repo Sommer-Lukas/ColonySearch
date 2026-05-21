@@ -38,5 +38,14 @@
   ],
   "source": "html",
   "source_base": "http://bradfordjewish.org.uk",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "history",
+    "biography",
+    "judaism",
+    "england",
+    "bradford",
+    "manchester",
+    "19th century"
+  ]
 }

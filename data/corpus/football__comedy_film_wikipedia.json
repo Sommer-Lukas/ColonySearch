@@ -847,5 +847,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "film",
+    "comedy",
+    "film genre",
+    "humor",
+    "silent film",
+    "slapstick",
+    "entertainment"
+  ]
 }

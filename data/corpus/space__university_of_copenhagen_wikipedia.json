@@ -700,5 +700,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "education",
+    "university",
+    "denmark",
+    "copenhagen",
+    "research institution",
+    "higher education"
+  ]
 }

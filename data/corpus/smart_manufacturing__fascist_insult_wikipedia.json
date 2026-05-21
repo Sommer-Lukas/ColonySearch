@@ -1353,5 +1353,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "history",
+    "politics",
+    "fascism",
+    "political science",
+    "insults",
+    "communism",
+    "political movements"
+  ]
 }

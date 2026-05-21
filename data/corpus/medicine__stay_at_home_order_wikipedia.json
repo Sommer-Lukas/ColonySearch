@@ -147,5 +147,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "politics",
+    "public health",
+    "stay at home order",
+    "quarantine",
+    "pandemic",
+    "government",
+    "law"
+  ]
 }

@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "astronomy",
+    "pulsars",
+    "radio astronomy",
+    "ska",
+    "sky surveys",
+    "interferometry"
+  ]
 }

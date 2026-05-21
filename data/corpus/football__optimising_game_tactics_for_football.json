@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "game theory",
+    "bayesian game",
+    "stochastic game",
+    "football",
+    "soccer",
+    "tactical optimization",
+    "decision making"
+  ]
 }

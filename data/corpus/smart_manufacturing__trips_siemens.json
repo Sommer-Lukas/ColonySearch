@@ -7,5 +7,14 @@
   ],
   "source": "html",
   "source_base": "https://www.siemens.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "automation",
+    "industrial automation",
+    "siemens",
+    "manufacturing",
+    "energy management",
+    "software engineering"
+  ]
 }

@@ -211,5 +211,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "economics",
+    "data science",
+    "global development",
+    "social science",
+    "statistics",
+    "nonprofit",
+    "public data",
+    "research"
+  ]
 }

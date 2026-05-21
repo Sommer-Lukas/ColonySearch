@@ -490,5 +490,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "space exploration",
+    "luna 16",
+    "soviet space program",
+    "lunar sample return",
+    "spacecraft",
+    "moon mission"
+  ]
 }

@@ -19,5 +19,14 @@
   ],
   "source": "html",
   "source_base": "http://www.carnegiefoundation.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "education",
+    "higher education",
+    "carnegie classification",
+    "institutional classification",
+    "student access",
+    "student earnings",
+    "educational policy"
+  ]
 }

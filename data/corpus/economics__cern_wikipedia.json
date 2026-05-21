@@ -952,5 +952,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "physics",
+    "particle physics",
+    "cern",
+    "research institution",
+    "europe"
+  ]
 }

@@ -5,5 +5,12 @@
   "links": [],
   "source": "html",
   "source_base": "https://web.archive.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "web development",
+    "spanish",
+    "error message",
+    "browser",
+    "scripts"
+  ]
 }

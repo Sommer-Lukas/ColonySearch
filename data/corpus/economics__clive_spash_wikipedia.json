@@ -272,5 +272,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "ecological economics",
+    "climate change",
+    "environmental economics",
+    "public policy",
+    "political economy",
+    "biodiversity",
+    "higher education"
+  ]
 }
