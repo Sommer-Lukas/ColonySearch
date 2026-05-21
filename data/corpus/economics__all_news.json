@@ -1,0 +1,17 @@
+{
+  "url": "https://www.worldbank.org/en/news/all?lang_exact=English&displayconttype_exact=Press%20Release&topic_exact=Macroeconomic%20And%20Structural%20Policies",
+  "title": "All News",
+  "body": "Who We Are News This page in: EN dropdown Français العربية Русский 中文 Español This page in: _ English Français العربية Русский 中文 Español dropdown Loading...",
+  "links": [
+    "https://www.worldbank.org/ext/en/who-we-are",
+    "https://www.worldbank.org/ext/en/news",
+    "https://www.banquemondiale.org/fr/news/all",
+    "https://www.albankaldawli.org/ar/news/all",
+    "https://www.vsemirnyjbank.org/ru/news/all",
+    "https://www.shihang.org/zh/news/all",
+    "https://www.bancomundial.org/es/news/all"
+  ],
+  "source": "html",
+  "source_base": "https://www.worldbank.org",
+  "topic": "economics"
+}
