@@ -12,7 +12,7 @@ Usage:
 
 Output:
   {algo}_results.json     — best params + full history
-  {algo}_convergence.png  — n_evals vs best NDCG@10
+    {algo}_convergence.png  — n_evals vs best NDCG@k
 """
 
 import argparse
@@ -47,7 +47,7 @@ def main():
                    help="Data directory containing dbs/ (all nodes used)")
     p.add_argument("--output", default=".",
                    help="Directory for output files (default: current dir)")
-    p.add_argument("--k", type=int, default=10, help="@k for NDCG evaluation")
+    p.add_argument("--k", type=int, default=3, help="@k for NDCG evaluation")
     p.add_argument("--particles", type=int, default=20, help="QPSO: number of particles")
     p.add_argument("--iterations", type=int, default=20, help="QPSO: max iterations")
     p.add_argument("--n-evals", type=int, default=200, help="RANDOM: evaluation budget")
@@ -122,8 +122,8 @@ def main():
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.plot(n_evals_list, ndcg_list, linewidth=2)
     ax.set_xlabel("Evaluations")
-    ax.set_ylabel("Best NDCG@10")
-    ax.set_title(f"{algo_name} Convergence")
+    ax.set_ylabel(f"Best NDCG@{args.k}")
+    ax.set_title(f"{algo_name} Convergence (NDCG@{args.k})")
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
     fig.savefig(png_path, dpi=120)
