@@ -1,0 +1,578 @@
+[
+  {
+    "url": "https://arxiv.org/abs/1004.3884v1",
+    "topic": "economics",
+    "query_text": "oil price trackers immune memory algorithm",
+    "title": "Oil Price Trackers Inspired by Immune Memory"
+  },
+  {
+    "url": "https://arxiv.org/abs/1508.05013v1",
+    "topic": "machine learning",
+    "query_text": "Message Passing and Combinatorial Optimization graphical models",
+    "title": "Message Passing and Combinatorial Optimization"
+  },
+  {
+    "url": "https://arxiv.org/abs/1802.05517v1",
+    "topic": "information security",
+    "query_text": "quantum cryptography key distribution applications review",
+    "title": "Quantum cryptography: key distribution and beyond"
+  },
+  {
+    "url": "https://arxiv.org/abs/1906.07794v1",
+    "topic": "convolutional neural network",
+    "query_text": "convolutional neural network cancer type prediction gene expression",
+    "title": "Convolutional neural network models for cancer type prediction based on gene expression"
+  },
+  {
+    "url": "https://arxiv.org/abs/1907.02100v1",
+    "topic": "economics",
+    "query_text": "machine learning behavioral economics personalized choice architecture",
+    "title": "Machine learning and behavioral economics for personalized choice architecture"
+  },
+  {
+    "url": "https://arxiv.org/abs/2009.12007v1",
+    "topic": "contrastive learning",
+    "query_text": "G-SimCLR self-supervised contrastive learning pseudo labelling",
+    "title": "G-SimCLR : Self-Supervised Contrastive Learning with Guided Projection via Pseudo Labelling"
+  },
+  {
+    "url": "https://arxiv.org/abs/2010.05863v1",
+    "topic": "social work",
+    "query_text": "Quantum computing social worker scheduling VQE NISQ optimization",
+    "title": "Using the Parameterized Quantum Circuit combined with Variational-Quantum-Eigensolver (VQE) to create an Intelligent social workers' schedule problem solver"
+  },
+  {
+    "url": "https://arxiv.org/abs/2111.11714v1",
+    "topic": "cybersecurity",
+    "query_text": "Industrial Internet of Things security challenges opportunities",
+    "title": "Challenges and Opportunities in Securing the Industrial Internet of Things"
+  },
+  {
+    "url": "https://arxiv.org/abs/2201.12150v2",
+    "topic": "supervised learning",
+    "query_text": "machine learning learning curves decision making survey",
+    "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey"
+  },
+  {
+    "url": "https://arxiv.org/abs/2211.05409v1",
+    "topic": "radiomics",
+    "query_text": "Radiomics enhanced deep multi-task learning head and neck cancer",
+    "title": "Radiomics-enhanced Deep Multi-task Learning for Outcome Prediction in Head and Neck Cancer"
+  },
+  {
+    "url": "https://arxiv.org/abs/2604.18210v1",
+    "topic": "multiagent systems",
+    "query_text": "TacticGen adaptable scalable football tactics generation",
+    "title": "TacticGen: Grounding Adaptable and Scalable Generation of Football Tactics"
+  },
+  {
+    "url": "https://docs.python.org/3/bugs.html",
+    "topic": "bug fixing",
+    "query_text": "Python documentation bug report theme",
+    "title": "Dealing with Bugs \u2014 Python 3.14.5 documentation"
+  },
+  {
+    "url": "https://docs.python.org/3/library/stdtypes.html",
+    "topic": "builtin functions",
+    "query_text": "Python built-in types documentation",
+    "title": "Built-in Types \u2014 Python 3.14.5 documentation"
+  },
+  {
+    "url": "https://doi.org/10.1002/wcc.681",
+    "topic": "carbon pricing",
+    "query_text": "carbon pricing effect on technological change energy decarbonization",
+    "title": "The effect of carbon pricing on technological change for full energy decarbonization: A review of empirical ex\u2010post evidence"
+  },
+  {
+    "url": "https://doi.org/10.1007/978-3-319-09042-9_2",
+    "topic": "protein ligand docking",
+    "query_text": "machine learning molecular docking drug discovery protein ligand",
+    "title": "Molecular Docking for Drug Discovery: Machine-Learning Approaches for Native Pose Prediction of Protein-Ligand Complexes"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.jhin.2025.06.006",
+    "topic": "medicine",
+    "query_text": "ESKAPE pathogen hospital acquired infections clinical financial burden",
+    "title": "The burden of ESKAPE pathogen-related hospital-acquired infections: clinical and financial perspective from a systematic review."
+  },
+  {
+    "url": "https://doi.org/10.1039/c4cs00035h",
+    "topic": "industrial chemistry",
+    "query_text": "mineral carbonation technologies CO2 sequestration review",
+    "title": "A review of mineral carbonation technologies to sequester CO<sub>2</sub>"
+  },
+  {
+    "url": "https://doi.org/10.1051/0004-6361/201834776",
+    "topic": "spectroscopy",
+    "query_text": "exoplanet atmospheres transit spectroscopy sodium HARPS WASP-76b",
+    "title": "Hot Exoplanet Atmospheres Resolved with Transit Spectroscopy (HEARTS)"
+  },
+  {
+    "url": "https://doi.org/10.1080/24748668.2023.2262813",
+    "topic": "soccer",
+    "query_text": "LaLiga football teams playing styles analysis",
+    "title": "How do the football teams play in LaLiga? Analysis and comparison of playing styles according to the outcome"
+  },
+  {
+    "url": "https://doi.org/10.1093/cercor/bhi005",
+    "topic": "medicine",
+    "query_text": "human brain changes with practice neuroimaging",
+    "title": "Human Functional Neuroimaging of Brain Changes Associated with Practice"
+  },
+  {
+    "url": "https://doi.org/10.1109/ICCECE69169.2026.11399759",
+    "topic": "game theory",
+    "query_text": "Multi-Agent Reinforcement Learning task offloading edge computing",
+    "title": "Multi-Agent Reinforcement Learning-Based Task Offloading with Evolutionary Game Theory for User Association in Edge Computing"
+  },
+  {
+    "url": "https://doi.org/10.1136/bjsports-2015-095259",
+    "topic": "sports medicine",
+    "query_text": "UEFA Elite Club Injury Study injury prevention survey",
+    "title": "Injury prevention strategies, coach compliance and player adherence of 33 of the UEFA Elite Club Injury Study teams: a survey of teams\u2019 head medical officers"
+  },
+  {
+    "url": "https://doi.org/10.1257/jel.37.4.1661",
+    "topic": "central banking",
+    "query_text": "New Keynesian perspective monetary policy rules inflation targeting",
+    "title": "The Science of Monetary Policy: A New Keynesian Perspective"
+  },
+  {
+    "url": "https://doi.org/10.1371/journal.pone.0107112",
+    "topic": "performance analysis",
+    "query_text": "numerical relations skill level sports teams co-adaptive behaviors",
+    "title": "Numerical Relations and Skill Level Constrain Co-Adaptive Behaviors of Agents in Sports Teams"
+  },
+  {
+    "url": "https://doi.org/10.3390/app15189994",
+    "topic": "morocco",
+    "query_text": "Moroccan football team FIFA World Cup 2022 performance analysis",
+    "title": "Tactical and Physical Profiling of the Moroccan National Football Team at the FIFA World Cup Qatar 2022: A Data-Driven and Artificial Intelligence-Assisted Analysis"
+  },
+  {
+    "url": "https://ec.europa.eu/environment/circular-economy/",
+    "topic": "european union",
+    "query_text": "EU official languages list",
+    "title": "Language selection | Environment"
+  },
+  {
+    "url": "https://en.wikipedia.org/w/index.php?title=National_Authority_for_Remote_Sensing_and_Space_Sciences&action=edit&section=2",
+    "topic": "space",
+    "query_text": "National Authority for Remote Sensing and Space Sciences Wikipedia",
+    "title": "Editing National Authority for Remote Sensing and Space Sciences (section) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/w/index.php?title=Open_science_data&redirect=no",
+    "topic": "scientific data",
+    "query_text": "Open science data Wikipedia redirect",
+    "title": "Open science data - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/4-API",
+    "topic": "chemical compound",
+    "query_text": "Aminopropyl)indole wikipedia chemical structure properties",
+    "title": "4-(2-Aminopropyl)indole - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Arabic_language",
+    "topic": "semitic language",
+    "query_text": "Arabic language Wikipedia",
+    "title": "Arabic - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Ayresome_Park",
+    "topic": "architecture",
+    "query_text": "Ayresome Park football stadium Middlesbrough England history",
+    "title": "Ayresome Park - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Backpropagation",
+    "topic": "machine learning",
+    "query_text": "backpropagation machine learning neural network training gradient computation",
+    "title": "Backpropagation"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
+    "topic": "epidemiology",
+    "query_text": "COVID-19 pandemic SARS-CoV-2 Wikipedia",
+    "title": "COVID-19 pandemic - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Communes_of_Italy",
+    "topic": "municipalities",
+    "query_text": "Italian comune administrative division",
+    "title": "Comune - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/DMAIC",
+    "topic": "six sigma",
+    "query_text": "DMAIC data driven improvement cycle Six Sigma",
+    "title": "DMAIC - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Daylight_saving_time",
+    "topic": "time",
+    "query_text": "daylight saving time wikipedia",
+    "title": "Daylight saving time - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/De_Puditicia",
+    "topic": "christianity",
+    "query_text": "Tertullian De Pudicitia Pope Callixtus I adultery",
+    "title": "De Pudicitia - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Decompensation",
+    "topic": "medical condition",
+    "query_text": "medical term decompensation definition symptoms causes",
+    "title": "Decompensation - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Default_mode_network",
+    "topic": "cognition",
+    "query_text": "default mode network brain activity function",
+    "title": "Default mode network"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Deforestation_in_Brazil",
+    "topic": "rainforest",
+    "query_text": "Deforestation in Brazil Amazon rainforest causes effects statistics",
+    "title": "Deforestation in Brazil - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Eastern_Empire",
+    "topic": "monarchy",
+    "query_text": "Byzantine Empire history facts emperors",
+    "title": "Byzantine Empire - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Economic_and_Social_Research_Council",
+    "topic": "economics",
+    "query_text": "Economic and Social Research Council UKRI Swindon",
+    "title": "Economic and Social Research Council - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Europe",
+    "topic": "europe",
+    "query_text": "Europe Wikipedia continent population area countries languages",
+    "title": "Europe - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+    "topic": "argentina",
+    "query_text": "FIFA World Cup history teams winners",
+    "title": "FIFA World Cup"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Finnish_paganism",
+    "topic": "estonian",
+    "query_text": "Baltic Finnic paganism religion history",
+    "title": "Baltic Finnic paganism - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Geographic_coordinate_system",
+    "topic": "geography",
+    "query_text": "Geographic coordinate system latitude longitude",
+    "title": "Geographic coordinate system - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Gospel_of_Matthew",
+    "topic": "christianity",
+    "query_text": "Gospel of Matthew New Testament summary",
+    "title": "Gospel of Matthew - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Gut_microbiota",
+    "topic": "microbiome",
+    "query_text": "gut microbiota gastrointestinal metagenome human microbiome effects",
+    "title": "Gut microbiota"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Helsingborg",
+    "topic": "europe",
+    "query_text": "Helsingborg Sweden city population history facts",
+    "title": "Helsingborg - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Hungary",
+    "topic": "geography",
+    "query_text": "Hungary Wikipedia country in Central Europe",
+    "title": "Hungary - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Ice_core",
+    "topic": "geology",
+    "query_text": "ice core drilling climate change research",
+    "title": "Ice core"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas",
+    "topic": "language extinction",
+    "query_text": "Indigenous languages of the Americas Wikipedia",
+    "title": "Indigenous languages of the Americas - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/International_Geophysical_Year",
+    "topic": "geophysics",
+    "query_text": "International Geophysical Year 1957 scientific collaboration Cold War",
+    "title": "International Geophysical Year - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Jaime_Balmes",
+    "topic": "catholicism",
+    "query_text": "Jaime Balmes Spanish philosopher theologian biography",
+    "title": "Jaime Balmes - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Kharaj_Mukherjee",
+    "topic": "biography",
+    "query_text": "Kharaj Mukherjee Bengali actor singer biography",
+    "title": "Kharaj Mukherjee - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/KnightCap",
+    "topic": "open source",
+    "query_text": "KnightCap chess engine Wikipedia",
+    "title": "KnightCap - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/List_of_modern_pagan_movements",
+    "topic": "neopaganism",
+    "query_text": "modern pagan movements list neopagan religions",
+    "title": "List of modern pagan movements - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Manufacturing_execution_system",
+    "topic": "supply chain",
+    "query_text": "Manufacturing Execution System MES definition and features",
+    "title": "Manufacturing execution system"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Marko_Valok",
+    "topic": "serbia",
+    "query_text": "Marko Valok Serbian footballer Wikipedia",
+    "title": "Marko Valok - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Mental_illness",
+    "topic": "treatment",
+    "query_text": "mental disorder mental illness wikipedia",
+    "title": "Mental disorder - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Mephisto_(chess_computer)",
+    "topic": "computer history",
+    "query_text": "Mephisto chess computer Hegener & Glaser",
+    "title": "Mephisto (chess computer) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/MuZero",
+    "topic": "game ai",
+    "query_text": "MuZero Wikipedia game playing artificial intelligence",
+    "title": "MuZero - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Nineteenth_Dynasty_of_Egypt_family_tree",
+    "topic": "egyptian pharaohs",
+    "query_text": "Nineteenth Dynasty Egypt pharaohs family tree",
+    "title": "Nineteenth Dynasty of Egypt family tree - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Omladinski_Stadium",
+    "topic": "geography",
+    "query_text": "Omladinski Stadium Belgrade Serbia football",
+    "title": "Omladinski Stadium - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Omroep_NTR",
+    "topic": "public broadcasting",
+    "query_text": "NTR Dutch public broadcaster Wikipedia",
+    "title": "NTR (broadcaster) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Pagus",
+    "topic": "carolingian",
+    "query_text": "Pagus ancient Roman administrative term definition",
+    "title": "Pagus - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Paul_van_Buitenen",
+    "topic": "politics",
+    "query_text": "Paul van Buitenen Dutch politician European Parliament",
+    "title": "Paul van Buitenen - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Principal_variation_search",
+    "topic": "game theory",
+    "query_text": "Principal variation search NegaScout alpha beta pruning",
+    "title": "Principal variation search - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+    "topic": "prompt engineering",
+    "query_text": "What is prompt engineering?",
+    "title": "Prompt engineering"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Religion_in_ancient_Greece",
+    "topic": "history",
+    "query_text": "ancient Greek religion gods goddesses mythology history",
+    "title": "Ancient Greek religion - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Route_of_administration",
+    "topic": "medicine",
+    "query_text": "route of administration medical definition",
+    "title": "Route of administration - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Sacrament",
+    "topic": "religion",
+    "query_text": "Christian sacrament meaning Wikipedia",
+    "title": "Sacrament - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Satan",
+    "topic": "judaism",
+    "query_text": "Satan Abrahamic religions fallen angel devil",
+    "title": "Satan - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Satellite",
+    "topic": "reconnaissance",
+    "query_text": "What is a satellite object in orbit",
+    "title": "Satellite - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Serotonin",
+    "topic": "neurotransmitters",
+    "query_text": "serotonin function production location",
+    "title": "Serotonin"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Supervised_learning",
+    "topic": "classification",
+    "query_text": "supervised learning machine learning wikipedia",
+    "title": "Supervised learning - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Swear_(disambiguation)",
+    "topic": "wikipedia",
+    "query_text": "Swear Wikipedia song meaning",
+    "title": "Swear - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Synaptic_plasticity",
+    "topic": "learning",
+    "query_text": "synaptic plasticity learning and memory",
+    "title": "Synaptic plasticity"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/The_City_of_God",
+    "topic": "christianity",
+    "query_text": "Augustine of Hippo City of God book summary",
+    "title": "The City of God - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Uganda",
+    "topic": "culture",
+    "query_text": "Uganda country in East Africa Wikipedia",
+    "title": "Uganda - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Western_world",
+    "topic": "geography",
+    "query_text": "Western world countries culture history",
+    "title": "Western world - Wikipedia"
+  },
+  {
+    "url": "https://github.com/openai/gym",
+    "topic": "api",
+    "query_text": "Gymnasium migration from Gym reinforcement learning library",
+    "title": "Gym"
+  },
+  {
+    "url": "https://github.com/tiangolo/fastapi",
+    "topic": "web development",
+    "query_text": "FastAPI framework high performance easy to learn",
+    "title": "Fastapi"
+  },
+  {
+    "url": "https://stackoverflow.com/questions/739654/how-to-make-function-decorators-and-chain-them-together",
+    "topic": "python",
+    "query_text": "python chain multiple decorators function",
+    "title": "python - How do I make function decorators and chain them together? - Stack Overflow"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/energy/china-energy/",
+    "topic": "coal",
+    "query_text": "China energy policy climate change",
+    "title": "China energy - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/in-focus/features/",
+    "topic": "climate policy",
+    "query_text": "Carbon Brief website sections and topics",
+    "title": "Features - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/policy/",
+    "topic": "international policy",
+    "query_text": "Carbon Brief policy sections and topics",
+    "title": "Policy - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/cookies/",
+    "topic": "extreme weather",
+    "query_text": "Carbon Brief cookies policy",
+    "title": "Cookies Policy - Carbon Brief"
+  },
+  {
+    "url": "https://www.eco2050.de/",
+    "topic": "climate change",
+    "query_text": "eco2050 sustainability ESG CSR AI digitalization training",
+    "title": "Home - eco2050"
+  },
+  {
+    "url": "https://www.ibiblio.org/hyperwar/AAF/AAF-Luftwaffe/AAF-Luftwaffe-3.html",
+    "topic": "european history",
+    "query_text": "Luftwaffe strategy 1933-1945 Hitler Russia war",
+    "title": "Strategy for Defeat: TheLuftwaffe1933-1945"
+  },
+  {
+    "url": "https://www.iea.org/topics/industry",
+    "topic": "industry",
+    "query_text": "IEA industrial decarbonization policies and progress",
+    "title": "Industry - Energy System - IEA"
+  },
+  {
+    "url": "https://www.industryweek.com/technology-and-iiot",
+    "topic": "robotics",
+    "query_text": "IndustryWeek Technology and IIoT articles",
+    "title": "Technology and IIoT | IndustryWeek"
+  },
+  {
+    "url": "https://www.manufacturingtomorrow.com/",
+    "topic": "manufacturing",
+    "query_text": "ManufacturingTomorrow articles stories interviews reviews news",
+    "title": "Manufacturing and Automation Stories, Videos, Articles, Interviews, Reviews & News  | ManufacturingTomorrow"
+  },
+  {
+    "url": "https://www.sciencedaily.com/breaking/",
+    "topic": "psyche mission",
+    "query_text": "ScienceDaily breaking news headlines May 11 2026",
+    "title": "Breaking News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.sciencedaily.com/news/health_medicine/nervous_system/",
+    "topic": "hsl",
+    "query_text": "nervous system news ScienceDaily stop scratching switch",
+    "title": "Nervous System News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.worldbank.org/ext/en/home",
+    "topic": "carbon pricing",
+    "query_text": "World Bank carbon pricing global emissions revenue report",
+    "title": "World Bank Group - International Development, Poverty and Sustainability"
+  }
+]
