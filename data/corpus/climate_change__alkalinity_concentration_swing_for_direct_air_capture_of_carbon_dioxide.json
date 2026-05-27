@@ -5,5 +5,17 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "chemistry",
+    "chemical engineering",
+    "carbon capture",
+    "direct air capture",
+    "carbon dioxide",
+    "alkalinity",
+    "desalination",
+    "reverse osmosis",
+    "capacitive deionization",
+    "energy models"
+  ]
 }

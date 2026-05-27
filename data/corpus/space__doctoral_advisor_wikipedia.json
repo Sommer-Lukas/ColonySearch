@@ -26,5 +26,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "education",
+    "academia",
+    "higher education",
+    "graduate study",
+    "phd",
+    "dissertation",
+    "faculty",
+    "advising"
+  ]
 }

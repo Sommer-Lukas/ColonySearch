@@ -136,5 +136,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "control systems",
+    "scada",
+    "industrial control",
+    "automation",
+    "data acquisition"
+  ]
 }

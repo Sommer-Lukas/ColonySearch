@@ -5,5 +5,14 @@
   "links": [],
   "source": "openalex",
   "source_base": "https://doi.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "medicine",
+    "climate change",
+    "health systems",
+    "sustainability",
+    "greenhouse gas emissions",
+    "net zero",
+    "planetary health"
+  ]
 }

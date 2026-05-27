@@ -1,0 +1,22 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/avasis/",
+  "title": "Avasis | Siemens",
+  "body": "Avasis The avasis group is a Platinum Partner of Siemens in the DACH region and specializes in the sales and implementation of the Siemens software solutions Teamcenter, Polarion, NX, and Teamcenter Quality. As a powerful addition to the Siemens product portfolio, we develop our own software products and sell/ implement them worldwide. Industries IT and telecommunication Pharma and life science Healthcare Others Motion Build Extends or builds on a Siemens Xcelerator product / solution by creating a new product, or creates a new customer solution via integration of Siemens Xcelerator product and own product Sell Resell / Co-sell SW and digital enabled HW on Siemens Xcelerator Service Provides a service for a Siemens Xcelerator product/solution that helps the customer to implement, integrate, operate or maintain it Available Products Teamcenter Medical Device Solution The Teamcenter Medical Device Solution (TC MDS) is an industry-specific enhancement to the powerful Siemens PLM software “Teamcenter”. Learn more avaRIMx avaRIMx is a regulatory information management system RIMS by avasis that centralizes and streamlines regulatory data processes and strategies across the entire product lifecycle helping organizations manage compliance submissions... Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/avasis-teamcenter-medical-device-solution-tc-mds/",
+    "https://www.siemens.com/en-us/products/avasis-avarimx/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "software",
+    "siemens",
+    "teamcenter",
+    "polarion",
+    "nx",
+    "it",
+    "product lifecycle management"
+  ]
+}

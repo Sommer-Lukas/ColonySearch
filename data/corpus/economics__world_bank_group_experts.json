@@ -1,0 +1,16 @@
+{
+  "url": "https://www.worldbank.org/en/about/people/all?sortBy=firstName&unit=Equitable+Growth%5EJobs%5EMacroeconomics",
+  "title": "World Bank Group Experts",
+  "body": "World Bank Group Experts",
+  "links": [],
+  "source": "html",
+  "source_base": "https://www.worldbank.org",
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "international development",
+    "world bank",
+    "expert",
+    "global economy"
+  ]
+}

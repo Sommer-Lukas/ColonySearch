@@ -507,5 +507,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "software development",
+    "ide",
+    "software engineering",
+    "development tools"
+  ]
 }

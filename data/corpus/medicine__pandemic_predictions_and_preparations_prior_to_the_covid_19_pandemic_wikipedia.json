@@ -1600,5 +1600,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "public health",
+    "pandemic preparedness",
+    "covid19",
+    "health policy",
+    "global health",
+    "disease prevention"
+  ]
 }

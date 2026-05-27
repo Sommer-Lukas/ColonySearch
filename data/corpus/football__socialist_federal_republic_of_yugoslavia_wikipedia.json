@@ -1739,5 +1739,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "history",
+    "yugoslavia",
+    "socialism",
+    "cold war",
+    "balkan history",
+    "20th century history"
+  ]
 }

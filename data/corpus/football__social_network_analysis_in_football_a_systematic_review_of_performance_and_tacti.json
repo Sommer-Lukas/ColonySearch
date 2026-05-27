@@ -5,5 +5,14 @@
   "links": [],
   "source": "semantic_scholar",
   "source_base": "https://doi.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports science",
+    "social network analysis",
+    "football",
+    "team performance",
+    "tactics",
+    "systematic review",
+    "sports analytics"
+  ]
 }

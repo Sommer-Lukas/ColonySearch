@@ -138,5 +138,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer science",
+    "algorithms",
+    "graph theory",
+    "graph traversal",
+    "data structures"
+  ]
 }

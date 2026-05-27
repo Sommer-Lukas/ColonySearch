@@ -83,5 +83,12 @@
   ],
   "source": "stackoverflow",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "c",
+    "design patterns",
+    "singleton pattern",
+    "objectoriented programming"
+  ]
 }

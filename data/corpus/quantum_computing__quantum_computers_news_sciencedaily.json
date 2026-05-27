@@ -64,5 +64,14 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "quantum_computing"
+  "topic": "quantum_computing",
+  "ai_labels": [
+    "physics",
+    "quantum computing",
+    "quantum mechanics",
+    "quantum communication",
+    "quantum encryption",
+    "quantum dots",
+    "quantum physics"
+  ]
 }

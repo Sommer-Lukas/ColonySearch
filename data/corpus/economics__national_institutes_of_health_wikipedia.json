@@ -769,5 +769,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "medicine",
+    "us government",
+    "nih",
+    "medical research",
+    "public health"
+  ]
 }

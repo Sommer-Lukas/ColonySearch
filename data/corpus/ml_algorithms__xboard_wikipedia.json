@@ -360,5 +360,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "programming",
+    "chess",
+    "graphical user interface",
+    "x window system",
+    "gnu project",
+    "free software"
+  ]
 }

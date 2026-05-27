@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "robotics",
+    "reinforcement learning",
+    "navigation",
+    "one shot learning",
+    "machine learning",
+    "mobile robot"
+  ]
 }

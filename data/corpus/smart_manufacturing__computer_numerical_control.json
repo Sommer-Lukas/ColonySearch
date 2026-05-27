@@ -359,5 +359,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "manufacturing",
+    "cnc",
+    "automation",
+    "machine tools",
+    "gcode"
+  ]
 }

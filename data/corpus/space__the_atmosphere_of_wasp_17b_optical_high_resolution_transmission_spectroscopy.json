@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "exoplanet",
+    "exoplanet atmosphere",
+    "spectroscopy",
+    "sodium",
+    "wasp17b",
+    "magellan telescopes"
+  ]
 }

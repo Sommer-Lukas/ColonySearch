@@ -64,5 +64,13 @@
   ],
   "source": "html",
   "source_base": "https://www.esa.int",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "esa",
+    "space science",
+    "solar system",
+    "cosmic vision",
+    "space exploration"
+  ]
 }

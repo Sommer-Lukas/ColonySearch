@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "biology",
+    "gene editing",
+    "crispr",
+    "large language models",
+    "laboratory automation",
+    "biomedical research"
+  ]
 }

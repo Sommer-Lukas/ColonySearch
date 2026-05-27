@@ -76,5 +76,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "science",
+    "data",
+    "data management",
+    "research",
+    "international organizations"
+  ]
 }

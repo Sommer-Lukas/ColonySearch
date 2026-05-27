@@ -153,6 +153,11 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("wikidata",         "biopolymer"),
             ("wikidata",         "circular economy"),
             ("github",           "IndEcol/brightway2"),
+            ("github",           "openLCA/olca-app"),
+            ("github",           "symbiflow/symbiflow-examples"),
+            ("devto",            "sustainability"),
+            ("devto",            "greentech"),
+            ("stackoverflow",    "https://stackoverflow.com/questions/tagged/life-cycle-assessment"),
             ("html",             "https://ellenmacarthurfoundation.org/topics/circular-economy/overview"),
             ("html",             "https://www.unep.org/topics/chemicals-waste/plastics"),
             ("html",             "https://www.weforum.org/agenda/archive/circular-economy/"),
@@ -162,6 +167,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.eco2050.de/"),
             ("html",             "https://ec.europa.eu/environment/circular-economy/"),
             ("html",             "https://www.unep.org/resources/report"),
+            ("html",             "https://www.materialstoday.com/"),
+            ("html",             "https://www.azom.com/green-chemistry.aspx"),
         ],
     },
 
@@ -416,10 +423,26 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("semantic_scholar", "sports analytics player performance prediction model"),
             ("wikidata",         "association football tactic"),
             ("wikidata",         "FIFA World Cup"),
+            ("github",           "friends-of-tracking-data/LaurieOnTracking"),
+            ("github",           "devinpleuler/analytics-handbook"),
+            ("github",           "metrica-sports/sample-data"),
+            ("devto",            "football"),
+            ("devto",            "sportsanalytics"),
+            ("stackoverflow",    "https://stackoverflow.com/questions/tagged/sports-analytics"),
             ("html",             "https://fbref.com/en/comps/Big5/stats/players/Big-5-European-Leagues-Stats"),
             ("html",             "https://www.bbc.com/sport/football"),
             ("html",             "https://statsbomb.com/articles/"),
             ("html",             "https://understat.com/"),
+            ("html",             "https://theathletic.com/football/"),
+            ("html",             "https://www.optasports.com/news/"),
+            ("html",             "https://totalfootballanalysis.com/"),
+            ("html",             "https://www.transfermarkt.com/"),
+            ("html",             "https://www.uefa.com/uefachampionsleague/news/"),
+            ("html",             "https://www.fifa.com/fifaplus/en/articles"),
+            ("html",             "https://www.skysports.com/football"),
+            ("html",             "https://www.goal.com/en"),
+            ("html",             "https://www.theguardian.com/football"),
+            ("html",             "https://tacticaljournal.com/"),
         ],
     },
 
@@ -672,6 +695,14 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("github",           "apache/plc4x"),
             ("github",           "eclipse/ditto"),
             ("github",           "ros-planning/navigation2"),
+            ("github",           "Industrial-IoT/Industrial-IoT"),
+            ("github",           "Azure/Industrial-IoT"),
+            ("github",           "eclipse-cyclonedds/cyclonedds"),
+            ("devto",            "iot"),
+            ("devto",            "robotics"),
+            ("devto",            "industry40"),
+            ("stackoverflow",    "https://stackoverflow.com/questions/tagged/industrial-automation"),
+            ("stackoverflow",    "https://stackoverflow.com/questions/tagged/plc"),
             ("html",             "https://www.nist.gov/manufacturing"),
             ("html",             "https://www.weforum.org/agenda/archive/advanced-manufacturing/"),
             ("html",             "https://phys.org/tags/manufacturing/"),
@@ -683,7 +714,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.th-nuernberg.de/"),
             ("html",             "https://www.accenture.com/en-us/industries"),
             ("html",             "https://ec.europa.eu/growth/industry/policy/"),
-            ("html",             "https://uns.org/sustainabledevelopment/"),
+            ("html",             "https://www.automationworld.com/"),
+            ("html",             "https://www.manufacturingtomorrow.com/"),
+            ("html",             "https://www.industryweek.com/technology-and-iiot"),
         ],
     },
 }
@@ -1357,12 +1390,15 @@ def expand(
     overwrite:  bool,
     max_body:   int | None = None,
     max_links:  int | None = None,
+    topics:     set[str] | None = None,
 ) -> None:
     """
     Reads links from existing corpus files, randomly samples `sample` of them,
     then crawls those URLs (and follows their links to `depth` levels).
     """
     candidates = load_corpus_links(corpus_dir)
+    if topics:
+        candidates = [(url, t) for url, t in candidates if t in topics]
     if not candidates:
         print("No unscraped links found in corpus.")
         return
@@ -1459,6 +1495,7 @@ examples:
             overwrite  = args.overwrite,
             max_body   = args.max_body,
             max_links  = args.max_links,
+            topics     = {t.strip() for t in args.topics.split(",")} if args.topics else None,
         )
         return
 

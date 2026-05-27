@@ -303,5 +303,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "drug discovery",
+    "pharmacology",
+    "biotechnology",
+    "genomics",
+    "screening",
+    "chemical libraries"
+  ]
 }

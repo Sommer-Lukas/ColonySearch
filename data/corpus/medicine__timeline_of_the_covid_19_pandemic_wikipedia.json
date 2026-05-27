@@ -1413,5 +1413,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "covid19",
+    "pandemic",
+    "public health",
+    "infectious disease",
+    "timeline"
+  ]
 }

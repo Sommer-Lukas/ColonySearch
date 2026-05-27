@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "medicine",
+    "robotics",
+    "human robot interaction",
+    "covid19",
+    "automation",
+    "healthcare",
+    "medical devices"
+  ]
 }

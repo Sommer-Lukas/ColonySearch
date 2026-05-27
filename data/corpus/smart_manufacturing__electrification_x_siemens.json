@@ -1,0 +1,30 @@
+{
+  "url": "https://www.siemens.com/en-us/products/electrification-x/",
+  "title": "Electrification X | Siemens",
+  "body": "ENERGY INFRASTRUCTURE Electrification X – Smart energy network management Electrification X bridges the physical and digital worlds with a scalable IoT Software as a Service (SaaS) suite, built to help industries and operators optimize power systems, build resilience and achieve long-term efficiency goals. Explore products Contact us The smarter E Europe 2026 JUNE 23-25, MESSE MUNICH Join us on the journey toward sustainable and digital energy infrastructure! Get your free ticket DIGITAL ENERGY SOLUTIONS Transform your electrification infrastructure Electrification X helps renewable energy, utilities, data centers and infrastructure industries meet the challenges of the energy transition — all with one integrated platform. Electrification X offers: Asset management: Track equipment condition, operation data, health status and alarms. Energy insights: Improve efficiency, reduce carbon emissions and optimize the energy mix. Load management: Oversee EV charging, enable remote control and manage loads dynamically. Grid visibility: Gain oversight of distribution stations and cabinets at medium and low voltage. Fault detection: Monitor overhead and underground electrical networks to facilitate prompt fault resolution. Operational technology (OT) support: Protect, monitor and manage OT assets for utilities and municipalities. Explore products Manage your energy networks, increase uptime and improve reliability, asset utilization, cybersecurity, and energy efficiency to reach sustainability goals. Electrification X – Asset Management Continuously monitor electrical assets across locations to prevent unplanned shutdowns. Get near real-time operational data, health status information, and alarms. Electrification X – Network Fault Management Enhance visibility of electrical faults across transmission and distribution networks. Gain comprehensive transparency for prompt, efficient fault management. Electrification X – OT Companion Your partner in the management and protection of all operational technology (OT) assets across electrical substations to navigate the challenges of IT/OT convergence Electrification X – Sustainability/Energy Management Improve energy efficiency, optimize costs, and reduce carbon emissions. Our solution provides the data transparency to gain a competitive advantage. Electrification X – Load Management Gain transparency and remote control over your EV charging network. Our dynamic load management helps you avoid costly power limit violations. Electrification X – Distribution Grid Monitoring Proactively detect overloads and bottlenecks in your distribution grid. Gain precise, real-time insights into MV and LV network utilization and capacity. Electrification X - Power Resource Management Electrification X – Power Resource Management empowers operators to efficiently manage sites with insights into power resources, reducing downtime and costs. IoT suite for electrification and automation To keep uptime and resilience as high as possible, TSO, DSO and I&I operators need optimal transparency of all energy distribution procedures and processes. Our modular IoT and cybersecurity suite offers ways to solve all your individual reliability, availability, sustainability, cost and cybersecurity challenges. Read Frequently asked questions Where can I learn more about Electrification X features, uses and terms? You can view product and data sheets and supplemental terms for Siemens Electrification X portfolio products here . Discover the possibilities Explore products Contact us",
+  "links": [
+    "https://www.siemens.com/en-us/contact/",
+    "https://resources.sw.siemens.com/en-US/your-free-ticket-for-the-smarter-e-europe-2026/",
+    "https://www.siemens.com/en-us/products/electrification-x/asset-management/",
+    "https://www.siemens.com/en-us/products/electrification-x/network-fault-management/",
+    "https://www.siemens.com/en-us/products/electrification-x/ot-companion/",
+    "https://www.siemens.com/en-us/products/electrification-x/sustainability-energy-management/",
+    "https://www.siemens.com/en-us/products/electrification-x/load-management/",
+    "https://www.siemens.com/en-us/products/electrification-x/distribution-grid-monitoring/",
+    "https://www.siemens.com/en-us/products/electrification-x/power-resource-management/",
+    "https://resources.sw.siemens.com/en-US/brochure-iot-suite-for-electrification-and-automation/",
+    "https://www.siemens.com/en-us/products/electrification-x/terms/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "energy",
+    "engineering",
+    "software as a service",
+    "internet of things",
+    "energy infrastructure",
+    "renewable energy",
+    "digital energy"
+  ]
+}

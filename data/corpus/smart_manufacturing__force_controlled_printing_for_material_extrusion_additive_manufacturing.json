@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "additive manufacturing",
+    "3d printing",
+    "process control",
+    "robotics",
+    "materials science"
+  ]
 }

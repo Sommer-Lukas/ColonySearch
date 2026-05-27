@@ -157,5 +157,16 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "biology",
+    "neuroscience",
+    "nervous system",
+    "brain",
+    "obesity",
+    "smell",
+    "fat cells",
+    "trpv4",
+    "hsl"
+  ]
 }

@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "biology",
+    "machine learning",
+    "scientific practice",
+    "best practices",
+    "research standards",
+    "data science"
+  ]
 }

@@ -326,5 +326,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "international trade",
+    "globalization",
+    "trade policy",
+    "economic history"
+  ]
 }

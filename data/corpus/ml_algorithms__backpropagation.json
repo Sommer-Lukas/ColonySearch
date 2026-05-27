@@ -442,5 +442,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "neural networks",
+    "backpropagation",
+    "gradient descent",
+    "deep learning"
+  ]
 }

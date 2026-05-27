@@ -361,5 +361,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "natural language processing",
+    "large language models",
+    "information retrieval",
+    "rag",
+    "ai",
+    "chatbots"
+  ]
 }

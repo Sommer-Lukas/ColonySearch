@@ -397,5 +397,15 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "biology",
+    "botany",
+    "organic chemistry",
+    "polymers",
+    "plant biology",
+    "biomaterials",
+    "wood",
+    "cell walls"
+  ]
 }

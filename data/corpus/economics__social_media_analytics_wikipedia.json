@@ -242,5 +242,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "social science",
+    "social media",
+    "data analysis",
+    "social networks",
+    "web analytics"
+  ]
 }

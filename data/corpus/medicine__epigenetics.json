@@ -506,5 +506,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "biology",
+    "epigenetics",
+    "gene expression",
+    "dna",
+    "dna methylation",
+    "histone modification",
+    "genetics"
+  ]
 }

@@ -5,5 +5,13 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "http",
+    "web development",
+    "libraries",
+    "apis"
+  ]
 }

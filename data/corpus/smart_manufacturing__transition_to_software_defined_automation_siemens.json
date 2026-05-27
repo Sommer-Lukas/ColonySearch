@@ -1,0 +1,30 @@
+{
+  "url": "https://www.siemens.com/en-us/company/it-ot-convergence/",
+  "title": "Transition to software-defined automation | Siemens",
+  "body": "Transition to software-defined automation In an evolving landscape, fixed-function hardware creates bottlenecks. Software-defined automation decouples control from proprietary hardware, turning your factory into a scalable asset. Break free from silos to gain massive benefits in deployment speed and operational agility. Explore Your partner for the software-defined future Software-defined automation is a shift in industrial DNA. We believe that moving control logic to a centralized, software-centric architecture is the key to unlocking cloud-like flexibility on the shop floor. This approach creates a seamless execution environment where updates are deployed instantly, and production scales at the speed of code. Unlock new levels of operational flexibility Move beyond the constraints of traditional PLCs. By adopting a software-defined layer, you gain the ability to reconfigure production lines via code, minimizing physical changeover time and optimizing resource allocation. Explore our Digital Enterprise Turn industrial logic into scalable innovation By utilizing automation, you can apply modern DevOps practices—like continuous integration and automated testing—to your production environment. Move from rigid, hardware-bound cycles to iterative performance improvements. See it in action Accelerate business agility through virtualization Software-defined automation allows you to virtualize control functions, shortening time-to-market for new products and enabling \"as-a-service\" business models that were previously limited by hardware life cycles. Explore Industrial Operations X Visit us at Hannover Messe 2026 Turn data into a competitive advantage with real world Industrial AI. Join us from 20 -24 April or online. Get your free ticket Examples of software-defined automation Discover how others have virtualized their industrial operations. all Software-defined control for renewable energy Case study Our collaboration with Projektplanungs- Beratungs- und Entwicklungs GmbH in Austria providing the company an economic advantage by virtualizing control systems using Industrial Edge and software-defined architectures. Learn more all Digitalization saved a 50-year-old factory in India Article A switchgear factory in Kalwa near Mumbai, India combines state-of-the-art production with a software-defined infrastructure, allowing legacy equipment to be managed through modern digital twins and centralized software control. Learn more all Decouple hardware for a data-driven boost Story The Siemens Electric Motor Factory in Bad Neustadt, Germany, is advancing by automating through software-centric layers, integrating legacy equipment into a unified, programmable environment. Learn more Accelerate your software-defined enterprise Merge the flexibility of IT-style software management with the precision of industrial execution. By abstracting your automation layer, you can use data and code to manage finite resources efficiently, driving a new standard for industrial sustainability and flexibility. Siemens and Snowflake enable data-rich automation Siemens is collaborating with Snowflake to bridge the gap between software-defined control and the AI Data Cloud, unlocking unprecedented scale for AI-driven manufacturing. Read the announcement The transition to software-defined production Why are leading manufacturers moving away from hardware-centric automation? Learn the roadmap for implementing a software-defined architecture on your shop floor. Read the whitepaper Ensuring software quality through efficient testing Go from hardware dependency to a software-defined ecosystem. See how to use digital twins and simulations to detect errors early, virtualize commissioning, and validate automation logic before it touches physical hardware. Read the whitepaper Ready to build at the speed of software? Don't let proprietary hardware cycles dictate your production roadmap. Transition to a software-defined architecture that scales with your business needs and adapts to market shifts in real-time. Explore software-defined automation",
+  "links": [
+    "https://www.siemens.com/en-us/content/software-defined-systems/",
+    "https://www.siemens.com/en-us/company/insights/digital-enterprise/",
+    "https://www.siemens.com/en-us/campaigns/digital-transformers-electronics-factory-erlangen/",
+    "https://www.siemens.com/en-us/company/insights/industrial-operations-x/",
+    "https://resources.sw.siemens.com/en-US/register-hannover-messe-fairground/",
+    "https://www.siemens.com/en-us/company/insights/pbeg-biogas-it-ot-industrial-edge/",
+    "https://www.siemens.com/en-us/company/insights/kalwa-digitalized-sustainable-factory/",
+    "https://www.siemens.com/en-us/company/insights/siemens-electric-motor-factory-it-ot-convergence/",
+    "https://press.siemens.com/global/en/pressrelease/siemens-and-snowflake-enable-itot-convergence-across-edge-and-cloud-industrial",
+    "https://contentpath.siemens.com/it-ot-integration-en/shop-floor-data-integration?utm_source=website",
+    "https://resources.sw.siemens.com/en-US/white-paper-software-quality-efficient-engineering/",
+    "https://www.siemens.com/en-us/company/insights/industrial-operations-x/software-defined-automation/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "industrial automation",
+    "software defined",
+    "manufacturing",
+    "cloud computing",
+    "factory automation"
+  ]
+}

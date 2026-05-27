@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "contrastive learning",
+    "embeddings",
+    "representation learning",
+    "deep learning",
+    "cosine similarity"
+  ]
 }

@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "robotics",
+    "automation",
+    "labor",
+    "qatar",
+    "manufacturing",
+    "economic feasibility",
+    "policy"
+  ]
 }

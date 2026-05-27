@@ -1,0 +1,28 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/engineering-group/",
+  "title": "Engineering Group | Siemens",
+  "body": "Engineering Group Engineering Group is a global leader in digital transformation. With competence hubs across North America, South America, Europe and Asia-Pacific, their Industries eXcellence division specializes in the development, integration and implementation of solutions covering the end-to-end lifecycle and supply chain of all industrial products and processes. With a holistic focus on enabling the digital transformation of manufacturing and transportation organizations, their global team designs and delivers cutting-edge technology solutions that transform the way our customers think about, design, build and deliver their products and services. Learn more at www.indx.com and www.eng.it. Industries Aerospace Automotive Marine Oil and gas Pharma and life science Pulp and paper Chemicals Metals Motion Build Extends or builds on a Siemens Xcelerator product / solution by creating a new product, or creates a new customer solution via integration of Siemens Xcelerator product and own product Available Products Smart Monitor for Asset eXcellence Smart Monitor enables real-time Production Monitoring, Process Variability Monitoring, Statistical Process Control (SPC), Process Trends & Deviation Analysis, Alarms Management, and Quality and Corrective Action Management. Learn more Smart Energy for Asset eXcellence Smart Energy enables Energy Utilization Monitoring, Energy Consumption Visibility & KPIs, Asset/Line/Plant/Multi-Plant Level Analysis, Energy Meter Inspection & Data Collection, Regulation Compliance and Integration with ERP for E... Learn more Smart Performance for Asset eXcellence Smart Performance enables Asset Performance Management (APM), Overall Equipment Effectiveness (OEE), Key Performance Indicators (KPIs), Bottleneck Analysis, Downtime Management & Alarm Triggers and Customizable Visual Dashboards. Learn more Smart Operator for Asset eXcellence Smart Operator enables to coordinate critical manual operations with visual guidance and offers Augmented Reality Integration, Remote Collaboration, On-Demand Expert Training & Support and Visual Process & Execution Analysis. Learn more Smart Plant for Asset eXcellence Smart Plant enables Digital Twin of Factory & Machines, Plant Simulation Modeling, Process Simulation Modeling, Asset Behavior Analysis, Artificial Intelligence & Machine Learning and Continuous Improvement. Learn more Smart Maintenance for Asset eXcellence Smart Maintenance enables Reactive Maintenance, Early Warning (Machine Learning), Root Cause Analysis, Condition-Based Maintenance, Predictive Maintenance, Prescriptive Diagnostics & Maintenance and Integration with ERP (Part Repl... Learn more Smart Process for Asset eXcellence Smart Process enables Manual Operations Monitoring, Video Analysis Integration, Performance Data Collection, Performance Efficiency Analysis, Performance Productivity Analysis and Error Checking, giving full visibility into plant ... Learn more Movilitas.Cloud Achieve end-to-end traceability with our powerful serialization software, automating serial number management and streamlining your manufacturing processes to ensure compliance and build a robust supply chain. Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/engineering-group-smart-monitor-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-smart-energy-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-smart-performance-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-smart-operator-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-smart-plant-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-smart-maintenance-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-smart-process-for-asset-excellence/",
+    "https://www.siemens.com/en-us/products/engineering-group-movilitas-cloud/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "digital transformation",
+    "industrial manufacturing",
+    "supply chain",
+    "aerospace",
+    "automotive",
+    "oil and gas",
+    "pharmaceuticals"
+  ]
+}

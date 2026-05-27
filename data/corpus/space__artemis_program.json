@@ -506,5 +506,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "space",
+    "space exploration",
+    "nasa",
+    "artemis program",
+    "moon",
+    "space launch system",
+    "orion spacecraft"
+  ]
 }

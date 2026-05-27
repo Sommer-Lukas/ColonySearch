@@ -1,0 +1,36 @@
+{
+  "url": "https://www.industryweek.com/technology-and-iiot",
+  "title": "Technology and IIoT | IndustryWeek",
+  "body": "Technology and IIoT © Mariagroth | Dreamstime.com Energy Making the Case for Data Centers We need the centers to power the modern digital economy, and there's a solution to the energy challenge: nuclear reactors. May 18, 2026 © Pop Nukoonrat | Dreamstime.com Robotics Now Interacting: Robotics and AI in Manufacturing The most significant transformation will be AI acting as a unifying intelligence layer, linking robotics to an expansive manufacturing ecosystem of previously unused data. May 15, 2026 126723440 © Sompong Sriphet | Dreamstime.com Digital Tools Agentic AI Could Make Robots Affordable for Small Businesses Siemens revealed new software at Hannover Messe meant to ease automation and integration and increase speed to ROI. May 13, 2026 Dennis Scimeca Technology and IIoT Meet the Humanoid Robots that May Replace Us All: Hannover Messe Edition What makes one humanoid robot different from all the others at the show? We tried to find out. May 12, 2026 © Pojoslaw | Dreamstime.com Emerging Technologies Drones Gain Altitude in Manufacturing Facilities (and Challenges Emerge) As the technology improves, cybersecurity concerns multiply and the need for sophisticated data integration ramps up. May 7, 2026 © Romolo Tavani | Dreamstime.com Automation Automation Won’t Save You If Nobody Uses It Correctly Adoption failure and dashboard blind spots are killing enterprise program efficiency. Here’s what actually works—from the field. May 4, 2026 Robert Schoenberger Technology and IIoT Humanoid Robots at Hannover Messe Great Question Was the most interesting innovation at this year's automation fair realistic or just another fad? April 30, 2026 Dennis Scimeca Additive Additive Is for Tooling First, Then Everything Else 3D printing has become indispensable for manufacturing operations, says an industry veteran. April 30, 2026 Dennis Scimeca Additive Images From the Floor at RAPID + TCT 2026 3D printing from the practical to the bizarre. April 29, 2026 Looking for Something? Load More Content",
+  "links": [
+    "https://www.industryweek.com/technology-and-iiot/energy/article/55378528/making-the-case-for-data-centers",
+    "https://www.industryweek.com/technology-and-iiot/energy",
+    "https://www.industryweek.com/technology-and-iiot/robotics/article/55378176/now-interacting-robotics-and-ai-in-manufacturing",
+    "https://www.industryweek.com/technology-and-iiot/robotics",
+    "https://www.industryweek.com/technology-and-iiot/digital-tools/article/55376887/agentic-ai-could-make-robots-affordable-for-small-businesses",
+    "https://www.industryweek.com/technology-and-iiot/digital-tools",
+    "https://www.industryweek.com/technology-and-iiot/media-gallery/55376401/meet-the-humanoid-robots-that-may-replace-us-all-hannover-messe-edition",
+    "https://www.industryweek.com/technology-and-iiot/emerging-technologies/article/55376185/drones-gain-altitude-in-manufacturing-facilities-and-challenges-emerge",
+    "https://www.industryweek.com/technology-and-iiot/emerging-technologies",
+    "https://www.industryweek.com/technology-and-iiot/automation/article/55375248/automation-wont-save-you-if-nobody-uses-it-correctly",
+    "https://www.industryweek.com/technology-and-iiot/automation",
+    "https://www.industryweek.com/technology-and-iiot/podcast/55374503/humanoid-robots-at-hannover-messe",
+    "https://www.industryweek.com/podcasts/great-question-a-manufacturing-podcast",
+    "https://www.industryweek.com/technology-and-iiot/additive/article/55374375/additive-is-for-tooling-first-then-everything-else",
+    "https://www.industryweek.com/technology-and-iiot/additive",
+    "https://www.industryweek.com/technology-and-iiot/additive/media-gallery/55371381/images-from-the-floor-at-rapid-tct-2026"
+  ],
+  "source": "html",
+  "source_base": "https://www.industryweek.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "technology",
+    "iiot",
+    "manufacturing",
+    "robotics",
+    "ai",
+    "data centers",
+    "nuclear energy",
+    "automation"
+  ]
+}

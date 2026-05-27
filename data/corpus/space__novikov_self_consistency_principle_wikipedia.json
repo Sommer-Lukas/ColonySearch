@@ -199,5 +199,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "time travel",
+    "paradox",
+    "general relativity",
+    "novikov selfconsistency principle"
+  ]
 }

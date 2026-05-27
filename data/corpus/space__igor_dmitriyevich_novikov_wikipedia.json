@@ -87,5 +87,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "physics",
+    "astrophysics",
+    "cosmology",
+    "russian science",
+    "white holes",
+    "scientific biography"
+  ]
 }

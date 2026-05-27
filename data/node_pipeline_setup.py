@@ -48,9 +48,9 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import normalize
 
 # ── Defaults (mirror data_preperation.ipynb config cell) ─────────────────────
-MIN_BODY_LEN     = 200
-LINK_BIAS_WEIGHT = 0.3
-LINK_SVD_DIMS    = 32
+MIN_BODY_LEN     = 150
+LINK_BIAS_WEIGHT = 0.5
+LINK_SVD_DIMS    = 61
 EMBED_MODEL      = "all-mpnet-base-v2"
 RANDOM_STATE     = 42
 
@@ -100,6 +100,29 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
+def _normalize_labels(raw_labels) -> list[str]:
+    if raw_labels is None:
+        return []
+    if isinstance(raw_labels, list):
+        labels = raw_labels
+    elif isinstance(raw_labels, str):
+        labels = [raw_labels]
+    else:
+        labels = [str(raw_labels)]
+
+    seen: set[str] = set()
+    normalized: list[str] = []
+    for label in labels:
+        if label is None:
+            continue
+        text = str(label).strip().lower()
+        if not text or text in seen:
+            continue
+        seen.add(text)
+        normalized.append(text)
+    return normalized
+
+
 def _normalize_url(u: str) -> str:
     if not u:
         return ""
@@ -133,7 +156,11 @@ def load_corpus(corpus_dir: Path) -> list[dict]:
         url   = raw.get("url", "").strip()
         title = raw.get("title", "").strip()
         body  = raw.get("body", "")
-        topic = raw.get("topic", "")
+        raw_labels = raw.get("ai_labels")
+        labels = _normalize_labels(raw_labels)
+        if not labels:
+            labels = _normalize_labels(raw.get("topic", ""))
+        topic = json.dumps(labels) if labels else ""
         links = raw.get("links")
 
         title_clean = clean_text(title)

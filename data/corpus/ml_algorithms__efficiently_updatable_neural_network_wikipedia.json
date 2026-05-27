@@ -130,5 +130,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "machine learning",
+    "neural networks",
+    "chess",
+    "computer science",
+    "artificial intelligence",
+    "algorithms",
+    "deep learning"
+  ]
 }

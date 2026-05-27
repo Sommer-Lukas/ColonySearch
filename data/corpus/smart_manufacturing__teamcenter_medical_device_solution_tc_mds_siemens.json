@@ -1,0 +1,23 @@
+{
+  "url": "https://www.siemens.com/en-us/products/avasis-teamcenter-medical-device-solution-tc-mds/",
+  "title": "Teamcenter Medical Device Solution (TC MDS) | Siemens",
+  "body": "Teamcenter Medical Device Solution is powered by Avasis The avasis group is a Platinum Partner of Siemens in the DACH region and specializes in the sales and implementation of the Siemens software solutions Teamcenter, Polarion, NX, and Teamcenter Quality. As a powerful addition to the Siemens product portfolio, we develop our own software products and sell/ implement them worldwide. Discover Avasis Why Improve product development efficiency? The Teamcenter Medical Device Solution (TC MDS) complements the established Teamcenter software. Its highly integrated interfaces to Teamcenter, Polarion, and other authoring tools act as a link and thus simplify the development process throughout the entire product life cycle. The core functions are: Excellent visualization and traceability: Complex documentation can be excellently visualized and traced at any time with TC MDS – paperless and digital, from concept to real product. Comprehensive project overview: With the push of a button, a comprehensive view of the project and its progress is visible, thanks to the simple and clear structure. Continuous process management: TC MDS enhances security through continuous process management. The status of all tasks and the scheduling situation are clearly visible throughout all development process phases. Automatic consideration of guidelines: Company-internal and regulatory guidelines are automatically considered and adhered to. Benefits Interdisciplinarity: Thanks to specific views for each user, work gets faster Usability: offers simple user navigation, despite complex development processes Baseline: a foundation for traceability and decision-making in case of changes Link: TC MDS provides all interaction of the different disciplines in one view Featured Capabilities all Visualization and traceability: paperless and digital, from concept to product all Single Source of Truth: end the chaos of checklists and inconsistent information all Comprehensive project overview: View the progress with the push of a button all Company-internal and regulatory guidelines: are automatically considered Explore Resources and Related Products Additional Information and Resources avasis Teamcenter Medical Device Solution (TC MDS) WEBINAR TC MDS \"maximizing workflow efficiency and compliance\" WEBINAR TC MDS \"project management and compliance made easy\" Prerequisites TC MDS requires the use of Teamcenter",
+  "links": [
+    "https://www.siemens.com/en-us/ecosystem/avasis/",
+    "https://www.avasis.biz/en/solutions/avasis-solutions/teamcentermedicaldevicesolution",
+    "https://www.avasis.biz/de/veranstaltungen/on-demand-webinar/maximizing-workflow-efficiency-and-compliance",
+    "https://www.avasis.biz/de/veranstaltungen/on-demand-webinar/projectmanagementandcompliancemadeeasy"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "medicine",
+    "medical devices",
+    "product development",
+    "software",
+    "siemens",
+    "teamcenter",
+    "avasis"
+  ]
+}

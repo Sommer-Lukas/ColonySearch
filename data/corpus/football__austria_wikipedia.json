@@ -1320,5 +1320,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "geography",
+    "politics",
+    "europe",
+    "austria",
+    "country",
+    "vienna",
+    "german"
+  ]
 }

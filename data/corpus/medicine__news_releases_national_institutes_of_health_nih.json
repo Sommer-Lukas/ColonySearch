@@ -27,5 +27,16 @@
   ],
   "source": "html",
   "source_base": "https://www.nih.gov",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "medicine",
+    "nih",
+    "medical research",
+    "news",
+    "public health",
+    "heart disease",
+    "glioblastoma",
+    "weight loss",
+    "alcohol use disorder"
+  ]
 }

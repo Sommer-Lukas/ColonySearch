@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "manufacturing",
+    "digital twin",
+    "deep learning",
+    "model predictive control",
+    "time series",
+    "neural networks",
+    "real time systems"
+  ]
 }

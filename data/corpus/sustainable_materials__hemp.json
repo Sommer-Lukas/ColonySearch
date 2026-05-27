@@ -506,5 +506,15 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "sustainable_materials"
+  "topic": "sustainable_materials",
+  "ai_labels": [
+    "biology",
+    "agriculture",
+    "hemp",
+    "cannabis",
+    "plant uses",
+    "natural fibers",
+    "biofuels",
+    "sustainable materials"
+  ]
 }

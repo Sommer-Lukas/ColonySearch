@@ -177,5 +177,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "chemistry",
+    "molar mass",
+    "molecular weight",
+    "isotopes",
+    "mole",
+    "mass",
+    "chemical substance"
+  ]
 }

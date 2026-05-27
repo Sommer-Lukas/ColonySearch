@@ -10,5 +10,12 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "space"
+  "topic": "space",
+  "ai_labels": [
+    "history",
+    "wikipedia",
+    "editing",
+    "user accounts",
+    "content policy"
+  ]
 }

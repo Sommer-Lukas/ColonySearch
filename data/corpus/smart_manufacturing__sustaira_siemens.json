@@ -1,0 +1,24 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/sustaira/",
+  "title": "Sustaira | Siemens",
+  "body": "Sustaira Sustaira low-code, modular, AI-powered platform helps leaders unify data, automate workflows, track KPIs, and turn strategy into action. By combining AI-driven insights with a flexible architecture, Sustaira delivers sustainability solutions tailored to your unique business needs. We envision a future where sustainability is core to every organization’s operations. That’s why we go beyond reporting, empowering organizations to decarbonize operations, reduce risk, and achieve measurable sustainability impact with flexible, scalable solutions. We make sustainability actionable, accountable, and rewarding. Industries Aerospace Automotive Water Marine Transportation Glass and solar Electrical and electronic IT and telecommunication Construction and real estate Food and beverages Oil and gas Power utilities Machine building Pharma and life science Pulp and paper Healthcare Chemicals Metals Batteries Commercial buildings Intralogistics Semiconductors Higher education Hospitality and entertainment Minerals Post and logistics Wind Cranes Home and lifestyle products Mining of metals and stone Harbors Airports Road Transportation Freight rail transportation Passenger rail transportation Consumer Data centers Consumer packaged goods Power distribution Power generation Power transmission Conveyor Biofuel production Tire Cement Household and office Apparel, footwear and accessories Sport and leisure Retail Motion Build Extends or builds on a Siemens Xcelerator product / solution by creating a new product, or creates a new customer solution via integration of Siemens Xcelerator product and own product Available Products DEI App Template Gain clear insights into workforce metrics such as compensation changes, promotions, performance outcomes, and representation trends, while receiving alerts on emerging patterns and tracking progress over time. Learn more Sustainability Disclosures and Reporting Solution The Sustaira Disclosures & Reporting Solution provides a structured, digital environment that walks users through the disclosure process using a pre-built structure applicable to all major frameworks, including CSRD, CDP, PCAF, an... Learn more Sustainability Projects & KPIs Tracker Sustaira Projects & KPIs is a centralized solution that turns sustainability goals into action. With built-in prioritization tools and pre-configured projects and KPIs, it enables clear roadmaps, real-time progress tracking, accou... Learn more Carbon Accounting Solution Sustaira Carbon Accounting Solution is a flexible, customizable solution to centralize, track, and manage Scope 1, 2, and 3 emissions. It offers a single source of truth, automates data aggregation, and uses GHG Protocol and EPA f... Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/sustaira-dei-app-template/",
+    "https://www.siemens.com/en-us/products/sustaira-sustainability-disclosures-and-reporting-solution/",
+    "https://www.siemens.com/en-us/products/sustaira-sustainability-projects-kpis-tracker/",
+    "https://www.siemens.com/en-us/products/sustaira-carbon-accounting-solution/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "sustainability",
+    "software",
+    "enterprise software",
+    "ai",
+    "decarbonization",
+    "business",
+    "energy",
+    "environment"
+  ]
+}

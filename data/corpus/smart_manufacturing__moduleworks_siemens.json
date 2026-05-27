@@ -1,0 +1,23 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/moduleworks/",
+  "title": "ModuleWorks | Siemens",
+  "body": "ModuleWorks At ModuleWorks, we provide advanced software for toolpath generation, simulation, and optimization to improve manufacturing efficiency. Our intelligent toolpaths reduce cycle times and enhance surface quality, while real-time simulation prevents errors and collisions. Physics-based optimization ensures safe, efficient operation of machine and cutting tools. These solutions help manufacturers improve machining strategies, boosting productivity, reducing costs, and enhancing product quality. Industries Aerospace Automotive Transportation Power utilities Healthcare Others Heavy equipment Motion Build Extends or builds on a Siemens Xcelerator product / solution by creating a new product, or creates a new customer solution via integration of Siemens Xcelerator product and own product Available Products VoluTurn VoluTurn™ is a physics-based rough turning solution for hard-to-machine exotics, eliminating tool dwell and maintaining constant load for faster, more reliable results. Learn more VoluMill VoluMill™ is a science-based rough milling toolpath engine that produces toolpaths that reduce cycle times, extend tool life, and deliver consistent, predictable performance across all materials. Learn more FeedControl FeedControl™ optimizes milling toolpaths with physics-based simulation—no cloud connection needed. Maximize efficiency, safety, and predictability while maintaining your digital thread inside of NX Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/moduleworks-voluturn/",
+    "https://www.siemens.com/en-us/products/moduleworks-volumill/",
+    "https://www.siemens.com/en-us/products/moduleworks-feedcontrol/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "manufacturing",
+    "software",
+    "siemens",
+    "automation",
+    "simulation",
+    "optimization",
+    "toolpath generation"
+  ]
+}

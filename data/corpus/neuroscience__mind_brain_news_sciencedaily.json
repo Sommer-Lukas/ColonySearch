@@ -103,5 +103,15 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "neuroscience",
+    "artificial intelligence",
+    "public health",
+    "traditional chinese medicine",
+    "hypertension",
+    "mental health",
+    "delusions"
+  ]
 }

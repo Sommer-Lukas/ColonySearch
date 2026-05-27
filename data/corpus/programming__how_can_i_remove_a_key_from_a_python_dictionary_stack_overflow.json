@@ -127,5 +127,13 @@
   ],
   "source": "stackoverflow",
   "source_base": "https://stackoverflow.com",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "python",
+    "dictionary",
+    "data structures",
+    "keyvalue store",
+    "stack overflow"
+  ]
 }

@@ -5,5 +5,15 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "biology",
+    "neuroscience",
+    "metabolism",
+    "synaptic plasticity",
+    "memory",
+    "learning",
+    "brain",
+    "energy consumption"
+  ]
 }

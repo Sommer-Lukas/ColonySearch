@@ -602,5 +602,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "environment",
+    "deforestation",
+    "brazil",
+    "amazon",
+    "rainforest",
+    "climate change",
+    "land use"
+  ]
 }

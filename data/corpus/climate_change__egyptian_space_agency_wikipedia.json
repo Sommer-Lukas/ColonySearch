@@ -232,5 +232,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "space",
+    "space agency",
+    "egypt",
+    "egsa",
+    "space program",
+    "aerospace",
+    "government agency"
+  ]
 }

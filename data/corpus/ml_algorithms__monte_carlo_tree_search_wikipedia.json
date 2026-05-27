@@ -227,5 +227,15 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "computer science",
+    "monte carlo tree search",
+    "mcts",
+    "algorithm",
+    "board games",
+    "artificial intelligence",
+    "ai",
+    "game theory"
+  ]
 }

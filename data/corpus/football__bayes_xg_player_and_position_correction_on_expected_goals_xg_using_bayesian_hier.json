@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports analytics",
+    "soccer",
+    "expected goals",
+    "bayesian modeling",
+    "hierarchical models",
+    "premier league",
+    "statistics"
+  ]
 }

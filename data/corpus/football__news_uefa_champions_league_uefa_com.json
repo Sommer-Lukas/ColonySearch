@@ -1,0 +1,21 @@
+{
+  "url": "https://www.uefa.com/uefachampionsleague/news/",
+  "title": "News | UEFA Champions League | UEFA.com",
+  "body": "Champions League Official Live football scores & Fantasy Get UEFA.com works better on other browsers For the best possible experience, we recommend using Chrome , Firefox or Microsoft Edge . Skip to main content UEFA Champions League Top",
+  "links": [
+    "https://www.google.com/chrome/",
+    "https://www.mozilla.org/firefox/",
+    "https://www.microsoft.com/edge",
+    "https://www.uefa.com/uefachampionsleague/"
+  ],
+  "source": "html",
+  "source_base": "https://www.uefa.com",
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "football",
+    "uefa",
+    "champions league",
+    "live scores"
+  ]
+}

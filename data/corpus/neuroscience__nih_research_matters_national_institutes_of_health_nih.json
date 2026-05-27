@@ -32,5 +32,19 @@
   ],
   "source": "html",
   "source_base": "https://www.nih.gov",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "medicine",
+    "nih",
+    "medical research",
+    "artificial intelligence",
+    "intimate partner violence",
+    "gutbrain connection",
+    "memory",
+    "brain cancer",
+    "aging",
+    "food allergies",
+    "rna",
+    "heart attacks"
+  ]
 }

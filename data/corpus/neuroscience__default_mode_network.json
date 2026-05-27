@@ -136,5 +136,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "neuroscience",
+    "default mode network",
+    "brain",
+    "fmri",
+    "consciousness",
+    "cognition"
+  ]
 }

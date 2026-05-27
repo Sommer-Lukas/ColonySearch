@@ -89,5 +89,13 @@
   ],
   "source": "html",
   "source_base": "https://www.sciencedaily.com",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "materials science",
+    "computer science",
+    "space exploration",
+    "green energy",
+    "nanotechnology"
+  ]
 }

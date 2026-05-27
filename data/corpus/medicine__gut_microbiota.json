@@ -414,5 +414,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "biology",
+    "gut microbiota",
+    "microbiome",
+    "gut flora",
+    "human health",
+    "digestion",
+    "disease"
+  ]
 }

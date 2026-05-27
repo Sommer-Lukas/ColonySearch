@@ -506,5 +506,14 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "inflation",
+    "cpi",
+    "monetary policy",
+    "fiscal policy",
+    "money supply",
+    "purchasing power"
+  ]
 }

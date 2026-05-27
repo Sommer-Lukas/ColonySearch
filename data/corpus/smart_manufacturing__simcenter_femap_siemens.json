@@ -1,0 +1,25 @@
+{
+  "url": "https://www.siemens.com/en-us/products/simcenter/mechanical-simulation/femap/",
+  "title": "Simcenter Femap | Siemens",
+  "body": "Why Simcenter Femap? Minimize costly prototyping using best-in-class simulation workflows. Simcenter Femap is an advanced simulation pre- and post-processor for creating and editing finite element models of complex products. Powerful data-driven results visualization help you evaluate and improve product performance. Model complex FE models – with a mesh-centric approach From 1D beam models to thin-walled shell element modeling to 3D tet-dominant or hex-dominant meshing, Simcenter Femap can do it all. Use advanced workflows in Simcenter Femap to model components, assemblies or systems to determine a model’s behavioral response when subjected to real-world conditions through the most popular finite element (FE) solvers used in industry. Trust the solution with 30+ years experience Simcenter Femap provides an industry-leading solution to accurately model and simulate structural, dynamic and thermal performance of complex engineered systems. Used by customers in aerospace, automotive and most other industries for decades, you can be assured Simcenter Femap can help you get the job done. See what's new in the latest release Simcenter Femap has been providing analysts with the tools required to model complex engineered structures for almost 40 years. The latest version, Simcenter Femap 2412, includes new features for Teamcenter integration, support for modal frequency response in Simcenter Nastran Multi-step Nonlinear and more. Read release notes Simcenter 3D: The latest Discover the latest Simcenter 3D new first Blog released in the last week of each month Learn more Simcenter Femap software capabilities Pre/post-processing Reduce the time you spend creating finite element models and spend more time evaluating results. Quickly move from multi-CAD geometry data to a complete, run-ready analysis model using unique tools for CAE geometry editing, comprehensive meshing, FE assembly management, multi-CAE solver environments and rapid results post-processing and reporting. FE pre/post-processing Structural analysis Understand how complex components, products and systems react under stress or vibration with powerful structural analysis tools that go beyond linear-static analyses. Simcenter Femap provides the structural analysis software you need to simulate a wide range of applications, all within a single user environment. Thermal analysis Understand the thermal characteristics of your products with comprehensive, best-in-class thermal simulation capabilities that enable you to tailor your thermal management solution for optimal performance. Simcenter Femap software trial Solve complex product design problems with finite element modeling and analysis software. Try now Case Study AeroFEM Case Study Bringing the iconic Junkers Ju 52 aircraft back to life digitally Company: AeroFEM GmbH Industry: Aerospace & defense Location: Ennetbürgen, Switzerland Siemens Software: NX, Simcenter Femap, Simcenter STAR-CCM+ Read Simcenter Femap is a great tool for advanced simulation and portfolio product of Siemens simulation. Umang D., Channel Technical Manager One of the best & proven tools in the market today for virtual testing. Verified user, Information Technology and Services Excellent program for a wide range of engineering analyzes. Ilya U., Chief Specialist Definitely a must-have! Piyush S., Small-Business",
+  "links": [
+    "https://docs.sw.siemens.com/en-US/doc/275652363/PL20240625347758374.xid2051178.pdf?dest=M8.newlink.xid2308137",
+    "https://blogs.sw.siemens.com/simcenter/simcenter-3d-the-latest/",
+    "https://plm.sw.siemens.com/en-US/simcenter/simulation-test/finite-element-pre-post-processing/",
+    "https://trials.sw.siemens.com/en-US/trials/simcenter-femap-fea-modeling",
+    "https://resources.sw.siemens.com/en-US/case-study-aerofem-gmbh/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "engineering",
+    "simulation",
+    "finite element analysis",
+    "fea",
+    "cad",
+    "product development",
+    "manufacturing",
+    "meshing"
+  ]
+}

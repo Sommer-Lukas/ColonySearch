@@ -86,5 +86,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "biography",
+    "comedy",
+    "netherlands",
+    "actor",
+    "writer",
+    "producer"
+  ]
 }

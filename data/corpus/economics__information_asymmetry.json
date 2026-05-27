@@ -135,5 +135,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "economics",
+    "information asymmetry",
+    "contract theory",
+    "market failure",
+    "adverse selection",
+    "moral hazard"
+  ]
 }

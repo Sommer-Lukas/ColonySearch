@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "ml_algorithms"
+  "topic": "ml_algorithms",
+  "ai_labels": [
+    "medicine",
+    "machine learning",
+    "large language models",
+    "natural language processing",
+    "machine translation",
+    "medical terminology",
+    "instruction tuning"
+  ]
 }

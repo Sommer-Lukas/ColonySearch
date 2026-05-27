@@ -5,5 +5,15 @@
   "links": [],
   "source": "github",
   "source_base": "https://github.com",
-  "topic": "neuroscience"
+  "topic": "neuroscience",
+  "ai_labels": [
+    "neuroscience",
+    "python",
+    "data analysis",
+    "electrophysiology",
+    "neural signals",
+    "open source",
+    "software",
+    "biology"
+  ]
 }

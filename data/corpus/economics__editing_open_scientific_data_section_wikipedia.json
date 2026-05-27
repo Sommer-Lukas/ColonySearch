@@ -10,5 +10,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "economics"
+  "topic": "economics",
+  "ai_labels": [
+    "information science",
+    "open science",
+    "data",
+    "wikipedia",
+    "editing",
+    "copyright",
+    "sources"
+  ]
 }

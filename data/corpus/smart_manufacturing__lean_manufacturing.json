@@ -96,5 +96,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "smart_manufacturing"
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "business",
+    "manufacturing",
+    "lean manufacturing",
+    "just in time",
+    "supply chain",
+    "operations management"
+  ]
 }

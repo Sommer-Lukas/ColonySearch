@@ -193,5 +193,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "microservices",
+    "software architecture",
+    "distributed systems",
+    "scalability"
+  ]
 }

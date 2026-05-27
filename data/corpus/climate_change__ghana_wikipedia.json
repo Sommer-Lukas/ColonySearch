@@ -1654,5 +1654,13 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "politics",
+    "geography",
+    "ghana",
+    "west africa",
+    "country",
+    "culture"
+  ]
 }

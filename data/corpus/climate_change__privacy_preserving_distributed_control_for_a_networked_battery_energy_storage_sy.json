@@ -5,5 +5,14 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "climate_change"
+  "topic": "climate_change",
+  "ai_labels": [
+    "energy",
+    "distributed control",
+    "battery energy storage",
+    "privacy",
+    "power grids",
+    "state of charge",
+    "optimization"
+  ]
 }

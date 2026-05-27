@@ -281,5 +281,13 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "kubernetes",
+    "container orchestration",
+    "cloud native",
+    "open source",
+    "software deployment"
+  ]
 }

@@ -418,5 +418,14 @@
   ],
   "source": "html",
   "source_base": "https://en.wikipedia.org",
-  "topic": "medicine"
+  "topic": "medicine",
+  "ai_labels": [
+    "internet",
+    "digital archive",
+    "wayback machine",
+    "internet archive",
+    "web history",
+    "nonprofit",
+    "technology"
+  ]
 }

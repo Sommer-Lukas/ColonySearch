@@ -199,5 +199,12 @@
   ],
   "source": "wikipedia",
   "source_base": "https://en.wikipedia.org",
-  "topic": "programming"
+  "topic": "programming",
+  "ai_labels": [
+    "programming",
+    "git",
+    "version control",
+    "software development",
+    "distributed systems"
+  ]
 }

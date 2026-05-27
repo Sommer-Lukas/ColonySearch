@@ -1,0 +1,24 @@
+{
+  "url": "https://www.siemens.com/en-us/ecosystem/accenture/",
+  "title": "Accenture | Siemens",
+  "body": "Accenture Accenture is a leading solutions and services company that helps the world’s leading enterprises reinvent by building their digital core and unleashing the power of AI to create value at speed across the enterprise, bringing together the talent of our approximately 786,000 people, our proprietary assets and platforms, and deep ecosystem relationships. Our strategy is to be the reinvention partner of choice for our clients and to be the most client-focused, AI-enabled, great place to work in the world. Through our Reinvention Services we bring together our capabilities across strategy, consulting, technology, operations, Song and Industry X with our deep industry expertise to create and deliver solutions and services for our clients. Industries Aerospace Home and lifestyle products Apparel, footwear and accessories Motion Service Provides a service for a Siemens Xcelerator product/solution that helps the customer to implement, integrate, operate or maintain it Available Products Digital engineering and R&D Accenture can help you speed up R&D by embedding connectivity, data and AI along your company's core R&D, product development, and product lifecycle processes. Learn more Intelligent maintenance We work with manufacturing clients across every industry including automotive, consumer goods, high tech and industrial equipment, to help breakdown siloes between internal functions and provide innovative solutions that allow tea... Learn more Cloud-powered engineering Siemens and Accenture have joined forces to deliver cloud-powered engineering solutions to manufacturing organizations. We help organizations at every stage of their journey from product engineering through to production powered b... Learn more Production & Operations Accenture combines a range of disciplines to bring holistic, large-scale transformation to organizations. We specialize in IT/OT integration, big data and real-time analytics, IIoT and sensor technology, machine learning and Artif... Learn more Platform engineering Shrinking revenues and cost pressures due to electrification, rising customer and service expectations increase the need for operational efficiency. Enabling growth is possible by transforming how products are serviced in an as-se... Learn more Agentic AI for Shopfloor Operations Agentic AI for Shopfloor Operations connects shop floor, quality and transactional data with contextual analytics and AI agents to support faster, guided decisions across production, quality and planning workflows. Learn more",
+  "links": [
+    "https://www.siemens.com/en-us/products/accenture-digital-engineering-and-r-d/",
+    "https://www.siemens.com/en-us/products/accenture-intelligent-maintenance/",
+    "https://www.siemens.com/en-us/products/accenture-cloud-powered-engineering/",
+    "https://www.siemens.com/en-us/products/accenture-production-operations/",
+    "https://www.siemens.com/en-us/products/accenture-platform-engineering/",
+    "https://www.siemens.com/en-us/products/accenture-agentic-ai-for-shopfloor-operations/"
+  ],
+  "source": "html",
+  "source_base": "https://www.siemens.com",
+  "topic": "smart_manufacturing",
+  "ai_labels": [
+    "business",
+    "technology",
+    "consulting",
+    "ai",
+    "digital transformation",
+    "enterprise software"
+  ]
+}

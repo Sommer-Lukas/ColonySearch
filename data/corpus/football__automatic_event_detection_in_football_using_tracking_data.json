@@ -5,5 +5,13 @@
   "links": [],
   "source": "arxiv",
   "source_base": "https://arxiv.org",
-  "topic": "football"
+  "topic": "football",
+  "ai_labels": [
+    "sports",
+    "machine learning",
+    "football",
+    "event detection",
+    "tracking data",
+    "algorithms"
+  ]
 }
