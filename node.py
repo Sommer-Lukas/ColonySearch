@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import requests
 
 import json
@@ -65,6 +65,8 @@ class Node:
     def _local_search(self, query: str):
         # TODO: figure out what to do for the vector argument
         results = [res.to_dict() for res in temp_search(self.db_dir, query, None)]
+        for r in results:
+            r.setdefault("node_id", self.db_dir)
         print_search_results(results)
 
         councilor_nodes = self.get_neighbors(10)
@@ -78,6 +80,7 @@ class Node:
             councilor_nodes_scores.append(node_score)
 
             for item in search_results:
+                item.setdefault("node_id", node.db_dir)
                 # TODO: make sure changing item changes search_results.
                 # TODO: think harder about whether we should use the old or new rep, maybe using the new rep has some advantage. It would effectively give a little more
                 # weight to the score of the results themselves. But I suppose a better way to do this would be to have a multiplier/slider for how much to consider
@@ -118,20 +121,46 @@ myself = Node("data/dbs/Node_1", [
 
 
 
+def _make_snippet(body: str, max_len: int = 300) -> str:
+    """Return a plain-text excerpt, truncated with ellipsis."""
+    text = body.strip()
+    if len(text) <= max_len:
+        return text
+    return text[:max_len].rsplit(" ", 1)[0] + "…"
+
+
+def _results_for_template(raw: list, node_id: str) -> list:
+    """Convert node.py result dicts to the shape results.html expects."""
+    out = []
+    for r in raw:
+        out.append({
+            "node_id": r.get("node_id", node_id),
+            "title":   r.get("title") or "",
+            "doc_id":  r.get("url", ""),
+            "snippet": _make_snippet(r.get("body", "")),
+            "score":   r.get("score", 0.0),
+            "url":     r.get("url", ""),
+        })
+    return out
+
+
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # TODO: return search page here
-    return jsonify({
-        "message": "Hello from Flask!"
-    })
+    return render_template("index.html")
 
 @app.route("/search", methods=["GET"])
-def search():
-    # TODO: return as an html document with a listing of search results
-    query = request.args.get("query")
-    return jsonify(myself.search(query))
+def search_page():
+    query = (request.args.get("query") or request.args.get("q") or "").strip()
+    if not query:
+        return render_template("results.html", query="", results=[], error=None)
+    try:
+        raw = myself.search(query)
+        results = _results_for_template(raw, node_id=myself.db_dir)
+        return render_template("results.html", query=query, results=results, error=None)
+    except Exception as exc:
+        return render_template("results.html", query=query, results=[], error=str(exc))
 
 @app.route("/api/search", methods=["GET"])
 def api_search():
