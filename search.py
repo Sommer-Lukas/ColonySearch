@@ -66,9 +66,9 @@ def search(
     query_text: str,
     query_vector: np.ndarray | None,
     *,
-    alpha: float = 0.37,
+    alpha: float = 0.10,
     top_k: int = 14,
-    bm25_candidates: int = 200,
+    bm25_candidates: int =30000,
 ) -> list[SearchResult]:
     """
     Hybrid BM25 + KNN search over one node's local index.
@@ -144,14 +144,16 @@ def search(
     if not all_rowids:
         return []
 
-    # ── Normalise each signal independently to [0, 1] ─────────────────────────
+    # ── Normalise BM25 only — KNN cosine similarity is already in [0, 1] ────────
+    # Applying min-max to KNN would destroy the absolute similarity signal:
+    # a node full of irrelevant docs would still produce a top score of 1.0,
+    # making its results indistinguishable from a relevant node when merging
+    # across nodes.  Cosine similarity needs no rescaling.
     bm25_norm = _minmax(bm25_raw)
-    knn_norm  = _minmax(knn_raw)
 
     # ── Blend ─────────────────────────────────────────────────────────────────
-    # Documents absent from one signal receive 0 for that signal, not a penalty.
     combined: dict[int, float] = {
-        rid: alpha * bm25_norm.get(rid, 0.0) + (1.0 - alpha) * knn_norm.get(rid, 0.0)
+        rid: alpha * bm25_norm.get(rid, 0.0) + (1.0 - alpha) * knn_raw.get(rid, 0.0)
         for rid in all_rowids
     }
 

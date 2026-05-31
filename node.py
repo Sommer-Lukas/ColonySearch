@@ -8,6 +8,22 @@ from time import sleep
 import search
 temp_search = search.search
 
+# ── Embedding model — loaded once at startup, never re-downloaded ─────────────
+_EMBED_MODEL_NAME = "all-mpnet-base-v2"
+_embed_model = None
+
+def _get_embed_model():
+    global _embed_model
+    if _embed_model is None:
+        from sentence_transformers import SentenceTransformer
+        print(f"Loading sentence-transformers model '{_EMBED_MODEL_NAME}' …", flush=True)
+        _embed_model = SentenceTransformer(_EMBED_MODEL_NAME)
+        print("Model ready.", flush=True)
+    return _embed_model
+
+def _encode_query(query: str):
+    return _get_embed_model().encode(query, show_progress_bar=False)
+
 
 def sort_search_results(search_results: list):
     return sorted(search_results, key=lambda x: x['score'], reverse=True)
@@ -63,8 +79,8 @@ class Node:
         else:            return self._remote_search(query)
 
     def _local_search(self, query: str):
-        # TODO: figure out what to do for the vector argument
-        results = [res.to_dict() for res in temp_search(self.db_dir, query, None)]
+        query_vector = _encode_query(query)
+        results = [res.to_dict() for res in temp_search(self.db_dir, query, query_vector)]
         for r in results:
             r.setdefault("node_id", self.db_dir)
         print_search_results(results)
@@ -109,12 +125,19 @@ class Node:
         return response.json()
 
     def get_neighbors(self, top_k:int=-1):
-        return sorted(self.neighbors, key=lambda x: x.rep)[:top_k]
+        return sorted(self.neighbors, key=lambda x: x.rep, reverse=True)[:top_k]
 
 
 myself = Node("data/dbs/Node_1", [
     Node("data/dbs/Node_2", []),
-    Node("data/dbs/Node_3", [])
+    Node("data/dbs/Node_3", []),
+    Node("data/dbs/Node_4", []),
+    Node("data/dbs/Node_5", []),
+    Node("data/dbs/Node_6", []),
+    Node("data/dbs/Node_7", []),
+    Node("data/dbs/Node_8", []),
+    Node("data/dbs/Node_9", []),
+    Node("data/dbs/Node_10", []),
 ])
 
 
