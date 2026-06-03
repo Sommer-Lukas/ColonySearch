@@ -33,6 +33,10 @@ PHEROMONE_EVAP: float = 0.1
 ACO_ALPHA: float = 1.0
 ACO_BETA:  float = 1.0
 
+# Number of neighbors sampled per hop in get_neighbors.
+# Lower = faster but fewer paths explored; higher = better recall, slower.
+NETWORK_TOP_K: int = 10
+
 # ── Embedding model — loaded once at startup, never re-downloaded ─────────────
 _EMBED_MODEL_NAME = "all-mpnet-base-v2"
 _embed_model = None
@@ -174,7 +178,7 @@ class Node:
         print_search_results(results)
 
         # Exclude already-visited nodes so mesh edges don't cause cycles.
-        councilor_nodes = [n for n in self.get_neighbors(10) if n.node_id not in _visited]
+        councilor_nodes = [n for n in self.get_neighbors(NETWORK_TOP_K) if n.node_id not in _visited]
 
         councilor_nodes_scores = []
 
