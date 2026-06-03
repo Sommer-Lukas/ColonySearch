@@ -12,6 +12,7 @@ Call from a node's Flask handler:
 
 from __future__ import annotations
 
+import json
 import re
 import sqlite3
 from dataclasses import asdict, dataclass
@@ -39,12 +40,20 @@ class SearchResult:
 # FTS5 special characters that break the MATCH expression.
 _FTS5_SPECIAL = re.compile(r'["\'\(\)\*\+\-\^:,\.!]')
 
+# Common English question/stop words that add noise to BM25 but carry no
+# topical signal.  "What is a large language model" → "large language model".
+_STOP_WORDS = {
+    "WHAT", "IS", "ARE", "WAS", "WERE", "BE", "BEEN", "BEING",
+    "A", "AN", "THE", "OF", "IN", "ON", "AT", "TO", "FOR",
+    "HOW", "WHY", "WHO", "WHEN", "WHERE", "WHICH", "DOES", "DO",
+    "AND", "OR", "NOT",
+}
+
 
 def _sanitize_fts5(query: str) -> str:
-    """Strip FTS5 operator chars, preserve words and spaces."""
+    """Strip FTS5 operator chars and stop words, preserve topical tokens."""
     cleaned = _FTS5_SPECIAL.sub(" ", query)
-    # Collapse whitespace and drop reserved single-token operators.
-    tokens = [t for t in cleaned.split() if t.upper() not in {"AND", "OR", "NOT"}]
+    tokens = [t for t in cleaned.split() if t.upper() not in _STOP_WORDS]
     return " ".join(tokens)
 
 
@@ -66,7 +75,7 @@ def search(
     query_text: str,
     query_vector: np.ndarray | None,
     *,
-    alpha: float = 0.10,
+    alpha: float = 0.50,
     top_k: int = 14,
     bm25_candidates: int =30000,
 ) -> list[SearchResult]:
@@ -134,10 +143,29 @@ def search(
             vec = np.hstack([vec, np.zeros((1, pad), dtype=np.float32)])
 
         distances, indices = nn.kneighbors(vec)
-        for dist, idx in zip(distances[0], indices[0]):
-            # KNN indices are 0-based; SQLite FTS5 rowids start at 1.
-            rowid = int(idx) + 1
-            knn_raw[rowid] = 1.0 - float(dist)   # cosine distance → similarity
+
+        # The KNN model was fitted on a filtered, ordered list of docs — its
+        # index i is NOT guaranteed to equal SQLite rowid i+1 because some docs
+        # may have been skipped during model building.  knn_metadata.json records
+        # the URL at each model index; we reverse-map through the DB to get the
+        # correct rowid.
+        meta_path = knn_path.parent / "knn_metadata.json"
+        meta_urls: list[str] = json.loads(meta_path.read_text())["urls"] if meta_path.exists() else []
+        if meta_urls:
+            with sqlite3.connect(db_path) as con:
+                url_to_rowid = {
+                    url: rid
+                    for rid, url in con.execute("SELECT rowid, url FROM documents").fetchall()
+                }
+            for dist, idx in zip(distances[0], indices[0]):
+                url    = meta_urls[int(idx)]
+                rowid  = url_to_rowid.get(url)
+                if rowid is not None:
+                    knn_raw[rowid] = 1.0 - float(dist)   # cosine distance → similarity
+        else:
+            # Fallback for nodes without metadata (assumes no filtering was done).
+            for dist, idx in zip(distances[0], indices[0]):
+                knn_raw[int(idx) + 1] = 1.0 - float(dist)
 
     # ── Nothing matched ───────────────────────────────────────────────────────
     all_rowids = set(bm25_raw) | set(knn_raw)

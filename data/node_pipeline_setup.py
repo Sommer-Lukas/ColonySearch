@@ -4,31 +4,36 @@ Build a per-node search pipeline from a JSON corpus.
 
 Each node gets its own sub-folder under dbs/:
   dbs/Node_1/
-    index.db   — SQLite FTS5 full-text index
-    knn.npz    — precomputed KNN neighbours (indices + distances, cross-node)
+    index.db          - SQLite FTS5 full-text index
+    knn_model.joblib  - local NearestNeighbors model
+    knn_metadata.json - ordered URL list matching the KNN model indices
 
-Pipeline (mirrors data_preperation.ipynb):
+Pipeline:
   1. Load all corpus JSON files
   2. Clean & normalise text (mojibake, HTML, boilerplate)
   3. Filter short / broken documents (MIN_BODY_LEN)
   4. Encode with sentence-transformers (cached in .embeddings_cache.npy)
   5. Build link-graph features via truncated SVD on the document adjacency matrix
   6. Combine: X = [normalize(embeddings) | LINK_BIAS_WEIGHT * link_features]
-  7. KMeans(k=N) to assign documents to nodes
-  8. Auto-select KNN-k by scanning KNN_K_RANGE and maximising neighbour purity
-     (fraction of k-nearest-neighbours that share the same cluster label).
-     Override with --knn-k to skip the scan, exactly like FORCE_K in the notebook.
-  9. Per node: write FTS5 SQLite + precomputed KNN (neighbours may span other nodes)
+  7. Two-tier node assignment:
+       a. Split corpus into source groups by URL domain
+          (wikipedia / academic / web)
+       b. Within each group run KMeans with a proportional node budget
+     Coherent per-node corpora ensure BM25 IDF and KNN similarity are meaningful.
+     A pure flat KMeans over the whole corpus tends to create one large catch-all
+     cluster that pollutes every query with irrelevant results.
+  8. Auto-select KNN-k by elbow on k-distance curve, or --knn-k to fix it.
+  9. Per node: write FTS5 SQLite + knn_model.joblib + knn_metadata.json
 
-Node assignment is content-based (KMeans on embeddings), not random and not by
-filename prefix.  Documents with similar semantics end up on the same node, which
-typically correlates with topic but can merge overlapping topics or split noisy ones.
+knn_metadata.json stores the ordered URL list so search.py can correctly map
+KNN model indices back to SQLite rowids (they diverge when docs are filtered
+during model building).
 
 Usage:
-  python data/node_pipeline_setup.py --nodes 5
-  python data/node_pipeline_setup.py --nodes 5 --knn-k 12   # skip auto-select
-  python data/node_pipeline_setup.py --nodes 5 --dry-run
-  python data/node_pipeline_setup.py --nodes 5 --embed-model all-MiniLM-L6-v2
+  python data/node_pipeline_setup.py --nodes 10
+  python data/node_pipeline_setup.py --nodes 10 --knn-k 12
+  python data/node_pipeline_setup.py --nodes 10 --dry-run
+  python data/node_pipeline_setup.py --nodes 10 --embed-model all-MiniLM-L6-v2
 """
 
 import argparse
@@ -47,18 +52,78 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import normalize
 
-# ── Defaults (mirror data_preperation.ipynb config cell) ─────────────────────
+# ── Defaults ──────────────────────────────────────────────────────────────────
 MIN_BODY_LEN     = 150
 LINK_BIAS_WEIGHT = 0.5
 LINK_SVD_DIMS    = 61
 EMBED_MODEL      = "all-mpnet-base-v2"
 RANDOM_STATE     = 42
 
-# Scan this range to auto-select KNN-k (mirrors K_RANGE / silhouette scan in notebook).
-# Pass --knn-k on the CLI to skip the scan and lock a specific value (like FORCE_K).
-KNN_K_RANGE = (3, 20)   # (min_k, max_k) inclusive
+KNN_K_RANGE = (3, 20)   # (min_k, max_k) for auto-selection elbow scan
 
-# ── Text cleaning (identical to notebook cell 2) ─────────────────────────────
+# ── Two-tier split: source group definitions ──────────────────────────────────
+# Each domain set maps to a named group.  Anything not matched goes to "web".
+# Groups are processed in this order, so Node numbering is stable:
+#   Node_1 .. Node_K  = wikipedia topic clusters
+#   Node_K+1 ..       = academic clusters
+#   last node(s)      = web / misc
+SOURCE_GROUPS: dict[str, set[str]] = {
+    "wikipedia": {"en.wikipedia.org"},
+    "academic":  {"arxiv.org", "doi.org"},
+    # everything else falls into "web"
+}
+GROUP_ORDER = ["wikipedia", "academic", "web"]
+
+
+def classify_doc(doc: dict) -> str:
+    """Return the source group name for a document based on its URL domain."""
+    netloc = urlparse(doc["url"]).netloc.lower()
+    for group, domains in SOURCE_GROUPS.items():
+        if netloc in domains:
+            return group
+    return "web"
+
+
+def allocate_nodes(n_total: int, group_sizes: dict[str, int]) -> dict[str, int]:
+    """
+    Distribute n_total nodes proportionally across non-empty groups.
+
+    Every non-empty group gets at least 1 node.  Remaining nodes are split
+    proportionally by document count.  Rounding remainder goes to the largest
+    group so the total is always exactly n_total.
+    """
+    non_empty = {g: s for g, s in group_sizes.items() if s > 0}
+    if not non_empty:
+        return {g: 0 for g in group_sizes}
+
+    allocation = {g: 0 for g in group_sizes}
+
+    if n_total <= len(non_empty):
+        # Fewer nodes than groups: give 1 to the largest groups only.
+        for g in sorted(non_empty, key=non_empty.__getitem__, reverse=True)[:n_total]:
+            allocation[g] = 1
+        return allocation
+
+    # Every non-empty group gets at least 1, then distribute the rest.
+    for g in non_empty:
+        allocation[g] = 1
+    remaining = n_total - len(non_empty)
+
+    total_docs = sum(non_empty.values())
+    for g in non_empty:
+        extra = round(non_empty[g] / total_docs * remaining)
+        allocation[g] += extra
+
+    # Fix any rounding drift so total is exactly n_total.
+    diff = sum(allocation.values()) - n_total
+    if diff != 0:
+        largest = max(non_empty, key=non_empty.__getitem__)
+        allocation[largest] -= diff
+
+    return allocation
+
+
+# ── Text cleaning ─────────────────────────────────────────────────────────────
 
 _MOJIBAKE = {
     "Â¶": "¶",
@@ -172,12 +237,12 @@ def load_corpus(corpus_dir: Path) -> list[dict]:
             continue
 
         docs.append({
-            "file":        path.name,
-            "url":         url,
-            "title":       title_clean,
-            "body":        body_clean,
-            "topic":       topic,
-            "links":       links,
+            "file":  path.name,
+            "url":   url,
+            "title": title_clean,
+            "body":  body_clean,
+            "topic": topic,
+            "links": links,
         })
 
     return docs
@@ -194,10 +259,10 @@ def build_embeddings(docs: list[dict], cache_path: Path, model_name: str) -> np.
         if cached.shape[0] == len(texts):
             print(f"Loaded cached embeddings: {cached.shape}  [{cache_path}]")
             return cached
-        print(f"Cache size mismatch ({cached.shape[0]} vs {len(texts)}) — re-encoding.")
+        print(f"Cache size mismatch ({cached.shape[0]} vs {len(texts)}) -- re-encoding.")
 
     from sentence_transformers import SentenceTransformer
-    print(f"Encoding {len(texts)} documents with '{model_name}' …")
+    print(f"Encoding {len(texts)} documents with '{model_name}' ...")
     model      = SentenceTransformer(model_name)
     embeddings = model.encode(texts, show_progress_bar=True, batch_size=16)
     np.save(cache_path, embeddings)
@@ -205,7 +270,7 @@ def build_embeddings(docs: list[dict], cache_path: Path, model_name: str) -> np.
     return embeddings
 
 
-# ── Link-graph features (mirrors notebook cell 4) ────────────────────────────
+# ── Link-graph features ───────────────────────────────────────────────────────
 
 def build_link_features(docs: list[dict]) -> np.ndarray | None:
     """Build SVD-reduced link-graph features. Returns None if no edges found."""
@@ -253,11 +318,8 @@ def build_feature_matrix(embeddings: np.ndarray, link_features: np.ndarray | Non
     link-connected documents are pulled closer together in the index.
 
     At query time the caller pads the query vector with zeros for the link
-    dimensions — a query has no link-graph position, so zero is the neutral
-    value.  Because the text component (768 dims) dominates over the link
-    component (32 dims × 0.3 weight), text similarity still drives results;
-    the link features act as a soft structural bias between documents.
-    The node can compute the required padding from nn.n_features_in_ at runtime.
+    dimensions.  The node can compute the required padding from nn.n_features_in_
+    at runtime.
     """
     text_emb = normalize(embeddings)
     if link_features is not None and LINK_BIAS_WEIGHT > 0:
@@ -310,33 +372,26 @@ def select_local_knn_k(X_node: np.ndarray, node_name: str) -> int:
 
     For each candidate k, compute the mean cosine distance to the k-th nearest
     neighbour within this node's documents.  The curve rises slowly at first then
-    accelerates once k reaches dissimilar docs — the elbow (maximum second
+    accelerates once k reaches dissimilar docs -- the elbow (maximum second
     derivative) marks the natural cut-off.
-
-    Mirrors the inertia-elbow / silhouette scan the notebook uses for KMeans k,
-    but applied locally so nodes with different sizes can get different k values.
     """
     k_min, k_max = KNN_K_RANGE
-    # Need at least k_max+1 docs to query k_max neighbours + self.
     max_k = min(k_max, len(X_node) - 1)
 
     if max_k < k_min:
-        # Node too small to scan — fall back to the minimum.
         print(f"  [{node_name}] too few docs for k-scan, using k={k_min}")
         return k_min
 
-    # One fit, slice distances per k to avoid repeated fitting.
     nn = NearestNeighbors(n_neighbors=max_k + 1, metric="cosine", algorithm="brute")
     nn.fit(X_node)
-    distances, _ = nn.kneighbors(X_node)   # shape (n, max_k+1); col 0 = self (dist=0)
+    distances, _ = nn.kneighbors(X_node)
 
     ks         = list(range(k_min, max_k + 1))
-    mean_dists = [distances[:, k].mean() for k in ks]   # mean dist to k-th neighbour
+    mean_dists = [distances[:, k].mean() for k in ks]
 
-    # Find elbow via maximum second derivative (highest acceleration in the curve).
     if len(mean_dists) >= 3:
         diffs2  = np.diff(mean_dists, n=2)
-        elbow_i = int(np.argmax(diffs2)) + 1   # +1 accounts for the two diff offsets
+        elbow_i = int(np.argmax(diffs2)) + 1
         best_k  = ks[min(elbow_i, len(ks) - 1)]
     else:
         best_k = ks[0]
@@ -346,19 +401,25 @@ def select_local_knn_k(X_node: np.ndarray, node_name: str) -> int:
     return best_k
 
 
-def build_and_save_knn(node_dir: Path, X_node: np.ndarray, k: int) -> None:
+def build_and_save_knn(node_dir: Path, X_node: np.ndarray, k: int,
+                       node_docs: list[dict]) -> None:
     """
     Fit and save the local KNN for one node.
 
-    X_node — combined embeddings for this node (text + link features).
-             At query time, pad the query vector with zeros to match X_node's
-             column count:  np.hstack([query_vec, np.zeros((1, nn.n_features_in_ - query_vec.shape[1]))])
+    Also writes knn_metadata.json with the URL at each model index so that
+    search.py can correctly reverse-map KNN indices to SQLite rowids.  Without
+    this file, any filtered/skipped docs during model building would silently
+    offset the index-to-rowid mapping and return wrong documents.
     """
     from joblib import dump
 
     nn = NearestNeighbors(n_neighbors=min(k, len(X_node)), metric="cosine", algorithm="brute")
     nn.fit(X_node)
     dump(nn, node_dir / "knn_model.joblib")
+
+    # Save URL order so search.py can map model index i -> correct rowid.
+    urls = [d["url"] for d in node_docs]
+    (node_dir / "knn_metadata.json").write_text(json.dumps({"urls": urls}))
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -369,19 +430,18 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 examples:
-  python data/node_pipeline_setup.py --nodes 5
-  python data/node_pipeline_setup.py --nodes 5 --knn-k 12   # skip auto-select
-  python data/node_pipeline_setup.py --nodes 5 --dry-run
-  python data/node_pipeline_setup.py --nodes 5 --embed-model all-MiniLM-L6-v2
+  python data/node_pipeline_setup.py --nodes 10
+  python data/node_pipeline_setup.py --nodes 10 --knn-k 12
+  python data/node_pipeline_setup.py --nodes 10 --dry-run
+  python data/node_pipeline_setup.py --nodes 10 --embed-model all-MiniLM-L6-v2
 """,
     )
     p.add_argument("--nodes",       type=int, required=True,
-                   help="Number of nodes to create (Node_1 … Node_N)")
+                   help="Total number of nodes to create (distributed across source groups)")
     p.add_argument("--knn-k",       type=int, default=None,
                    help=(
                        f"Fix KNN neighbours per document and skip auto-selection "
-                       f"(scans {KNN_K_RANGE[0]}..{KNN_K_RANGE[1]} by default, "
-                       f"like FORCE_K in the notebook)"
+                       f"(scans {KNN_K_RANGE[0]}..{KNN_K_RANGE[1]} by default)"
                    ))
     p.add_argument("--corpus-dir",  default=None,
                    help="Path to corpus directory (default: <script_dir>/corpus)")
@@ -392,7 +452,7 @@ examples:
     p.add_argument("--embed-model", default=EMBED_MODEL,
                    help=f"sentence-transformers model name (default: {EMBED_MODEL})")
     p.add_argument("--dry-run",     action="store_true",
-                   help="Show plan without writing any files")
+                   help="Show split plan without writing any files")
     args = p.parse_args()
 
     script_dir  = Path(__file__).parent
@@ -405,10 +465,10 @@ examples:
         sys.exit(1)
 
     n_nodes   = args.nodes
-    force_knn = args.knn_k  # None = auto-select
+    force_knn = args.knn_k
 
     # ── 1. Load & clean corpus ────────────────────────────────────────────────
-    print(f"Loading corpus from {corpus_dir} …")
+    print(f"Loading corpus from {corpus_dir} ...")
     docs = load_corpus(corpus_dir)
     print(f"Clean documents: {len(docs)}")
 
@@ -416,59 +476,96 @@ examples:
         print(f"error: only {len(docs)} documents but --nodes={n_nodes}", file=sys.stderr)
         sys.exit(1)
 
+    # ── 2. Source-group split ─────────────────────────────────────────────────
+    groups: dict[str, list[int]] = {g: [] for g in GROUP_ORDER}
+    for i, doc in enumerate(docs):
+        groups[classify_doc(doc)].append(i)
+
+    group_sizes = {g: len(idxs) for g, idxs in groups.items()}
+    allocation  = allocate_nodes(n_nodes, group_sizes)
+
+    print(f"\nSource group split:")
+    for g in GROUP_ORDER:
+        print(f"  {g:12s}  {group_sizes[g]:4d} docs  ->  {allocation[g]} node(s)")
+    print()
+
     if args.dry_run:
-        knn_desc = f"k={force_knn} (fixed)" if force_knn else f"auto per node (elbow on k-distance, range {KNN_K_RANGE[0]}..{KNN_K_RANGE[1]})"
-        print(f"\n[dry-run] Would create {n_nodes} node(s) in {db_dir}:")
-        for i in range(1, n_nodes + 1):
-            node_dir = db_dir / f"Node_{i}"
-            print(f"  {node_dir}/")
-            print(f"    index.db         — FTS5 SQLite (local documents only)")
-            print(f"    knn_model.joblib — local NearestNeighbors for query-time search ({knn_desc})")
-        print(f"\nCorpus: {len(docs)} clean documents, whole corpus split across {n_nodes} node(s).")
-        print("Split: KMeans on sentence embeddings + link-graph features (content-based, deterministic).")
+        knn_desc = (f"k={force_knn} (fixed)" if force_knn
+                    else f"auto per node (elbow, range {KNN_K_RANGE[0]}..{KNN_K_RANGE[1]})")
+        node_id = 1
+        for g in GROUP_ORDER:
+            n_g = allocation[g]
+            if n_g == 0:
+                continue
+            size = group_sizes[g]
+            per_node = size // n_g if n_g else size
+            for _ in range(n_g):
+                print(f"  [dry-run] Node_{node_id}  ({g}, ~{per_node} docs)  "
+                      f"-> {db_dir}/Node_{node_id}/  knn: {knn_desc}")
+                node_id += 1
         return
 
-    # ── 2. Embeddings ─────────────────────────────────────────────────────────
+    # ── 3. Embeddings ─────────────────────────────────────────────────────────
     embeddings = build_embeddings(docs, embed_cache, args.embed_model)
 
-    # ── 3. Link-graph features ────────────────────────────────────────────────
+    # ── 4. Link-graph features ────────────────────────────────────────────────
     link_features = build_link_features(docs)
 
-    # ── 4. Feature matrix — used for both KMeans and KNN ─────────────────────
+    # ── 5. Feature matrix ─────────────────────────────────────────────────────
     X = build_feature_matrix(embeddings, link_features)
 
-    # ── 5. KMeans assignment — whole corpus, each doc goes to exactly one node ─
-    print(f"Clustering {len(docs)} documents into {n_nodes} nodes …")
-    km     = KMeans(n_clusters=n_nodes, random_state=RANDOM_STATE, n_init="auto")
-    labels = km.fit_predict(X)
+    # ── 6. Two-tier assignment ────────────────────────────────────────────────
+    # For each source group, run KMeans within the group's embedding subspace.
+    # Single-node groups skip clustering entirely.
+    node_id    = 1
+    all_assignments: list[tuple[int, list[int]]] = []  # (node_number, [doc_indices])
 
-    node_to_indices: dict[int, list[int]] = {i: [] for i in range(n_nodes)}
-    for doc_idx, cluster_id in enumerate(labels):
-        node_to_indices[cluster_id].append(doc_idx)
+    for group_name in GROUP_ORDER:
+        group_indices = groups[group_name]
+        n_group_nodes = allocation[group_name]
 
-    # ── 6. Per-node output ────────────────────────────────────────────────────
-    for cluster_id in range(n_nodes):
-        node_name        = f"Node_{cluster_id + 1}"
-        node_dir         = db_dir / node_name
-        node_indices  = node_to_indices[cluster_id]
-        node_docs     = [docs[i] for i in node_indices]
-        X_node        = X[node_indices]
+        if n_group_nodes == 0 or not group_indices:
+            continue
+
+        if n_group_nodes == 1:
+            all_assignments.append((node_id, group_indices))
+            node_id += 1
+        else:
+            X_group     = X[group_indices]
+            km          = KMeans(n_clusters=n_group_nodes, random_state=RANDOM_STATE,
+                                 n_init="auto")
+            local_labels = km.fit_predict(X_group)
+            for cluster_id in range(n_group_nodes):
+                cluster_indices = [
+                    group_indices[i]
+                    for i, lbl in enumerate(local_labels)
+                    if lbl == cluster_id
+                ]
+                all_assignments.append((node_id, cluster_indices))
+                node_id += 1
+
+    # ── 7. Per-node output ────────────────────────────────────────────────────
+    for node_num, node_indices in all_assignments:
+        node_name = f"Node_{node_num}"
+        node_dir  = db_dir / node_name
+        node_docs = [docs[i] for i in node_indices]
+        X_node    = X[node_indices]
+
+        # Determine which source group this node belongs to for the label.
+        group_label = classify_doc(node_docs[0]) if node_docs else "?"
 
         node_dir.mkdir(parents=True, exist_ok=True)
-        print(f"\n{node_name}  ({len(node_docs)} docs)  →  {node_dir}")
+        print(f"\n{node_name}  ({len(node_docs)} docs, {group_label})  ->  {node_dir}")
 
         inserted = write_fts_db(node_dir / "index.db", node_docs)
-        print(f"  index.db         — {inserted} documents indexed")
+        print(f"  index.db          - {inserted} documents indexed")
 
-        if force_knn is not None:
-            knn_k = force_knn
-        else:
-            knn_k = select_local_knn_k(X_node, node_name)
+        knn_k = force_knn if force_knn is not None else select_local_knn_k(X_node, node_name)
+        build_and_save_knn(node_dir, X_node, knn_k, node_docs)
+        print(f"  knn_model.joblib  - fitted on {len(node_docs)} local docs, k={knn_k}")
+        print(f"  knn_metadata.json - {len(node_docs)} URL entries")
 
-        build_and_save_knn(node_dir, X_node, knn_k)
-        print(f"  knn_model.joblib — fitted on {len(node_docs)} local docs, k={knn_k}")
-
-    print(f"\nDone — {n_nodes} node(s) written to {db_dir}")
+    print(f"\nDone -- {n_nodes} node(s) written to {db_dir}")
 
 
 if __name__ == "__main__":
