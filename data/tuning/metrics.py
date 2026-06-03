@@ -9,7 +9,7 @@ The index is rebuilt once per unique node per evaluate() call.
 
 from math import log2
 
-from .local_search import build_index, search
+from .local_search import build_index, resolve_svd_dims, search
 
 
 # ── Core metric functions ─────────────────────────────────────────────────────
@@ -61,7 +61,7 @@ def evaluate(params, test_cases: list[dict], k: int = 10) -> dict:
     from pathlib import Path
 
     link_bias = float(params[0])
-    svd_dims  = int(round(params[1]))
+    svd_dims  = resolve_svd_dims(params[1])
     alpha     = float(params[2])
 
     # Rebuild index once per unique node for this parameter set

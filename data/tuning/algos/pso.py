@@ -24,6 +24,9 @@ class PSO:
         c1: float = 2.0,   # cognitive coefficient
         c2: float = 2.0,   # social coefficient
         seed: int = 42,
+        early_stop_patience: int | None = None,
+        early_stop_min_delta: float = 1e-4,
+        early_stop_min_iters: int = 0,
     ):
         self.bounds = bounds
         self.n_particles = n_particles
@@ -34,6 +37,9 @@ class PSO:
         self.c2 = c2
         self.rng = np.random.default_rng(seed)
         self._n_dims = len(bounds)
+        self.early_stop_patience = early_stop_patience
+        self.early_stop_min_delta = early_stop_min_delta
+        self.early_stop_min_iters = early_stop_min_iters
 
     def optimize(self, objective) -> OptimizeResult:
         """Minimise objective(params). objective must return a scalar."""
@@ -52,6 +58,11 @@ class PSO:
 
         history: list[dict] = []
         n_evals = 0
+        best_ndcg_seen = -np.inf
+        no_improve = 0
+        early_stop_active = (
+            self.early_stop_patience is not None and self.early_stop_patience > 0
+        )
 
         for t in range(self.max_iter):
             # Linear inertia decay: high early (exploration) → low late (exploitation)
@@ -66,6 +77,8 @@ class PSO:
                 if fit < gbest_fitness:
                     gbest_fitness = fit
                     gbest = positions[i].copy()
+
+            current_best_ndcg = float(-gbest_fitness) if gbest is not None else -np.inf
 
             for i in range(self.n_particles):
                 r1 = self.rng.random(self._n_dims)
@@ -82,6 +95,18 @@ class PSO:
                 "best_ndcg": float(-gbest_fitness),
                 "n_evals": n_evals,
             })
+
+            if early_stop_active:
+                if current_best_ndcg > best_ndcg_seen + self.early_stop_min_delta:
+                    best_ndcg_seen = current_best_ndcg
+                    no_improve = 0
+                else:
+                    no_improve += 1
+                if (
+                    no_improve >= self.early_stop_patience
+                    and (t + 1) >= self.early_stop_min_iters
+                ):
+                    break
 
         return OptimizeResult(
             best_params=gbest.tolist() if gbest is not None else lo.tolist(),

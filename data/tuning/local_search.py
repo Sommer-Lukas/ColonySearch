@@ -24,10 +24,39 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import normalize
 
+from .algos import BOUNDS
+
 _MIN_BODY_LEN = 200
 _RANDOM_STATE = 42
 _KNN_NEIGHBOURS = 20
 _TOP_K = 50
+
+_SVD_MIN = int(BOUNDS[1][0])
+_SVD_MAX = int(BOUNDS[1][1])
+
+# In-memory caches to avoid repeated disk I/O + expensive rebuilds
+_INDEX_CACHE: dict[tuple[str, float, int], dict[str, object]] = {}
+_ACTIVE_INDEX: dict[str, tuple[str, float, int]] = {}
+_EMBEDDINGS_CACHE: dict[str, np.ndarray] = {}
+_DOCS_CACHE: dict[str, list[dict]] = {}
+_TEXT_EMB_CACHE: dict[str, np.ndarray] = {}
+_LINK_FEATS_CACHE: dict[tuple[str, int], np.ndarray | None] = {}
+
+
+def resolve_svd_dims(value: float) -> int:
+    """Round to int with half-up behavior and clip to bounds."""
+    rounded = int(np.floor(float(value) + 0.5))
+    return int(np.clip(rounded, _SVD_MIN, _SVD_MAX))
+
+
+def clear_index_cache() -> None:
+    """Clear in-memory index caches (useful after data changes)."""
+    _INDEX_CACHE.clear()
+    _ACTIVE_INDEX.clear()
+    _EMBEDDINGS_CACHE.clear()
+    _DOCS_CACHE.clear()
+    _TEXT_EMB_CACHE.clear()
+    _LINK_FEATS_CACHE.clear()
 
 
 # ── URL normalisation (matches node_pipeline_setup.py) ───────────────────────
@@ -91,7 +120,7 @@ def _link_features(docs: list[dict], svd_dims: int) -> np.ndarray | None:
         (np.ones(len(edges), dtype=np.float32), (rows, cols)), shape=(n, n)
     )
     adj = (adj + adj.T).tocsr()
-    dims = min(svd_dims, max(1, n - 1))
+    dims = min(int(svd_dims), max(1, n - 1))
     feats = TruncatedSVD(n_components=dims, random_state=_RANDOM_STATE).fit_transform(adj)
     return normalize(feats)
 
@@ -101,41 +130,66 @@ def _link_features(docs: list[dict], svd_dims: int) -> np.ndarray | None:
 def build_index(node_dir, link_bias: float, svd_dims: int) -> None:
     """Rebuild the KNN model with the given hyperparameters."""
     node_dir = Path(node_dir)
+    svd_dims = resolve_svd_dims(svd_dims)
+    node_key = str(node_dir)
+    cache_key = (node_key, float(link_bias), svd_dims)
+    _ACTIVE_INDEX[node_key] = cache_key
+    if cache_key in _INDEX_CACHE:
+        return
     data_dir = node_dir.parent.parent
 
-    embeddings_all = np.load(data_dir / ".embeddings_cache.npy")
-    url_idx = _url_to_cache_index(str(data_dir / "corpus"))
+    embeddings_all = _EMBEDDINGS_CACHE.get(str(data_dir))
+    if embeddings_all is None:
+        embeddings_all = np.load(data_dir / ".embeddings_cache.npy")
+        _EMBEDDINGS_CACHE[str(data_dir)] = embeddings_all
 
-    conn = sqlite3.connect(node_dir / "index.db")
-    rows = conn.execute("SELECT url, title, links FROM documents").fetchall()
-    conn.close()
+    docs = _DOCS_CACHE.get(node_key)
+    if docs is None:
+        url_idx = _url_to_cache_index(str(data_dir / "corpus"))
+        conn = sqlite3.connect(node_dir / "index.db")
+        rows = conn.execute("SELECT url, title, links FROM documents").fetchall()
+        conn.close()
 
-    docs = []
-    for url, title, links_json in rows:
-        if url not in url_idx:
-            continue
-        docs.append({
-            "url": url,
-            "title": title,
-            "links": json.loads(links_json) if links_json else [],
-            "_row": url_idx[url],
-        })
+        docs = []
+        for url, title, links_json in rows:
+            if url not in url_idx:
+                continue
+            docs.append({
+                "url": url,
+                "title": title,
+                "links": json.loads(links_json) if links_json else [],
+                "_row": url_idx[url],
+            })
+        _DOCS_CACHE[node_key] = docs
 
     if not docs:
         raise ValueError(f"No indexable docs in {node_dir}")
 
-    text_emb = normalize(embeddings_all[[d["_row"] for d in docs]])
-    link_feats = _link_features(docs, int(round(svd_dims)))
+    text_emb = _TEXT_EMB_CACHE.get(node_key)
+    if text_emb is None:
+        text_emb = normalize(embeddings_all[[d["_row"] for d in docs]])
+        _TEXT_EMB_CACHE[node_key] = text_emb
+
+    link_key = (node_key, svd_dims)
+    if link_key in _LINK_FEATS_CACHE:
+        link_feats = _LINK_FEATS_CACHE[link_key]
+    else:
+        link_feats = _link_features(docs, svd_dims)
+        _LINK_FEATS_CACHE[link_key] = link_feats
 
     X = np.hstack([text_emb, link_bias * link_feats]) if (link_feats is not None and link_bias > 0) else text_emb
 
     k = min(_KNN_NEIGHBOURS, len(docs))
     nn = NearestNeighbors(n_neighbors=k, metric="cosine", algorithm="brute")
     nn.fit(X)
-    dump(nn, node_dir / "knn_model.joblib")
+    urls = [d["url"] for d in docs]
+    titles = [d["title"] for d in docs]
 
+    _INDEX_CACHE[cache_key] = {"nn": nn, "urls": urls, "titles": titles}
+
+    dump(nn, node_dir / "knn_model.joblib")
     (node_dir / "knn_metadata.json").write_text(
-        json.dumps({"urls": [d["url"] for d in docs], "titles": [d["title"] for d in docs]})
+        json.dumps({"urls": urls, "titles": titles})
     )
 
 
@@ -188,6 +242,22 @@ def _bm25(node_dir: Path, query_text: str) -> list[dict]:
 
 
 def _knn(node_dir: Path, qv: np.ndarray) -> list[dict]:
+    node_key = str(node_dir)
+    active_key = _ACTIVE_INDEX.get(node_key)
+    if active_key is not None:
+        entry = _INDEX_CACHE.get(active_key)
+        if entry is not None:
+            nn = entry["nn"]
+            urls = entry["urls"]
+            titles = entry["titles"]
+            if qv.shape[1] < nn.n_features_in_:
+                qv = np.hstack([qv, np.zeros((1, nn.n_features_in_ - qv.shape[1]), dtype=np.float32)])
+            dists, idxs = nn.kneighbors(qv, n_neighbors=min(_TOP_K, nn.n_samples_fit_))
+            return [
+                {"url": urls[i], "title": titles[i], "score": float(1.0 - d)}
+                for d, i in zip(dists[0], idxs[0])
+            ]
+
     model_path = node_dir / "knn_model.joblib"
     meta_path = node_dir / "knn_metadata.json"
     if not model_path.exists() or not meta_path.exists():

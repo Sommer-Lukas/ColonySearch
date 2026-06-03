@@ -32,6 +32,7 @@ sys.path.insert(0, str(_ROOT))
 
 from data.tuning.ground_truth import load_all_ground_truth
 from data.tuning.metrics import evaluate
+from data.tuning.local_search import resolve_svd_dims
 from data.tuning.algos import BOUNDS, OptimizeResult
 from data.tuning.algos.qpso import QPSO
 from data.tuning.algos.pso import PSO
@@ -95,7 +96,7 @@ def main():
     best_ndcg = -result.best_fitness
     print()
     print(f"Best link_bias: {lb:.3f}")
-    print(f"Best svd_dims:  {int(round(svd))}")
+    print(f"Best svd_dims:  {resolve_svd_dims(svd)}")
     print(f"Best alpha:     {alpha:.3f}")
     print(f"Best NDCG@{args.k}:   {best_ndcg:.4f}")
     print(f"Total evals:    {result.n_evals}")
@@ -106,7 +107,7 @@ def main():
     json_path = output_dir / f"{slug}_results.json"
     json_path.write_text(json.dumps({
         "algo": algo_name,
-        "best_params": {"link_bias": lb, "svd_dims": int(round(svd)), "alpha": alpha},
+        "best_params": {"link_bias": lb, "svd_dims": resolve_svd_dims(svd), "alpha": alpha},
         "best_ndcg": best_ndcg,
         "n_evals": result.n_evals,
         "elapsed_s": elapsed,
