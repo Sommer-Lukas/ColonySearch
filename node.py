@@ -120,7 +120,9 @@ class Node:
             req_id = gen_req_id()
         else:
             if self._req_id_cache_query(req_id) == True:
-                return [] # do as little as possible to conserve effort an simply return empty result list
+                self._req_id_cache_new_entry(req_id) # in this case we STILL put the entry in the cache, because it could come again
+                                                     # and we want to refresh its entry
+                return [] # do as little as possible to conserve effort and simply return empty result list
 
         self._req_id_cache_new_entry(req_id)
 
