@@ -103,14 +103,14 @@ class Node:
         # remove existing cache entry if it exists
         for i, req_id in zip(range(len(self.req_id_cache)), self.req_id_cache):
             if req_id == new_req_id:
-                self.req_id_cache.remove(i)
+                del self.req_id_cache[i]
 
         # place new cache entry at input end of FIFO
         self.req_id_cache.append(new_req_id)
 
         # remove oldest cache entry if cache is too large now
         if len(self.req_id_cache) > self.req_id_cache_max_length:
-            self.req_id_cache.remove(0)
+            del self.req_id_cache[0]
 
     def _req_id_cache_query(self, query_req_id):
         return query_req_id in self.req_id_cache
@@ -119,6 +119,8 @@ class Node:
         if req_id == None:
             req_id = gen_req_id()
         else:
+            if not isinstance(req_id, uuid.UUID): req_id = uuid.UUID(req_id)
+
             if self._req_id_cache_query(req_id) == True:
                 self._req_id_cache_new_entry(req_id) # in this case we STILL put the entry in the cache, because it could come again
                                                      # and we want to refresh its entry
@@ -183,19 +185,28 @@ class Node:
     def get_neighbors(self, top_k:int=-1):
         return sorted(self.neighbors, key=lambda x: x.rep, reverse=True)[:top_k]
 
+myself  = Node("data/dbs/Node_1", [], 8)
 
-myself = Node("data/dbs/Node_1", [
-    Node("data/dbs/Node_2",  [], 8),
-    Node("data/dbs/Node_3",  [], 8),
-    Node("data/dbs/Node_4",  [], 8),
-    Node("data/dbs/Node_5",  [], 8),
-    Node("data/dbs/Node_6",  [], 8),
-    Node("data/dbs/Node_7",  [], 8),
-    Node("data/dbs/Node_8",  [], 8),
-    Node("data/dbs/Node_9",  [], 8),
-    Node("data/dbs/Node_10", [], 8),
-], 8)
+node_2  = Node("data/dbs/Node_2",   [], 8)
+node_3  = Node("data/dbs/Node_3",   [], 8)
+node_4  = Node("data/dbs/Node_4",   [], 8)
+node_5  = Node("data/dbs/Node_5",   [], 8)
+node_6  = Node("data/dbs/Node_6",   [], 8)
+node_7  = Node("data/dbs/Node_7",   [], 8)
+node_8  = Node("data/dbs/Node_8",   [], 8)
+node_9  = Node("data/dbs/Node_9",   [], 8)
+node_10 = Node("data/dbs/Node_10",  [], 8)
 
+myself.neighbors =  [ node_2, node_3, node_4 ]
+node_2.neighbors =  [ node_3, node_8 ]
+node_3.neighbors =  [ node_5, node_8 ]
+node_4.neighbors =  [ node_7, node_8 ]
+node_5.neighbors =  [ node_2, node_10 ]
+node_6.neighbors =  [ node_9, node_10 ]
+node_7.neighbors =  [ node_6, node_5 ]
+node_8.neighbors =  []
+node_9.neighbors =  []
+node_10.neighbors = []
 
 
 
@@ -246,7 +257,7 @@ def search_page():
 @app.route("/api/search", methods=["GET"])
 def api_search():
     query  = request.args.get("query")
-    depth  = request.args.get("depth")
+    depth  = int(request.args.get("depth"))
     req_id = request.args.get("req_id")
     return jsonify(myself.search(query, depth, req_id))
 
