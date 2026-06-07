@@ -105,6 +105,10 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://ec.europa.eu/climate/"),
             ("html",             "https://www.un.org/en/climatechange/"),
             ("html",             "https://www.bundestag.de/dokumente/textarchiv/themenbereich-klima"),
+            ("rss",              "https://climate.nasa.gov/news/rss.xml"),
+            ("rss",              "https://www.carbonbrief.org/feed"),
+            ("rss",              "https://www.sciencedaily.com/rss/earth_climate/global_warming.xml"),
+            ("rss",              "https://phys.org/rss-feed/earth-news/environment/"),
         ],
     },
 
@@ -169,6 +173,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.unep.org/resources/report"),
             ("html",             "https://www.materialstoday.com/"),
             ("html",             "https://www.azom.com/green-chemistry.aspx"),
+            ("rss",              "https://www.sciencedaily.com/rss/matter_energy/biomaterials.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/materials-science/"),
         ],
     },
 
@@ -231,6 +237,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://phys.org/tags/space/"),
             ("html",             "https://www.sciencedaily.com/news/space_time/"),
             ("html",             "https://spacenews.com/"),
+            ("rss",              "https://www.nasa.gov/news-release/feed/"),
+            ("rss",              "https://www.sciencedaily.com/rss/space_time.xml"),
+            ("rss",              "https://phys.org/rss-feed/space-news/"),
         ],
     },
 
@@ -313,6 +322,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("arxiv",            "concurrent programming lock-free data structure"),
             ("html",             "https://www.th-nuernberg.de/"),
             ("html",             "https://www.accenture.com/en-us/industries"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/computer-sciences/"),
+            ("rss",              "https://news.mit.edu/rss/topic/computer-science-and-technology"),
         ],
     },
 
@@ -380,6 +391,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"),
             ("html",             "https://paperswithcode.com/sota"),
             ("html",             "https://distill.pub/"),
+            ("rss",              "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/artificial-intelligence-news/"),
+            ("rss",              "https://www.quantamagazine.org/feed/"),
         ],
     },
 
@@ -443,6 +457,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.goal.com/en"),
             ("html",             "https://www.theguardian.com/football"),
             ("html",             "https://tacticaljournal.com/"),
+            ("rss",              "https://www.bbc.com/sport/football/rss.xml"),
+            ("rss",              "https://www.theguardian.com/football/rss"),
         ],
     },
 
@@ -498,6 +514,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.mayoclinic.org/diseases-conditions"),
             ("html",             "https://phys.org/tags/medicine/"),
             ("html",             "https://www.sciencedaily.com/news/health_medicine/"),
+            ("rss",              "https://www.sciencedaily.com/rss/health_medicine.xml"),
+            ("rss",              "https://phys.org/rss-feed/health-news/"),
+            ("rss",              "https://www.nih.gov/rss/alldiscoveries.xml"),
         ],
     },
 
@@ -547,6 +566,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://phys.org/tags/quantum+computing/"),
             ("html",             "https://www.sciencedaily.com/news/computers_math/quantum_computers/"),
             ("html",             "https://research.ibm.com/quantum-computing"),
+            ("rss",              "https://www.sciencedaily.com/rss/computers_math/quantum_computers.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/quantum-physics-news/"),
+            ("rss",              "https://www.quantamagazine.org/feed/"),
         ],
     },
 
@@ -599,6 +621,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.sciencedaily.com/news/mind_brain/"),
             ("html",             "https://www.nih.gov/news-events/nih-research-matters"),
             ("html",             "https://www.quantamagazine.org/tag/neuroscience/"),
+            ("rss",              "https://www.sciencedaily.com/rss/mind_brain.xml"),
+            ("rss",              "https://phys.org/rss-feed/health-news/neuroscience/"),
         ],
     },
 
@@ -648,6 +672,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.worldbank.org/en/topic/macroeconomics"),
             ("html",             "https://phys.org/tags/economics/"),
             ("html",             "https://www.sciencedaily.com/news/mind_brain/economics/"),
+            ("rss",              "https://www.sciencedaily.com/rss/mind_brain/economics.xml"),
+            ("rss",              "https://phys.org/rss-feed/social-sciences-news/economics/"),
         ],
     },
 
@@ -717,6 +743,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.automationworld.com/"),
             ("html",             "https://www.manufacturingtomorrow.com/"),
             ("html",             "https://www.industryweek.com/technology-and-iiot"),
+            ("rss",              "https://www.sciencedaily.com/rss/matter_energy/engineering.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/engineering/"),
         ],
     },
 }
@@ -1195,6 +1223,68 @@ def fetch_devto(tag: str, topic: str,
     return docs
 
 
+_ATOM_NS    = "http://www.w3.org/2005/Atom"
+_CONTENT_NS = "http://purl.org/rss/1.0/modules/content/"
+
+
+def fetch_rss(url: str, topic: str,
+              max_body: int | None = None, max_links: int | None = None,
+              max_results: int = 20) -> list[dict]:
+    """Fetch an RSS 2.0 or Atom feed and return one doc per item/entry.
+
+    Handles both formats transparently. Body is taken from <content:encoded>
+    → <description> (RSS) or <content> → <summary> (Atom), with HTML stripped.
+    """
+    r = _get(url)
+    if not r:
+        return []
+    try:
+        root = ET.fromstring(r.content)
+    except ET.ParseError:
+        return []
+
+    # Detect format: Atom feeds use a namespaced <feed> root tag
+    is_atom = _ATOM_NS in (root.tag or "")
+    items   = (root.findall(f".//{{{_ATOM_NS}}}entry") if is_atom
+               else root.findall(".//item"))
+
+    docs: list[dict] = []
+    for item in items:
+        if len(docs) >= max_results:
+            break
+
+        if is_atom:
+            def _a(tag: str) -> str:
+                el = item.find(f"{{{_ATOM_NS}}}{tag}")
+                return (el.text or "").strip() if el is not None else ""
+            title   = _a("title")
+            link_el = item.find(f"{{{_ATOM_NS}}}link")
+            link    = (link_el.get("href") or "").strip() if link_el is not None else ""
+            raw     = _a("content") or _a("summary")
+        else:
+            def _r(tag: str) -> str:
+                el = item.find(tag)
+                return (el.text or "").strip() if el is not None else ""
+            title   = _r("title")
+            link    = _r("link") or _r("guid")
+            enc     = item.find(f"{{{_CONTENT_NS}}}encoded")
+            raw     = (enc.text or "") if enc is not None else _r("description")
+
+        if not title or not link:
+            continue
+
+        body = BeautifulSoup(raw, "html.parser").get_text(" ", strip=True) if raw else ""
+        body = " ".join(body.split())
+        body = body[:max_body] if max_body else body
+        if not body:
+            continue
+
+        docs.append(_doc(url=link, title=title, body=body,
+                         links=[], source="rss", source_base=_base_url(link),
+                         topic=topic))
+    return docs
+
+
 def fetch_github(repo: str, topic: str,
                  max_body: int | None = None, max_links: int | None = None) -> list[dict]:
     for branch in ("main", "master"):
@@ -1284,6 +1374,7 @@ def dispatch(source: str, value: str, topic: str,
         case "arxiv":            return fetch_arxiv(value, topic, **kw)
         case "semantic_scholar": return fetch_semantic_scholar(value, topic, **kw)
         case "devto":            return fetch_devto(value, topic, **kw)
+        case "rss":              return fetch_rss(value, topic, **kw)
         case "github":           return fetch_github(value, topic, **kw)
         case "scikit":           return fetch_html(value, topic, "scikit", **kw)
         case "stackoverflow":    return fetch_html(value, topic, "stackoverflow", **kw)
@@ -1547,7 +1638,7 @@ examples:
     p.add_argument("--topics",         help="Comma-separated cluster names (default: all)")
     p.add_argument("--sources",        help="Comma-separated source types to include "
                    "(wikipedia, arxiv, openalex, semantic_scholar, devto, github, "
-                   "html, stackoverflow, wikidata)")
+                   "html, stackoverflow, wikidata, rss)")
     p.add_argument("--wiki-cats",      help="Comma-separated Wikipedia category names to "
                    "scrape (e.g. 'Climate_change,Renewable_energy'). Seeds are injected "
                    "into every selected topic cluster.")
