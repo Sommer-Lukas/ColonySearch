@@ -18,16 +18,6 @@ def test_register_node_present():
     net.register_node("n0")
     assert "n0" in net
 
-def test_register_node_default_reputation():
-    net = Network()
-    net.register_node("n0")
-    assert net.reputation("n0") == 1.0
-
-def test_register_node_custom_reputation():
-    net = Network()
-    net.register_node("n0", reputation=0.5)
-    assert net.reputation("n0") == 0.5
-
 def test_register_node_obj_attach():
     net = Network()
     net.register_node("n0")
@@ -115,23 +105,6 @@ def test_all_edges_pheromone_snapshot():
     assert snapshot[("a", "b")] == pytest.approx(INITIAL_PHEROMONE)
     assert snapshot[("b", "a")] == pytest.approx(INITIAL_PHEROMONE)
     assert snapshot[("b", "c")] == pytest.approx(2.5)
-
-
-# ---------------------------------------------------------------------------
-# Reputation
-# ---------------------------------------------------------------------------
-
-def test_set_reputation():
-    net = Network()
-    net.register_node("n0")
-    net.set_reputation("n0", 0.8)
-    assert net.reputation("n0") == pytest.approx(0.8)
-
-def test_reputation_floored_at_zero():
-    net = Network()
-    net.register_node("n0")
-    net.set_reputation("n0", -1.0)
-    assert net.reputation("n0") == pytest.approx(0.0)
 
 
 # ---------------------------------------------------------------------------

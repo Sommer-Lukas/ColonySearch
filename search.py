@@ -75,8 +75,8 @@ def search(
     query_text: str,
     query_vector: np.ndarray | None,
     *,
-    alpha: float = 0.50,
-    top_k: int = 14,
+    alpha: float = 0.51,
+    top_k: int = 10,
     bm25_candidates: int =30000,
 ) -> list[SearchResult]:
     """

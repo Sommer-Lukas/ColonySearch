@@ -54,8 +54,8 @@ from sklearn.preprocessing import normalize
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
 MIN_BODY_LEN     = 150
-LINK_BIAS_WEIGHT = 0.5
-LINK_SVD_DIMS    = 61
+LINK_BIAS_WEIGHT = 0.70
+LINK_SVD_DIMS    = 8
 EMBED_MODEL      = "all-mpnet-base-v2"
 RANDOM_STATE     = 42
 

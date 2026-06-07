@@ -17,10 +17,14 @@ temp_search = search.search
 # 0.0 = pure content score, 1.0 = pure reputation.
 REP_WEIGHT: float = 0.2
 
-# EMA learning rate for reputation.  Keeps rep bounded in [0, 1] and lets
-# nodes recover or fall — recent performance matters more than early luck.
+# EMA learning rate for direct-observation reputation updates.  Keeps rep
+# bounded in [0, 1] and lets nodes recover or fall.
 # 0 = never updates, 1 = full replace each query.
 REP_DECAY: float = 0.15
+
+# EMA learning rate for gossiped reputation updates.  Lower than REP_DECAY
+# because a direct observation is more trustworthy than hearsay from a peer.
+GOSSIP_WEIGHT: float = 0.1
 
 # ACO pheromone evaporation rate.  Standard τ = (1−ρ)·τ + Δτ deposit.
 # Without evaporation, early-winner edges dominate forever.
@@ -36,6 +40,10 @@ ACO_BETA:  float = 1.0
 # Number of neighbors sampled per hop in get_neighbors.
 # Lower = faster but fewer paths explored; higher = better recall, slower.
 NETWORK_TOP_K: int = 10
+
+# Max hops a query is forwarded before a node searches locally only.
+# Prevents unbounded flooding in large meshes.
+DEFAULT_TTL: int = 3
 
 # ── Embedding model — loaded once at startup, never re-downloaded ─────────────
 _EMBED_MODEL_NAME = "all-mpnet-base-v2"
@@ -80,14 +88,13 @@ def endpoint_from_str(endpoint_str: str):
 # example: add to network via node_from_endpoint_str then network.add_edge(my_id, endpoint_str)
 def node_from_endpoint_str(endpoint_str: str):
     # Bypass __init__ — remote nodes have no local db and no shared Network.
-    # rep falls back to the plain _rep float because the property checks _network first.
     result = Node.__new__(Node)
     result.local = False
     result.db_dir = None
     result.node_id = endpoint_str
     result.remote_endpoint = endpoint_from_str(endpoint_str)
     result._network = None
-    result._rep = 0.0
+    result._rep_table = {}
     return result
 
 
@@ -110,37 +117,75 @@ class Node:
         self.node_id = node_id if node_id is not None else db_dir
         self.remote_endpoint = None
         self._network = network
+        # Each node maintains its own local view of peer reputations.
+        # Unknown peers default to 1.0 (benefit of the doubt).
+        self._rep_table: dict[str, float] = {}
 
-    # Reputation is owned by the Network so all routing code sees the same value.
-    # Remote nodes (no network) fall back to a plain float stored in _rep.
-    @property
-    def rep(self) -> float:
+    def get_rep(self, node_id: str) -> float:
+        """Return this node's local reputation estimate for node_id."""
+        return self._rep_table.get(node_id, 1.0)
+
+    def update_rep(self, node_id: str, observed_score: float) -> None:
+        """EMA-update rep from a direct observation, then gossip the new value to neighbors."""
+        old = self._rep_table.get(node_id, 1.0)
+        new = max((1.0 - REP_DECAY) * old + REP_DECAY * observed_score, 0.0)
+        self._rep_table[node_id] = new
+        self._gossip_rep(node_id, new)
+
+    def receive_gossip(self, about_id: str, value: float) -> None:
+        """Merge a reputation update gossiped from a neighbor.
+
+        Uses a lower weight than direct observation — hearsay is less
+        trustworthy than what this node measured itself.
+        """
+        old = self._rep_table.get(about_id, 1.0)
+        self._rep_table[about_id] = max(
+            (1.0 - GOSSIP_WEIGHT) * old + GOSSIP_WEIGHT * value, 0.0
+        )
+
+    def _gossip_rep(self, about_id: str, value: float) -> None:
+        """Push a reputation update one hop to all direct neighbors.
+
+        One-hop only — cascading gossip would let reputation flood the
+        network and make values harder to trace back to an observation.
+        """
         if self._network is None:
-            return self._rep
-        return self._network.reputation(self.node_id)
+            return
+        for nid in self._network.neighbors(self.node_id):
+            neighbor_obj = self._network.get_node_obj(nid)
+            if neighbor_obj is None or neighbor_obj.node_id == about_id:
+                continue
+            if neighbor_obj.local:
+                neighbor_obj.receive_gossip(about_id, value)
+            else:
+                # Remote node — fire-and-forget HTTP POST, ignore failures.
+                try:
+                    requests.post(
+                        "http://{}:{}/api/gossip_rep".format(
+                            neighbor_obj.remote_endpoint[0],
+                            neighbor_obj.remote_endpoint[1],
+                        ),
+                        json={"about": about_id, "value": value},
+                        timeout=0.5,
+                    )
+                except Exception:
+                    pass
 
-    @rep.setter
-    def rep(self, value: float):
-        if self._network is None:
-            self._rep = value
-        else:
-            self._network.set_reputation(self.node_id, value)
-
-    def search(self, query: str, _visited: set = None) -> list:
-        # _visited is threaded through the whole query to prevent cycles in a mesh.
-        # Each top-level call from the Flask layer starts with a fresh empty set.
-        # is_root distinguishes the top-level call so rep blending and truncation
-        # happen exactly once — applying them at every hop would inflate all scores
-        # toward 1.0 and make deep results indistinguishable from shallow ones.
+    def search(self, query: str, _visited: set = None, ttl: int = DEFAULT_TTL) -> list:
+        # _visited travels with the query to prevent cycles.  The root starts
+        # with an empty set; each hop adds itself before forwarding.
+        # In remote calls _visited is serialised into the request so cycle state
+        # lives in the message, not in shared process memory.
+        # is_root distinguishes the top-level call so rep blending and
+        # deduplication happen exactly once.
         is_root = _visited is None
         if _visited is None:
             _visited = set()
         if self.local:
-            results = self._local_search(query, _visited)
+            results = self._local_search(query, _visited, ttl)
             if is_root:
                 results = self._blend_rep(results)
-                # Deduplicate by URL — the same doc can arrive via multiple mesh
-                # paths.  Keep the copy with the highest score.
+                # Deduplicate by URL — same doc can arrive via multiple paths.
                 seen: dict[str, dict] = {}
                 for r in results:
                     url = r.get("url", "")
@@ -149,17 +194,16 @@ class Node:
                 results = sort_search_results(list(seen.values()))[:10]
             return results
         else:
-            return self._remote_search(query)
+            return self._remote_search(query, _visited, ttl)
 
     def _blend_rep(self, results: list) -> list:
         """Apply rep blending once at the root — never inside recursive calls."""
         if not results:
             return results
-        # Build rep map across every unique node_id present in the result set.
-        # Nodes not registered in the network fall back to rep 1.0.
+        # Build rep map using this node's local reputation table.
+        # Unknown nodes default to 1.0 inside get_rep.
         reps = {
-            r["node_id"]: (self._network.reputation(r["node_id"])
-                           if r.get("node_id") in self._network else 1.0)
+            r["node_id"]: self.get_rep(r["node_id"])
             for r in results if r.get("node_id")
         }
         max_rep = max(reps.values(), default=1.0) or 1.0
@@ -168,7 +212,7 @@ class Node:
             r["score"] = (1.0 - REP_WEIGHT) * r["score"] + REP_WEIGHT * rep_fraction
         return results
 
-    def _local_search(self, query: str, _visited: set) -> list:
+    def _local_search(self, query: str, _visited: set, ttl: int) -> list:
         _visited.add(self.node_id)  # mark before querying neighbors so they skip us
 
         query_vector = _encode_query(query)
@@ -177,54 +221,71 @@ class Node:
             r.setdefault("node_id", self.db_dir)
         print_search_results(results)
 
+        if ttl <= 0:
+            # TTL exhausted — return own results only, no forwarding.
+            return results
+
         # Exclude already-visited nodes so mesh edges don't cause cycles.
         councilor_nodes = [n for n in self.get_neighbors(NETWORK_TOP_K) if n.node_id not in _visited]
 
-        councilor_nodes_scores = []
+        all_peer_results: list = []
 
         for node in councilor_nodes:
-            # No rep blending here — scores stay raw so the root gets clean signal.
-            search_results = node.search(query, _visited)
+            # Pass ttl-1 so each hop consumes one unit of depth budget.
+            # Pass _visited so the remote node knows which nodes to skip —
+            # in HTTP calls this is serialised into the request body.
+            search_results = node.search(query, _visited, ttl - 1)
             print_search_results(search_results)
-            node_score = calc_node_score_from_search_results(search_results)
-            councilor_nodes_scores.append(node_score)
 
             for item in search_results:
-                item.setdefault("node_id", node.db_dir)
+                item.setdefault("node_id", node.node_id)
 
-            results += search_results
+            all_peer_results.extend(search_results)
 
-        for node, score in zip(councilor_nodes, councilor_nodes_scores):
-            # EMA update — reputation tracks recent performance, doesn't snowball.
-            # A node that was good once but degrades will naturally fall back.
-            node.rep = (1.0 - REP_DECAY) * node.rep + REP_DECAY * score
+        # Update reputation for every node that contributed results, judged
+        # only on that node's own output (not its downstream sub-results).
+        # This gives credit to intermediate nodes too, not just direct neighbours.
+        # Pheromone is still deposited only on edges that exist in the graph.
+        node_id_to_results: dict[str, list] = {}
+        for r in all_peer_results:
+            nid = r.get("node_id", "")
+            if nid:
+                node_id_to_results.setdefault(nid, []).append(r)
 
-            # Standard ACO pheromone deposit with evaporation.
-            # τ = (1−ρ)·τ + Δτ  — old trails fade so early-winner edges don't
-            # dominate forever and genuinely better nodes can take over.
-            if self._network.has_edge(self.node_id, node.node_id):
-                old_pheromone = self._network.pheromone(self.node_id, node.node_id)
+        for nid, node_results in node_id_to_results.items():
+            score = calc_node_score_from_search_results(node_results)
+            self.update_rep(nid, score)
+            # Pheromone deposit only on direct edges — ACO trail stays local.
+            if self._network.has_edge(self.node_id, nid):
+                old_ph = self._network.pheromone(self.node_id, nid)
                 self._network.set_pheromone(
-                    self.node_id,
-                    node.node_id,
-                    (1.0 - PHEROMONE_EVAP) * old_pheromone + score
+                    self.node_id, nid,
+                    (1.0 - PHEROMONE_EVAP) * old_ph + score,
                 )
 
         print('\n\n\n\nbetter together, no matter the weather, now, ladies and gentlemen, welcome all the search results:\n\n\n\n')
+        results += all_peer_results
         print_search_results(results)
 
         # Return all collected results — the root's search() handles truncation.
-        # Cutting to [:10] here would drop deep nodes' results before they reach
-        # the root, making 2nd-hop nodes effectively invisible.
         return results
 
-    def _remote_search(self, query: str):
-        response = requests.get("http://{}:{}/api/search"
-                                .format(self.remote_endpoint[0], self.remote_endpoint[1]),
-        {
-            "query": query
-        });
-        return response.json()
+    def _remote_search(self, query: str, visited: set, ttl: int) -> list:
+        try:
+            response = requests.get(
+                "http://{}:{}/api/search".format(
+                    self.remote_endpoint[0], self.remote_endpoint[1]
+                ),
+                params={
+                    "query": query,
+                    "visited": json.dumps(list(visited)),
+                    "ttl": ttl,
+                },
+                timeout=5.0,
+            )
+            return response.json()
+        except Exception:
+            return []
 
     def get_neighbors(self, top_k: int = -1) -> list:
         neighbor_ids = self._network.neighbors(self.node_id)
@@ -237,7 +298,7 @@ class Node:
         # still get a chance.  Pure greedy (sort + slice) kills exploration.
         weights = [
             self._network.pheromone(self.node_id, nid) ** ACO_ALPHA *
-            max(self._network.reputation(nid), 1e-9) ** ACO_BETA
+            max(self.get_rep(nid), 1e-9) ** ACO_BETA
             for nid in neighbor_ids
         ]
 
@@ -318,7 +379,12 @@ def search_page():
 @app.route("/api/search", methods=["GET"])
 def api_search():
     query = request.args.get("query")
-    return jsonify(myself.search(query))
+    ttl = int(request.args.get("ttl", str(DEFAULT_TTL)))
+    try:
+        visited = set(json.loads(request.args.get("visited", "[]")))
+    except (json.JSONDecodeError, TypeError):
+        visited = set()
+    return jsonify(myself.search(query, _visited=visited, ttl=ttl))
 
 @app.route("/api/rep", methods=["GET"])
 def rep():
@@ -327,7 +393,21 @@ def rep():
 
 @app.route("/api/allreps", methods=["GET"])
 def allreps():
-    return jsonify(sorted([n.rep for n in myself.get_neighbors()], reverse=True))
+    return jsonify(sorted(
+        [myself.get_rep(n.node_id) for n in myself.get_neighbors()],
+        reverse=True,
+    ))
+
+@app.route("/api/gossip_rep", methods=["POST"])
+def gossip_rep():
+    """Receive a gossiped reputation update from a peer node."""
+    data = request.get_json(silent=True) or {}
+    about = data.get("about")
+    value = data.get("value")
+    if about is None or value is None:
+        return jsonify({"error": "missing 'about' or 'value'"}), 400
+    myself.receive_gossip(about, float(value))
+    return jsonify({"ok": True})
 
 if __name__ == "__main__":
     app.run(debug=True) # TODO: change to non-debug mode when in production

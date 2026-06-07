@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColonySearch — ACO Network Simulation</title>
+  <style>
+    :root {
+      --bg: #0d1117; --panel: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e;
+      --blue: #58a6ff; --green: #3fb950; --orange: #f0883e;
+      --red: #f85149; --purple: #bc8cff; --yellow: #e3b341;
+      --formula-bg: #161d27; --numbers-bg: #0f1923;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      height: 100vh; display: flex; flex-direction: column; overflow: hidden;
+    }
+
+    /* ── Header ───────────────────────────────────────────────── */
+    header {
+      padding: 10px 28px; border-bottom: 1px solid var(--border);
+      background: var(--panel); display: flex; align-items: center;
+      gap: 20px; flex-shrink: 0;
+    }
+    header h1 { font-size: 1.15rem; font-weight: 700; color: var(--blue); }
+    .badge {
+      border-radius: 20px; padding: 3px 14px; font-size: 0.82rem;
+      border: 1px solid; display: flex; gap: 6px; align-items: center;
+    }
+    .badge.query { border-color: var(--orange); color: var(--orange); }
+    .badge.entry { border-color: var(--purple); color: var(--purple); }
+    .badge span { color: var(--text); font-style: italic; }
+    header .hint { margin-left: auto; font-size: 0.78rem; color: var(--muted); }
+
+    /* ── Main layout ──────────────────────────────────────────── */
+    .main { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+
+    /* ── Graph pane ───────────────────────────────────────────── */
+    .graph-pane {
+      width: 500px; flex-shrink: 0; border-right: 1px solid var(--border);
+      background: #080c10; display: flex; flex-direction: column;
+      align-items: center; padding: 14px 10px 10px;
+    }
+    .graph-pane h2 {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.2px;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    #network-svg { width: 460px; height: 460px; }
+
+    .legend {
+      display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap;
+      justify-content: center;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.74rem; color: var(--muted); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid; }
+
+    /* ── Step pane ────────────────────────────────────────────── */
+    .step-pane {
+      flex: 1; overflow-y: auto; padding: 24px 28px 16px;
+      display: flex; flex-direction: column; gap: 0;
+    }
+
+    /* Step content elements */
+    .step-num { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 4px; }
+    .step-title { font-size: 1.45rem; font-weight: 700; line-height: 1.25; margin-bottom: 4px; }
+    .step-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; }
+
+    .explanation { font-size: 0.9rem; line-height: 1.7; color: #c9d1d9; margin-bottom: 14px; }
+    .explanation p { margin-bottom: 8px; }
+    .explanation p:last-child { margin-bottom: 0; }
+    .explanation strong { color: var(--text); }
+    .explanation code { background: #1a2030; padding: 1px 5px; border-radius: 3px; font-size: 0.82rem; color: var(--purple); font-family: 'Courier New', monospace; }
+
+    /* Formula block */
+    .fblock {
+      background: var(--formula-bg); border: 1px solid var(--border);
+      border-left: 3px solid var(--blue); border-radius: 6px;
+      padding: 13px 18px; margin-bottom: 13px;
+    }
+    .fblock-label {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--blue); margin-bottom: 8px;
+    }
+    .formula {
+      font-family: 'Courier New', monospace; font-size: 0.95rem;
+      color: #cdd6f4; line-height: 2;
+    }
+    .formula .sym { color: var(--orange); }
+    .formula .val { color: var(--green); font-weight: bold; }
+    .formula .cmt { color: #5a6a7a; font-size: 0.82rem; }
+    .formula .hi { color: var(--yellow); }
+
+    /* Numbers block */
+    .nblock {
+      background: var(--numbers-bg); border: 1px solid var(--border);
+      border-left: 3px solid var(--green); border-radius: 6px;
+      padding: 13px 18px; margin-bottom: 13px;
+    }
+    .nblock-label {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--green); margin-bottom: 8px;
+    }
+    .nblock table { width: 100%; border-collapse: collapse; font-size: 0.84rem; font-family: 'Courier New', monospace; }
+    .nblock th { color: var(--muted); font-size: 0.74rem; text-align: left; padding: 3px 8px; border-bottom: 1px solid var(--border); font-family: 'Segoe UI', sans-serif; letter-spacing: 0.5px; }
+    .nblock td { padding: 4px 8px; color: #c9d1d9; border-bottom: 1px solid rgba(48,54,61,0.4); }
+    .nblock td.g { color: var(--green); font-weight: bold; }
+    .nblock td.o { color: var(--orange); font-weight: bold; }
+    .nblock td.y { color: var(--yellow); font-weight: bold; }
+    .nblock td.b { color: var(--blue); }
+    .nblock td.p { color: var(--purple); }
+    .calc { font-family: 'Courier New', monospace; font-size: 0.85rem; color: #c9d1d9; line-height: 1.9; }
+    .calc .arrow { color: var(--muted); }
+    .calc .result { color: var(--green); font-weight: bold; }
+    .calc .updated { color: var(--yellow); font-weight: bold; }
+
+    /* ── Nav bar ─────────────────────────────────────────────── */
+    .nav-bar {
+      border-top: 1px solid var(--border); background: var(--panel);
+      padding: 10px 28px; display: flex; align-items: center; gap: 12px;
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      background: transparent; border: 1px solid var(--border); color: var(--text);
+      padding: 7px 18px; border-radius: 6px; font-size: 0.88rem; cursor: pointer;
+      transition: all 0.15s; font-family: inherit;
+    }
+    .nav-btn:hover:not(:disabled) { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .nav-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+    .step-dots { display: flex; gap: 7px; align-items: center; }
+    .sdot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--border);
+      cursor: pointer; transition: all 0.15s; flex-shrink: 0;
+    }
+    .sdot.active { background: var(--blue); transform: scale(1.5); }
+    .sdot:hover { background: var(--muted); }
+    .step-counter { font-size: 0.82rem; color: var(--muted); margin-left: auto; white-space: nowrap; }
+
+    /* ── SVG element styles ──────────────────────────────────── */
+    .edef  { stroke: #1e2d3d; stroke-width: 1.5; fill: none; transition: all 0.35s; }
+    .eact  { stroke: var(--blue); stroke-width: 2.5; fill: none; transition: all 0.35s; }
+    .eqry  { stroke: var(--orange); stroke-width: 3; fill: none; transition: all 0.35s; }
+    .ephr  { stroke: var(--green); stroke-width: 2.5; fill: none; transition: all 0.35s; }
+
+    .ndef  { fill: #111820; stroke: #2a4a6a; stroke-width: 2; transition: all 0.35s; }
+    .nact  { fill: #0f2040; stroke: var(--blue); stroke-width: 2.5; transition: all 0.35s; }
+    .nent  { fill: #1a0830; stroke: var(--purple); stroke-width: 2.5; transition: all 0.35s; }
+    .nqry  { fill: #251400; stroke: var(--orange); stroke-width: 2.5; transition: all 0.35s; }
+    .nvis  { fill: #0a2010; stroke: var(--green); stroke-width: 2.5; transition: all 0.35s; }
+    .nupd  { fill: #251a00; stroke: var(--yellow); stroke-width: 2.5; transition: all 0.35s; }
+    .ngsip { fill: #001a1a; stroke: #4dd0e1; stroke-width: 2.5; transition: all 0.35s; }
+
+    .nlbl  { fill: #4a7fa5; font-size: 12px; font-family: 'Courier New', monospace; dominant-baseline: middle; text-anchor: middle; pointer-events: none; transition: fill 0.35s; font-weight: bold; stroke: none; }
+    .nlbl.nact { fill: var(--blue); }
+    .nlbl.nent { fill: var(--purple); }
+    .nlbl.nqry { fill: var(--orange); }
+    .nlbl.nvis { fill: var(--green); }
+    .nlbl.nupd { fill: var(--yellow); }
+    .nlbl.ngsip { fill: #4dd0e1; }
+
+    .nrep  { fill: #2a3a4a; font-size: 9px; font-family: 'Courier New', monospace; dominant-baseline: middle; text-anchor: middle; pointer-events: none; transition: fill 0.35s; }
+    .nrep.changed { fill: var(--yellow); }
+
+    .egsip { stroke: #4dd0e1; stroke-width: 2.5; stroke-dasharray: 5 3; fill: none; transition: all 0.35s; }
+
+    .etau  { fill: var(--green); font-size: 9px; font-family: 'Courier New', monospace; dominant-baseline: middle; text-anchor: middle; pointer-events: none; opacity: 0; transition: opacity 0.35s; }
+    .etau.show { opacity: 1; }
+
+    .pulse-ring { fill: none; stroke-width: 2; opacity: 0; }
+    .pulse-ring.go { animation: pulse 1.8s ease-out infinite; }
+    @keyframes pulse { 0% { r: 26px; opacity: 0.7; } 100% { r: 46px; opacity: 0; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🐜 ColonySearch</h1>
+  <div class="badge query">Query: <span>"machine learning"</span></div>
+  <div class="badge entry">Entry point: <span>Node 1</span></div>
+  <span class="hint">← → arrow keys to navigate</span>
+</header>
+
+<div class="main">
+  <div class="graph-pane">
+    <h2>Network Topology</h2>
+    <svg id="network-svg" viewBox="0 0 460 460">
+      <defs>
+        <marker id="arr-def" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#1e2d3d"/>
+        </marker>
+        <marker id="arr-act" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--blue)"/>
+        </marker>
+        <marker id="arr-qry" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+          <path d="M0,0 L7,3.5 L0,7 Z" fill="var(--orange)"/>
+        </marker>
+        <marker id="arr-phr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="var(--green)"/>
+        </marker>
+        <marker id="arr-gsip" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#4dd0e1"/>
+        </marker>
+      </defs>
+      <g id="edges-layer"></g>
+      <g id="nodes-layer"></g>
+    </svg>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="border-color:#2a4a6a"></div>Default</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:var(--purple)"></div>Entry</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:var(--orange)"></div>Querying</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:var(--green)"></div>Searched</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:var(--yellow)"></div>Rep Updated</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:#4dd0e1"></div>Gossip Received</div>
+    </div>
+    <div style="font-size:0.69rem;color:var(--muted);margin-top:6px;text-align:center">r = Node 1's local rep estimate of each peer</div>
+  </div>
+
+  <div class="step-pane" id="step-pane"></div>
+</div>
+
+<div class="nav-bar">
+  <button id="prev-btn" class="nav-btn" disabled>← Prev</button>
+  <div class="step-dots" id="step-dots"></div>
+  <button id="next-btn" class="nav-btn">Next →</button>
+  <span class="step-counter" id="step-counter">Step 1 / 13</span>
+</div>
+
+<script>
+// ── Network data ─────────────────────────────────────────────────────────────
+const R = 24; // node circle radius
+const CX = 230, CY = 230, RAD = 185; // SVG center + layout radius
+
+// Node positions: decagon with Node 1 at top
+const NODES = Array.from({length: 10}, (_, i) => {
+  const deg = 90 - i * 36;
+  const rad = deg * Math.PI / 180;
+  return {
+    id: i + 1,
+    x: Math.round(CX + RAD * Math.cos(rad)),
+    y: Math.round(CY - RAD * Math.sin(rad)),
+    rep: 1.0,
+  };
+});
+
+// Undirected edges (seed=42, p=0.4 + spanning tree)
+const EDGES = [
+  [1,3],[1,4],[1,5],[1,9],
+  [2,3],[2,4],[2,6],[2,7],[2,10],
+  [3,6],[3,7],[3,9],[3,10],
+  [4,6],[4,7],[4,8],
+  [5,6],[5,10],
+  [6,9],
+  [7,10],
+  [8,9],[8,10],
+  [9,10],
+];
+
+// ── Step definitions ─────────────────────────────────────────────────────────
+// nodeClass: { nodeId: cssClass }  edgeClass: { "a-b": cssClass }
+// showTau: array of edge keys to show τ label  showPulse: nodeId to pulse
+
+const STEPS = [
+  // ── 1 ──
+  {
+    nodeClass: {},
+    edgeClass: {},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 1 of 13</div>
+<div class="step-title">Initial Network State</div>
+<div class="step-sub">Erdős–Rényi random mesh · p = 0.4 · seed = 42 · spanning-tree connected</div>
+<div class="explanation">
+  <p>The ColonySearch network consists of <strong>10 independent nodes</strong>.
+  Each node holds its own <strong>SQLite FTS5 full-text index</strong> and a
+  <strong>KNN semantic model</strong> — there is no central server and no shared index.</p>
+  <p>Nodes are wired together by a random mesh topology.
+  A <strong>spanning-tree pass</strong> guarantees every node is reachable,
+  so no query ever gets stranded. There are <strong>23 undirected edges</strong> in total.</p>
+  <p>Crucially, <strong>reputation is not a global value</strong>. Each node keeps its own
+  <code>_rep_table</code> — a local dictionary of what <em>it</em> believes about its peers.
+  After a query, the querying node updates rep for <strong>every peer that returned results</strong>
+  in the entire result pool, not just direct neighbours. Beliefs spread further via
+  <strong>gossip</strong> to direct neighbours.</p>
+  <p>Queries carry a <strong>TTL (time-to-live)</strong> depth budget. When TTL reaches 0 a node
+  searches locally only and does not forward — preventing unbounded flooding in large meshes.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Initial Values</div>
+  <div class="formula">
+    τ<sub>0</sub>(i,j) = <span class="val">1.0</span>  <span class="cmt">// pheromone on every edge (INITIAL_PHEROMONE)</span><br>
+    node._rep_table = <span class="val">{}</span>  <span class="cmt">// empty — unknown peers default to 1.0</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">System Constants</div>
+  <table>
+    <tr><th>Role</th><th>Symbol</th><th>Value</th><th>Meaning</th></tr>
+    <tr><td>Pheromone evaporation</td><td class="b">ρ</td><td class="g">0.10</td><td>How fast old trails fade</td></tr>
+    <tr><td>Rep. EMA (direct obs.)</td><td class="b">λ</td><td class="g">0.15</td><td>Weight for your own measurement</td></tr>
+    <tr><td>Rep. EMA (gossip)</td><td class="b">γ</td><td class="g">0.10</td><td>Weight for hearsay from a neighbor</td></tr>
+    <tr><td>Rep. blend weight</td><td class="b">w</td><td class="g">0.20</td><td>Rep influence on final score</td></tr>
+    <tr><td>ACO pheromone exponent</td><td class="b">α<sub>aco</sub></td><td class="g">1.0</td><td>Exploitation vs exploration</td></tr>
+    <tr><td>ACO rep. exponent</td><td class="b">β<sub>aco</sub></td><td class="g">1.0</td><td>Reputation bias in routing</td></tr>
+    <tr><td>Search blend (BM25 weight)</td><td class="b">α<sub>s</sub></td><td class="g">0.51</td><td>BM25 vs KNN balance</td></tr>
+    <tr><td>Pheromone floor</td><td class="b">τ<sub>min</sub></td><td class="g">0.01</td><td>No edge fully dies</td></tr>
+    <tr><td>Query depth limit</td><td class="b">TTL</td><td class="g">3</td><td>Max hops before a node goes local-only</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 2 ──
+  {
+    nodeClass: {1:'nent'},
+    edgeClass: {},
+    showTau: [],
+    showPulse: 1,
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 2 of 13</div>
+<div class="step-title">Query Arrives at Node 1</div>
+<div class="step-sub">User submits "machine learning" via the Flask /search endpoint</div>
+<div class="explanation">
+  <p>A user types <strong>"machine learning"</strong> into the search box. The HTTP GET request
+  lands on <strong>Node 1</strong> — the fixed entry point
+  (<code>myself = _network.get_node_obj("Node_1")</code>).</p>
+  <p>Node 1's <code>search()</code> method is called with <code>_visited = None</code> and
+  <code>ttl = DEFAULT_TTL = 3</code>, making it the <strong>root node</strong>
+  (<code>is_root = True</code>). Rep-blending and deduplication happen <em>only once</em>
+  at the root — applying them at every hop would inflate all scores toward 1.0.</p>
+  <p>A fresh <code>_visited = set()</code> is created locally. For in-process nodes this set is
+  passed by reference so every recursive call shares the same object.
+  For <strong>remote HTTP nodes</strong>, <code>_visited</code> is serialised to JSON and sent in
+  the request params — each remote process gets a <em>snapshot copy</em>, so cycle state
+  travels as data in the message rather than through shared memory.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Entry Flow</div>
+  <div class="formula">
+    GET /search?query=<span class="hi">"machine learning"</span><br>
+    <span class="cmt">↓</span><br>
+    Node1.search(query, <span class="sym">_visited=None</span>, <span class="sym">ttl=3</span>)<br>
+    &nbsp;&nbsp;is_root = <span class="val">True</span><br>
+    &nbsp;&nbsp;_visited = <span class="sym">{}</span>&nbsp;&nbsp;<span class="cmt">// fresh empty set (shared for local, serialised for remote)</span><br>
+    &nbsp;&nbsp;ttl = <span class="val">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cmt">// depth budget; reaches 0 → local-only, no forwarding</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Node 1 State at Query Arrival</div>
+  <table>
+    <tr><th>Attribute</th><th>Value</th></tr>
+    <tr><td>node_id</td><td class="b">"data/dbs/Node_1"</td></tr>
+    <tr><td>local</td><td class="g">True</td></tr>
+    <tr><td>_rep_table</td><td class="b">{} — all peers unknown, default 1.0</td></tr>
+    <tr><td>neighbors</td><td class="b">Node 3, 4, 5, 9</td></tr>
+    <tr><td>pheromone (all edges)</td><td class="g">τ = 1.0</td></tr>
+    <tr><td>ttl received</td><td class="g">3 (DEFAULT_TTL — root call)</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 3 ──
+  {
+    nodeClass: {1:'nact'},
+    edgeClass: {},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 3 of 13</div>
+<div class="step-title">Node 1: BM25 Full-Text Search</div>
+<div class="step-sub">SQLite FTS5 · BM25 scoring · stop-word filtering</div>
+<div class="explanation">
+  <p>Node 1 first marks itself visited (<code>_visited.add("Node_1")</code>), then queries its
+  <strong>SQLite FTS5 index</strong> using BM25 — a probabilistic keyword relevance formula.</p>
+  <p>The raw query <strong>"machine learning"</strong> is sanitized: FTS5 special characters
+  are stripped and stop-words are removed. Result: tokens <code>["machine", "learning"]</code>.</p>
+  <p>FTS5 returns <em>negative</em> BM25 values (lower = better in SQLite). We negate them so
+  higher = better, then <strong>min-max normalize</strong> to [0, 1] across the candidate set.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">BM25 Formula (per document d, query term t)</div>
+  <div class="formula">
+    BM25(d) = Σ<sub>t</sub> IDF(t) · <span class="sym">(tf(t,d) · (k₁+1))</span> / <span class="sym">(tf(t,d) + k₁·(1−b+b·|d|/avgDL))</span><br><br>
+    <span class="cmt">// FTS5 returns −BM25(d) → we negate: raw = −score(FTS5)</span><br>
+    BM25<sub>norm</sub>(d) = (raw(d) − min) / (max − min) <span class="cmt">→ [0, 1]</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Node 1 · BM25 Results for "machine learning"</div>
+  <table>
+    <tr><th>Document</th><th>BM25 raw</th><th>BM25 norm</th></tr>
+    <tr><td>intro_to_ml.txt</td><td>2.81</td><td class="g">1.000</td></tr>
+    <tr><td>neural_networks.txt</td><td>1.65</td><td class="b">0.521</td></tr>
+    <tr><td>bitcoin_overview.txt</td><td>0.58</td><td>0.000</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 4 ──
+  {
+    nodeClass: {1:'nact'},
+    edgeClass: {},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 4 of 13</div>
+<div class="step-title">Node 1: KNN Semantic Search</div>
+<div class="step-sub">Sentence-transformers · all-mpnet-base-v2 · cosine similarity</div>
+<div class="explanation">
+  <p>In parallel with BM25, Node 1 encodes the query into a
+  <strong>768-dimensional sentence embedding</strong> using <code>all-mpnet-base-v2</code>.
+  It then queries its pre-trained <strong>KNN model</strong> (scikit-learn, fitted offline) to find
+  the <em>k</em> nearest document vectors by cosine distance.</p>
+  <p>Unlike BM25, cosine similarity is already in [0, 1] and carries an
+  <strong>absolute</strong> signal: a node full of irrelevant docs will score near 0 — min-max
+  normalization would destroy this signal, so KNN scores are <em>not</em> rescaled.</p>
+  <p>The KNN model may have extra link-graph feature columns; the query vector is
+  <strong>zero-padded</strong> to match (zero is the neutral value).</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">KNN Cosine Similarity</div>
+  <div class="formula">
+    <span class="cmt">// Query vector: q = encode("machine learning")  [768-dim]</span><br>
+    cos_sim(q, d) = 1 − cos_dist(q, d)<br><br>
+    cos_dist(q,d) = 1 − <span class="sym">(q · d)</span> / (<span class="sym">‖q‖</span> · <span class="sym">‖d‖</span>)<br><br>
+    <span class="cmt">// KNN score is NOT min-max normalized — absolute signal matters</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Node 1 · KNN Results for "machine learning"</div>
+  <table>
+    <tr><th>Document</th><th>Cosine dist</th><th>KNN score (1 − dist)</th></tr>
+    <tr><td>intro_to_ml.txt</td><td>0.112</td><td class="g">0.888</td></tr>
+    <tr><td>neural_networks.txt</td><td>0.278</td><td class="b">0.722</td></tr>
+    <tr><td>bitcoin_overview.txt</td><td>0.689</td><td>0.311</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 5 ──
+  {
+    nodeClass: {1:'nact'},
+    edgeClass: {},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 5 of 13</div>
+<div class="step-title">Node 1: Hybrid Score Blend</div>
+<div class="step-sub">BM25 (keyword) + KNN (semantic) · α = 0.51</div>
+<div class="explanation">
+  <p>BM25 and KNN scores are combined into a single <strong>blended score</strong> per document.
+  The blend weight <strong>α = 0.51</strong> gives a slight edge to BM25 (keyword match),
+  while KNN provides semantic fallback for paraphrases and synonyms.</p>
+  <p>Documents that appear in <em>only one</em> signal get 0 for the missing component — this
+  is intentional: a doc with no keyword match but high semantic similarity still scores
+  <code>(1-0.51) × KNN_score</code>.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Hybrid Blend Formula</div>
+  <div class="formula">
+    score(d) = <span class="sym">α<sub>s</sub></span> · BM25<sub>norm</sub>(d) + (1 − <span class="sym">α<sub>s</sub></span>) · KNN(d)<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <span class="val">0.51</span> · BM25<sub>norm</sub>(d) + <span class="val">0.49</span> · KNN(d)
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Node 1 · Blended Scores</div>
+  <table>
+    <tr><th>Document</th><th>BM25 norm</th><th>KNN</th><th>Blended score</th></tr>
+    <tr><td>intro_to_ml.txt</td><td>1.000</td><td>0.888</td><td class="g">0.510×1.000 + 0.490×0.888 = <strong>0.945</strong></td></tr>
+    <tr><td>neural_networks.txt</td><td>0.521</td><td>0.722</td><td class="b">0.510×0.521 + 0.490×0.722 = <strong>0.619</strong></td></tr>
+    <tr><td>bitcoin_overview.txt</td><td>0.000</td><td>0.311</td><td>0.510×0.000 + 0.490×0.311 = <strong>0.152</strong></td></tr>
+  </table>
+  <div style="margin-top:8px" class="calc">
+    Node 1 local results: <span class="result">[0.945, 0.619, 0.152]</span>
+  </div>
+</div>`
+  },
+
+  // ── 6 ──
+  {
+    nodeClass: {1:'nact', 3:'nqry', 4:'nqry', 5:'nqry', 9:'nqry'},
+    edgeClass: {'1-3':'eact','1-4':'eact','1-5':'eact','1-9':'eact'},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 6 of 13</div>
+<div class="step-title">ACO: Neighbor Selection</div>
+<div class="step-sub">P(j) ∝ τ(i,j)<sup>α</sup> · rep(j)<sup>β</sup> — probabilistic routing</div>
+<div class="explanation">
+  <p>Node 1 now asks: <em>which neighbors should I forward the query to?</em>
+  It calls <code>get_neighbors(top_k=10)</code>, which uses the core
+  <strong>Ant Colony Optimization</strong> mechanic: neighbors are sampled
+  <em>probabilistically</em>, biased toward high-pheromone, high-reputation links.</p>
+  <p>The reputation used here — <code>rep(j)</code> — comes from
+  <strong>Node 1's own local <code>_rep_table</code></strong> via <code>self.get_rep(nid)</code>.
+  On this first query the table is empty, so all peers default to 1.0.
+  After queries complete and gossip propagates, different nodes will hold
+  <em>different</em> beliefs about the same peer — there is no shared truth.</p>
+  <p>Sampling uses <strong>Efraimidis–Spirakis reservoir keys</strong>:
+  each neighbor j draws key = −log(U) / w<sub>j</sub> where U ~ Uniform(0,1).
+  Items with the smallest keys are selected — this gives exact weighted sampling
+  without replacement and without numpy.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">ACO Selection Weight Formula</div>
+  <div class="formula">
+    w(j) = τ(i,j)<sup><span class="sym">α<sub>aco</sub></span></sup> · rep(j)<sup><span class="sym">β<sub>aco</sub></span></sup><br><br>
+    <span class="cmt">// Reservoir key (Efraimidis–Spirakis):</span><br>
+    key(j) = −log(U<sub>j</sub>) / w(j)&nbsp;&nbsp;&nbsp;<span class="cmt">U<sub>j</sub> ~ Uniform(0,1)</span><br>
+    <span class="cmt">// Select top-k neighbors with smallest keys</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Node 1 → Neighbor Weights (First Query: all τ=1.0, _rep_table={} → default 1.0, k=2)</div>
+  <table>
+    <tr><th>Neighbor</th><th>τ(1,j)</th><th>N1.get_rep(j)</th><th>w(j) = τ<sup>1.0</sup> · rep<sup>1.0</sup></th><th>key = −log(U)/w</th><th>Selected?</th></tr>
+    <tr><td>Node 3</td><td>1.0</td><td>1.0</td><td class="b">1.0</td><td class="g">0.31  ← smallest</td><td class="g">✓  (k=2, rank 1)</td></tr>
+    <tr><td>Node 4</td><td>1.0</td><td>1.0</td><td class="b">1.0</td><td>1.47</td><td class="o">✗  (rank 3)</td></tr>
+    <tr><td>Node 5</td><td>1.0</td><td>1.0</td><td class="b">1.0</td><td>2.05</td><td class="o">✗  (rank 4)</td></tr>
+    <tr><td>Node 9</td><td>1.0</td><td>1.0</td><td class="b">1.0</td><td class="g">0.88  ← 2nd smallest</td><td class="g">✓  (k=2, rank 2)</td></tr>
+  </table>
+  <div style="margin-top:8px" class="calc">
+    All weights are equal on the first query, so the 2 winners are <span class="result">random</span> — here N3 and N9 happen to draw the smallest keys.
+    After this query, τ(1→3) and τ(1→9) will increase, making them more likely to win future samples.
+    N4 and N5 are <span class="o">not queried directly</span> — they are still reachable through the cascade.
+  </div>
+</div>`
+  },
+
+  // ── 7 ──
+  {
+    nodeClass: {1:'nact', 3:'nvis', 9:'nvis'},
+    edgeClass: {'1-3':'eqry','1-9':'eqry'},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 7 of 13</div>
+<div class="step-title">Hop 1 — Direct Neighbors Called (k=2, ttl=3→2)</div>
+<div class="step-sub">Node 1 calls search() on N3 and N9, passing ttl−1=2 and the current _visited snapshot</div>
+<div class="explanation">
+  <p>Node 1 calls <code>node.search(query, _visited, ttl−1)</code> on each of its <strong>2 selected
+  neighbors</strong>. TTL is decremented by 1 at every hop — N3 and N9 receive
+  <strong>ttl=2</strong>, can forward once more (to nodes that get ttl=1), and those nodes
+  can forward one last time (to nodes that get ttl=0 and stop).</p>
+  <p>The <code>_visited</code> set is <strong>shared by reference</strong> for same-process
+  nodes — every recursive call sees the same object and cycle prevention is automatic.
+  For <strong>remote HTTP calls</strong> the current snapshot is serialised as JSON in the
+  request params, so each remote process works on its own copy; additions it makes
+  stay local to that process.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Call Structure (sequential, TTL decremented each hop)</div>
+  <div class="formula">
+    councilor_nodes = [N3, N9]  <span class="cmt">// k=2, computed ONCE before the loop</span><br>
+    for j in councilor_nodes:<br>
+    &nbsp;&nbsp;results<sub>j</sub> = j.<span class="hi">search</span>(query, <span class="sym">_visited</span>, <span class="sym">ttl−1</span>)<br>
+    &nbsp;&nbsp;<span class="cmt">// N3, N9 receive ttl=2 → can still forward</span><br>
+    &nbsp;&nbsp;all_peer_results += results<sub>j</sub>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Direct neighbor behaviour</div>
+  <table>
+    <tr><th>Node</th><th>ttl received</th><th>Local search</th><th>Forwards?</th></tr>
+    <tr><td class="g">Node 3</td><td class="g">2</td><td class="g">✓</td><td class="o">Yes — selects k=2 unvisited neighbors, passes ttl=1</td></tr>
+    <tr><td class="g">Node 9</td><td class="g">2</td><td class="g">✓</td><td class="o">Yes — selects k=2 unvisited neighbors, passes ttl=1</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 8 — recursive cascade with TTL ──
+  {
+    nodeClass: {1:'nact', 2:'nvis', 3:'nvis', 5:'nvis', 6:'nvis', 7:'nvis', 8:'nvis', 9:'nvis', 10:'nvis'},
+    edgeClass: {
+      '1-3':'eqry', '1-9':'eqry',
+      '3-6':'eqry', '3-10':'eqry',
+      '2-6':'eqry', '5-6':'eqry',
+      '7-10':'eqry', '8-10':'eqry',
+      '8-9':'eqry',
+    },
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 8 of 13</div>
+<div class="step-title">TTL-Limited Cascade — 9 of 10 Nodes Reached</div>
+<div class="step-sub">TTL=3 allows 3 hops from Node 1; ttl=0 nodes search locally only — N4 unreached this run</div>
+<div class="explanation">
+  <p>With <strong>TTL=3 and k=2</strong>, the cascade fans out to at most 1+2+4+8 = 15 slots,
+  but the 10-node network and <code>_visited</code> cap the real coverage.
+  In this representative run <strong>9 of 10 nodes</strong> are reached — N4 never appears
+  in any node's k=2 selection this round.</p>
+  <p>Nodes receiving <strong>ttl=0</strong> (N2, N5, N7, N8) run their local search and return
+  results immediately — no forwarding. This is the key difference from the old behaviour:
+  the cascade is now <strong>depth-bounded</strong>, not just cycle-bounded.</p>
+  <p><code>_visited</code> still prevents cycles for in-process nodes (shared reference).
+  For remote nodes it was already serialised into the HTTP request — each remote process
+  adds its own node to a local copy, which is fine because the cycle-relevant path is
+  captured in the message, not in shared memory.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">TTL Depth Map (one representative run, k=2)</div>
+  <div class="formula" style="font-size:0.82rem; line-height:1.9">
+    <span class="val">ttl=3</span> Node 1  →  <span class="val">ttl=2</span> N3, N9<br>
+    &nbsp;&nbsp;&nbsp;<span class="val">ttl=2</span> N3  →  <span class="val">ttl=1</span> N6, N10<br>
+    &nbsp;&nbsp;&nbsp;<span class="val">ttl=2</span> N9  →  <span class="val">ttl=1</span> N8 &nbsp;&nbsp;<span class="cmt">(N10 already visited by N3)</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">ttl=1</span> N6  →  <span class="val">ttl=0</span> N2, N5 &nbsp;&nbsp;<span class="cmt">← local only, no forwarding</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">ttl=1</span> N10 →  <span class="val">ttl=0</span> N7 &nbsp;&nbsp;&nbsp;&nbsp;<span class="cmt">(N8 visited by N9's path)</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">ttl=1</span> N8  →  (all neighbors visited — leaf)<br>
+    <span class="cmt">// N4 never selected → not reached this run</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Call tally — TTL determines forwarding rights, not just _visited</div>
+  <table>
+    <tr><th>Node</th><th>ttl</th><th>Forwards to</th><th>Results bubble up to…</th></tr>
+    <tr><td class="o">N1</td><td class="g">3</td><td class="g">N3, N9</td><td>—</td></tr>
+    <tr><td class="g">N3</td><td class="g">2</td><td class="g">N6, N10</td><td class="o">N1</td></tr>
+    <tr><td class="g">N9</td><td class="g">2</td><td class="g">N8</td><td class="o">N1</td></tr>
+    <tr><td class="g">N6</td><td class="g">1</td><td class="g">N2, N5</td><td class="b">N3 → N1</td></tr>
+    <tr><td class="g">N10</td><td class="g">1</td><td class="g">N7</td><td class="b">N3 → N1</td></tr>
+    <tr><td class="g">N8</td><td class="g">1</td><td>leaf (all visited)</td><td class="b">N9 → N1</td></tr>
+    <tr><td class="g">N2</td><td class="o">0</td><td class="o">— (local only)</td><td class="b">N6 → N3 → N1</td></tr>
+    <tr><td class="g">N5</td><td class="o">0</td><td class="o">— (local only)</td><td class="b">N6 → N3 → N1</td></tr>
+    <tr><td class="g">N7</td><td class="o">0</td><td class="o">— (local only)</td><td class="b">N10 → N3 → N1</td></tr>
+    <tr><td>N4</td><td>—</td><td class="o">not reached this run</td><td>—</td></tr>
+  </table>
+  <div style="margin-top:8px" class="calc">
+    All 9 reached nodes contribute results to Node 1's <code>all_peer_results</code> pool.
+    <span class="result">Every one of them gets a rep update from Node 1</span> — not just N3 and N9.
+  </div>
+</div>`
+  },
+
+  // ── 9 ──
+  {
+    nodeClass: {1:'nact', 2:'nvis', 3:'nvis', 5:'nvis', 6:'nvis', 7:'nvis', 8:'nvis', 9:'nvis', 10:'nvis'},
+    edgeClass: {'1-3':'eact','1-9':'eact'},
+    showTau: [],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 9 of 13</div>
+<div class="step-title">Harmonic Node Score — All Contributing Nodes</div>
+<div class="step-sub">Node 1 scores every node whose results appear in all_peer_results</div>
+<div class="explanation">
+  <p>After the cascade, Node 1 scans <code>all_peer_results</code> and groups results by
+  <code>node_id</code>. It computes a <strong>harmonic-weighted score</strong> for
+  <em>every</em> node that contributed at least one result — not just N3 and N9.</p>
+  <p>This means Node 1 forms a reputation opinion about all 8 reached nodes
+  (N2, N3, N5, N6, N7, N8, N9, N10) based on the quality of <em>that node's own documents</em>,
+  regardless of how many hops away it sits. N4 contributed nothing → no score, no update.</p>
+  <p>Rank 1 gets weight 1, rank 2 gets 1/2, etc. Quality matters, not quantity.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Harmonic Node Score Formula</div>
+  <div class="formula">
+    score<sub>node</sub> = <span class="sym">Σ<sub>i</sub> (score<sub>i</sub> / i)</span> / <span class="sym">Σ<sub>i</sub> (1 / i)</span>&nbsp;&nbsp;<span class="cmt">i = rank (1-indexed)</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Scores for all 8 result-contributing nodes (abbreviated)</div>
+  <table>
+    <tr><th>Node</th><th>Top result scores</th><th>Harmonic score</th></tr>
+    <tr><td class="g">N9</td><td>[0.910, 0.680, 0.590]</td><td class="g">0.791</td></tr>
+    <tr><td class="g">N3</td><td>[0.880, 0.710, 0.550]</td><td class="g">0.773</td></tr>
+    <tr><td class="g">N6</td><td>[0.810, 0.630]</td><td class="b">0.720</td></tr>
+    <tr><td class="g">N2</td><td>[0.770, 0.620]</td><td class="b">0.695</td></tr>
+    <tr><td class="g">N10</td><td>[0.720, 0.560]</td><td class="b">0.640</td></tr>
+    <tr><td class="g">N7</td><td>[0.480]</td><td class="b">0.480</td></tr>
+    <tr><td class="g">N8</td><td>[0.580]</td><td class="b">0.580</td></tr>
+    <tr><td class="g">N5</td><td>[0.420]</td><td class="b">0.420</td></tr>
+    <tr><td>N4</td><td>—</td><td class="o">not reached → no update</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 10 ──
+  {
+    nodeClass: {1:'nact', 2:'nvis', 3:'nvis', 5:'nvis', 6:'nvis', 7:'nvis', 8:'nvis', 9:'nvis', 10:'nvis'},
+    edgeClass: {'1-3':'ephr','1-9':'ephr'},
+    showTau: ['1-3','1-9'],
+    repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
+    tauValues: {'1-3':1.673,'1-9':1.691},
+    html: `
+<div class="step-num">Step 10 of 13</div>
+<div class="step-title">Pheromone Update — Direct Edges Only</div>
+<div class="step-sub">τ<sub>new</sub>(i,j) = (1−ρ)·τ<sub>old</sub>(i,j) + Δτ<sub>j</sub> — edges 1→3 and 1→9 only</div>
+<div class="explanation">
+  <p>Even though Node 1 now computes quality scores for all 8 reached nodes,
+  <strong>pheromone is only deposited on edges that exist in the graph</strong>.
+  Node 1 has direct edges to N3 and N9 (the k=2 councilors), so only those
+  edges get an update. Nodes N2, N5, N6, N7, N8, N10 contributed results via
+  multi-hop forwarding — Node 1 uses their scores for <em>reputation</em>
+  updates (next step), but it cannot lay pheromone on edges it doesn't have.</p>
+  <p>Edges 1→4 and 1→5 are <strong>not touched</strong> — they were not used this round.
+  Their pheromone stays at 1.0; gradual evaporation over future queries will
+  eventually make N3 and N9 the strongly preferred routes.</p>
+  <p>Evaporation (ρ = 0.10) prevents early winners from dominating forever.
+  A minimum floor τ<sub>min</sub> = 0.01 ensures no edge fully dies.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">ACO Pheromone Update Rule</div>
+  <div class="formula">
+    τ<sub>new</sub>(i,j) = (1 − <span class="sym">ρ</span>) · τ<sub>old</sub>(i,j) + <span class="sym">Δτ<sub>j</sub></span><br><br>
+    where&nbsp; <span class="sym">ρ</span> = <span class="val">0.10</span>&nbsp;&nbsp;<span class="cmt">(PHEROMONE_EVAP)</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sym">Δτ<sub>j</sub></span> = score<sub>node_j</sub> <span class="cmt">(harmonic quality score — direct councilors only)</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Practical Calculation</div>
+  <div class="calc">
+τ(1→3): (1−0.10)×1.0 + 0.773 = 0.900 + 0.773 = <span class="updated">1.673</span>
+τ(1→9): (1−0.10)×1.0 + 0.791 = 0.900 + 0.791 = <span class="updated">1.691</span>
+
+τ(1→4): unchanged → <span class="o">1.000</span>  (not queried this round)
+τ(1→5): unchanged → <span class="o">1.000</span>  (not queried this round)
+
+N2, N5, N6, N7, N8, N10: <span class="cmt">no direct edge from N1 → no pheromone update,
+  but their scores are still used for reputation (see Step 11).</span>
+  </div>
+</div>`
+  },
+
+  // ── 11 ──
+  {
+    nodeClass: {1:'nact', 2:'nupd', 3:'nupd', 5:'nupd', 6:'nupd', 7:'nupd', 8:'nupd', 9:'nupd', 10:'nupd'},
+    edgeClass: {'1-3':'ephr','1-9':'ephr'},
+    showTau: ['1-3','1-9'],
+    repValues: {1:1.0,2:0.954,3:0.966,4:1.0,5:0.913,6:0.958,7:0.922,8:0.937,9:0.969,10:0.946},
+    tauValues: {'1-3':1.673,'1-9':1.691},
+    html: `
+<div class="step-num">Step 11 of 13</div>
+<div class="step-title">Local Reputation Update (EMA) — All 8 Reached Nodes</div>
+<div class="step-sub">Node 1 calls update_rep for every node_id appearing in all_peer_results</div>
+<div class="explanation">
+  <p>After the cascade, Node 1 scans <code>all_peer_results</code>, groups results by
+  <code>node_id</code>, and calls <code>self.update_rep(nid, score)</code> for every
+  node that returned at least one result. This is <strong>not limited to direct
+  councilors</strong> — N6, N2, N10, N7, N8, and N5 (reached via multi-hop) all
+  get entries in Node 1's local <code>_rep_table</code>.</p>
+  <p>N4 is the only node without an entry — it was never reached due to the TTL cascade
+  and k=2 sampling, so Node 1 has no observation and leaves it at the default
+  <strong>1.0</strong>.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Direct-Observation EMA (λ = REP_DECAY = 0.15)</div>
+  <div class="formula">
+    self._rep_table[j] = (1 − <span class="sym">λ</span>) · old + <span class="sym">λ</span> · score<sub>j</sub><br><br>
+    <span class="cmt">// old = self._rep_table.get(j, 1.0)  — default 1.0 for all unknowns</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Node 1's _rep_table after first query</div>
+  <table>
+    <tr><th>Entry</th><th>Harmonic score</th><th>Calculation</th><th>New rep</th></tr>
+    <tr><td>Node_9</td><td>0.791</td><td>0.85×1.0 + 0.15×0.791</td><td class="updated">0.969</td></tr>
+    <tr><td>Node_3</td><td>0.773</td><td>0.85×1.0 + 0.15×0.773</td><td class="updated">0.966</td></tr>
+    <tr><td>Node_6</td><td>0.720</td><td>0.85×1.0 + 0.15×0.720</td><td class="updated">0.958</td></tr>
+    <tr><td>Node_2</td><td>0.695</td><td>0.85×1.0 + 0.15×0.695</td><td class="updated">0.954</td></tr>
+    <tr><td>Node_10</td><td>0.640</td><td>0.85×1.0 + 0.15×0.640</td><td class="updated">0.946</td></tr>
+    <tr><td>Node_8</td><td>0.580</td><td>0.85×1.0 + 0.15×0.580</td><td class="updated">0.937</td></tr>
+    <tr><td>Node_7</td><td>0.480</td><td>0.85×1.0 + 0.15×0.480</td><td class="updated">0.922</td></tr>
+    <tr><td>Node_5</td><td>0.420</td><td>0.85×1.0 + 0.15×0.420</td><td class="updated">0.913</td></tr>
+    <tr><td>Node_4</td><td class="o">—</td><td class="o">not reached</td><td class="o">1.000 (default)</td></tr>
+  </table>
+</div>`
+  },
+
+  // ── 12 — Gossip propagation ──
+  {
+    nodeClass: {1:'nact', 3:'ngsip', 4:'ngsip', 5:'ngsip', 9:'ngsip'},
+    edgeClass: {'1-3':'egsip','1-4':'egsip','1-5':'egsip','1-9':'egsip'},
+    showTau: [],
+    repValues: {1:1.0,2:0.954,3:0.966,4:1.0,5:0.913,6:0.958,7:0.922,8:0.937,9:0.969,10:0.946},
+    tauValues: {},
+    html: `
+<div class="step-num">Step 12 of 13</div>
+<div class="step-title">Gossip Propagation — 8 Rounds</div>
+<div class="step-sub">Node 1 gossips once per observed node → 8 rounds, each to ≤4 direct neighbors</div>
+<div class="explanation">
+  <p>After each <code>update_rep</code> call, Node 1 immediately calls
+  <code>self._gossip_rep(about_id, new_value)</code>. This iterates <strong>all of Node 1's
+  direct neighbors</strong> (N3, N4, N5, N9) and pushes the fresh reputation value to each,
+  skipping only the node being gossiped about (it would be circular for it to receive gossip
+  about itself from its own observer).</p>
+  <p>Because Node 1 observed 8 nodes this round, gossip fires <strong>8 times</strong>.
+  Each recipient blends the gossip at <strong>γ = 0.10</strong> — lower than the λ = 0.15
+  direct observation rate, because hearsay is less trustworthy than your own measurement.</p>
+  <p>Gossip is <strong>one-hop only</strong>: recipients do not re-broadcast, keeping
+  reputation changes traceable back to a single original observation.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Gossip Merge Rule (γ = GOSSIP_WEIGHT = 0.10)</div>
+  <div class="formula">
+    recipient._rep_table[about] = (1 − <span class="sym">γ</span>) · old + <span class="sym">γ</span> · received_value<br><br>
+    <span class="cmt">// old = recipient._rep_table.get(about, 1.0)  — default 1.0 for unknowns</span><br>
+    <span class="cmt">// γ &lt; λ: hearsay counts less than direct observation</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">All 8 gossip rounds — recipients are N1's neighbors minus the subject</div>
+  <table>
+    <tr><th>About</th><th>value</th><th>Recipients</th><th>0.9×1.0 + 0.1×value</th><th>New rep[about]</th></tr>
+    <tr><td>N2</td><td>0.954</td><td>N3, N4, N5, N9</td><td>0.900+0.095</td><td class="updated">0.995</td></tr>
+    <tr><td>N3</td><td>0.966</td><td>N4, N5, N9</td><td>0.900+0.097</td><td class="updated">0.997</td></tr>
+    <tr><td>N5</td><td>0.913</td><td>N3, N4, N9</td><td>0.900+0.091</td><td class="updated">0.991</td></tr>
+    <tr><td>N6</td><td>0.958</td><td>N3, N4, N5, N9</td><td>0.900+0.096</td><td class="updated">0.996</td></tr>
+    <tr><td>N7</td><td>0.922</td><td>N3, N4, N5, N9</td><td>0.900+0.092</td><td class="updated">0.992</td></tr>
+    <tr><td>N8</td><td>0.937</td><td>N3, N4, N5, N9</td><td>0.900+0.094</td><td class="updated">0.994</td></tr>
+    <tr><td>N9</td><td>0.969</td><td>N3, N4, N5</td><td>0.900+0.097</td><td class="updated">0.997</td></tr>
+    <tr><td>N10</td><td>0.946</td><td>N3, N4, N5, N9</td><td>0.900+0.095</td><td class="updated">0.995</td></tr>
+  </table>
+  <p style="margin-top:0.6em;font-size:0.85em;color:#888">
+    After one query cycle, N4 (never reached itself) has received gossip about
+    all 8 observed nodes — <span class="result">without ever forwarding a single query</span>.
+    N3 and N9 also now know something about nodes they never directly contacted.
+  </p>
+</div>`
+  },
+
+  // ── 13 ──
+  {
+    nodeClass: {1:'nent', 2:'nvis', 3:'nvis', 5:'nvis', 6:'nvis', 7:'nvis', 8:'nvis', 9:'nvis', 10:'nvis'},
+    edgeClass: {'1-3':'ephr','1-9':'ephr'},
+    showTau: ['1-3','1-9'],
+    repValues: {1:1.0,2:0.954,3:0.966,4:1.0,5:0.913,6:0.958,7:0.922,8:0.937,9:0.969,10:0.946},
+    tauValues: {'1-3':1.673,'1-9':1.691},
+    html: `
+<div class="step-num">Step 13 of 13</div>
+<div class="step-title">Final Blend &amp; Top-10 Results</div>
+<div class="step-sub">score<sub>final</sub> = (1−w)·raw + w·(rep<sub>j</sub> / max_rep) · deduplicate · sort</div>
+<div class="explanation">
+  <p>Back at the root, Node 1 now holds all results collected from itself and all reachable nodes.
+  Three final steps run <em>exactly once</em> at the root:</p>
+  <p><strong>1. Rep blending</strong> — Each result's raw score is nudged by its source node's
+  reputation, read from <strong>Node 1's local <code>_rep_table</code></strong>
+  via <code>self.get_rep(node_id)</code>. <code>REP_WEIGHT = 0.20</code> means reputation
+  contributes 20% of the final score. Scores are normalized by <code>max_rep</code> (= 1.0
+  here, since N1 and N4 both default to 1.0). N4 was never reached, so it keeps the
+  benefit-of-the-doubt default — but nodes that were reached and scored below 1.0 (like N5 at 0.913)
+  are slightly penalised.</p>
+  <p><strong>2. Deduplication</strong> — The same document can arrive via multiple mesh paths.
+  Only the copy with the highest score is kept.</p>
+  <p><strong>3. Sort &amp; truncate</strong> — Results sorted descending; top 10 returned.</p>
+</div>
+<div class="fblock">
+  <div class="fblock-label">Reputation Blending Formula (using Node 1's local _rep_table)</div>
+  <div class="formula">
+    score<sub>final</sub>(d) = (1 − <span class="sym">w</span>) · score<sub>raw</sub>(d) + <span class="sym">w</span> · self.get_rep(node_id<sub>j</sub>) / max_rep<br><br>
+    where&nbsp; <span class="sym">w</span> = <span class="val">0.20</span>,&nbsp; max_rep = <span class="val">1.0</span> (N1 self / N4 not reached → default 1.0)
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Final Top-10 Results</div>
+  <table>
+    <tr><th>#</th><th>Document</th><th>Node</th><th>raw</th><th>N1.get_rep(node)</th><th>final score</th></tr>
+    <tr><td>1</td><td>intro_to_ml.txt</td><td class="p">N1</td><td>0.945</td><td>1.000 (self/default)</td><td class="g">0.8×0.945+0.2×1.000 = <strong>0.956</strong></td></tr>
+    <tr><td>2</td><td>deep_learning_intro.txt</td><td class="g">N9</td><td>0.910</td><td>0.969 (observed)</td><td class="g">0.8×0.910+0.2×0.969 = <strong>0.922</strong></td></tr>
+    <tr><td>3</td><td>ml_basics.txt</td><td class="g">N3</td><td>0.880</td><td>0.966 (observed)</td><td class="g">0.8×0.880+0.2×0.966 = <strong>0.897</strong></td></tr>
+    <tr><td>4</td><td>supervised_learning.txt</td><td class="b">N4</td><td>0.760</td><td>1.000 (default — not reached)</td><td class="g">0.8×0.760+0.2×1.000 = <strong>0.808</strong></td></tr>
+    <tr><td>5</td><td>gradient_descent.txt</td><td class="g">N3</td><td>0.710</td><td>0.966 (observed)</td><td>0.8×0.710+0.2×0.966 = <strong>0.761</strong></td></tr>
+    <tr><td>6</td><td>backpropagation.txt</td><td class="g">N9</td><td>0.680</td><td>0.969 (observed)</td><td>0.8×0.680+0.2×0.969 = <strong>0.738</strong></td></tr>
+    <tr><td>7</td><td>neural_networks.txt</td><td class="p">N1</td><td>0.619</td><td>1.000 (self/default)</td><td>0.8×0.619+0.2×1.000 = <strong>0.695</strong></td></tr>
+    <tr><td>8</td><td>overfitting.txt</td><td class="g">N9</td><td>0.590</td><td>0.969 (observed)</td><td>0.8×0.590+0.2×0.969 = <strong>0.666</strong></td></tr>
+    <tr><td>9</td><td>decision_trees.txt</td><td class="b">N4</td><td>0.440</td><td>1.000 (default — not reached)</td><td>0.8×0.440+0.2×1.000 = <strong>0.552</strong></td></tr>
+    <tr><td>10</td><td>clustering_algorithms.txt</td><td class="o">N5</td><td>0.420</td><td>0.913 (observed — ttl=0 leaf)</td><td>0.8×0.420+0.2×0.913 = <strong>0.519</strong></td></tr>
+  </table>
+  <p style="margin-top:0.6em;font-size:0.85em;color:#888">
+    N5's result scores slightly lower than before (0.519 vs 0.536) because Node 1 now has
+    a direct observation of N5's quality (0.913) — lower than the 1.0 default. N4 still
+    benefits from the default because it was never reached.
+  </p>
+</div>`
+  },
+];
+
+// ── SVG Rendering ─────────────────────────────────────────────────────────────
+const svg = document.getElementById('network-svg');
+const edgesLayer = document.getElementById('edges-layer');
+const nodesLayer = document.getElementById('nodes-layer');
+
+function nodeById(id) { return NODES.find(n => n.id === id); }
+
+function edgeEndpoints(n1, n2) {
+  const dx = n2.x - n1.x, dy = n2.y - n1.y;
+  const len = Math.sqrt(dx*dx + dy*dy) || 1;
+  const ux = dx/len, uy = dy/len;
+  return { x1: n1.x + R*ux, y1: n1.y + R*uy, x2: n2.x - R*ux, y2: n2.y - R*uy };
+}
+
+// Build SVG elements once
+const edgeEls = {};
+const tauEls = {};
+
+EDGES.forEach(([a, b]) => {
+  const na = nodeById(a), nb = nodeById(b);
+  const key = `${a}-${b}`;
+  const ep = edgeEndpoints(na, nb);
+
+  const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  line.setAttribute('x1', ep.x1); line.setAttribute('y1', ep.y1);
+  line.setAttribute('x2', ep.x2); line.setAttribute('y2', ep.y2);
+  line.setAttribute('class', 'edef');
+  line.id = `edge-${key}`;
+  edgesLayer.appendChild(line);
+  edgeEls[key] = line;
+
+  // τ label at midpoint
+  const mx = (na.x + nb.x) / 2, my = (na.y + nb.y) / 2;
+  const tau = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  tau.setAttribute('x', mx); tau.setAttribute('y', my);
+  tau.setAttribute('class', 'etau');
+  tau.id = `tau-${key}`;
+  edgesLayer.appendChild(tau);
+  tauEls[key] = tau;
+});
+
+const nodeEls = {};
+const labelEls = {};
+const repEls = {};
+const pulseEls = {};
+
+NODES.forEach(n => {
+  // Pulse ring (behind circle)
+  const pulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  pulse.setAttribute('cx', n.x); pulse.setAttribute('cy', n.y); pulse.setAttribute('r', 26);
+  pulse.setAttribute('class', 'pulse-ring'); pulse.setAttribute('stroke', 'var(--purple)');
+  pulse.id = `pulse-${n.id}`;
+  nodesLayer.appendChild(pulse);
+  pulseEls[n.id] = pulse;
+
+  // Node circle
+  const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  circle.setAttribute('cx', n.x); circle.setAttribute('cy', n.y); circle.setAttribute('r', R);
+  circle.setAttribute('class', 'ndef');
+  circle.id = `node-${n.id}`;
+  nodesLayer.appendChild(circle);
+  nodeEls[n.id] = circle;
+
+  // Node label
+  const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  lbl.setAttribute('x', n.x); lbl.setAttribute('y', n.y - 4);
+  lbl.setAttribute('class', 'nlbl');
+  lbl.textContent = `N${n.id}`;
+  nodesLayer.appendChild(lbl);
+  labelEls[n.id] = lbl;
+
+  // Rep label (below node)
+  const rep = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  rep.setAttribute('x', n.x); rep.setAttribute('y', n.y + 10);
+  rep.setAttribute('class', 'nrep');
+  rep.textContent = 'r=1.0';
+  nodesLayer.appendChild(rep);
+  repEls[n.id] = rep;
+});
+
+// ── Step Rendering ────────────────────────────────────────────────────────────
+let currentStep = 0;
+
+function renderStep(idx) {
+  const step = STEPS[idx];
+
+  // Reset all nodes
+  NODES.forEach(n => {
+    const cls = step.nodeClass[n.id] || 'ndef';
+    nodeEls[n.id].setAttribute('class', cls);
+    labelEls[n.id].setAttribute('class', `nlbl ${cls}`);
+    pulseEls[n.id].setAttribute('class', 'pulse-ring');
+    pulseEls[n.id].setAttribute('stroke', 'var(--purple)');
+  });
+
+  // Pulse ring for entry node highlight
+  if (step.showPulse) {
+    pulseEls[step.showPulse].setAttribute('class', 'pulse-ring go');
+  }
+
+  // Reset all edges
+  EDGES.forEach(([a, b]) => {
+    const key = `${a}-${b}`;
+    const cls = step.edgeClass[key] || 'edef';
+    edgeEls[key].setAttribute('class', cls);
+
+    // Update τ label visibility
+    if (step.showTau.includes(key) && step.tauValues[key]) {
+      tauEls[key].textContent = `τ=${step.tauValues[key].toFixed(2)}`;
+      tauEls[key].setAttribute('class', 'etau show');
+    } else {
+      tauEls[key].setAttribute('class', 'etau');
+    }
+  });
+
+  // Update rep labels
+  NODES.forEach(n => {
+    const repVal = step.repValues[n.id];
+    const old = 1.0; // baseline
+    const changed = Math.abs(repVal - 1.0) > 0.001;
+    repEls[n.id].textContent = `r=${repVal.toFixed(3)}`;
+    repEls[n.id].setAttribute('class', changed ? 'nrep changed' : 'nrep');
+  });
+
+  // Render step panel
+  document.getElementById('step-pane').innerHTML = step.html;
+
+  // Update nav
+  document.getElementById('prev-btn').disabled = idx === 0;
+  document.getElementById('next-btn').disabled = idx === STEPS.length - 1;
+  document.getElementById('step-counter').textContent = `Step ${idx + 1} / ${STEPS.length}`;
+
+  // Update dots
+  document.querySelectorAll('.sdot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === idx);
+  });
+}
+
+// ── Build dots ────────────────────────────────────────────────────────────────
+const dotsContainer = document.getElementById('step-dots');
+STEPS.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'sdot';
+  dot.title = `Step ${i + 1}`;
+  dot.onclick = () => { currentStep = i; renderStep(i); };
+  dotsContainer.appendChild(dot);
+});
+
+// ── Navigation ────────────────────────────────────────────────────────────────
+document.getElementById('prev-btn').onclick = () => { if (currentStep > 0) { currentStep--; renderStep(currentStep); } };
+document.getElementById('next-btn').onclick = () => { if (currentStep < STEPS.length-1) { currentStep++; renderStep(currentStep); } };
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' && currentStep < STEPS.length - 1) { currentStep++; renderStep(currentStep); }
+  if (e.key === 'ArrowLeft'  && currentStep > 0)                { currentStep--; renderStep(currentStep); }
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+renderStep(0);
+</script>
+</body>
+</html>

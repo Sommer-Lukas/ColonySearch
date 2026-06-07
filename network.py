@@ -2,8 +2,8 @@
 network.py — NetworkX-backed topology for the ColonySearch swarm.
 
 Owns the node registry, directed graph, and per-edge pheromone values.
-Used by router.py (neighbor lookup, pheromone read), reputation.py
-(pheromone and reputation writes), and visualise.py (graph layout).
+Reputation is NOT stored here — each Node holds its own local rep table
+so the system behaves as a true P2P network with no shared global state.
 
 Design notes:
 - DiGraph so pheromone can be asymmetric (A→B trail ≠ B→A trail),
@@ -30,9 +30,9 @@ class Network:
     # Node registration
     # ------------------------------------------------------------------
 
-    def register_node(self, node_id: str, node_obj=None, reputation: float = 1.0) -> None:
+    def register_node(self, node_id: str, node_obj=None) -> None:
         """Add node_id to the topology. node_obj is the Node instance (may be None during setup)."""
-        self._graph.add_node(node_id, node=node_obj, reputation=reputation)
+        self._graph.add_node(node_id, node=node_obj)
 
     def attach_node_obj(self, node_id: str, node_obj) -> None:
         """Bind a Node instance to an already-registered node_id."""
@@ -77,16 +77,6 @@ class Network:
     def all_edges_pheromone(self) -> dict[tuple[str, str], float]:
         """Snapshot of all edge pheromone values — used by visualise.py."""
         return {(u, v): d["pheromone"] for u, v, d in self._graph.edges(data=True)}
-
-    # ------------------------------------------------------------------
-    # Reputation access — reputation.py reads and writes these
-    # ------------------------------------------------------------------
-
-    def reputation(self, node_id: str) -> float:
-        return self._graph.nodes[node_id]["reputation"]
-
-    def set_reputation(self, node_id: str, value: float) -> None:
-        self._graph.nodes[node_id]["reputation"] = max(value, 0.0)
 
     # ------------------------------------------------------------------
     # Routing helpers — router.py uses these
