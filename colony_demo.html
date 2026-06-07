@@ -166,8 +166,8 @@
 
     .egsip { stroke: #4dd0e1; stroke-width: 2.5; stroke-dasharray: 5 3; fill: none; transition: all 0.35s; }
 
-    .etau  { fill: var(--green); font-size: 9px; font-family: 'Courier New', monospace; dominant-baseline: middle; text-anchor: middle; pointer-events: none; opacity: 0; transition: opacity 0.35s; }
-    .etau.show { opacity: 1; }
+    .etau  { fill: var(--green); font-size: 9px; font-family: 'Courier New', monospace; dominant-baseline: middle; text-anchor: middle; pointer-events: none; opacity: 0.45; transition: opacity 0.3s; }
+    .etau.show { opacity: 1; fill: var(--orange); font-size: 10px; font-weight: 700; }
 
     .pulse-ring { fill: none; stroke-width: 2; opacity: 0; }
     .pulse-ring.go { animation: pulse 1.8s ease-out infinite; }
@@ -688,46 +688,53 @@ const STEPS = [
   // ── 10 ──
   {
     nodeClass: {1:'nact', 2:'nvis', 3:'nvis', 5:'nvis', 6:'nvis', 7:'nvis', 8:'nvis', 9:'nvis', 10:'nvis'},
-    edgeClass: {'1-3':'ephr','1-9':'ephr'},
+    edgeClass: {
+      '1-3':'ephr', '3-6':'eqry', '3-10':'eqry', '2-6':'eqry', '5-6':'eqry', '7-10':'eqry',
+      '1-9':'ephr', '8-9':'eqry',
+    },
     showTau: ['1-3','1-9'],
     repValues: {1:1.0,2:1.0,3:1.0,4:1.0,5:1.0,6:1.0,7:1.0,8:1.0,9:1.0,10:1.0},
-    tauValues: {'1-3':1.673,'1-9':1.691},
+    tauValues: {'1-3':1.653,'1-9':1.664},
     html: `
 <div class="step-num">Step 10 of 13</div>
-<div class="step-title">Pheromone Update — Direct Edges Only</div>
-<div class="step-sub">τ<sub>new</sub>(i,j) = (1−ρ)·τ<sub>old</sub>(i,j) + Δτ<sub>j</sub> — edges 1→3 and 1→9 only</div>
-<div class="explanation">
-  <p>Even though Node 1 now computes quality scores for all 8 reached nodes,
-  <strong>pheromone is only deposited on edges that exist in the graph</strong>.
-  Node 1 has direct edges to N3 and N9 (the k=2 councilors), so only those
-  edges get an update. Nodes N2, N5, N6, N7, N8, N10 contributed results via
-  multi-hop forwarding — Node 1 uses their scores for <em>reputation</em>
-  updates (next step), but it cannot lay pheromone on edges it doesn't have.</p>
-  <p>Edges 1→4 and 1→5 are <strong>not touched</strong> — they were not used this round.
-  Their pheromone stays at 1.0; gradual evaporation over future queries will
-  eventually make N3 and N9 the strongly preferred routes.</p>
-  <p>Evaporation (ρ = 0.10) prevents early winners from dominating forever.
-  A minimum floor τ<sub>min</sub> = 0.01 ensures no edge fully dies.</p>
-</div>
+<div class="step-title">Pheromone Update</div>
+<div class="step-sub">τ<sub>new</sub>(i→j) = (1−ρ)·τ<sub>old</sub> + path_score — path_score = harmonic of ALL results through that edge</div>
 <div class="fblock">
-  <div class="fblock-label">ACO Pheromone Update Rule</div>
+  <div class="fblock-label">Formula</div>
   <div class="formula">
-    τ<sub>new</sub>(i,j) = (1 − <span class="sym">ρ</span>) · τ<sub>old</sub>(i,j) + <span class="sym">Δτ<sub>j</sub></span><br><br>
-    where&nbsp; <span class="sym">ρ</span> = <span class="val">0.10</span>&nbsp;&nbsp;<span class="cmt">(PHEROMONE_EVAP)</span><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sym">Δτ<sub>j</sub></span> = score<sub>node_j</sub> <span class="cmt">(harmonic quality score — direct councilors only)</span>
+    path_score(i→c) = harmonic( <strong>all results in branch_results[c]</strong> )<br>
+    <span class="cmt">// branch_results[c] = councilor c's own docs + every downstream doc</span><br><br>
+    τ<sub>new</sub>(i→c) = (1 − <span class="sym">ρ</span>) · τ<sub>old</sub> + path_score(i→c)<br>
+    <span class="cmt">// ρ = 0.10 (PHEROMONE_EVAP) — deposit only on direct edges</span>
   </div>
 </div>
 <div class="nblock">
-  <div class="nblock-label">Practical Calculation</div>
+  <div class="nblock-label">Edge 1→3 — branch: N3, N6, N10, N2, N5, N7 (11 docs)</div>
   <div class="calc">
-τ(1→3): (1−0.10)×1.0 + 0.773 = 0.900 + 0.773 = <span class="updated">1.673</span>
-τ(1→9): (1−0.10)×1.0 + 0.791 = 0.900 + 0.791 = <span class="updated">1.691</span>
+Sorted: [0.880, 0.810, 0.770, 0.720, 0.710, 0.630, 0.620, 0.560, 0.550, 0.480, 0.420]
+num   = 0.880+0.405+0.257+0.180+0.142+0.105+0.089+0.070+0.061+0.048+0.038 = 2.275
+denom = 1+½+⅓+¼+⅕+⅙+⅐+⅛+⅑+1/10+1/11 = 3.020
+path_score = 2.275 / 3.020 = <span class="result">0.753</span>
 
-τ(1→4): unchanged → <span class="o">1.000</span>  (not queried this round)
-τ(1→5): unchanged → <span class="o">1.000</span>  (not queried this round)
+τ(1→3) = 0.9×1.000 + 0.753 = <span class="updated">1.653</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">Edge 1→9 — branch: N9, N8 (4 docs — N10 in _visited, N8 can't forward)</div>
+  <div class="calc">
+Sorted: [0.910, 0.680, 0.590, 0.580]
+num   = 0.910+0.340+0.197+0.145 = 1.592
+denom = 1+½+⅓+¼ = 2.083
+path_score = 1.592 / 2.083 = <span class="result">0.764</span>
 
-N2, N5, N6, N7, N8, N10: <span class="cmt">no direct edge from N1 → no pheromone update,
-  but their scores are still used for reputation (see Step 11).</span>
+τ(1→9) = 0.9×1.000 + 0.764 = <span class="updated">1.664</span>
+  </div>
+</div>
+<div class="nblock">
+  <div class="nblock-label">All other edges from N1</div>
+  <div class="calc">
+τ(1→4) = <span class="o">1.000</span>  (not used this query)
+τ(1→5) = <span class="o">1.000</span>  (not used this query)
   </div>
 </div>`
   },
@@ -738,41 +745,35 @@ N2, N5, N6, N7, N8, N10: <span class="cmt">no direct edge from N1 → no pheromo
     edgeClass: {'1-3':'ephr','1-9':'ephr'},
     showTau: ['1-3','1-9'],
     repValues: {1:1.0,2:0.954,3:0.966,4:1.0,5:0.913,6:0.958,7:0.922,8:0.937,9:0.969,10:0.946},
-    tauValues: {'1-3':1.673,'1-9':1.691},
+    tauValues: {'1-3':1.653,'1-9':1.664},
     html: `
 <div class="step-num">Step 11 of 13</div>
-<div class="step-title">Local Reputation Update (EMA) — All 8 Reached Nodes</div>
-<div class="step-sub">Node 1 calls update_rep for every node_id appearing in all_peer_results</div>
-<div class="explanation">
-  <p>After the cascade, Node 1 scans <code>all_peer_results</code>, groups results by
-  <code>node_id</code>, and calls <code>self.update_rep(nid, score)</code> for every
-  node that returned at least one result. This is <strong>not limited to direct
-  councilors</strong> — N6, N2, N10, N7, N8, and N5 (reached via multi-hop) all
-  get entries in Node 1's local <code>_rep_table</code>.</p>
-  <p>N4 is the only node without an entry — it was never reached due to the TTL cascade
-  and k=2 sampling, so Node 1 has no observation and leaves it at the default
-  <strong>1.0</strong>.</p>
-</div>
+<div class="step-title">Reputation Update</div>
+<div class="step-sub">rep = each node's own documents only — separate from pheromone's path score</div>
 <div class="fblock">
-  <div class="fblock-label">Direct-Observation EMA (λ = REP_DECAY = 0.15)</div>
+  <div class="fblock-label">How it works</div>
   <div class="formula">
-    self._rep_table[j] = (1 − <span class="sym">λ</span>) · old + <span class="sym">λ</span> · score<sub>j</sub><br><br>
-    <span class="cmt">// old = self._rep_table.get(j, 1.0)  — default 1.0 for all unknowns</span>
+    <span class="cmt">// build node_own_results by iterating ALL branch results, group by node_id</span><br>
+    for r in branch_results[councilor]:<br>
+    &nbsp;&nbsp;node_own_results[ r["node_id"] ].append(r)<br><br>
+    <span class="cmt">// EMA update per node — own docs only, λ = 0.15</span><br>
+    self.update_rep(nid, harmonic( node_own_results[nid] ))<br>
+    _rep_table[j] = 0.85 · old + 0.15 · content_score<sub>j</sub>
   </div>
 </div>
 <div class="nblock">
   <div class="nblock-label">Node 1's _rep_table after first query</div>
   <table>
-    <tr><th>Entry</th><th>Harmonic score</th><th>Calculation</th><th>New rep</th></tr>
-    <tr><td>Node_9</td><td>0.791</td><td>0.85×1.0 + 0.15×0.791</td><td class="updated">0.969</td></tr>
-    <tr><td>Node_3</td><td>0.773</td><td>0.85×1.0 + 0.15×0.773</td><td class="updated">0.966</td></tr>
-    <tr><td>Node_6</td><td>0.720</td><td>0.85×1.0 + 0.15×0.720</td><td class="updated">0.958</td></tr>
-    <tr><td>Node_2</td><td>0.695</td><td>0.85×1.0 + 0.15×0.695</td><td class="updated">0.954</td></tr>
-    <tr><td>Node_10</td><td>0.640</td><td>0.85×1.0 + 0.15×0.640</td><td class="updated">0.946</td></tr>
-    <tr><td>Node_8</td><td>0.580</td><td>0.85×1.0 + 0.15×0.580</td><td class="updated">0.937</td></tr>
-    <tr><td>Node_7</td><td>0.480</td><td>0.85×1.0 + 0.15×0.480</td><td class="updated">0.922</td></tr>
-    <tr><td>Node_5</td><td>0.420</td><td>0.85×1.0 + 0.15×0.420</td><td class="updated">0.913</td></tr>
-    <tr><td>Node_4</td><td class="o">—</td><td class="o">not reached</td><td class="o">1.000 (default)</td></tr>
+    <tr><th>Node</th><th>Own docs</th><th>Content score</th><th>EMA</th><th>New rep</th></tr>
+    <tr><td>N9</td><td>[0.910, 0.680, 0.590]</td><td>0.791</td><td>0.85+0.15×0.791</td><td class="updated">0.969</td></tr>
+    <tr><td>N3</td><td>[0.880, 0.710, 0.550]</td><td>0.773</td><td>0.85+0.15×0.773</td><td class="updated">0.966</td></tr>
+    <tr><td>N6</td><td>[0.810, 0.630]</td><td>0.720</td><td>0.85+0.15×0.720</td><td class="updated">0.958</td></tr>
+    <tr><td>N2</td><td>[0.770, 0.620]</td><td>0.695</td><td>0.85+0.15×0.695</td><td class="updated">0.954</td></tr>
+    <tr><td>N10</td><td>[0.720, 0.560]</td><td>0.640</td><td>0.85+0.15×0.640</td><td class="updated">0.946</td></tr>
+    <tr><td>N8</td><td>[0.580]</td><td>0.580</td><td>0.85+0.15×0.580</td><td class="updated">0.937</td></tr>
+    <tr><td>N7</td><td>[0.480]</td><td>0.480</td><td>0.85+0.15×0.480</td><td class="updated">0.922</td></tr>
+    <tr><td>N5</td><td>[0.420]</td><td>0.420</td><td>0.85+0.15×0.420</td><td class="updated">0.913</td></tr>
+    <tr><td>N4</td><td class="o">—</td><td class="o">not reached</td><td class="o">—</td><td class="o">1.000</td></tr>
   </table>
 </div>`
   },
@@ -835,7 +836,7 @@ N2, N5, N6, N7, N8, N10: <span class="cmt">no direct edge from N1 → no pheromo
     edgeClass: {'1-3':'ephr','1-9':'ephr'},
     showTau: ['1-3','1-9'],
     repValues: {1:1.0,2:0.954,3:0.966,4:1.0,5:0.913,6:0.958,7:0.922,8:0.937,9:0.969,10:0.946},
-    tauValues: {'1-3':1.673,'1-9':1.691},
+    tauValues: {'1-3':1.653,'1-9':1.664},
     html: `
 <div class="step-num">Step 13 of 13</div>
 <div class="step-title">Final Blend &amp; Top-10 Results</div>
@@ -991,13 +992,10 @@ function renderStep(idx) {
     const cls = step.edgeClass[key] || 'edef';
     edgeEls[key].setAttribute('class', cls);
 
-    // Update τ label visibility
-    if (step.showTau.includes(key) && step.tauValues[key]) {
-      tauEls[key].textContent = `τ=${step.tauValues[key].toFixed(2)}`;
-      tauEls[key].setAttribute('class', 'etau show');
-    } else {
-      tauEls[key].setAttribute('class', 'etau');
-    }
+    // Always show τ value; highlight (orange, bold) if in showTau
+    const tauVal = (step.tauValues && step.tauValues[key] !== undefined) ? step.tauValues[key] : 1.0;
+    tauEls[key].textContent = `τ=${tauVal.toFixed(3)}`;
+    tauEls[key].setAttribute('class', step.showTau.includes(key) ? 'etau show' : 'etau');
   });
 
   // Update rep labels
