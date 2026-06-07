@@ -1057,80 +1057,122 @@ def _rebuild_abstract(inv: dict | None) -> str:
     ))
 
 def fetch_openalex(query: str, topic: str,
-                   max_body: int | None = None, max_links: int | None = None) -> list[dict]:
-    r = _get("https://api.openalex.org/works", params={
-        "search": query, "per-page": 5,
-        "select": "id,title,abstract_inverted_index,concepts,doi",
-        "mailto": "research@example.com",
-    })
-    if not r:
-        return []
-    docs = []
-    for work in r.json().get("results", []):
-        title   = work.get("title") or ""
-        body    = _rebuild_abstract(work.get("abstract_inverted_index"))
-        body   += " " + " ".join(c["display_name"] for c in work.get("concepts", []))
-        body    = body.strip()
-        body    = body[:max_body] if max_body else body
-        url     = work.get("doi") or work.get("id", "")
-        if title and body and url:
-            docs.append(_doc(url=url, title=title, body=body,
-                             links=[], source="openalex", source_base=_base_url(url),
-                             topic=topic))
+                   max_body: int | None = None, max_links: int | None = None,
+                   max_results: int = 5) -> list[dict]:
+    per_page = min(max_results, 200)  # API hard cap is 200
+    docs: list[dict] = []
+    page = 1
+    while len(docs) < max_results:
+        r = _get("https://api.openalex.org/works", params={
+            "search": query, "per-page": per_page, "page": page,
+            "select": "id,title,abstract_inverted_index,concepts,doi",
+            "mailto": "research@example.com",
+        })
+        if not r:
+            break
+        results = r.json().get("results", [])
+        if not results:
+            break
+        for work in results:
+            title = work.get("title") or ""
+            body  = _rebuild_abstract(work.get("abstract_inverted_index"))
+            body += " " + " ".join(c["display_name"] for c in work.get("concepts", []))
+            body  = body.strip()
+            body  = body[:max_body] if max_body else body
+            url   = work.get("doi") or work.get("id", "")
+            if title and body and url:
+                docs.append(_doc(url=url, title=title, body=body,
+                                 links=[], source="openalex", source_base=_base_url(url),
+                                 topic=topic))
+            if len(docs) >= max_results:
+                break
+        if len(results) < per_page:
+            break  # last page
+        page += 1
+        if page > 1:
+            time.sleep(0.5)
     return docs
 
 
 def fetch_arxiv(query: str, topic: str,
-                max_body: int | None = None, max_links: int | None = None) -> list[dict]:
-    r = _get("https://export.arxiv.org/api/query", params={
-        "search_query": f"all:{query}", "start": 0, "max_results": 5,
-    })
-    if not r:
-        return []
-    try:
-        root = ET.fromstring(r.text)
-    except ET.ParseError:
-        return []
+                max_body: int | None = None, max_links: int | None = None,
+                max_results: int = 5) -> list[dict]:
+    per_page = min(max_results, 100)  # stay well within arxiv's rate-limit guidance
     ns = {"a": "http://www.w3.org/2005/Atom"}
-    docs = []
-    for entry in root.findall("a:entry", ns):
-        def _t(tag: str) -> str:
-            el = entry.find(tag, ns)
-            return el.text.strip() if el is not None and el.text else ""
-        title = _t("a:title")
-        raw   = _t("a:summary")
-        body  = raw[:max_body] if max_body else raw
-        url   = _t("a:id").replace("http://", "https://")
-        if title and body and url:
-            docs.append(_doc(url=url, title=title, body=body,
-                             links=[], source="arxiv", source_base=_base_url(url),
-                             topic=topic))
+    docs: list[dict] = []
+    start = 0
+    while len(docs) < max_results:
+        r = _get("https://export.arxiv.org/api/query", params={
+            "search_query": f"all:{query}", "start": start, "max_results": per_page,
+        })
+        if not r:
+            break
+        try:
+            root = ET.fromstring(r.text)
+        except ET.ParseError:
+            break
+        entries = root.findall("a:entry", ns)
+        if not entries:
+            break
+        for entry in entries:
+            def _t(tag: str) -> str:
+                el = entry.find(tag, ns)
+                return el.text.strip() if el is not None and el.text else ""
+            title = _t("a:title")
+            raw   = _t("a:summary")
+            body  = raw[:max_body] if max_body else raw
+            url   = _t("a:id").replace("http://", "https://")
+            if title and body and url:
+                docs.append(_doc(url=url, title=title, body=body,
+                                 links=[], source="arxiv", source_base=_base_url(url),
+                                 topic=topic))
+            if len(docs) >= max_results:
+                break
+        if len(entries) < per_page:
+            break  # last page
+        start += per_page
+        if start > 0:
+            time.sleep(3.0)  # arxiv asks for a 3-second delay between paged requests
     return docs
 
 
 def fetch_semantic_scholar(query: str, topic: str,
-                           max_body: int | None = None, max_links: int | None = None) -> list[dict]:
-    r = _get("https://api.semanticscholar.org/graph/v1/paper/search", params={
-        "query": query, "limit": 6,
-        "fields": "title,abstract,tldr,externalIds,openAccessPdf",
-    })
-    if not r:
-        return []
-    docs = []
-    for paper in r.json().get("data", []):
-        title    = paper.get("title") or ""
-        abstract = paper.get("abstract") or ""
-        tldr     = (paper.get("tldr") or {}).get("text") or ""
-        raw      = f"{abstract}\n\nTL;DR: {tldr}" if tldr else abstract
-        body     = raw[:max_body] if max_body else raw
-        ext      = paper.get("externalIds") or {}
-        doi      = ext.get("DOI")
-        url      = (f"https://doi.org/{doi}" if doi else
-                    (paper.get("openAccessPdf") or {}).get("url") or "")
-        if title and body and url:
-            docs.append(_doc(url=url, title=title, body=body,
-                             links=[], source="semantic_scholar", source_base=_base_url(url),
-                             topic=topic))
+                           max_body: int | None = None, max_links: int | None = None,
+                           max_results: int = 6) -> list[dict]:
+    per_page = min(max_results, 100)  # API hard cap is 100
+    docs: list[dict] = []
+    offset = 0
+    while len(docs) < max_results:
+        r = _get("https://api.semanticscholar.org/graph/v1/paper/search", params={
+            "query": query, "limit": per_page, "offset": offset,
+            "fields": "title,abstract,tldr,externalIds,openAccessPdf",
+        })
+        if not r:
+            break
+        data = r.json().get("data", [])
+        if not data:
+            break
+        for paper in data:
+            title    = paper.get("title") or ""
+            abstract = paper.get("abstract") or ""
+            tldr     = (paper.get("tldr") or {}).get("text") or ""
+            raw      = f"{abstract}\n\nTL;DR: {tldr}" if tldr else abstract
+            body     = raw[:max_body] if max_body else raw
+            ext      = paper.get("externalIds") or {}
+            doi      = ext.get("DOI")
+            url      = (f"https://doi.org/{doi}" if doi else
+                        (paper.get("openAccessPdf") or {}).get("url") or "")
+            if title and body and url:
+                docs.append(_doc(url=url, title=title, body=body,
+                                 links=[], source="semantic_scholar", source_base=_base_url(url),
+                                 topic=topic))
+            if len(docs) >= max_results:
+                break
+        if len(data) < per_page:
+            break  # last page
+        offset += per_page
+        if offset > 0:
+            time.sleep(1.0)
     return docs
 
 
@@ -1229,8 +1271,11 @@ def _links(soup: BeautifulSoup, base_url: str, host: str,
 # ── DISPATCH ──────────────────────────────────────────────────────────────────
 
 def dispatch(source: str, value: str, topic: str,
-             max_body: int | None = None, max_links: int | None = None) -> list[dict]:
+             max_body: int | None = None, max_links: int | None = None,
+             max_results: int | None = None) -> list[dict]:
     kw = {"max_body": max_body, "max_links": max_links}
+    if max_results is not None:
+        kw["max_results"] = max_results
     match source:
         case "wikipedia":          return fetch_wikipedia(value, topic, **kw)
         case "wikipedia_category": return fetch_wikipedia_category(value, topic, **kw)
@@ -1314,14 +1359,15 @@ def load_corpus_links(corpus_dir: Path) -> list[tuple[str, str]]:
 # ── CRAWL ENGINE ─────────────────────────────────────────────────────────────
 
 def crawl(
-    clusters:  dict[str, dict],
-    depth:     int,
-    max_pages: int,
-    out_dir:   Path,
-    delay:     float,
-    overwrite: bool = False,
-    max_body:  int | None = None,
-    max_links: int | None = None,
+    clusters:     dict[str, dict],
+    depth:        int,
+    max_pages:    int,
+    out_dir:      Path,
+    delay:        float,
+    overwrite:    bool = False,
+    max_body:     int | None = None,
+    max_links:    int | None = None,
+    max_results:  int | None = None,
 ) -> None:
     queues: dict[str, deque] = {}
     for topic, conf in clusters.items():
@@ -1352,7 +1398,8 @@ def crawl(
             progress = True
 
             print(f"[{topic}][{source}][d={dlevel}] {value[:80]}")
-            docs = dispatch(source, value, topic, max_body=max_body, max_links=max_links)
+            docs = dispatch(source, value, topic, max_body=max_body, max_links=max_links,
+                            max_results=max_results)
 
             for doc in docs:
                 # Wikidata returns placeholder docs → re-queue as wikipedia
@@ -1429,9 +1476,10 @@ def expand(
     out_dir:    Path,
     delay:      float,
     overwrite:  bool,
-    max_body:   int | None = None,
-    max_links:  int | None = None,
-    topics:     set[str] | None = None,
+    max_body:     int | None = None,
+    max_links:    int | None = None,
+    max_results:  int | None = None,
+    topics:       set[str] | None = None,
 ) -> None:
     """
     Reads links from existing corpus files, randomly samples `sample` of them,
@@ -1469,7 +1517,7 @@ def expand(
 
     crawl(clusters, depth=depth, max_pages=max_pages,
           out_dir=out_dir, delay=delay, overwrite=overwrite,
-          max_body=max_body, max_links=max_links)
+          max_body=max_body, max_links=max_links, max_results=max_results)
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -1521,10 +1569,13 @@ examples:
                    help="RNG seed for reproducible shuffles")
     p.add_argument("--overwrite",      action="store_true",
                    help="Re-fetch and overwrite existing files")
-    p.add_argument("--max-body",       type=int, default=None,
+    p.add_argument("--max-body",        type=int, default=None,
                    help="Truncate body text to N characters (default: no limit)")
-    p.add_argument("--max-links",      type=int, default=None,
+    p.add_argument("--max-links",       type=int, default=None,
                    help="Keep only the first N links per page (default: no limit)")
+    p.add_argument("--max-results",     type=int, default=None,
+                   help="Max results per query for academic APIs — openalex, arxiv, "
+                   "semantic_scholar (default: 5/5/6). Use e.g. 50 to paginate deeper.")
     args = p.parse_args()
 
     if args.seed is not None:
@@ -1543,9 +1594,10 @@ examples:
             out_dir    = out_dir,
             delay      = args.delay,
             overwrite  = args.overwrite,
-            max_body   = args.max_body,
-            max_links  = args.max_links,
-            topics     = {t.strip() for t in args.topics.split(",")} if args.topics else None
+            max_body    = args.max_body,
+            max_links   = args.max_links,
+            max_results = args.max_results,
+            topics      = {t.strip() for t in args.topics.split(",")} if args.topics else None
         )
         return
 
@@ -1595,14 +1647,15 @@ examples:
               f"{len(clusters)} topic(s): {', '.join(cats)}")
 
     crawl(
-        clusters  = clusters,
-        depth     = args.depth,
-        max_pages = args.max,
-        out_dir   = out_dir,
-        delay     = args.delay,
-        overwrite = args.overwrite,
-        max_body  = args.max_body,
-        max_links = args.max_links,
+        clusters    = clusters,
+        depth       = args.depth,
+        max_pages   = args.max,
+        out_dir     = out_dir,
+        delay       = args.delay,
+        overwrite   = args.overwrite,
+        max_body    = args.max_body,
+        max_links   = args.max_links,
+        max_results = args.max_results,
     )
 
 
