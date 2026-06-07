@@ -228,40 +228,48 @@ class Node:
         # Exclude already-visited nodes so mesh edges don't cause cycles.
         councilor_nodes = [n for n in self.get_neighbors(NETWORK_TOP_K) if n.node_id not in _visited]
 
-        all_peer_results: list = []
-
+        # Collect the full subtree results per direct neighbour so we can use
+        # them for two distinct signals:
+        #   - pheromone on self→councilor: path quality = everything that flowed
+        #     through that edge, including the councilor's downstream nodes.
+        #     This makes ACO reward the route, not just the endpoint.
+        #   - rep per node: only that node's own results (node_id == nid),
+        #     so content quality and routing quality don't blur together.
+        # Both signals are computed in one pass to avoid re-iterating results.
+        branch_results: dict[str, list] = {}
         for node in councilor_nodes:
-            # Pass ttl-1 so each hop consumes one unit of depth budget.
-            # Pass _visited so the remote node knows which nodes to skip —
-            # in HTTP calls this is serialised into the request body.
-            search_results = node.search(query, _visited, ttl - 1)
-            print_search_results(search_results)
-
-            for item in search_results:
+            sub = node.search(query, _visited, ttl - 1)
+            print_search_results(sub)
+            for item in sub:
                 item.setdefault("node_id", node.node_id)
+            branch_results[node.node_id] = sub
 
-            all_peer_results.extend(search_results)
+        node_own_results: dict[str, list] = {}
+        for councilor in councilor_nodes:
+            sub = branch_results[councilor.node_id]
 
-        # Update reputation for every node that contributed results, judged
-        # only on that node's own output (not its downstream sub-results).
-        # This gives credit to intermediate nodes too, not just direct neighbours.
-        # Pheromone is still deposited only on edges that exist in the graph.
-        node_id_to_results: dict[str, list] = {}
-        for r in all_peer_results:
-            nid = r.get("node_id", "")
-            if nid:
-                node_id_to_results.setdefault(nid, []).append(r)
+            # Accumulate per-node own results across all branches for rep.
+            for r in sub:
+                nid = r.get("node_id", "")
+                if nid:
+                    node_own_results.setdefault(nid, []).append(r)
 
-        for nid, node_results in node_id_to_results.items():
-            score = calc_node_score_from_search_results(node_results)
-            self.update_rep(nid, score)
-            # Pheromone deposit only on direct edges — ACO trail stays local.
-            if self._network.has_edge(self.node_id, nid):
-                old_ph = self._network.pheromone(self.node_id, nid)
+            # Pheromone on the direct edge rewards the full path through this
+            # councilor.  The recursive call already did the same for the next
+            # hop (councilor→its neighbours), so every edge on the traversed
+            # tree gets incrementally updated with path-level signal.
+            if self._network.has_edge(self.node_id, councilor.node_id):
+                path_score = calc_node_score_from_search_results(sub)
+                old_ph = self._network.pheromone(self.node_id, councilor.node_id)
                 self._network.set_pheromone(
-                    self.node_id, nid,
-                    (1.0 - PHEROMONE_EVAP) * old_ph + score,
+                    self.node_id, councilor.node_id,
+                    (1.0 - PHEROMONE_EVAP) * old_ph + path_score,
                 )
+
+        for nid, own in node_own_results.items():
+            self.update_rep(nid, calc_node_score_from_search_results(own))
+
+        all_peer_results = [r for sub in branch_results.values() for r in sub]
 
         print('\n\n\n\nbetter together, no matter the weather, now, ladies and gentlemen, welcome all the search results:\n\n\n\n')
         results += all_peer_results
