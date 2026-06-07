@@ -880,6 +880,7 @@ HEADERS = {
 }
 
 CROSS_THRESHOLD   = 3   # keyword hits before cross-topic seed injection
+WIKI_FOLLOW_LIMIT = 30  # max Wikipedia links re-queued per article at depth > 0
 CROSS_INJECT      = 1   # seeds injected per detected relation
 
 # Hosts whose discovered child-links we follow (depth > 0)
@@ -1016,6 +1017,33 @@ def fetch_wikidata(concept: str, topic: str) -> list[dict]:
         if title:
             url = _wiki_url(title)
             docs.append(_doc(url=url, title=title, body="", links=[],
+                             source="wikidata_ref", source_base=_base_url(url),
+                             topic=topic))
+    return docs
+
+
+def fetch_wikipedia_category(category: str, topic: str,
+                             max_members: int = 200, **_) -> list[dict]:
+    """Return stub docs for every article in a Wikipedia category.
+
+    Returned docs have source='wikidata_ref' so the crawl engine re-queues
+    them as proper wikipedia fetches — reusing the existing stub-requeue path.
+    Strips a leading 'Category:' prefix if the caller included it.
+    """
+    title = category.removeprefix("Category:").removeprefix("category:")
+    r = _get("https://en.wikipedia.org/w/api.php", params={
+        "action": "query", "list": "categorymembers",
+        "cmtitle": f"Category:{title}",
+        "cmlimit": max_members, "cmnamespace": 0, "format": "json",
+    })
+    if not r:
+        return []
+    docs = []
+    for member in r.json().get("query", {}).get("categorymembers", []):
+        art_title = member.get("title", "")
+        if art_title:
+            url = _wiki_url(art_title)
+            docs.append(_doc(url=url, title=art_title, body="", links=[],
                              source="wikidata_ref", source_base=_base_url(url),
                              topic=topic))
     return docs
@@ -1204,8 +1232,9 @@ def dispatch(source: str, value: str, topic: str,
              max_body: int | None = None, max_links: int | None = None) -> list[dict]:
     kw = {"max_body": max_body, "max_links": max_links}
     match source:
-        case "wikipedia":        return fetch_wikipedia(value, topic, **kw)
-        case "wikidata":         return fetch_wikidata(value, topic)
+        case "wikipedia":          return fetch_wikipedia(value, topic, **kw)
+        case "wikipedia_category": return fetch_wikipedia_category(value, topic, **kw)
+        case "wikidata":           return fetch_wikidata(value, topic)
         case "openalex":         return fetch_openalex(value, topic, **kw)
         case "arxiv":            return fetch_arxiv(value, topic, **kw)
         case "semantic_scholar": return fetch_semantic_scholar(value, topic, **kw)
@@ -1359,14 +1388,26 @@ def crawl(
                             injected_pairs.add(pair)
                             break
 
-                # Child-link expansion — only follow links to crawlable hosts
-                if dlevel < depth and source in ("html", "scikit", "stackoverflow"):
-                    for link in doc["links"]:
-                        if urlparse(link).netloc not in CRAWLABLE:
-                            continue
-                        lk = f"{source}::{link}"
-                        if lk not in visited:
-                            q.append((source, link, dlevel + 1))
+                # Child-link expansion
+                if dlevel < depth:
+                    if source == "wikipedia":
+                        # Links are Wikipedia URLs — extract title and re-queue
+                        # via the API rather than raw HTML. Shuffle so each run
+                        # explores a different neighbourhood.
+                        wiki_links = doc["links"][:]
+                        random.shuffle(wiki_links)
+                        for link in wiki_links[:WIKI_FOLLOW_LIMIT]:
+                            art = _title_from_wiki_url(link)
+                            lk  = f"wikipedia::{art}"
+                            if lk not in visited:
+                                q.append(("wikipedia", art, dlevel + 1))
+                    elif source in ("html", "scikit", "stackoverflow"):
+                        for link in doc["links"]:
+                            if urlparse(link).netloc not in CRAWLABLE:
+                                continue
+                            lk = f"{source}::{link}"
+                            if lk not in visited:
+                                q.append((source, link, dlevel + 1))
 
             if delay > 0:
                 time.sleep(delay)
@@ -1407,10 +1448,16 @@ def expand(
     sampled = candidates[:sample]
     print(f"Sampled {len(sampled)} / {len(candidates)} candidate links.")
 
-    # Group by topic so the round-robin engine still balances coverage
+    # Group by topic so the round-robin engine still balances coverage.
+    # Route Wikipedia URLs through the API adapter, not raw HTML.
     by_topic: dict[str, list] = {}
     for url, topic in sampled:
-        by_topic.setdefault(topic, []).append(("html", url))
+        if "wikipedia.org/wiki/" in url:
+            by_topic.setdefault(topic, []).append(
+                ("wikipedia", _title_from_wiki_url(url))
+            )
+        else:
+            by_topic.setdefault(topic, []).append(("html", url))
 
     clusters = {
         t: {
@@ -1453,6 +1500,9 @@ examples:
     p.add_argument("--sources",        help="Comma-separated source types to include "
                    "(wikipedia, arxiv, openalex, semantic_scholar, devto, github, "
                    "html, stackoverflow, wikidata)")
+    p.add_argument("--wiki-cats",      help="Comma-separated Wikipedia category names to "
+                   "scrape (e.g. 'Climate_change,Renewable_energy'). Seeds are injected "
+                   "into every selected topic cluster.")
     p.add_argument("--companies",      action="store_true",
                    help="Use corporate/NGO HTML sources instead of academic APIs")
     p.add_argument("--expand",         action="store_true",
@@ -1533,6 +1583,14 @@ examples:
             }
             for t, conf in clusters.items()
         }
+
+    if args.wiki_cats:
+        cats = [c.strip() for c in args.wiki_cats.split(",") if c.strip()]
+        for topic in clusters:
+            for cat in cats:
+                clusters[topic]["seeds"].append(("wikipedia_category", cat))
+        print(f"[wiki-cats] injected {len(cats)} category seed(s) into "
+              f"{len(clusters)} topic(s): {', '.join(cats)}")
 
     crawl(
         clusters  = clusters,
