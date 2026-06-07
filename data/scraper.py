@@ -25,7 +25,7 @@ import time
 import xml.etree.ElementTree as ET
 from collections import deque
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -105,6 +105,10 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://ec.europa.eu/climate/"),
             ("html",             "https://www.un.org/en/climatechange/"),
             ("html",             "https://www.bundestag.de/dokumente/textarchiv/themenbereich-klima"),
+            ("rss",              "https://climate.nasa.gov/news/rss.xml"),
+            ("rss",              "https://www.carbonbrief.org/feed"),
+            ("rss",              "https://www.sciencedaily.com/rss/earth_climate/global_warming.xml"),
+            ("rss",              "https://phys.org/rss-feed/earth-news/environment/"),
         ],
     },
 
@@ -169,6 +173,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.unep.org/resources/report"),
             ("html",             "https://www.materialstoday.com/"),
             ("html",             "https://www.azom.com/green-chemistry.aspx"),
+            ("rss",              "https://www.sciencedaily.com/rss/matter_energy/biomaterials.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/materials-science/"),
         ],
     },
 
@@ -231,6 +237,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://phys.org/tags/space/"),
             ("html",             "https://www.sciencedaily.com/news/space_time/"),
             ("html",             "https://spacenews.com/"),
+            ("rss",              "https://www.nasa.gov/news-release/feed/"),
+            ("rss",              "https://www.sciencedaily.com/rss/space_time.xml"),
+            ("rss",              "https://phys.org/rss-feed/space-news/"),
         ],
     },
 
@@ -313,6 +322,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("arxiv",            "concurrent programming lock-free data structure"),
             ("html",             "https://www.th-nuernberg.de/"),
             ("html",             "https://www.accenture.com/en-us/industries"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/computer-sciences/"),
+            ("rss",              "https://news.mit.edu/rss/topic/computer-science-and-technology"),
         ],
     },
 
@@ -380,6 +391,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"),
             ("html",             "https://paperswithcode.com/sota"),
             ("html",             "https://distill.pub/"),
+            ("rss",              "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/artificial-intelligence-news/"),
+            ("rss",              "https://www.quantamagazine.org/feed/"),
         ],
     },
 
@@ -443,6 +457,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.goal.com/en"),
             ("html",             "https://www.theguardian.com/football"),
             ("html",             "https://tacticaljournal.com/"),
+            ("rss",              "https://www.bbc.com/sport/football/rss.xml"),
+            ("rss",              "https://www.theguardian.com/football/rss"),
         ],
     },
 
@@ -498,6 +514,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.mayoclinic.org/diseases-conditions"),
             ("html",             "https://phys.org/tags/medicine/"),
             ("html",             "https://www.sciencedaily.com/news/health_medicine/"),
+            ("rss",              "https://www.sciencedaily.com/rss/health_medicine.xml"),
+            ("rss",              "https://phys.org/rss-feed/health-news/"),
+            ("rss",              "https://www.nih.gov/rss/alldiscoveries.xml"),
         ],
     },
 
@@ -547,6 +566,9 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://phys.org/tags/quantum+computing/"),
             ("html",             "https://www.sciencedaily.com/news/computers_math/quantum_computers/"),
             ("html",             "https://research.ibm.com/quantum-computing"),
+            ("rss",              "https://www.sciencedaily.com/rss/computers_math/quantum_computers.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/quantum-physics-news/"),
+            ("rss",              "https://www.quantamagazine.org/feed/"),
         ],
     },
 
@@ -599,6 +621,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.sciencedaily.com/news/mind_brain/"),
             ("html",             "https://www.nih.gov/news-events/nih-research-matters"),
             ("html",             "https://www.quantamagazine.org/tag/neuroscience/"),
+            ("rss",              "https://www.sciencedaily.com/rss/mind_brain.xml"),
+            ("rss",              "https://phys.org/rss-feed/health-news/neuroscience/"),
         ],
     },
 
@@ -648,6 +672,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.worldbank.org/en/topic/macroeconomics"),
             ("html",             "https://phys.org/tags/economics/"),
             ("html",             "https://www.sciencedaily.com/news/mind_brain/economics/"),
+            ("rss",              "https://www.sciencedaily.com/rss/mind_brain/economics.xml"),
+            ("rss",              "https://phys.org/rss-feed/social-sciences-news/economics/"),
         ],
     },
 
@@ -717,6 +743,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.automationworld.com/"),
             ("html",             "https://www.manufacturingtomorrow.com/"),
             ("html",             "https://www.industryweek.com/technology-and-iiot"),
+            ("rss",              "https://www.sciencedaily.com/rss/matter_energy/engineering.xml"),
+            ("rss",              "https://phys.org/rss-feed/technology-news/engineering/"),
         ],
     },
 }
@@ -880,6 +908,7 @@ HEADERS = {
 }
 
 CROSS_THRESHOLD   = 3   # keyword hits before cross-topic seed injection
+WIKI_FOLLOW_LIMIT = 30  # max Wikipedia links re-queued per article at depth > 0
 CROSS_INJECT      = 1   # seeds injected per detected relation
 
 # Hosts whose discovered child-links we follow (depth > 0)
@@ -1021,6 +1050,33 @@ def fetch_wikidata(concept: str, topic: str) -> list[dict]:
     return docs
 
 
+def fetch_wikipedia_category(category: str, topic: str,
+                             max_members: int = 200, **_) -> list[dict]:
+    """Return stub docs for every article in a Wikipedia category.
+
+    Returned docs have source='wikidata_ref' so the crawl engine re-queues
+    them as proper wikipedia fetches — reusing the existing stub-requeue path.
+    Strips a leading 'Category:' prefix if the caller included it.
+    """
+    title = category.removeprefix("Category:").removeprefix("category:")
+    r = _get("https://en.wikipedia.org/w/api.php", params={
+        "action": "query", "list": "categorymembers",
+        "cmtitle": f"Category:{title}",
+        "cmlimit": max_members, "cmnamespace": 0, "format": "json",
+    })
+    if not r:
+        return []
+    docs = []
+    for member in r.json().get("query", {}).get("categorymembers", []):
+        art_title = member.get("title", "")
+        if art_title:
+            url = _wiki_url(art_title)
+            docs.append(_doc(url=url, title=art_title, body="", links=[],
+                             source="wikidata_ref", source_base=_base_url(url),
+                             topic=topic))
+    return docs
+
+
 def _rebuild_abstract(inv: dict | None) -> str:
     if not inv:
         return ""
@@ -1029,80 +1085,122 @@ def _rebuild_abstract(inv: dict | None) -> str:
     ))
 
 def fetch_openalex(query: str, topic: str,
-                   max_body: int | None = None, max_links: int | None = None) -> list[dict]:
-    r = _get("https://api.openalex.org/works", params={
-        "search": query, "per-page": 5,
-        "select": "id,title,abstract_inverted_index,concepts,doi",
-        "mailto": "research@example.com",
-    })
-    if not r:
-        return []
-    docs = []
-    for work in r.json().get("results", []):
-        title   = work.get("title") or ""
-        body    = _rebuild_abstract(work.get("abstract_inverted_index"))
-        body   += " " + " ".join(c["display_name"] for c in work.get("concepts", []))
-        body    = body.strip()
-        body    = body[:max_body] if max_body else body
-        url     = work.get("doi") or work.get("id", "")
-        if title and body and url:
-            docs.append(_doc(url=url, title=title, body=body,
-                             links=[], source="openalex", source_base=_base_url(url),
-                             topic=topic))
+                   max_body: int | None = None, max_links: int | None = None,
+                   max_results: int = 5) -> list[dict]:
+    per_page = min(max_results, 200)  # API hard cap is 200
+    docs: list[dict] = []
+    page = 1
+    while len(docs) < max_results:
+        r = _get("https://api.openalex.org/works", params={
+            "search": query, "per-page": per_page, "page": page,
+            "select": "id,title,abstract_inverted_index,concepts,doi",
+            "mailto": "research@example.com",
+        })
+        if not r:
+            break
+        results = r.json().get("results", [])
+        if not results:
+            break
+        for work in results:
+            title = work.get("title") or ""
+            body  = _rebuild_abstract(work.get("abstract_inverted_index"))
+            body += " " + " ".join(c["display_name"] for c in work.get("concepts", []))
+            body  = body.strip()
+            body  = body[:max_body] if max_body else body
+            url   = work.get("doi") or work.get("id", "")
+            if title and body and url:
+                docs.append(_doc(url=url, title=title, body=body,
+                                 links=[], source="openalex", source_base=_base_url(url),
+                                 topic=topic))
+            if len(docs) >= max_results:
+                break
+        if len(results) < per_page:
+            break  # last page
+        page += 1
+        if page > 1:
+            time.sleep(0.5)
     return docs
 
 
 def fetch_arxiv(query: str, topic: str,
-                max_body: int | None = None, max_links: int | None = None) -> list[dict]:
-    r = _get("https://export.arxiv.org/api/query", params={
-        "search_query": f"all:{query}", "start": 0, "max_results": 5,
-    })
-    if not r:
-        return []
-    try:
-        root = ET.fromstring(r.text)
-    except ET.ParseError:
-        return []
+                max_body: int | None = None, max_links: int | None = None,
+                max_results: int = 5) -> list[dict]:
+    per_page = min(max_results, 100)  # stay well within arxiv's rate-limit guidance
     ns = {"a": "http://www.w3.org/2005/Atom"}
-    docs = []
-    for entry in root.findall("a:entry", ns):
-        def _t(tag: str) -> str:
-            el = entry.find(tag, ns)
-            return el.text.strip() if el is not None and el.text else ""
-        title = _t("a:title")
-        raw   = _t("a:summary")
-        body  = raw[:max_body] if max_body else raw
-        url   = _t("a:id").replace("http://", "https://")
-        if title and body and url:
-            docs.append(_doc(url=url, title=title, body=body,
-                             links=[], source="arxiv", source_base=_base_url(url),
-                             topic=topic))
+    docs: list[dict] = []
+    start = 0
+    while len(docs) < max_results:
+        r = _get("https://export.arxiv.org/api/query", params={
+            "search_query": f"all:{query}", "start": start, "max_results": per_page,
+        })
+        if not r:
+            break
+        try:
+            root = ET.fromstring(r.text)
+        except ET.ParseError:
+            break
+        entries = root.findall("a:entry", ns)
+        if not entries:
+            break
+        for entry in entries:
+            def _t(tag: str) -> str:
+                el = entry.find(tag, ns)
+                return el.text.strip() if el is not None and el.text else ""
+            title = _t("a:title")
+            raw   = _t("a:summary")
+            body  = raw[:max_body] if max_body else raw
+            url   = _t("a:id").replace("http://", "https://")
+            if title and body and url:
+                docs.append(_doc(url=url, title=title, body=body,
+                                 links=[], source="arxiv", source_base=_base_url(url),
+                                 topic=topic))
+            if len(docs) >= max_results:
+                break
+        if len(entries) < per_page:
+            break  # last page
+        start += per_page
+        if start > 0:
+            time.sleep(3.0)  # arxiv asks for a 3-second delay between paged requests
     return docs
 
 
 def fetch_semantic_scholar(query: str, topic: str,
-                           max_body: int | None = None, max_links: int | None = None) -> list[dict]:
-    r = _get("https://api.semanticscholar.org/graph/v1/paper/search", params={
-        "query": query, "limit": 6,
-        "fields": "title,abstract,tldr,externalIds,openAccessPdf",
-    })
-    if not r:
-        return []
-    docs = []
-    for paper in r.json().get("data", []):
-        title    = paper.get("title") or ""
-        abstract = paper.get("abstract") or ""
-        tldr     = (paper.get("tldr") or {}).get("text") or ""
-        raw      = f"{abstract}\n\nTL;DR: {tldr}" if tldr else abstract
-        body     = raw[:max_body] if max_body else raw
-        ext      = paper.get("externalIds") or {}
-        doi      = ext.get("DOI")
-        url      = (f"https://doi.org/{doi}" if doi else
-                    (paper.get("openAccessPdf") or {}).get("url") or "")
-        if title and body and url:
-            docs.append(_doc(url=url, title=title, body=body,
-                             links=[], source="semantic_scholar", source_base=_base_url(url),
-                             topic=topic))
+                           max_body: int | None = None, max_links: int | None = None,
+                           max_results: int = 6) -> list[dict]:
+    per_page = min(max_results, 100)  # API hard cap is 100
+    docs: list[dict] = []
+    offset = 0
+    while len(docs) < max_results:
+        r = _get("https://api.semanticscholar.org/graph/v1/paper/search", params={
+            "query": query, "limit": per_page, "offset": offset,
+            "fields": "title,abstract,tldr,externalIds,openAccessPdf",
+        })
+        if not r:
+            break
+        data = r.json().get("data", [])
+        if not data:
+            break
+        for paper in data:
+            title    = paper.get("title") or ""
+            abstract = paper.get("abstract") or ""
+            tldr     = (paper.get("tldr") or {}).get("text") or ""
+            raw      = f"{abstract}\n\nTL;DR: {tldr}" if tldr else abstract
+            body     = raw[:max_body] if max_body else raw
+            ext      = paper.get("externalIds") or {}
+            doi      = ext.get("DOI")
+            url      = (f"https://doi.org/{doi}" if doi else
+                        (paper.get("openAccessPdf") or {}).get("url") or "")
+            if title and body and url:
+                docs.append(_doc(url=url, title=title, body=body,
+                                 links=[], source="semantic_scholar", source_base=_base_url(url),
+                                 topic=topic))
+            if len(docs) >= max_results:
+                break
+        if len(data) < per_page:
+            break  # last page
+        offset += per_page
+        if offset > 0:
+            time.sleep(1.0)
     return docs
 
 
@@ -1122,6 +1220,68 @@ def fetch_devto(tag: str, topic: str,
             docs.append(_doc(url=url, title=title, body=body,
                              links=[], source="devto", source_base=_base_url(url),
                              topic=topic))
+    return docs
+
+
+_ATOM_NS    = "http://www.w3.org/2005/Atom"
+_CONTENT_NS = "http://purl.org/rss/1.0/modules/content/"
+
+
+def fetch_rss(url: str, topic: str,
+              max_body: int | None = None, max_links: int | None = None,
+              max_results: int = 20) -> list[dict]:
+    """Fetch an RSS 2.0 or Atom feed and return one doc per item/entry.
+
+    Handles both formats transparently. Body is taken from <content:encoded>
+    → <description> (RSS) or <content> → <summary> (Atom), with HTML stripped.
+    """
+    r = _get(url)
+    if not r:
+        return []
+    try:
+        root = ET.fromstring(r.content)
+    except ET.ParseError:
+        return []
+
+    # Detect format: Atom feeds use a namespaced <feed> root tag
+    is_atom = _ATOM_NS in (root.tag or "")
+    items   = (root.findall(f".//{{{_ATOM_NS}}}entry") if is_atom
+               else root.findall(".//item"))
+
+    docs: list[dict] = []
+    for item in items:
+        if len(docs) >= max_results:
+            break
+
+        if is_atom:
+            def _a(tag: str) -> str:
+                el = item.find(f"{{{_ATOM_NS}}}{tag}")
+                return (el.text or "").strip() if el is not None else ""
+            title   = _a("title")
+            link_el = item.find(f"{{{_ATOM_NS}}}link")
+            link    = (link_el.get("href") or "").strip() if link_el is not None else ""
+            raw     = _a("content") or _a("summary")
+        else:
+            def _r(tag: str) -> str:
+                el = item.find(tag)
+                return (el.text or "").strip() if el is not None else ""
+            title   = _r("title")
+            link    = _r("link") or _r("guid")
+            enc     = item.find(f"{{{_CONTENT_NS}}}encoded")
+            raw     = (enc.text or "") if enc is not None else _r("description")
+
+        if not title or not link:
+            continue
+
+        body = BeautifulSoup(raw, "html.parser").get_text(" ", strip=True) if raw else ""
+        body = " ".join(body.split())
+        body = body[:max_body] if max_body else body
+        if not body:
+            continue
+
+        docs.append(_doc(url=link, title=title, body=body,
+                         links=[], source="rss", source_base=_base_url(link),
+                         topic=topic))
     return docs
 
 
@@ -1201,15 +1361,20 @@ def _links(soup: BeautifulSoup, base_url: str, host: str,
 # ── DISPATCH ──────────────────────────────────────────────────────────────────
 
 def dispatch(source: str, value: str, topic: str,
-             max_body: int | None = None, max_links: int | None = None) -> list[dict]:
+             max_body: int | None = None, max_links: int | None = None,
+             max_results: int | None = None) -> list[dict]:
     kw = {"max_body": max_body, "max_links": max_links}
+    if max_results is not None:
+        kw["max_results"] = max_results
     match source:
-        case "wikipedia":        return fetch_wikipedia(value, topic, **kw)
-        case "wikidata":         return fetch_wikidata(value, topic)
+        case "wikipedia":          return fetch_wikipedia(value, topic, **kw)
+        case "wikipedia_category": return fetch_wikipedia_category(value, topic, **kw)
+        case "wikidata":           return fetch_wikidata(value, topic)
         case "openalex":         return fetch_openalex(value, topic, **kw)
         case "arxiv":            return fetch_arxiv(value, topic, **kw)
         case "semantic_scholar": return fetch_semantic_scholar(value, topic, **kw)
         case "devto":            return fetch_devto(value, topic, **kw)
+        case "rss":              return fetch_rss(value, topic, **kw)
         case "github":           return fetch_github(value, topic, **kw)
         case "scikit":           return fetch_html(value, topic, "scikit", **kw)
         case "stackoverflow":    return fetch_html(value, topic, "stackoverflow", **kw)
@@ -1285,14 +1450,15 @@ def load_corpus_links(corpus_dir: Path) -> list[tuple[str, str]]:
 # ── CRAWL ENGINE ─────────────────────────────────────────────────────────────
 
 def crawl(
-    clusters:  dict[str, dict],
-    depth:     int,
-    max_pages: int,
-    out_dir:   Path,
-    delay:     float,
-    overwrite: bool = False,
-    max_body:  int | None = None,
-    max_links: int | None = None,
+    clusters:     dict[str, dict],
+    depth:        int,
+    max_pages:    int,
+    out_dir:      Path,
+    delay:        float,
+    overwrite:    bool = False,
+    max_body:     int | None = None,
+    max_links:    int | None = None,
+    max_results:  int | None = None,
 ) -> None:
     queues: dict[str, deque] = {}
     for topic, conf in clusters.items():
@@ -1323,12 +1489,13 @@ def crawl(
             progress = True
 
             print(f"[{topic}][{source}][d={dlevel}] {value[:80]}")
-            docs = dispatch(source, value, topic, max_body=max_body, max_links=max_links)
+            docs = dispatch(source, value, topic, max_body=max_body, max_links=max_links,
+                            max_results=max_results)
 
             for doc in docs:
                 # Wikidata returns placeholder docs → re-queue as wikipedia
                 if doc["source"] == "wikidata_ref":
-                    wt  = _title_from_wiki_url(doc["url"])
+                    wt  = unquote(_title_from_wiki_url(doc["url"]))
                     wk  = f"wikipedia::{wt}"
                     if wk not in visited:
                         q.append(("wikipedia", wt, dlevel))
@@ -1359,14 +1526,26 @@ def crawl(
                             injected_pairs.add(pair)
                             break
 
-                # Child-link expansion — only follow links to crawlable hosts
-                if dlevel < depth and source in ("html", "scikit", "stackoverflow"):
-                    for link in doc["links"]:
-                        if urlparse(link).netloc not in CRAWLABLE:
-                            continue
-                        lk = f"{source}::{link}"
-                        if lk not in visited:
-                            q.append((source, link, dlevel + 1))
+                # Child-link expansion
+                if dlevel < depth:
+                    if source == "wikipedia":
+                        # Links are Wikipedia URLs — extract title and re-queue
+                        # via the API rather than raw HTML. Shuffle so each run
+                        # explores a different neighbourhood.
+                        wiki_links = doc["links"][:]
+                        random.shuffle(wiki_links)
+                        for link in wiki_links[:WIKI_FOLLOW_LIMIT]:
+                            art = unquote(_title_from_wiki_url(link))
+                            lk  = f"wikipedia::{art}"
+                            if lk not in visited:
+                                q.append(("wikipedia", art, dlevel + 1))
+                    elif source in ("html", "scikit", "stackoverflow"):
+                        for link in doc["links"]:
+                            if urlparse(link).netloc not in CRAWLABLE:
+                                continue
+                            lk = f"{source}::{link}"
+                            if lk not in visited:
+                                q.append((source, link, dlevel + 1))
 
             if delay > 0:
                 time.sleep(delay)
@@ -1388,9 +1567,10 @@ def expand(
     out_dir:    Path,
     delay:      float,
     overwrite:  bool,
-    max_body:   int | None = None,
-    max_links:  int | None = None,
-    topics:     set[str] | None = None,
+    max_body:     int | None = None,
+    max_links:    int | None = None,
+    max_results:  int | None = None,
+    topics:       set[str] | None = None,
 ) -> None:
     """
     Reads links from existing corpus files, randomly samples `sample` of them,
@@ -1407,10 +1587,16 @@ def expand(
     sampled = candidates[:sample]
     print(f"Sampled {len(sampled)} / {len(candidates)} candidate links.")
 
-    # Group by topic so the round-robin engine still balances coverage
+    # Group by topic so the round-robin engine still balances coverage.
+    # Route Wikipedia URLs through the API adapter, not raw HTML.
     by_topic: dict[str, list] = {}
     for url, topic in sampled:
-        by_topic.setdefault(topic, []).append(("html", url))
+        if "wikipedia.org/wiki/" in url:
+            by_topic.setdefault(topic, []).append(
+                ("wikipedia", _title_from_wiki_url(url))
+            )
+        else:
+            by_topic.setdefault(topic, []).append(("html", url))
 
     clusters = {
         t: {
@@ -1422,7 +1608,7 @@ def expand(
 
     crawl(clusters, depth=depth, max_pages=max_pages,
           out_dir=out_dir, delay=delay, overwrite=overwrite,
-          max_body=max_body, max_links=max_links)
+          max_body=max_body, max_links=max_links, max_results=max_results)
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -1452,7 +1638,10 @@ examples:
     p.add_argument("--topics",         help="Comma-separated cluster names (default: all)")
     p.add_argument("--sources",        help="Comma-separated source types to include "
                    "(wikipedia, arxiv, openalex, semantic_scholar, devto, github, "
-                   "html, stackoverflow, wikidata)")
+                   "html, stackoverflow, wikidata, rss)")
+    p.add_argument("--wiki-cats",      help="Comma-separated Wikipedia category names to "
+                   "scrape (e.g. 'Climate_change,Renewable_energy'). Seeds are injected "
+                   "into every selected topic cluster.")
     p.add_argument("--companies",      action="store_true",
                    help="Use corporate/NGO HTML sources instead of academic APIs")
     p.add_argument("--expand",         action="store_true",
@@ -1471,10 +1660,13 @@ examples:
                    help="RNG seed for reproducible shuffles")
     p.add_argument("--overwrite",      action="store_true",
                    help="Re-fetch and overwrite existing files")
-    p.add_argument("--max-body",       type=int, default=None,
+    p.add_argument("--max-body",        type=int, default=None,
                    help="Truncate body text to N characters (default: no limit)")
-    p.add_argument("--max-links",      type=int, default=None,
+    p.add_argument("--max-links",       type=int, default=None,
                    help="Keep only the first N links per page (default: no limit)")
+    p.add_argument("--max-results",     type=int, default=None,
+                   help="Max results per query for academic APIs — openalex, arxiv, "
+                   "semantic_scholar (default: 5/5/6). Use e.g. 50 to paginate deeper.")
     args = p.parse_args()
 
     if args.seed is not None:
@@ -1493,9 +1685,10 @@ examples:
             out_dir    = out_dir,
             delay      = args.delay,
             overwrite  = args.overwrite,
-            max_body   = args.max_body,
-            max_links  = args.max_links,
-            topics     = {t.strip() for t in args.topics.split(",")} if args.topics else None,
+            max_body    = args.max_body,
+            max_links   = args.max_links,
+            max_results = args.max_results,
+            topics      = {t.strip() for t in args.topics.split(",")} if args.topics else None
         )
         return
 
@@ -1534,15 +1727,26 @@ examples:
             for t, conf in clusters.items()
         }
 
+    if args.wiki_cats:
+        cats = [c.strip() for c in args.wiki_cats.split(",") if c.strip()]
+        # Copy seeds lists before appending so TOPIC_CLUSTERS is never mutated.
+        clusters = {t: {**conf, "seeds": list(conf["seeds"])} for t, conf in clusters.items()}
+        for topic in clusters:
+            for cat in cats:
+                clusters[topic]["seeds"].append(("wikipedia_category", cat))
+        print(f"[wiki-cats] injected {len(cats)} category seed(s) into "
+              f"{len(clusters)} topic(s): {', '.join(cats)}")
+
     crawl(
-        clusters  = clusters,
-        depth     = args.depth,
-        max_pages = args.max,
-        out_dir   = out_dir,
-        delay     = args.delay,
-        overwrite = args.overwrite,
-        max_body  = args.max_body,
-        max_links = args.max_links,
+        clusters    = clusters,
+        depth       = args.depth,
+        max_pages   = args.max,
+        out_dir     = out_dir,
+        delay       = args.delay,
+        overwrite   = args.overwrite,
+        max_body    = args.max_body,
+        max_links   = args.max_links,
+        max_results = args.max_results,
     )
 
 
