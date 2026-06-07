@@ -25,7 +25,7 @@ import time
 import xml.etree.ElementTree as ET
 from collections import deque
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -1357,7 +1357,7 @@ def crawl(
             for doc in docs:
                 # Wikidata returns placeholder docs → re-queue as wikipedia
                 if doc["source"] == "wikidata_ref":
-                    wt  = _title_from_wiki_url(doc["url"])
+                    wt  = unquote(_title_from_wiki_url(doc["url"]))
                     wk  = f"wikipedia::{wt}"
                     if wk not in visited:
                         q.append(("wikipedia", wt, dlevel))
@@ -1397,7 +1397,7 @@ def crawl(
                         wiki_links = doc["links"][:]
                         random.shuffle(wiki_links)
                         for link in wiki_links[:WIKI_FOLLOW_LIMIT]:
-                            art = _title_from_wiki_url(link)
+                            art = unquote(_title_from_wiki_url(link))
                             lk  = f"wikipedia::{art}"
                             if lk not in visited:
                                 q.append(("wikipedia", art, dlevel + 1))
@@ -1545,7 +1545,7 @@ examples:
             overwrite  = args.overwrite,
             max_body   = args.max_body,
             max_links  = args.max_links,
-            topics     = {t.strip() for t in args.topics.split(",")} if args.topics else None,
+            topics     = {t.strip() for t in args.topics.split(",")} if args.topics else None
         )
         return
 
@@ -1586,6 +1586,8 @@ examples:
 
     if args.wiki_cats:
         cats = [c.strip() for c in args.wiki_cats.split(",") if c.strip()]
+        # Copy seeds lists before appending so TOPIC_CLUSTERS is never mutated.
+        clusters = {t: {**conf, "seeds": list(conf["seeds"])} for t, conf in clusters.items()}
         for topic in clusters:
             for cat in cats:
                 clusters[topic]["seeds"].append(("wikipedia_category", cat))
