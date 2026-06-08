@@ -109,6 +109,8 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("rss",              "https://www.carbonbrief.org/feed"),
             ("rss",              "https://www.sciencedaily.com/rss/earth_climate/global_warming.xml"),
             ("rss",              "https://phys.org/rss-feed/earth-news/environment/"),
+            ("sitemap",          "https://www.carbonbrief.org/sitemap_index.xml"),
+            ("sitemap",          "https://www.iea.org/sitemap.xml"),
         ],
     },
 
@@ -175,6 +177,7 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.azom.com/green-chemistry.aspx"),
             ("rss",              "https://www.sciencedaily.com/rss/matter_energy/biomaterials.xml"),
             ("rss",              "https://phys.org/rss-feed/technology-news/materials-science/"),
+            ("sitemap",          "https://www.unep.org/sitemap.xml"),
         ],
     },
 
@@ -240,6 +243,7 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("rss",              "https://www.nasa.gov/news-release/feed/"),
             ("rss",              "https://www.sciencedaily.com/rss/space_time.xml"),
             ("rss",              "https://phys.org/rss-feed/space-news/"),
+            ("sitemap",          "https://www.nasa.gov/sitemap.xml"),
         ],
     },
 
@@ -324,6 +328,7 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("html",             "https://www.accenture.com/en-us/industries"),
             ("rss",              "https://phys.org/rss-feed/technology-news/computer-sciences/"),
             ("rss",              "https://news.mit.edu/rss/topic/computer-science-and-technology"),
+            ("sitemap",          "https://news.mit.edu/sitemap.xml"),
         ],
     },
 
@@ -394,6 +399,7 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("rss",              "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"),
             ("rss",              "https://phys.org/rss-feed/technology-news/artificial-intelligence-news/"),
             ("rss",              "https://www.quantamagazine.org/feed/"),
+            ("sitemap",          "https://news.mit.edu/sitemap.xml"),
         ],
     },
 
@@ -517,6 +523,7 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("rss",              "https://www.sciencedaily.com/rss/health_medicine.xml"),
             ("rss",              "https://phys.org/rss-feed/health-news/"),
             ("rss",              "https://www.nih.gov/rss/alldiscoveries.xml"),
+            ("sitemap",          "https://www.unep.org/sitemap.xml"),
         ],
     },
 
@@ -569,6 +576,7 @@ TOPIC_CLUSTERS: dict[str, dict] = {
             ("rss",              "https://www.sciencedaily.com/rss/computers_math/quantum_computers.xml"),
             ("rss",              "https://phys.org/rss-feed/technology-news/quantum-physics-news/"),
             ("rss",              "https://www.quantamagazine.org/feed/"),
+            ("sitemap",          "https://research.ibm.com/sitemap.xml"),
         ],
     },
 
@@ -1285,6 +1293,69 @@ def fetch_rss(url: str, topic: str,
     return docs
 
 
+_SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+
+
+def fetch_sitemap(url: str, topic: str,
+                  max_body: int | None = None, max_links: int | None = None,
+                  max_results: int = 50, _depth: int = 0) -> list[dict]:
+    """Fetch a sitemap.xml (or sitemap index) and return stub docs for each URL.
+
+    Returned docs use source='sitemap_ref' so the crawl engine re-queues them
+    as HTML fetches — the same stub-requeue pattern used by wikidata_ref.
+    Handles one level of sitemap index nesting (index → child sitemaps).
+    """
+    r = _get(url)
+    if not r:
+        return []
+    try:
+        root = ET.fromstring(r.content)
+    except ET.ParseError:
+        return []
+
+    tag = root.tag.lower()
+    ns  = _SITEMAP_NS if _SITEMAP_NS in (root.tag or "") else ""
+    loc = lambda el: (el.find(f"{{{ns}}}loc") if ns else el.find("loc"))
+
+    # Sitemap index — recurse into each child sitemap (one level only)
+    index_tag = f"{{{ns}}}sitemap" if ns else "sitemap"
+    child_maps = root.findall(index_tag)
+    if child_maps and _depth == 0:
+        docs: list[dict] = []
+        for child in child_maps:
+            if len(docs) >= max_results:
+                break
+            loc_el = loc(child)
+            if loc_el is None or not loc_el.text:
+                continue
+            child_url = loc_el.text.strip()
+            remaining = max_results - len(docs)
+            docs.extend(fetch_sitemap(child_url, topic,
+                                      max_results=remaining, _depth=1))
+            time.sleep(0.5)
+        return docs
+
+    # Regular sitemap — collect <url><loc> entries
+    url_tag = f"{{{ns}}}url" if ns else "url"
+    docs = []
+    for url_el in root.findall(url_tag):
+        if len(docs) >= max_results:
+            break
+        loc_el = loc(url_el)
+        if loc_el is None or not loc_el.text:
+            continue
+        page_url = loc_el.text.strip()
+        if not page_url.startswith("http"):
+            continue
+        # Use URL path as a minimal title placeholder; real title comes on fetch
+        path  = urlparse(page_url).path.rstrip("/").split("/")[-1] or "index"
+        title = re.sub(r"[-_]", " ", path).title()
+        docs.append(_doc(url=page_url, title=title, body="", links=[],
+                         source="sitemap_ref", source_base=_base_url(page_url),
+                         topic=topic))
+    return docs
+
+
 def fetch_github(repo: str, topic: str,
                  max_body: int | None = None, max_links: int | None = None) -> list[dict]:
     for branch in ("main", "master"):
@@ -1375,6 +1446,7 @@ def dispatch(source: str, value: str, topic: str,
         case "semantic_scholar": return fetch_semantic_scholar(value, topic, **kw)
         case "devto":            return fetch_devto(value, topic, **kw)
         case "rss":              return fetch_rss(value, topic, **kw)
+        case "sitemap":          return fetch_sitemap(value, topic, **kw)
         case "github":           return fetch_github(value, topic, **kw)
         case "scikit":           return fetch_html(value, topic, "scikit", **kw)
         case "stackoverflow":    return fetch_html(value, topic, "stackoverflow", **kw)
@@ -1493,12 +1565,19 @@ def crawl(
                             max_results=max_results)
 
             for doc in docs:
-                # Wikidata returns placeholder docs → re-queue as wikipedia
+                # Wikidata/category stubs → re-queue as wikipedia
                 if doc["source"] == "wikidata_ref":
                     wt  = unquote(_title_from_wiki_url(doc["url"]))
                     wk  = f"wikipedia::{wt}"
                     if wk not in visited:
                         q.append(("wikipedia", wt, dlevel))
+                    continue
+
+                # Sitemap stubs → re-queue as html pages
+                if doc["source"] == "sitemap_ref":
+                    lk = f"html::{doc['url']}"
+                    if lk not in visited:
+                        q.append(("html", doc["url"], dlevel))
                     continue
 
                 if not doc["body"]:
@@ -1638,7 +1717,7 @@ examples:
     p.add_argument("--topics",         help="Comma-separated cluster names (default: all)")
     p.add_argument("--sources",        help="Comma-separated source types to include "
                    "(wikipedia, arxiv, openalex, semantic_scholar, devto, github, "
-                   "html, stackoverflow, wikidata, rss)")
+                   "html, stackoverflow, wikidata, rss, sitemap)")
     p.add_argument("--wiki-cats",      help="Comma-separated Wikipedia category names to "
                    "scrape (e.g. 'Climate_change,Renewable_energy'). Seeds are injected "
                    "into every selected topic cluster.")
