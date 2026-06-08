@@ -7,6 +7,8 @@ import random
 from copy import deepcopy
 from time import sleep
 
+from pathlib import Path
+
 import search
 from network import Network
 
@@ -45,16 +47,23 @@ NETWORK_TOP_K: int = 10
 # Prevents unbounded flooding in large meshes.
 DEFAULT_TTL: int = 3
 
-# ── Embedding model — loaded once at startup, never re-downloaded ─────────────
+# ── Embedding model ───────────────────────────────────────────────────────────
+# Loading by local path instead of model name skips all HuggingFace Hub
+# network activity (no version checks, no re-downloads).  First run downloads
+# once via cache_folder; every run after that loads from the local path only.
 _EMBED_MODEL_NAME = "all-mpnet-base-v2"
+_EMBED_LOCAL_PATH = Path(__file__).resolve().parent / "data" / "model_cache" / "sentence-transformers_all-mpnet-base-v2"
 _embed_model = None
 
 def _get_embed_model():
     global _embed_model
     if _embed_model is None:
         from sentence_transformers import SentenceTransformer
-        print(f"Loading sentence-transformers model '{_EMBED_MODEL_NAME}' …", flush=True)
-        _embed_model = SentenceTransformer(_EMBED_MODEL_NAME)
+        if _EMBED_LOCAL_PATH.exists():
+            _embed_model = SentenceTransformer(str(_EMBED_LOCAL_PATH))
+        else:
+            print(f"First run: downloading '{_EMBED_MODEL_NAME}' to {_EMBED_LOCAL_PATH} …", flush=True)
+            _embed_model = SentenceTransformer(_EMBED_MODEL_NAME, cache_folder=str(_EMBED_LOCAL_PATH.parent))
         print("Model ready.", flush=True)
     return _embed_model
 

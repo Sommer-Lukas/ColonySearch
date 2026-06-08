@@ -206,3 +206,6 @@ __marimo__/
 
 # Claude Code local config (permissions, session state, etc.)
 .claude/
+
+# Sentence-transformers model cache — pinned to data/model_cache/ in node.py
+data/model_cache/
