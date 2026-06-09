@@ -54,21 +54,26 @@ DEFAULT_TTL: int = 3
 _EMBED_MODEL_NAME = "all-mpnet-base-v2"
 _EMBED_LOCAL_PATH = Path(__file__).resolve().parent / "data" / "model_cache" / "sentence-transformers_all-mpnet-base-v2"
 _embed_model = None
+_encode_cache: dict[str, object] = {}
 
 def _get_embed_model():
     global _embed_model
     if _embed_model is None:
+        import torch
         from sentence_transformers import SentenceTransformer
+        device = "cuda" if torch.cuda.is_available() else "cpu"
         if _EMBED_LOCAL_PATH.exists():
-            _embed_model = SentenceTransformer(str(_EMBED_LOCAL_PATH))
+            _embed_model = SentenceTransformer(str(_EMBED_LOCAL_PATH), device=device)
         else:
             print(f"First run: downloading '{_EMBED_MODEL_NAME}' to {_EMBED_LOCAL_PATH} …", flush=True)
-            _embed_model = SentenceTransformer(_EMBED_MODEL_NAME, cache_folder=str(_EMBED_LOCAL_PATH.parent))
-        print("Model ready.", flush=True)
+            _embed_model = SentenceTransformer(_EMBED_MODEL_NAME, cache_folder=str(_EMBED_LOCAL_PATH.parent), device=device)
+        print(f"Model ready (device={device}).", flush=True)
     return _embed_model
 
 def _encode_query(query: str):
-    return _get_embed_model().encode(query, show_progress_bar=False)
+    if query not in _encode_cache:
+        _encode_cache[query] = _get_embed_model().encode(query, show_progress_bar=False)
+    return _encode_cache[query]
 
 
 def sort_search_results(search_results: list):

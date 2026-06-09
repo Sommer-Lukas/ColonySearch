@@ -16,6 +16,7 @@ import json
 import re
 import sqlite3
 from dataclasses import asdict, dataclass
+from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -48,6 +49,23 @@ _STOP_WORDS = {
     "HOW", "WHY", "WHO", "WHEN", "WHERE", "WHICH", "DOES", "DO",
     "AND", "OR", "NOT",
 }
+
+
+@lru_cache(maxsize=32)
+def _cached_knn(knn_path_str: str):
+    """Load KNN model once per node — avoids reloading on every search call."""
+    return load(knn_path_str)
+
+
+@lru_cache(maxsize=32)
+def _cached_meta_urls(meta_path_str: str) -> list:
+    return json.loads(Path(meta_path_str).read_text())["urls"]
+
+
+@lru_cache(maxsize=32)
+def _cached_url_rowid(db_path_str: str) -> dict:
+    with sqlite3.connect(db_path_str) as con:
+        return {url: rid for rid, url in con.execute("SELECT rowid, url FROM documents").fetchall()}
 
 
 def _sanitize_fts5(query: str) -> str:
@@ -135,7 +153,7 @@ def search(
 
     use_knn = query_vector is not None and alpha < 1.0 and knn_path.exists()
     if use_knn:
-        nn  = load(knn_path)
+        nn  = _cached_knn(str(knn_path))
         vec = np.array(query_vector, dtype=np.float32).reshape(1, -1)
 
         pad = nn.n_features_in_ - vec.shape[1]
@@ -144,19 +162,10 @@ def search(
 
         distances, indices = nn.kneighbors(vec)
 
-        # The KNN model was fitted on a filtered, ordered list of docs — its
-        # index i is NOT guaranteed to equal SQLite rowid i+1 because some docs
-        # may have been skipped during model building.  knn_metadata.json records
-        # the URL at each model index; we reverse-map through the DB to get the
-        # correct rowid.
         meta_path = knn_path.parent / "knn_metadata.json"
-        meta_urls: list[str] = json.loads(meta_path.read_text())["urls"] if meta_path.exists() else []
+        meta_urls: list[str] = _cached_meta_urls(str(meta_path)) if meta_path.exists() else []
         if meta_urls:
-            with sqlite3.connect(db_path) as con:
-                url_to_rowid = {
-                    url: rid
-                    for rid, url in con.execute("SELECT rowid, url FROM documents").fetchall()
-                }
+            url_to_rowid = _cached_url_rowid(str(db_path))
             for dist, idx in zip(distances[0], indices[0]):
                 url    = meta_urls[int(idx)]
                 rowid  = url_to_rowid.get(url)
