@@ -1,9 +1,33 @@
 [
   {
+    "url": "http://bradfordjewish.org.uk/jacob-behrens/",
+    "topic": "19th century",
+    "query_text": "Sir Jacob Behrens Bradford Jewish history biography",
+    "title": "Sir Jacob Behrens 1806-1889 | Making Their Mark: Bradford Jewish"
+  },
+  {
     "url": "https://arxiv.org/abs/1004.3884v1",
     "topic": "economics",
     "query_text": "oil price trackers immune memory algorithm",
     "title": "Oil Price Trackers Inspired by Immune Memory"
+  },
+  {
+    "url": "https://arxiv.org/abs/1111.5177v3",
+    "topic": "aerosol",
+    "query_text": "fractal climate response function global temperature trends",
+    "title": "A fractal climate response function can simulate global average temperature trends of the modern era and the past millennium"
+  },
+  {
+    "url": "https://arxiv.org/abs/1307.2629v1",
+    "topic": "time scales",
+    "query_text": "Parkes Pulsar Timing Array gravitational waves research",
+    "title": "The Parkes Pulsar Timing Array"
+  },
+  {
+    "url": "https://arxiv.org/abs/1403.4969v1",
+    "topic": "fluid dynamics",
+    "query_text": "modeling athlete crowd flow mass sports events",
+    "title": "Crowd Flow Modeling of Athletes in Mass Sports Events -- a Macroscopic Approach"
   },
   {
     "url": "https://arxiv.org/abs/1508.05013v1",
@@ -18,6 +42,24 @@
     "title": "Quantum cryptography: key distribution and beyond"
   },
   {
+    "url": "https://arxiv.org/abs/1806.04793v2",
+    "topic": "neural networks",
+    "query_text": "Drosophila visual system connectome convolutional network model",
+    "title": "A Connectome Based Hexagonal Lattice Convolutional Network Model of the Drosophila Visual System"
+  },
+  {
+    "url": "https://arxiv.org/abs/1807.06006v1",
+    "topic": "smart materials",
+    "query_text": "intelligent metamaterials circular economy product design",
+    "title": "Towards a Circular Economy via Intelligent Metamaterials"
+  },
+  {
+    "url": "https://arxiv.org/abs/1810.00482v1",
+    "topic": "visuomotor control",
+    "query_text": "Few-shot goal inference visuomotor learning and planning",
+    "title": "Few-Shot Goal Inference for Visuomotor Learning and Planning"
+  },
+  {
     "url": "https://arxiv.org/abs/1906.07794v1",
     "topic": "convolutional neural network",
     "query_text": "convolutional neural network cancer type prediction gene expression",
@@ -28,6 +70,30 @@
     "topic": "economics",
     "query_text": "machine learning behavioral economics personalized choice architecture",
     "title": "Machine learning and behavioral economics for personalized choice architecture"
+  },
+  {
+    "url": "https://arxiv.org/abs/1912.09091v3",
+    "topic": "continual learning",
+    "query_text": "catastrophic forgetting adversarial neural pruning synaptic consolidation",
+    "title": "Overcoming Long-term Catastrophic Forgetting through Adversarial Neural Pruning and Synaptic Consolidation"
+  },
+  {
+    "url": "https://arxiv.org/abs/2005.10189v3",
+    "topic": "physics",
+    "query_text": "quantum error mitigation Clifford gates noisy quantum computers",
+    "title": "Error mitigation with Clifford quantum-circuit data"
+  },
+  {
+    "url": "https://arxiv.org/abs/2006.16189v4",
+    "topic": "machine learning",
+    "query_text": "DOME supervised machine learning validation in biology recommendations",
+    "title": "DOME: Recommendations for supervised machine learning validation in biology"
+  },
+  {
+    "url": "https://arxiv.org/abs/2009.10637v1",
+    "topic": "model driven engineering",
+    "query_text": "Domain Specific Modeling as a Service Internet of Things",
+    "title": "Domain Specific Modeling (DSM) as a Service for the Internet of Things & Services"
   },
   {
     "url": "https://arxiv.org/abs/2009.12007v1",
@@ -42,10 +108,58 @@
     "title": "Using the Parameterized Quantum Circuit combined with Variational-Quantum-Eigensolver (VQE) to create an Intelligent social workers' schedule problem solver"
   },
   {
+    "url": "https://arxiv.org/abs/2012.10386v1",
+    "topic": "climate change",
+    "query_text": "Indian climate change projections regional climate model PRECIS",
+    "title": "Future Climate Change Projections over the Indian Region"
+  },
+  {
+    "url": "https://arxiv.org/abs/2105.14287v1",
+    "topic": "whey protein",
+    "query_text": "sustainable bioplastics amyloid fibril biodegradable polymer blends",
+    "title": "Sustainable bioplastics from amyloid fibril-biodegradable polymer blends"
+  },
+  {
+    "url": "https://arxiv.org/abs/2108.12388v1",
+    "topic": "variational algorithms",
+    "query_text": "Noise effect on variational algorithms quantum chemistry performance",
+    "title": "The Effect of Noise on the Performance of Variational Algorithms for Quantum Chemistry"
+  },
+  {
+    "url": "https://arxiv.org/abs/2109.13918v1",
+    "topic": "toxicology",
+    "query_text": "toxicity carbon nanomaterials environmental exposure",
+    "title": "Toxicity of Carbon Nanomaterials"
+  },
+  {
+    "url": "https://arxiv.org/abs/2110.02266v1",
+    "topic": "experimental study",
+    "query_text": "turbulent boundary layer flow around cylinder group",
+    "title": "Time-averaged velocity and scalar fields of the flow surrounding a group of cylinders"
+  },
+  {
     "url": "https://arxiv.org/abs/2111.11714v1",
     "topic": "cybersecurity",
     "query_text": "Industrial Internet of Things security challenges opportunities",
     "title": "Challenges and Opportunities in Securing the Industrial Internet of Things"
+  },
+  {
+    "url": "https://arxiv.org/abs/2112.02390v1",
+    "topic": "reverse osmosis",
+    "query_text": "Alkalinity Concentration Swing direct air capture carbon dioxide",
+    "title": "Alkalinity Concentration Swing for Direct Air Capture of Carbon Dioxide"
+  },
+  {
+    "url": "https://arxiv.org/abs/2112.14193v3",
+    "topic": "physics",
+    "query_text": "quantum algorithm excited states quantum chemistry full circuit",
+    "title": "A full circuit-based quantum algorithm for excited-states in quantum chemistry"
+  },
+  {
+    "url": "https://arxiv.org/abs/2201.10303v1",
+    "topic": "energy",
+    "query_text": "smart buildings energy optimization normal-boundary intersection algorithm",
+    "title": "Improved normal-boundary intersection algorithm: a method for energy optimization strategy in smart buildings"
   },
   {
     "url": "https://arxiv.org/abs/2201.12150v2",
@@ -54,10 +168,64 @@
     "title": "Learning Curves for Decision Making in Supervised Machine Learning: A Survey"
   },
   {
+    "url": "https://arxiv.org/abs/2202.02626v3",
+    "topic": "deep learning",
+    "query_text": "Layer-wise Regularized Adversarial Training LSA framework",
+    "title": "Layer-wise Regularized Adversarial Training using Layers Sustainability Analysis (LSA) framework"
+  },
+  {
     "url": "https://arxiv.org/abs/2211.05409v1",
     "topic": "radiomics",
     "query_text": "Radiomics enhanced deep multi-task learning head and neck cancer",
     "title": "Radiomics-enhanced Deep Multi-task Learning for Outcome Prediction in Head and Neck Cancer"
+  },
+  {
+    "url": "https://arxiv.org/abs/2302.11439v1",
+    "topic": "gadolinium",
+    "query_text": "Gd-rich precipitates Ni-Mn-In Heusler alloys magnetocaloric effect",
+    "title": "Influence of Gd-rich precipitates on the martensitic transformation, magnetocaloric effect and mechanical properties of Ni-Mn-In Heusler alloys -- A comparative study"
+  },
+  {
+    "url": "https://arxiv.org/abs/2305.07125v3",
+    "topic": "plasticity",
+    "query_text": "NiTi martensite plastic forming mechanism kwinking",
+    "title": "Kwinking as the plastic forming mechanism of B19' NiTi martensite"
+  },
+  {
+    "url": "https://arxiv.org/abs/2306.04338v1",
+    "topic": "official statistics",
+    "query_text": "machine learning official statistics changing data sources risks",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics"
+  },
+  {
+    "url": "https://arxiv.org/abs/2311.09479v1",
+    "topic": "sagittarius a",
+    "query_text": "Sagittarius A* Event Horizon Telescope results imaging",
+    "title": "First Sagittarius A* Event Horizon Telescope Results. III: Imaging of the Galactic Center Supermassive Black Hole"
+  },
+  {
+    "url": "https://arxiv.org/abs/2502.17506v3",
+    "topic": "llm agents",
+    "query_text": "RAG enhanced LLM agents drug discovery",
+    "title": "RAG-Enhanced Collaborative LLM Agents for Drug Discovery"
+  },
+  {
+    "url": "https://arxiv.org/abs/2503.03213v1",
+    "topic": "deep learning",
+    "query_text": "Convergence rates softmax gating mixture of experts",
+    "title": "Convergence Rates for Softmax Gating Mixture of Experts"
+  },
+  {
+    "url": "https://arxiv.org/abs/2512.02760v1",
+    "topic": "quantum information",
+    "query_text": "Fault-tolerant quantum computation constant overhead general noise",
+    "title": "Fault-tolerant quantum computation with constant overhead for general noise"
+  },
+  {
+    "url": "https://arxiv.org/abs/2512.16163v1",
+    "topic": "skao",
+    "query_text": "SKAO Pulsar Timing Array gravitational-wave astronomy",
+    "title": "The SKAO Pulsar Timing Array"
   },
   {
     "url": "https://arxiv.org/abs/2604.18210v1",
@@ -72,10 +240,40 @@
     "title": "Dealing with Bugs \u2014 Python 3.14.5 documentation"
   },
   {
+    "url": "https://docs.python.org/3/library/asyncio-task.html",
+    "topic": "concurrency",
+    "query_text": "Python asyncio coroutines and tasks tutorial",
+    "title": "Coroutines and tasks \u2014 Python 3.14.5 documentation"
+  },
+  {
+    "url": "https://docs.python.org/3/library/exceptions.html",
+    "topic": "programming",
+    "query_text": "Python 3.14.5 built-in exceptions documentation",
+    "title": "Built-in Exceptions \u2014 Python 3.14.5 documentation"
+  },
+  {
     "url": "https://docs.python.org/3/library/stdtypes.html",
     "topic": "builtin functions",
     "query_text": "Python built-in types documentation",
     "title": "Built-in Types \u2014 Python 3.14.5 documentation"
+  },
+  {
+    "url": "https://docs.python.org/3/tutorial/errors.html",
+    "topic": "exceptions",
+    "query_text": "Python errors and exceptions documentation",
+    "title": "8. Errors and Exceptions \u2014 Python 3.14.5 documentation"
+  },
+  {
+    "url": "https://doi.org/10.1002/adfm.201604619",
+    "topic": "bioprinting",
+    "query_text": "D printing cellulose nanocrystal inks for textured cellular architectures",
+    "title": "Cellulose Nanocrystal Inks for 3D Printing of Textured Cellular Architectures"
+  },
+  {
+    "url": "https://doi.org/10.1002/bit.21854",
+    "topic": "bioplastics",
+    "query_text": "tequila bagasse polyhydroxyalkanoate bioplastics Saccharophagus degradans",
+    "title": "Utilization of cellulosic waste from tequila bagasse and production of polyhydroxyalkanoate (PHA) bioplastics by <i>Saccharophagus degradans</i>"
   },
   {
     "url": "https://doi.org/10.1002/wcc.681",
@@ -90,10 +288,82 @@
     "title": "Molecular Docking for Drug Discovery: Machine-Learning Approaches for Native Pose Prediction of Protein-Ligand Complexes"
   },
   {
+    "url": "https://doi.org/10.1007/978-3-642-27645-3_18",
+    "topic": "engineering",
+    "query_text": "Reinforcement Learning Robotics Survey",
+    "title": "Reinforcement Learning in Robotics: A Survey"
+  },
+  {
+    "url": "https://doi.org/10.1007/s00702-016-1510-0",
+    "topic": "dopamine",
+    "query_text": "basal ganglia reward function dopamine neurons",
+    "title": "Reward functions of the basal ganglia"
+  },
+  {
+    "url": "https://doi.org/10.1007/s11214-006-8315-7",
+    "topic": "space",
+    "query_text": "James Webb Space Telescope instruments and science goals",
+    "title": "The James Webb Space Telescope"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.biteb.2025.102272",
+    "topic": "wastewater treatment",
+    "query_text": "PHA bioplastic production from wastewater sludge circular economy",
+    "title": "The circular value of polyhydroxyalkanoate (PHA) bioplastic production from sludge at a large-scale wastewater treatment plant"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.compchemeng.2019.106521",
+    "topic": "risk analysis",
+    "query_text": "European supply chains carbon capture geological storage capacity",
+    "title": "European supply chains for carbon capture, transport and sequestration, with uncertainties in geological storage capacity: Insights from economic optimisation"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.ijinfomgt.2019.08.002",
+    "topic": "economics",
+    "query_text": "AI multidisciplinary challenges opportunities research practice policy",
+    "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.jclepro.2019.119238",
+    "topic": "engineering",
+    "query_text": "circular economy construction demolition waste management",
+    "title": "The circular economy in the construction and demolition waste sector \u2013 A review and an integrative model approach"
+  },
+  {
     "url": "https://doi.org/10.1016/j.jhin.2025.06.006",
     "topic": "medicine",
     "query_text": "ESKAPE pathogen hospital acquired infections clinical financial burden",
     "title": "The burden of ESKAPE pathogen-related hospital-acquired infections: clinical and financial perspective from a systematic review."
+  },
+  {
+    "url": "https://doi.org/10.1016/s1386-4181(01)00024-6",
+    "topic": "liquidity",
+    "query_text": "Illiquidity stock returns cross-section time-series effects",
+    "title": "Illiquidity and stock returns: cross-section and time-series effects"
+  },
+  {
+    "url": "https://doi.org/10.1016/s1474-4422(17)30371-x",
+    "topic": "public health",
+    "query_text": "traumatic brain injury prevention clinical care research",
+    "title": "Traumatic brain injury: integrated approaches to improve prevention, clinical care, and research"
+  },
+  {
+    "url": "https://doi.org/10.1038/nature11466",
+    "topic": "biology",
+    "query_text": "dopaminergic neurons inhibit striatal output gaba",
+    "title": "Dopaminergic neurons inhibit striatal output through non-canonical release of GABA"
+  },
+  {
+    "url": "https://doi.org/10.1038/s41593-018-0232-z",
+    "topic": "cognitive science",
+    "query_text": "hippocampal replay planning memory access",
+    "title": "Prioritized memory access explains planning and hippocampal replay"
+  },
+  {
+    "url": "https://doi.org/10.1038/s41893-022-00851-6",
+    "topic": "conservation",
+    "query_text": "artificial intelligence biodiversity protection conservation policies",
+    "title": "Improving biodiversity protection through artificial intelligence"
   },
   {
     "url": "https://doi.org/10.1039/c4cs00035h",
@@ -102,10 +372,22 @@
     "title": "A review of mineral carbonation technologies to sequester CO<sub>2</sub>"
   },
   {
+    "url": "https://doi.org/10.1051/0004-6361/201732189",
+    "topic": "exoplanets",
+    "query_text": "exoplanet atmospheres GIANO high-resolution spectroscopy",
+    "title": "Exoplanet atmospheres with GIANO"
+  },
+  {
     "url": "https://doi.org/10.1051/0004-6361/201834776",
     "topic": "spectroscopy",
     "query_text": "exoplanet atmospheres transit spectroscopy sodium HARPS WASP-76b",
     "title": "Hot Exoplanet Atmospheres Resolved with Transit Spectroscopy (HEARTS)"
+  },
+  {
+    "url": "https://doi.org/10.1080/14693062.2019.1596873",
+    "topic": "social impacts",
+    "query_text": "social impacts climate change mitigation policies inequality",
+    "title": "Social impacts of climate change mitigation policies and their implications for inequality"
   },
   {
     "url": "https://doi.org/10.1080/24748668.2023.2262813",
@@ -114,10 +396,46 @@
     "title": "How do the football teams play in LaLiga? Analysis and comparison of playing styles according to the outcome"
   },
   {
+    "url": "https://doi.org/10.1088/0067-0049/197/2/35",
+    "topic": "hubble space telescope",
+    "query_text": "CANDELS Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey",
+    "title": "CANDELS: THE COSMIC ASSEMBLY NEAR-INFRARED DEEP EXTRAGALACTIC LEGACY SURVEY"
+  },
+  {
+    "url": "https://doi.org/10.1088/1748-9326/ac44c8",
+    "topic": "fraction of attributable risk",
+    "query_text": "extreme weather events anthropogenic climate change attribution",
+    "title": "On the attribution of the impacts of extreme weather events to anthropogenic climate change"
+  },
+  {
     "url": "https://doi.org/10.1093/cercor/bhi005",
     "topic": "medicine",
     "query_text": "human brain changes with practice neuroimaging",
     "title": "Human Functional Neuroimaging of Brain Changes Associated with Practice"
+  },
+  {
+    "url": "https://doi.org/10.1097/MD.0000000000043542",
+    "topic": "neurological disorders",
+    "query_text": "gut microbiota brain axis neurological disorders therapeutic potential",
+    "title": "Unveiling the therapeutic potential of the gut microbiota\u2013brain axis: Novel insights and clinical applications in neurological disorders"
+  },
+  {
+    "url": "https://doi.org/10.1103/81v4-pp8q",
+    "topic": "cosmic microwave background",
+    "query_text": "cosmic string gravitational waves CMB inflation",
+    "title": "Complementary signatures of \n\u03b1\n-attractor inflation in CMB and cosmic string gravitational waves"
+  },
+  {
+    "url": "https://doi.org/10.1103/physrevd.89.023524",
+    "topic": "astrophysics",
+    "query_text": "neutrino backgrounds dark matter direct detection experiments",
+    "title": "Implication of neutrino backgrounds on the reach of next generation dark matter direct detection experiments"
+  },
+  {
+    "url": "https://doi.org/10.1109/ICCEA65460.2025.11103434",
+    "topic": "machine learning",
+    "query_text": "Transformer architecture abnormal behavior recognition survey",
+    "title": "A Survey on Transformer Architecture Design for Abnormal Behavior Recognition Tasks"
   },
   {
     "url": "https://doi.org/10.1109/ICCECE69169.2026.11399759",
@@ -126,10 +444,28 @@
     "title": "Multi-Agent Reinforcement Learning-Based Task Offloading with Evolutionary Game Theory for User Association in Edge Computing"
   },
   {
+    "url": "https://doi.org/10.1109/TPAMI.2022.3152247",
+    "topic": "neural networks",
+    "query_text": "Vision Transformer survey deep learning computer vision",
+    "title": "A Survey on Vision Transformer"
+  },
+  {
     "url": "https://doi.org/10.1136/bjsports-2015-095259",
     "topic": "sports medicine",
     "query_text": "UEFA Elite Club Injury Study injury prevention survey",
     "title": "Injury prevention strategies, coach compliance and player adherence of 33 of the UEFA Elite Club Injury Study teams: a survey of teams\u2019 head medical officers"
+  },
+  {
+    "url": "https://doi.org/10.1145/3104028",
+    "topic": "computer science",
+    "query_text": "Cloud software architectural principles patterns",
+    "title": "Architectural Principles for Cloud Software"
+  },
+  {
+    "url": "https://doi.org/10.1186/s13073-016-0299-7",
+    "topic": "disease biomarkers",
+    "query_text": "rheumatoid arthritis intestinal microbes gut microbiota",
+    "title": "An expansion of rare lineage intestinal microbes characterizes rheumatoid arthritis"
   },
   {
     "url": "https://doi.org/10.1257/jel.37.4.1661",
@@ -138,10 +474,34 @@
     "title": "The Science of Monetary Policy: A New Keynesian Perspective"
   },
   {
+    "url": "https://doi.org/10.1257/jep.27.1.173",
+    "topic": "psychology",
+    "query_text": "Prospect Theory in economics review assessment",
+    "title": "Thirty Years of Prospect Theory in Economics: A Review and Assessment"
+  },
+  {
     "url": "https://doi.org/10.1371/journal.pone.0107112",
     "topic": "performance analysis",
     "query_text": "numerical relations skill level sports teams co-adaptive behaviors",
     "title": "Numerical Relations and Skill Level Constrain Co-Adaptive Behaviors of Agents in Sports Teams"
+  },
+  {
+    "url": "https://doi.org/10.1557/s43579-024-00616-6",
+    "topic": "data science",
+    "query_text": "CRADLE materials data science distributed data-centric approach",
+    "title": "Materials data science using CRADLE: A distributed, data-centric approach"
+  },
+  {
+    "url": "https://doi.org/10.2519/jospt.2020.9753",
+    "topic": "medicine",
+    "query_text": "wearable technology workload monitoring team sports injury prevention review",
+    "title": "Workload a-WEAR-ness: Monitoring Workload in Team Sports With Wearable Technology. A Scoping Review"
+  },
+  {
+    "url": "https://doi.org/10.30574/ijsra.2024.11.2.0432",
+    "topic": "scalability",
+    "query_text": "cloud-native technologies scalability resilience software development review",
+    "title": "A comprehensive review of leveraging cloud-native technologies for scalability and resilience in software development"
   },
   {
     "url": "https://doi.org/10.3390/app15189994",
@@ -150,10 +510,52 @@
     "title": "Tactical and Physical Profiling of the Moroccan National Football Team at the FIFA World Cup Qatar 2022: A Data-Driven and Artificial Intelligence-Assisted Analysis"
   },
   {
+    "url": "https://doi.org/10.3390/su11010281",
+    "topic": "circular economy",
+    "query_text": "mycelium based biocomposites physico-mechanical and thermodynamic properties review",
+    "title": "Physico-Mechanical and Thermodynamic Properties of Mycelium-Based Biocomposites: A Review"
+  },
+  {
+    "url": "https://doi.org/10.3390/su11164371",
+    "topic": "engineering",
+    "query_text": "Industry 5.0 human-centric solution brain-machine interface",
+    "title": "Industry 5.0\u2014A Human-Centric Solution"
+  },
+  {
+    "url": "https://doi.org/10.3847/2041-8213/ac0aef",
+    "topic": "hierarchical mergers",
+    "query_text": "LIGO Virgo gravitational wave catalog hierarchical black hole mergers",
+    "title": "Evidence for Hierarchical Black Hole Mergers in the Second LIGO\u2013Virgo Gravitational Wave Catalog"
+  },
+  {
+    "url": "https://doi.org/10.48550/arXiv.2412.20523",
+    "topic": "reinforcement learning",
+    "query_text": "game theory multi-agent reinforcement learning challenges",
+    "title": "Game Theory and Multi-Agent Reinforcement Learning : From Nash Equilibria to Evolutionary Dynamics"
+  },
+  {
+    "url": "https://doi.org/10.5114/biolsport.2023.118337",
+    "topic": "womens football",
+    "query_text": "women's football physical demands national level",
+    "title": "Position specific physical demands in different phases of competitive matches in national level women\u2019s football"
+  },
+  {
     "url": "https://ec.europa.eu/environment/circular-economy/",
     "topic": "european union",
     "query_text": "EU official languages list",
     "title": "Language selection | Environment"
+  },
+  {
+    "url": "https://en.wikipedia.org/w/index.php?title=1950%E2%80%9351_FK_Partizan_season&action=edit&section=1",
+    "topic": "fk partizan",
+    "query_text": "FK Partizan season Wikipedia",
+    "title": "View source for 1950\u201351 FK Partizan season - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/w/index.php?title=General_theory_of_relativity&redirect=no",
+    "topic": "redirect",
+    "query_text": "General theory of relativity Wikipedia",
+    "title": "General theory of relativity - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/w/index.php?title=National_Authority_for_Remote_Sensing_and_Space_Sciences&action=edit&section=2",
@@ -168,16 +570,82 @@
     "title": "Open science data - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/w/index.php?title=Sanctions_on_Russia&redirect=no",
+    "topic": "redirects",
+    "query_text": "Sanctions involving Russia Wikipedia",
+    "title": "Sanctions on Russia - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/%C3%96rebro_SK",
+    "topic": "football",
+    "query_text": "\u00d6rebro SK Swedish football club Wikipedia",
+    "title": "\u00d6rebro SK - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup",
+    "topic": "world cup",
+    "query_text": "FIFA World Cup tournament details",
+    "title": "2018 FIFA World Cup - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/4-API",
     "topic": "chemical compound",
     "query_text": "Aminopropyl)indole wikipedia chemical structure properties",
     "title": "4-(2-Aminopropyl)indole - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Abrahamic_world",
+    "topic": "abrahamic religions",
+    "query_text": "Abrahamic religions world map Middle East",
+    "title": "Abrahamic world - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/African_Space_Agency",
+    "topic": "international relations",
+    "query_text": "African Space Agency Wikipedia African Union space organization",
+    "title": "African Space Agency - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/AlphaZero",
+    "topic": "chess",
+    "query_text": "AlphaZero chess AI",
+    "title": "AlphaZero - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/American_Society_for_Quality",
+    "topic": "professional organization",
+    "query_text": "American Society for Quality ASQ Wikipedia",
+    "title": "American Society for Quality - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Ancient_language",
+    "topic": "ancient languages",
+    "query_text": "ancient languages definition history examples",
+    "title": "Ancient language - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Arabic_language",
     "topic": "semitic language",
     "query_text": "Arabic language Wikipedia",
     "title": "Arabic - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Arminia_Ludwigshafen",
+    "topic": "history",
+    "query_text": "Arminia Ludwigshafen German football club history",
+    "title": "Arminia Ludwigshafen - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor",
+    "topic": "pearl harbor",
+    "query_text": "Pearl Harbor attack December 7 1941 Wikipedia",
+    "title": "Attack on Pearl Harbor - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Away_colours",
+    "topic": "team sports",
+    "query_text": "sports team away kit colors explained",
+    "title": "Away colours - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Ayresome_Park",
@@ -192,10 +660,76 @@
     "title": "Backpropagation"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Big_O_notation",
+    "topic": "landau notation",
+    "query_text": "Big O notation computer science math definition",
+    "title": "Big O notation"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Bombing_of_Darmstadt_in_World_War_II",
+    "topic": "aerial bombardment",
+    "query_text": "Darmstadt bombing World War II September 1944 Royal Air Force",
+    "title": "Bombing of Darmstadt in World War II - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Bonaire",
+    "topic": "island",
+    "query_text": "Bonaire Dutch Caribbean island Wikipedia",
+    "title": "Bonaire - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Book_of_Leviticus",
+    "topic": "leviticus",
+    "query_text": "Book of Leviticus Wikipedia Bible Torah Judaism",
+    "title": "Book of Leviticus - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Boothferry_Park",
+    "topic": "england",
+    "query_text": "Boothferry Park Hull England football stadium history",
+    "title": "Boothferry Park - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Bretton_Woods_system",
+    "topic": "finance",
+    "query_text": "Bretton Woods system monetary management 1944 agreement",
+    "title": "Bretton Woods system - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
     "topic": "epidemiology",
     "query_text": "COVID-19 pandemic SARS-CoV-2 Wikipedia",
     "title": "COVID-19 pandemic - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Central_European_Time",
+    "topic": "time zones",
+    "query_text": "Central European Time countries UTC+01:00",
+    "title": "Central European Time - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Chess_Tiger",
+    "topic": "programming",
+    "query_text": "Chess Tiger software by Christophe Th\u00e9ron",
+    "title": "Chess Tiger - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Chess_bitboard",
+    "topic": "algorithms",
+    "query_text": "bitboard data structure computer board games",
+    "title": "Bitboard - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Cholangiocarcinoma",
+    "topic": "cholangiocarcinoma",
+    "query_text": "cholangiocarcinoma bile duct cancer symptoms causes treatment",
+    "title": "Cholangiocarcinoma - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Civil_Works_Administration",
+    "topic": "history",
+    "query_text": "Civil Works Administration New Deal Great Depression",
+    "title": "Civil Works Administration - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Communes_of_Italy",
@@ -204,10 +738,40 @@
     "title": "Comune - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Communist",
+    "topic": "class conflict",
+    "query_text": "Communism political socioeconomic ideology wikipedia",
+    "title": "Communism - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+    "topic": "machine learning",
+    "query_text": "convolutional neural network deep learning",
+    "title": "Convolutional neural network"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Cosmic-ray_observatory",
+    "topic": "high energy particles",
+    "query_text": "cosmic ray observatory high energy particles space",
+    "title": "Cosmic-ray observatory - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao",
+    "topic": "politics",
+    "query_text": "Cura\u00e7ao island country Wikipedia",
+    "title": "Cura\u00e7ao - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/DMAIC",
     "topic": "six sigma",
     "query_text": "DMAIC data driven improvement cycle Six Sigma",
     "title": "DMAIC - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Darius_I_of_Persia",
+    "topic": "persia",
+    "query_text": "Darius the Great Persian ruler Achaemenid Empire history",
+    "title": "Darius the Great - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Daylight_saving_time",
@@ -240,6 +804,36 @@
     "title": "Deforestation in Brazil - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Democratic_Party_(Italy)",
+    "topic": "politics",
+    "query_text": "Democratic Party Italy Wikipedia political party",
+    "title": "Democratic Party (Italy) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Denotation",
+    "topic": "denotation",
+    "query_text": "denotation definition philosophy linguistics literal meaning",
+    "title": "Denotation - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Dr._Horacio_E._Oduber_Hospital",
+    "topic": "healthcare",
+    "query_text": "Horacio Oduber Hospital Aruba Wikipedia",
+    "title": "Dr. Horacio E. Oduber Hospital - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Dragi%C5%A1a_Cvetkovi%C4%87",
+    "topic": "politics",
+    "query_text": "Dragi\u0161a Cvetkovi\u0107 Yugoslav politician Wikipedia",
+    "title": "Dragi\u0161a Cvetkovi\u0107 - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/ENQUIRE",
+    "topic": "world wide web",
+    "query_text": "ENQUIRE Tim Berners-Lee CERN World Wide Web predecessor",
+    "title": "ENQUIRE - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Eastern_Empire",
     "topic": "monarchy",
     "query_text": "Byzantine Empire history facts emperors",
@@ -252,10 +846,40 @@
     "title": "Economic and Social Research Council - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Education_Resources_Information_Center",
+    "topic": "eric",
+    "query_text": "Education Resources Information Center Wikipedia",
+    "title": "Education Resources Information Center - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/EgyptSat_1",
+    "topic": "spacecraft",
+    "query_text": "EgyptSat 1 satellite remote sensing mission details",
+    "title": "EgyptSat 1 - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/England",
+    "topic": "england",
+    "query_text": "England Wikipedia page information history culture",
+    "title": "England - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Europe",
     "topic": "europe",
     "query_text": "Europe Wikipedia continent population area countries languages",
     "title": "Europe - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Evaluation_function",
+    "topic": "chess programming",
+    "query_text": "chess programming evaluation function",
+    "title": "Evaluation function - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Evelyn_Wever-Croes",
+    "topic": "government",
+    "query_text": "Evelyn Wever-Croes Prime Minister Aruba biography",
+    "title": "Evelyn Wever-Croes - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
@@ -264,10 +888,40 @@
     "title": "FIFA World Cup"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/FK_Vardar",
+    "topic": "fk vardar",
+    "query_text": "FK Vardar football club North Macedonia",
+    "title": "FK Vardar - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Finnish_paganism",
     "topic": "estonian",
     "query_text": "Baltic Finnic paganism religion history",
     "title": "Baltic Finnic paganism - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Flag_of_Uganda",
+    "topic": "politics",
+    "query_text": "Uganda flag history design meaning",
+    "title": "Flag of Uganda - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Forbes_(disambiguation)",
+    "topic": "business",
+    "query_text": "Forbes magazine people places history",
+    "title": "Forbes (disambiguation) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Franjo_%C5%A0o%C5%A1tari%C4%87",
+    "topic": "yugoslavia",
+    "query_text": "Franjo \u0160o\u0161tari\u0107 Yugoslavian footballer biography",
+    "title": "Franjo \u0160o\u0161tari\u0107 - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Gaijin",
+    "topic": "japan",
+    "query_text": "Gaijin Japanese word for foreigner meaning",
+    "title": "Gaijin - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Geographic_coordinate_system",
@@ -282,16 +936,52 @@
     "title": "Gospel of Matthew - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Graph_traversal",
+    "topic": "graph traversal",
+    "query_text": "graph traversal algorithm computer science",
+    "title": "Graph traversal - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Gravitational_wave",
+    "topic": "gravitational waves",
+    "query_text": "gravitational waves einstein general relativity spacetime curvature",
+    "title": "Gravitational wave"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Grawlix",
+    "topic": "popular culture",
+    "query_text": "what is grawlix typography symbols profanity",
+    "title": "Grawlix - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Greek_mythology",
+    "topic": "history",
+    "query_text": "Greek mythology gods heroes creatures",
+    "title": "Greek mythology - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Gut_microbiota",
     "topic": "microbiome",
     "query_text": "gut microbiota gastrointestinal metagenome human microbiome effects",
     "title": "Gut microbiota"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Heart",
+    "topic": "circulatory system",
+    "query_text": "human heart facts anatomy wikipedia",
+    "title": "Heart - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Helsingborg",
     "topic": "europe",
     "query_text": "Helsingborg Sweden city population history facts",
     "title": "Helsingborg - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Historical_recurrence",
+    "topic": "historical recurrence",
+    "query_text": "historical recurrence concept history events repeating",
+    "title": "Historical recurrence - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Hungary",
@@ -318,10 +1008,40 @@
     "title": "International Geophysical Year - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/International_sanctions_during_the_Russo-Ukrainian_War",
+    "topic": "crimea",
+    "query_text": "Russo-Ukrainian war international sanctions since 2014",
+    "title": "International sanctions during the Russo-Ukrainian war - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Intravenous",
+    "topic": "rehydration",
+    "query_text": "intravenous therapy IV fluids medications nutrients vein",
+    "title": "Intravenous therapy - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Italian_Left",
+    "topic": "democratic socialism",
+    "query_text": "Italian Left political party Wikipedia",
+    "title": "Italian Left - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Jaime_Balmes",
     "topic": "catholicism",
     "query_text": "Jaime Balmes Spanish philosopher theologian biography",
     "title": "Jaime Balmes - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Jerome",
+    "topic": "theology",
+    "query_text": "who was Jerome priest and theologian",
+    "title": "Jerome - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Kenya",
+    "topic": "demographics",
+    "query_text": "Kenya information Wikipedia",
+    "title": "Kenya - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Kharaj_Mukherjee",
@@ -342,6 +1062,12 @@
     "title": "List of modern pagan movements - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Lloyd_Llewellyn-Jones",
+    "topic": "achaemenid empire",
+    "query_text": "Lloyd Llewellyn-Jones Welsh professor ancient history Cardiff University",
+    "title": "Lloyd Llewellyn-Jones - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Manufacturing_execution_system",
     "topic": "supply chain",
     "query_text": "Manufacturing Execution System MES definition and features",
@@ -352,6 +1078,12 @@
     "topic": "serbia",
     "query_text": "Marko Valok Serbian footballer Wikipedia",
     "title": "Marko Valok - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Martyrs%27_Synod",
+    "topic": "reformation",
+    "query_text": "Martyrs' Synod 1527 Augsburg Anabaptist meeting history",
+    "title": "Martyrs' Synod - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Mental_illness",
@@ -366,16 +1098,76 @@
     "title": "Mephisto (chess computer) - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Mittens_(chess_engine)",
+    "topic": "programming",
+    "query_text": "Mittens chess com chess programming",
+    "title": "Mittens (chess) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Moscow_Oblast",
+    "topic": "political geography",
+    "query_text": "Moscow Oblast Russia political administrative region information",
+    "title": "Moscow Oblast - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/MuZero",
     "topic": "game ai",
     "query_text": "MuZero Wikipedia game playing artificial intelligence",
     "title": "MuZero - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Museum_of_Contemporary_Art,_Antwerp",
+    "topic": "belgium",
+    "query_text": "Museum of Contemporary Art Antwerp Belgium M HKA",
+    "title": "Museum of Contemporary Art, Antwerp - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/NASA",
+    "topic": "us government",
+    "query_text": "NASA National Aeronautics and Space Administration Wikipedia",
+    "title": "NASA - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Nash_equilibrium",
+    "topic": "game theory",
+    "query_text": "game theory Nash equilibrium definition",
+    "title": "Nash equilibrium"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/National_Library_of_Serbia",
+    "topic": "history",
+    "query_text": "National Library of Serbia Belgrade history",
+    "title": "National Library of Serbia - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Nazi_Germany",
+    "topic": "history",
+    "query_text": "Nazi Germany history Third Reich",
+    "title": "Nazi Germany - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Nigeria",
+    "topic": "west africa",
+    "query_text": "Nigeria country in West Africa information",
+    "title": "Nigeria - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Nineteenth_Dynasty_of_Egypt_family_tree",
     "topic": "egyptian pharaohs",
     "query_text": "Nineteenth Dynasty Egypt pharaohs family tree",
     "title": "Nineteenth Dynasty of Egypt family tree - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Norrk%C3%B6ping",
+    "topic": "sweden",
+    "query_text": "Norrk\u00f6ping Sweden Wikipedia article",
+    "title": "Norrk\u00f6ping - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/OECD",
+    "topic": "international relations",
+    "query_text": "OECD Wikipedia intergovernmental economic organization",
+    "title": "OECD - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Omladinski_Stadium",
@@ -390,16 +1182,46 @@
     "title": "NTR (broadcaster) - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Oxford_English_Dictionary",
+    "topic": "linguistics",
+    "query_text": "Oxford English Dictionary publication history",
+    "title": "Oxford English Dictionary - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Pagus",
     "topic": "carolingian",
     "query_text": "Pagus ancient Roman administrative term definition",
     "title": "Pagus - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Pandemic_predictions_and_preparations_prior_to_the_COVID-19_pandemic",
+    "topic": "covid19",
+    "query_text": "pandemic predictions preparations prior to COVID-19 pandemic Wikipedia",
+    "title": "Pandemic predictions and preparations prior to the COVID-19 pandemic - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Paul_van_Buitenen",
     "topic": "politics",
     "query_text": "Paul van Buitenen Dutch politician European Parliament",
     "title": "Paul van Buitenen - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Penalty_kick_(association_football)",
+    "topic": "penalty kick",
+    "query_text": "football penalty kick rules and procedure",
+    "title": "Penalty kick (association football) - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Political_science",
+    "topic": "social science",
+    "query_text": "political science wikipedia",
+    "title": "Political science - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Polyhydroxyalkanoates",
+    "topic": "bioplastics",
+    "query_text": "polyhydroxyalkanoates PHA bioplastics production and properties",
+    "title": "Polyhydroxyalkanoates"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Principal_variation_search",
@@ -414,10 +1236,76 @@
     "title": "Prompt engineering"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Proto-Indo-European",
+    "topic": "etymology",
+    "query_text": "Proto-Indo-European language history origin and evolution",
+    "title": "Proto-Indo-European language - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Prvoslav_Mihajlovi%C4%87",
+    "topic": "yugoslavia",
+    "query_text": "Prvoslav Mihajlovi\u0107 Yugoslav footballer biography",
+    "title": "Prvoslav Mihajlovi\u0107 - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Quebec_French_profanity",
+    "topic": "etymology",
+    "query_text": "Quebec French profanity sacres tabarnak etymology",
+    "title": "Quebec French profanity - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Quiescence_search",
+    "topic": "chess",
+    "query_text": "Quiescence search algorithm game programming",
+    "title": "Quiescence search - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Radical_politics",
+    "topic": "political ideologies",
+    "query_text": "radical politics wikipedia political ideologies",
+    "title": "Radical politics - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Regional_planning",
+    "topic": "law",
+    "query_text": "regional planning land use management laws",
+    "title": "Regional planning - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Religion_in_ancient_Greece",
     "topic": "history",
     "query_text": "ancient Greek religion gods goddesses mythology history",
     "title": "Ancient Greek religion - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Remote_sensing",
+    "topic": "sensors",
+    "query_text": "remote sensing wikipedia non-contact sensors",
+    "title": "Remote sensing - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Renaissance",
+    "topic": "renaissance",
+    "query_text": "European cultural period 14th to 17th centuries",
+    "title": "Renaissance - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Rioni_of_Rome",
+    "topic": "rome",
+    "query_text": "Rioni of Rome administrative divisions history",
+    "title": "Rioni of Rome - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Roman_military",
+    "topic": "history",
+    "query_text": "Military of ancient Rome history facts",
+    "title": "Military of ancient Rome - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Roman_women",
+    "topic": "history",
+    "query_text": "ancient Rome women's rights and roles",
+    "title": "Women in ancient Rome - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Route_of_administration",
@@ -426,10 +1314,40 @@
     "title": "Route of administration - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Royal_Astronomical_Society",
+    "topic": "space",
+    "query_text": "Royal Astronomical Society Wikipedia Burlington House London",
+    "title": "Royal Astronomical Society - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Russian_SFSR",
+    "topic": "soviet union",
+    "query_text": "Russian Soviet Federative Socialist Republic history",
+    "title": "Russian Soviet Federative Socialist Republic - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Rwanda_Space_Agency",
+    "topic": "economic development",
+    "query_text": "Rwanda Space Agency Wikipedia",
+    "title": "Rwanda Space Agency - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/SARS",
+    "topic": "medicine",
+    "query_text": "SARS disease symptoms causes prevention prognosis",
+    "title": "SARS - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Sacrament",
     "topic": "religion",
     "query_text": "Christian sacrament meaning Wikipedia",
     "title": "Sacrament - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Saswata_Chatterjee",
+    "topic": "bengali cinema",
+    "query_text": "Saswata Chatterjee Indian actor Wikipedia",
+    "title": "Saswata Chatterjee - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Satan",
@@ -450,10 +1368,52 @@
     "title": "Serotonin"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Social_norm",
+    "topic": "psychology",
+    "query_text": "What is a social norm definition",
+    "title": "Social norm - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Socialist_Federal_Republic_of_Yugoslavia",
+    "topic": "balkan history",
+    "query_text": "Socialist Federal Republic of Yugoslavia 1945 to 1992",
+    "title": "Socialist Federal Republic of Yugoslavia - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Soot",
+    "topic": "particulate matter",
+    "query_text": "what is soot incomplete combustion hydrocarbons",
+    "title": "Soot - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Soviet_Antarctic_Expedition",
+    "topic": "cold war",
+    "query_text": "Soviet Antarctic Expedition research agency history",
+    "title": "Soviet Antarctic Expedition - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Space_research",
+    "topic": "biology",
+    "query_text": "space research wikipedia scientific studies outer space",
+    "title": "Space research - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Superradiance",
+    "topic": "light",
+    "query_text": "superradiance physics quantum optics astrophysics relativity",
+    "title": "Superradiance - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Supervised_learning",
     "topic": "classification",
     "query_text": "supervised learning machine learning wikipedia",
     "title": "Supervised learning - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Surangana_Bandyopadhyay",
+    "topic": "dance",
+    "query_text": "Surangana Bandyopadhyay Indian actress singer biography",
+    "title": "Surangana Bandyopadhyay - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Swear_(disambiguation)",
@@ -462,10 +1422,28 @@
     "title": "Swear - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Sweden",
+    "topic": "sweden",
+    "query_text": "Sweden country in Northern Europe Wikipedia",
+    "title": "Sweden - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Sweden_and_the_euro",
+    "topic": "euro",
+    "query_text": "Sweden Euro Wikipedia currency accession Maastricht treaty",
+    "title": "Sweden and the euro - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Synaptic_plasticity",
     "topic": "learning",
     "query_text": "synaptic plasticity learning and memory",
     "title": "Synaptic plasticity"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Tachycardia",
+    "topic": "tachycardia",
+    "query_text": "tachycardia heart rate exceeding normal resting rate",
+    "title": "Tachycardia - Wikipedia"
   },
   {
     "url": "https://en.wikipedia.org/wiki/The_City_of_God",
@@ -474,16 +1452,82 @@
     "title": "The City of God - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/The_People_of_Freedom",
+    "topic": "political parties",
+    "query_text": "The People of Freedom Italian political party Wikipedia",
+    "title": "The People of Freedom - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Thomism",
+    "topic": "medieval philosophy",
+    "query_text": "Thomism philosophy of Thomas Aquinas Wikipedia",
+    "title": "Thomism - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)",
+    "topic": "natural language processing",
+    "query_text": "transformer deep learning wikipedia",
+    "title": "Transformer (deep learning) - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Uganda",
     "topic": "culture",
     "query_text": "Uganda country in East Africa Wikipedia",
     "title": "Uganda - Wikipedia"
   },
   {
+    "url": "https://en.wikipedia.org/wiki/Unfriendly_countries_list",
+    "topic": "international relations",
+    "query_text": "Russia unfriendly countries list Wikipedia",
+    "title": "Unfriendly countries and territories list - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Unique_Ingredient_Identifier",
+    "topic": "pharmacology",
+    "query_text": "FDA Unique Ingredient Identifier UNII GSRS",
+    "title": "Unique Ingredient Identifier - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Valery_Rubakov",
+    "topic": "biography",
+    "query_text": "Valery Rubakov Russian physicist biography",
+    "title": "Valery Rubakov - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Vasilije_%C5%A0ijakovi%C4%87",
+    "topic": "montenegro",
+    "query_text": "Vasilije \u0160ijakovi\u0107 Montenegrin footballer World Cup",
+    "title": "Vasilije \u0160ijakovi\u0107 - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Vespasian",
+    "topic": "roman empire",
+    "query_text": "Vespasian Roman emperor biography",
+    "title": "Vespasian - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/West_Bengal",
+    "topic": "history",
+    "query_text": "West Bengal India state history culture",
+    "title": "West Bengal - Wikipedia"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Western_world",
     "topic": "geography",
     "query_text": "Western world countries culture history",
     "title": "Western world - Wikipedia"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Zambia",
+    "topic": "culture",
+    "query_text": "Zambia country in Southern Africa Wikipedia",
+    "title": "Zambia - Wikipedia"
+  },
+  {
+    "url": "https://github.com/huggingface/transformers",
+    "topic": "deep learning",
+    "query_text": "HuggingFace Transformers library documentation",
+    "title": "Transformers"
   },
   {
     "url": "https://github.com/openai/gym",
@@ -498,10 +1542,58 @@
     "title": "Fastapi"
   },
   {
+    "url": "https://realpython.com/learning-paths/python-basics/",
+    "topic": "python",
+    "query_text": "Python basics introduction learning path real python",
+    "title": "Python Basics: Introduction to Python (Learning Path) \u2013 Real Python"
+  },
+  {
+    "url": "https://realpython.com/python-decorators/",
+    "topic": "programming",
+    "query_text": "Python Decorators Real Python tutorial examples",
+    "title": "Primer on Python Decorators \u2013 Real Python"
+  },
+  {
+    "url": "https://realpython.com/python-for-loop/",
+    "topic": "for loops",
+    "query_text": "Python for loop tutorial with examples",
+    "title": "Python for Loops: The Pythonic Way \u2013 Real Python"
+  },
+  {
+    "url": "https://stackoverflow.com/questions/1024559/when-to-use-os-name-posix-vs-os-name-nt",
+    "topic": "net",
+    "query_text": "LINQ First vs FirstOrDefault C#",
+    "title": "c# - When to use .First and when to use .FirstOrDefault with LINQ? - Stack Overflow"
+  },
+  {
+    "url": "https://stackoverflow.com/questions/4166/how-do-you-calculate-the-big-o-notation-of-a-function",
+    "topic": "code quality",
+    "query_text": "Java code analysis tools static code coverage",
+    "title": "What code analysis tools do you use for your Java projects? - Stack Overflow"
+  },
+  {
+    "url": "https://stackoverflow.com/questions/419163/what-does-if-name-main-do",
+    "topic": "programming",
+    "query_text": "python if __name__ == \"__main__\": explained",
+    "title": "python - What does if __name__ == \"__main__\": do? - Stack Overflow"
+  },
+  {
     "url": "https://stackoverflow.com/questions/739654/how-to-make-function-decorators-and-chain-them-together",
     "topic": "python",
     "query_text": "python chain multiple decorators function",
     "title": "python - How do I make function decorators and chain them together? - Stack Overflow"
+  },
+  {
+    "url": "https://web.archive.org/web/20200724230114/https://denstoredanske.lex.dk/K%C3%B8benhavns_Universitetshospital",
+    "topic": "medical research",
+    "query_text": "K\u00f8benhavns Universitetshospital lex.dk Den Store Danske",
+    "title": "K\u00f8benhavns Universitetshospital | lex.dk \u2013 Den Store Danske"
+  },
+  {
+    "url": "https://www.bbc.com/sport/football",
+    "topic": "var",
+    "query_text": "BBC Sport football news today results video highlights",
+    "title": "Football - latest news today, results & video highlights - BBC Sport"
   },
   {
     "url": "https://www.carbonbrief.org/category/energy/china-energy/",
@@ -510,16 +1602,52 @@
     "title": "China energy - Carbon Brief"
   },
   {
+    "url": "https://www.carbonbrief.org/category/in-focus/",
+    "topic": "climate policy",
+    "query_text": "Carbon Brief climate change science energy policy",
+    "title": "In focus - Carbon Brief"
+  },
+  {
     "url": "https://www.carbonbrief.org/category/in-focus/features/",
     "topic": "climate policy",
     "query_text": "Carbon Brief website sections and topics",
     "title": "Features - Carbon Brief"
   },
   {
+    "url": "https://www.carbonbrief.org/category/in-focus/media-analysis/",
+    "topic": "energy",
+    "query_text": "Carbon Brief media analysis climate science and policy",
+    "title": "Media analysis - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/in-focus/state-of-the-climate/",
+    "topic": "extreme weather",
+    "query_text": "Carbon Brief State of the Climate report",
+    "title": "State of the climate - Carbon Brief"
+  },
+  {
     "url": "https://www.carbonbrief.org/category/policy/",
     "topic": "international policy",
     "query_text": "Carbon Brief policy sections and topics",
     "title": "Policy - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/policy/us-policy/",
+    "topic": "us policy",
+    "query_text": "US climate policy Carbon Brief",
+    "title": "US Policy - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/science/climate-modelling/",
+    "topic": "climate modeling",
+    "query_text": "Carbon Brief climate modelling science policy energy",
+    "title": "Climate modelling - Carbon Brief"
+  },
+  {
+    "url": "https://www.carbonbrief.org/category/science/ice/",
+    "topic": "climate science",
+    "query_text": "Carbon Brief Ice climate change science policy",
+    "title": "Ice - Carbon Brief"
   },
   {
     "url": "https://www.carbonbrief.org/cookies/",
@@ -532,6 +1660,12 @@
     "topic": "climate change",
     "query_text": "eco2050 sustainability ESG CSR AI digitalization training",
     "title": "Home - eco2050"
+  },
+  {
+    "url": "https://www.goal.com/en",
+    "topic": "sports",
+    "query_text": "Goal.com football news live scores results transfers",
+    "title": "Football News, Live Scores, Results & Transfers | Goal.com"
   },
   {
     "url": "https://www.ibiblio.org/hyperwar/AAF/AAF-Luftwaffe/AAF-Luftwaffe-3.html",
@@ -558,16 +1692,106 @@
     "title": "Manufacturing and Automation Stories, Videos, Articles, Interviews, Reviews & News  | ManufacturingTomorrow"
   },
   {
+    "url": "https://www.nasa.gov/missions/artemis/",
+    "topic": "space",
+    "query_text": "NASA Artemis program Moon to Mars missions",
+    "title": "Moon to Mars | NASA's Artemis Program - NASA"
+  },
+  {
     "url": "https://www.sciencedaily.com/breaking/",
     "topic": "psyche mission",
     "query_text": "ScienceDaily breaking news headlines May 11 2026",
     "title": "Breaking News -- ScienceDaily"
   },
   {
+    "url": "https://www.sciencedaily.com/news/earth_climate/global_warming/",
+    "topic": "giant squid",
+    "query_text": "global warming news ScienceDaily Humpback whale migration Hektoria Glacier",
+    "title": "Global Warming News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.sciencedaily.com/news/health_medicine/",
+    "topic": "weight management",
+    "query_text": "ScienceDaily health medicine news headlines",
+    "title": "Health & Medicine News -- ScienceDaily"
+  },
+  {
     "url": "https://www.sciencedaily.com/news/health_medicine/nervous_system/",
     "topic": "hsl",
     "query_text": "nervous system news ScienceDaily stop scratching switch",
     "title": "Nervous System News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.sciencedaily.com/news/matter_energy/engineering/",
+    "topic": "nanotechnology",
+    "query_text": "latest engineering news headlines research discoveries",
+    "title": "Engineering News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.sciencedaily.com/news/mind_brain/",
+    "topic": "traditional chinese medicine",
+    "query_text": "ScienceDaily Mind & Brain News headlines",
+    "title": "Mind & Brain News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.sciencedaily.com/news/space_time/",
+    "topic": "nasa",
+    "query_text": "NASA Psyche probe Mars flyby Blue Origin moon lander",
+    "title": "Space & Time News -- ScienceDaily"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/company/insights/industrial-operations-x/",
+    "topic": "operations",
+    "query_text": "Siemens Industrial Operations X adaptive production software",
+    "title": "Industrial Operations X | Siemens"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/content/wonik-building-x-remote-alarm-monitoring/",
+    "topic": "facility management",
+    "query_text": "Siemens remote alarm monitoring WONIK HOLDINGS Korea",
+    "title": "Remote alarm monitoring | Siemens"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/ecosystem/moduleworks/",
+    "topic": "simulation",
+    "query_text": "ModuleWorks Siemens manufacturing efficiency toolpath generation software",
+    "title": "ModuleWorks | Siemens"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/ecosystem/productive-machines/",
+    "topic": "digital twin",
+    "query_text": "Siemens Productive Machines autonomous toolpath optimization NX CAM plugin",
+    "title": "Productive Machines | Siemens"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/industries/water/non-revenue-water/",
+    "topic": "engineering",
+    "query_text": "Siemens non-revenue water reduction leak detection",
+    "title": "Non-revenue Water | Siemens"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/products/avasis-teamcenter-medical-device-solution-tc-mds/",
+    "topic": "teamcenter",
+    "query_text": "Teamcenter Medical Device Solution Avasis Siemens",
+    "title": "Teamcenter Medical Device Solution (TC MDS) | Siemens"
+  },
+  {
+    "url": "https://www.siemens.com/en-us/products/electrification-x/",
+    "topic": "software as a service",
+    "query_text": "Siemens Electrification X smart energy network management",
+    "title": "Electrification X | Siemens"
+  },
+  {
+    "url": "https://www.theguardian.com/football",
+    "topic": "sports",
+    "query_text": "Freiburg Aston Villa Europa League final updates",
+    "title": "Football | The Guardian"
+  },
+  {
+    "url": "https://www.un.org/en/climatechange/",
+    "topic": "renewable energy",
+    "query_text": "UN climate change renewable energy solutions",
+    "title": "ClimateChange | United Nations"
   },
   {
     "url": "https://www.worldbank.org/ext/en/home",
